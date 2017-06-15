@@ -1,11 +1,11 @@
 (function($) {
-    var params = birchschedule_view_admincommon;
+    var params = appointer_view_admincommon;
 
     var namespace = birchpress.namespace;
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.admincommon');
+    var ns = namespace('appointer.view.admincommon');
 
     defineFunction(ns, 'getI18nMessages', function(){
         return params.i18n_messages;

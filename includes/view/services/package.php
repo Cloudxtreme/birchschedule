@@ -1,22 +1,22 @@
 <?php
 
-birch_ns( 'birchschedule.view.services', function( $ns ) {
+birch_ns( 'appointer.view.services', function( $ns ) {
 
-        global $birchschedule;
+        global $appointer;
 
-        birch_defn( $ns, 'init', function() use( $ns, $birchschedule ) {
+        birch_defn( $ns, 'init', function() use( $ns, $appointer ) {
 
                 add_action( 'admin_init', array( $ns, 'wp_admin_init' ) );
 
                 add_action( 'init', array( $ns, 'wp_init' ) );
 
-                birch_defmethod( $birchschedule->view, 'load_page_edit',
+                birch_defmethod( $appointer->view, 'load_page_edit',
                     'birs_service', $ns->load_page_edit );
 
-                birch_defmethod( $birchschedule->view, 'enqueue_scripts_edit',
+                birch_defmethod( $appointer->view, 'enqueue_scripts_edit',
                     'birs_service', $ns->enqueue_scripts_edit );
 
-                birch_defmethod( $birchschedule->view, 'save_post',
+                birch_defmethod( $appointer->view, 'save_post',
                     'birs_service', $ns->save_post );
 
             } );
@@ -33,21 +33,21 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
         birch_defn( $ns, 'register_post_type', function() use ( $ns ) {
                 register_post_type( 'birs_service', array(
                         'labels' => array(
-                            'name' => __( 'Services', 'birchschedule' ),
-                            'singular_name' => __( 'Service', 'birchschedule' ),
-                            'add_new' => __( 'Add Service', 'birchschedule' ),
-                            'add_new_item' => __( 'Add New Service', 'birchschedule' ),
-                            'edit' => __( 'Edit', 'birchschedule' ),
-                            'edit_item' => __( 'Edit Service', 'birchschedule' ),
-                            'new_item' => __( 'New Service', 'birchschedule' ),
-                            'view' => __( 'View Service', 'birchschedule' ),
-                            'view_item' => __( 'View Service', 'birchschedule' ),
-                            'search_items' => __( 'Search Services', 'birchschedule' ),
-                            'not_found' => __( 'No Services found', 'birchschedule' ),
-                            'not_found_in_trash' => __( 'No Services found in trash', 'birchschedule' ),
-                            'parent' => __( 'Parent Service', 'birchschedule' )
+                            'name' => __( 'Services', 'appointer' ),
+                            'singular_name' => __( 'Service', 'appointer' ),
+                            'add_new' => __( 'Add Service', 'appointer' ),
+                            'add_new_item' => __( 'Add New Service', 'appointer' ),
+                            'edit' => __( 'Edit', 'appointer' ),
+                            'edit_item' => __( 'Edit Service', 'appointer' ),
+                            'new_item' => __( 'New Service', 'appointer' ),
+                            'view' => __( 'View Service', 'appointer' ),
+                            'view_item' => __( 'View Service', 'appointer' ),
+                            'search_items' => __( 'Search Services', 'appointer' ),
+                            'not_found' => __( 'No Services found', 'appointer' ),
+                            'not_found_in_trash' => __( 'No Services found in trash', 'appointer' ),
+                            'parent' => __( 'Parent Service', 'appointer' )
                         ),
-                        'description' => __( 'This is where services are stored.', 'birchschedule' ),
+                        'description' => __( 'This is where services are stored.', 'appointer' ),
                         'public' => false,
                         'show_ui' => true,
                         'capability_type' => 'birs_service',
@@ -69,8 +69,8 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
                 $columns = array();
 
                 $columns["cb"] = "<input type=\"checkbox\" />";
-                $columns["title"] = __( "Service Name", 'birchschedule' );
-                $columns["description"] = __( "Description", 'birchschedule' );
+                $columns["title"] = __( "Service Name", 'appointer' );
+                $columns["description"] = __( "Description", 'appointer' );
                 return $columns;
             } );
 
@@ -94,26 +94,26 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
 
         birch_defn( $ns, 'enqueue_scripts_edit', function( $arg ) {
 
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
-                $birchschedule->view->enqueue_scripts(
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
+                $appointer->view->enqueue_scripts(
                     array(
-                        'birchschedule_view_services_edit', 'birchschedule_model',
-                        'birchschedule_view_admincommon', 'birchschedule_view'
+                        'appointer_view_services_edit', 'appointer_model',
+                        'appointer_view_admincommon', 'appointer_view'
                     )
                 );
-                $birchschedule->view->enqueue_styles( array( 'birchschedule_admincommon',
-                        'birchschedule_services_edit' ) );
+                $appointer->view->enqueue_styles( array( 'appointer_admincommon',
+                        'appointer_services_edit' ) );
             } );
 
         birch_defn( $ns, 'add_meta_boxes', function() use ( $ns ) {
                 remove_meta_box( 'slugdiv', 'birs_service', 'normal' );
                 remove_meta_box( 'postcustom', 'birs_service', 'normal' );
-                add_meta_box( 'birchschedule-service-info', __( 'Service Settings', 'birchschedule' ),
+                add_meta_box( 'appointer-service-info', __( 'Service Settings', 'appointer' ),
                     array( $ns, 'render_service_info' ), 'birs_service', 'normal', 'high' );
-                add_meta_box( 'birchschedule-service-staff', __( 'Providers', 'birchschedule' ),
+                add_meta_box( 'appointer-service-staff', __( 'Providers', 'appointer' ),
                     array( $ns, 'render_assign_staff' ), 'birs_service', 'side', 'default' );
             } );
 
@@ -122,16 +122,16 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
 
                 $messages['birs_service'] = array(
                     0 => '', // Unused. Messages start at index 1.
-                    1 => __( 'Service updated.', 'birchschedule' ),
-                    2 => __( 'Custom field updated.', 'birchschedule' ),
-                    3 => __( 'Custom field deleted.', 'birchschedule' ),
-                    4 => __( 'Service updated.', 'birchschedule' ),
-                    5 => isset( $_GET['revision'] ) ? sprintf( __( 'Service restored to revision from %s', 'birchschedule' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-                    6 => __( 'Service updated.', 'birchschedule' ),
-                    7 => __( 'Service saved.', 'birchschedule' ),
-                    8 => __( 'Service submitted.', 'birchschedule' ),
-                    9 => sprintf( __( 'Service scheduled for: <strong>%1$s</strong>.', 'birchschedule' ), date_i18n( 'M j, Y @ G:i', strtotime( $post->post_date ) ) ),
-                    10 => __( 'Service draft updated.', 'birchschedule' )
+                    1 => __( 'Service updated.', 'appointer' ),
+                    2 => __( 'Custom field updated.', 'appointer' ),
+                    3 => __( 'Custom field deleted.', 'appointer' ),
+                    4 => __( 'Service updated.', 'appointer' ),
+                    5 => isset( $_GET['revision'] ) ? sprintf( __( 'Service restored to revision from %s', 'appointer' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+                    6 => __( 'Service updated.', 'appointer' ),
+                    7 => __( 'Service saved.', 'appointer' ),
+                    8 => __( 'Service submitted.', 'appointer' ),
+                    9 => sprintf( __( 'Service scheduled for: <strong>%1$s</strong>.', 'appointer' ), date_i18n( 'M j, Y @ G:i', strtotime( $post->post_date ) ) ),
+                    10 => __( 'Service draft updated.', 'appointer' )
                 );
 
                 return $messages;
@@ -139,29 +139,29 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
 
         birch_defn( $ns, 'get_length_types', function() {
                 return array(
-                    'minutes' => __( 'minutes', 'birchschedule' ),
-                    'hours' => __( 'hours', 'birchschedule' )
+                    'minutes' => __( 'minutes', 'appointer' ),
+                    'hours' => __( 'hours', 'appointer' )
                 );
             } );
 
         birch_defn( $ns, 'get_padding_types', function() {
                 return array(
-                    'before' => __( 'Before', 'birchschedule' ),
-                    'after' => __( 'After', 'birchschedule' ),
-                    'before-and-after' => __( 'Before & After', 'birchschedule' )
+                    'before' => __( 'Before', 'appointer' ),
+                    'after' => __( 'After', 'appointer' ),
+                    'before-and-after' => __( 'Before & After', 'appointer' )
                 );
             } );
 
         birch_defn( $ns, 'get_price_types', function() {
                 return array(
-                    'fixed' => __( 'Fixed', 'birchschedule' ),
-                    'varies' => __( 'Varies', 'birchschedule' ),
+                    'fixed' => __( 'Fixed', 'appointer' ),
+                    'varies' => __( 'Varies', 'appointer' ),
                 );
             } );
 
         birch_defn( $ns, 'save_post', function( $post ) {
 
-                global $birchschedule;
+                global $appointer;
                 $config = array(
                     'base_keys' => array(),
                     'meta_keys' => array(
@@ -172,18 +172,18 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
                     )
                 );
                 $service_data =
-                $birchschedule->view->merge_request( $post, $config, $_POST );
+                $appointer->view->merge_request( $post, $config, $_POST );
                 if ( !isset( $_POST['birs_assigned_staff'] ) ) {
                     $service_data['_birs_assigned_staff'] = array();
                 }
-                $birchschedule->model->save( $service_data, $config );
-                $birchschedule->model->update_model_relations( $post['ID'], '_birs_assigned_staff',
+                $appointer->model->save( $service_data, $config );
+                $appointer->model->update_model_relations( $post['ID'], '_birs_assigned_staff',
                     'birs_staff', '_birs_assigned_services' );
-                $birchschedule->model->booking->async_recheck_fully_booked_days();
+                $appointer->model->booking->async_recheck_fully_booked_days();
             } );
 
         birch_defn( $ns, 'render_service_info', function( $post ) use( $ns ) {
-                global $birchschedule, $birchpress;
+                global $appointer, $birchpress;
 
                 $post_id = $post->ID;
                 $length = get_post_meta( $post_id, '_birs_service_length', true );
@@ -193,10 +193,10 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
                 $price = get_post_meta( $post_id, '_birs_service_price', true );
                 $price_type = get_post_meta( $post_id, '_birs_service_price_type', true );
 ?>
-                <div class="panel-wrap birchschedule">
+                <div class="panel-wrap appointer">
                     <table class="form-table">
                         <tr class="form-field">
-                            <th><label><?php _e( 'Length', 'birchschedule' ); ?> </label>
+                            <th><label><?php _e( 'Length', 'appointer' ); ?> </label>
                             </th>
                             <td>
                                 <input type="text" name="birs_service_length"
@@ -207,17 +207,17 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
                             </td>
                         </tr>
                         <tr class="form-field">
-                            <th><label><?php _e( 'Padding', 'birchschedule' ); ?> </label>
+                            <th><label><?php _e( 'Padding', 'appointer' ); ?> </label>
                             </th>
                             <td><input type="text" name="birs_service_padding"
-                                       id="birs_service_padding" value="<?php echo $padding; ?>"> <span><?php echo _e( 'mins padding time', 'birchschedule' ); ?>
+                                       id="birs_service_padding" value="<?php echo $padding; ?>"> <span><?php echo _e( 'mins padding time', 'appointer' ); ?>
                                 </span> <select name="birs_service_padding_type">
                                     <?php $birchpress->util->render_html_options( $ns->get_padding_types(), $padding_type ) ?>
                                 </select>
                             </td>
                         </tr>
                         <tr class="form-field">
-                            <th><label><?php echo apply_filters( 'birchschedule_price_label', __( 'Price', 'birchschedule' ) ); ?> </label></th>
+                            <th><label><?php echo apply_filters( 'appointer_price_label', __( 'Price', 'appointer' ) ); ?> </label></th>
                             <td><select name="birs_service_price_type" id="birs_service_price_type">
                                     <?php $birchpress->util->render_html_options( $ns->get_price_types(), $price_type ); ?>
                                 </select>
@@ -258,12 +258,12 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
                     $assigned_staff = array();
                 }
 ?>
-                <div class="panel-wrap birchschedule">
+                <div class="panel-wrap appointer">
 <?php
                 if ( sizeof( $staff ) > 0 ) {
 ?>
                     <p>
-                        <?php _e( 'Assign providers that can perform this service:', 'birchschedule' ); ?>
+                        <?php _e( 'Assign providers that can perform this service:', 'appointer' ); ?>
                     </p>
                     <div>
                         <ul>
@@ -275,7 +275,7 @@ birch_ns( 'birchschedule.view.services', function( $ns ) {
 ?>
                     <p>
 <?php
-                    printf( __( 'There is no providers to assign. Click %s here %s to add one.', 'birchschedule' ), '<a
+                    printf( __( 'There is no providers to assign. Click %s here %s to add one.', 'appointer' ), '<a
                             href="post-new.php?post_type=birs_staff">', '</a>' );
 ?>
                     </p>

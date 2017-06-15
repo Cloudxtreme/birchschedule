@@ -1,28 +1,28 @@
 <?php
 
-birch_ns('birchschedule.view.clients', function($ns){
+birch_ns('appointer.view.clients', function($ns){
 
-        global $birchschedule;
+        global $appointer;
 
-        birch_defn($ns, 'init', function() use ($ns, $birchschedule) {
+        birch_defn($ns, 'init', function() use ($ns, $appointer) {
 
                 add_action('admin_init', array($ns, 'wp_admin_init'));
 
                 add_action('init', array($ns, 'wp_init'));
 
-                birch_defmethod( $birchschedule->view, 'load_page_edit', 
+                birch_defmethod( $appointer->view, 'load_page_edit', 
                     'birs_client', $ns->load_page_edit );
 
-                birch_defmethod( $birchschedule->view, 'enqueue_scripts_edit', 
+                birch_defmethod( $appointer->view, 'enqueue_scripts_edit', 
                     'birs_client', $ns->enqueue_scripts_edit );
 
-                birch_defmethod( $birchschedule->view, 'enqueue_scripts_list', 
+                birch_defmethod( $appointer->view, 'enqueue_scripts_list', 
                     'birs_client', $ns->enqueue_scripts_list );
 
-                birch_defmethod( $birchschedule->view, 'save_post', 
+                birch_defmethod( $appointer->view, 'save_post', 
                     'birs_client', $ns->save_post );
 
-                birch_defmethod( $birchschedule->view, 'pre_save_post', 
+                birch_defmethod( $appointer->view, 'pre_save_post', 
                     'birs_client', $ns->pre_save_post );
 
             });
@@ -39,21 +39,21 @@ birch_ns('birchschedule.view.clients', function($ns){
         birch_defn($ns, 'register_post_type', function() {
                 register_post_type('birs_client', array(
                         'labels' => array(
-                            'name' => __('Clients', 'birchschedule'),
-                            'singular_name' => __('Client', 'birchschedule'),
-                            'add_new' => __('Add Client', 'birchschedule'),
-                            'add_new_item' => __('Add New Client', 'birchschedule'),
-                            'edit' => __('Edit', 'birchschedule'),
-                            'edit_item' => __('Edit Client', 'birchschedule'),
-                            'new_item' => __('New Client', 'birchschedule'),
-                            'view' => __('View Client', 'birchschedule'),
-                            'view_item' => __('View Client', 'birchschedule'),
-                            'search_items' => __('Search Clients', 'birchschedule'),
-                            'not_found' => __('No Clients found', 'birchschedule'),
-                            'not_found_in_trash' => __('No Clients found in trash', 'birchschedule'),
-                            'parent' => __('Parent Client', 'birchschedule')
+                            'name' => __('Clients', 'appointer'),
+                            'singular_name' => __('Client', 'appointer'),
+                            'add_new' => __('Add Client', 'appointer'),
+                            'add_new_item' => __('Add New Client', 'appointer'),
+                            'edit' => __('Edit', 'appointer'),
+                            'edit_item' => __('Edit Client', 'appointer'),
+                            'new_item' => __('New Client', 'appointer'),
+                            'view' => __('View Client', 'appointer'),
+                            'view_item' => __('View Client', 'appointer'),
+                            'search_items' => __('Search Clients', 'appointer'),
+                            'not_found' => __('No Clients found', 'appointer'),
+                            'not_found_in_trash' => __('No Clients found in trash', 'appointer'),
+                            'parent' => __('Parent Client', 'appointer')
                         ),
-                        'description' => __('This is where clients are stored.', 'birchschedule'),
+                        'description' => __('This is where clients are stored.', 'appointer'),
                         'public' => false,
                         'show_ui' => true,
                         'menu_icon' => 'dashicons-id',
@@ -80,31 +80,31 @@ birch_ns('birchschedule.view.clients', function($ns){
 
         birch_defn($ns, 'enqueue_scripts_edit', function($arg) {
 
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
-                $birchschedule->view->enqueue_scripts(
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
+                $appointer->view->enqueue_scripts(
                     array(
-                        'birchschedule_view_clients_edit', 'birchschedule_model',
-                        'birchschedule_view_admincommon', 'birchschedule_view'
+                        'appointer_view_clients_edit', 'appointer_model',
+                        'appointer_view_admincommon', 'appointer_view'
                     )
                 );
-                $birchschedule->view->enqueue_styles(array('birchschedule_admincommon'));
+                $appointer->view->enqueue_styles(array('appointer_admincommon'));
             });
 
         birch_defn($ns, 'enqueue_scripts_list', function($arg) {
 
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
             });
 
         birch_defn($ns, 'add_meta_boxes', function() use($ns) {
                 remove_meta_box('slugdiv', 'birs_client', 'normal');
                 remove_meta_box('postcustom', 'birs_client', 'normal');
-                add_meta_box('birchschedule-client-info', __('Client Info', 'birchschedule'),
+                add_meta_box('appointer-client-info', __('Client Info', 'appointer'),
                     array($ns, 'render_client_info'), 'birs_client', 'normal', 'high');
             });
 
@@ -112,10 +112,10 @@ birch_ns('birchschedule.view.clients', function($ns){
                 $columns = array();
 
                 $columns["cb"] = "<input type=\"checkbox\" />";
-                $columns["title"] = __("Client Name", 'birchschedule');
-                $columns["birs_client_phone"] = __("Phone", 'birchschedule');
-                $columns["birs_client_email"] = __("Email", 'birchschedule');
-                $columns["birs_client_address"] = __("Address", 'birchschedule');
+                $columns["title"] = __("Client Name", 'appointer');
+                $columns["birs_client_phone"] = __("Phone", 'appointer');
+                $columns["birs_client_email"] = __("Email", 'appointer');
+                $columns["birs_client_address"] = __("Address", 'appointer');
                 return $columns;
             });
 
@@ -134,24 +134,24 @@ birch_ns('birchschedule.view.clients', function($ns){
             });
 
         birch_defn($ns, 'get_updated_messages', function($messages) {
-                global $post, $post_ID, $birchschedule;
+                global $post, $post_ID, $appointer;
 
-                if($birchschedule->view->has_errors()) {
+                if($appointer->view->has_errors()) {
                     $messages['birs_client'] = array(
                     );
                 } else {
                     $messages['birs_client'] = array(
                         0 => '', // Unused. Messages start at index 1.
-                        1 => __('Client updated.', 'birchschedule'),
-                        2 => __('Custom field updated.', 'birchschedule'),
-                        3 => __('Custom field deleted.', 'birchschedule'),
-                        4 => __('Client updated.', 'birchschedule'),
-                        5 => isset($_GET['revision']) ? sprintf(__('Client restored to revision from %s', 'birchschedule'), wp_post_revision_title((int) $_GET['revision'], false)) : false,
-                        6 => __('Client updated.', 'birchschedule'),
-                        7 => __('Client saved.', 'birchschedule'),
-                        8 => __('Client submitted.', 'birchschedule'),
-                        9 => sprintf(__('Client scheduled for: <strong>%1$s</strong>.', 'birchschedule'), date_i18n('M j, Y @ G:i', strtotime($post->post_date))),
-                        10 => __('Client draft updated.', 'birchschedule')
+                        1 => __('Client updated.', 'appointer'),
+                        2 => __('Custom field updated.', 'appointer'),
+                        3 => __('Custom field deleted.', 'appointer'),
+                        4 => __('Client updated.', 'appointer'),
+                        5 => isset($_GET['revision']) ? sprintf(__('Client restored to revision from %s', 'appointer'), wp_post_revision_title((int) $_GET['revision'], false)) : false,
+                        6 => __('Client updated.', 'appointer'),
+                        7 => __('Client saved.', 'appointer'),
+                        8 => __('Client submitted.', 'appointer'),
+                        9 => sprintf(__('Client scheduled for: <strong>%1$s</strong>.', 'appointer'), date_i18n('M j, Y @ G:i', strtotime($post->post_date))),
+                        10 => __('Client draft updated.', 'appointer')
                     );
                 }
 
@@ -160,7 +160,7 @@ birch_ns('birchschedule.view.clients', function($ns){
 
         birch_defn($ns, 'save_post', function($post) {
 
-                global $birchschedule;
+                global $appointer;
 
                 if (isset($_POST['birs_client_fields'])) {
                     $fields = $_POST['birs_client_fields'];
@@ -172,17 +172,17 @@ birch_ns('birchschedule.view.clients', function($ns){
                     'base_keys' => array()
                 );
                 $client_data =
-                $birchschedule->view->merge_request($post, $config, $_POST);
-                $birchschedule->model->save($client_data, $config);
+                $appointer->view->merge_request($post, $config, $_POST);
+                $appointer->model->save($client_data, $config);
             });
 
         birch_defn($ns, 'pre_save_post', function($post_data, $post_attr) {
 
-                global $birchschedule;
+                global $appointer;
 
-                $errors = $birchschedule->view->clients->validate_data($post_attr['ID']);
+                $errors = $appointer->view->clients->validate_data($post_attr['ID']);
                 if($errors) {
-                    $birchschedule->view->save_errors($errors);
+                    $appointer->view->save_errors($errors);
                     return false;
                 }
 
@@ -201,14 +201,14 @@ birch_ns('birchschedule.view.clients', function($ns){
             });
 
         birch_defn($ns, 'validate_data', function($client_id) {
-                global $birchschedule;
+                global $appointer;
 
                 $errors = array();
                 if(!is_email($_POST['birs_client_email'])) {
-                    $errors[] = __('The email address isn’t correct.', 'birchschedule');
+                    $errors[] = __('The email address isn’t correct.', 'appointer');
                 } else {
-                    if($birchschedule->model->booking->if_email_duplicated($client_id, $_POST['birs_client_email'])) {
-                        $errors[] = __('Email already exists.', 'birchschedule').
+                    if($appointer->model->booking->if_email_duplicated($client_id, $_POST['birs_client_email'])) {
+                        $errors[] = __('Email already exists.', 'appointer').
                         ' (' . $_POST['birs_client_email']. ')';
                     }
                 }
@@ -217,7 +217,7 @@ birch_ns('birchschedule.view.clients', function($ns){
             });
 
         birch_defn($ns, 'get_client_details_html', function($client_id) {
-                global $birchpress, $birchschedule;
+                global $birchpress, $appointer;
 
                 $post_id = $client_id;
                 $client_titles = $birchpress->util->get_client_title_options();
@@ -233,7 +233,7 @@ birch_ns('birchschedule.view.clients', function($ns){
                 $state = get_post_meta($post_id, '_birs_client_state', true);
                 $country = get_post_meta($post_id, '_birs_client_country', true);
                 if(!$country) {
-                    $country = $birchschedule->model->get_default_country();
+                    $country = $appointer->model->get_default_country();
                 }
                 $states = $birchpress->util->get_states();
                 $countries = $birchpress->util->get_countries();
@@ -247,15 +247,15 @@ birch_ns('birchschedule.view.clients', function($ns){
                 ob_start();
 ?>
         <style type="text/css">
-            .birchschedule .form-field input[type="text"],
-            .birchschedule .form-field select {
+            .appointer .form-field input[type="text"],
+            .appointer .form-field select {
                 width: 25em;
             }
         </style>
-        <div class="panel-wrap birchschedule">
+        <div class="panel-wrap appointer">
             <table class="form-table">
                 <tr class="form-field">
-                    <th><label><?php _e('Title', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('Title', 'appointer'); ?> </label>
                     </th>
                     <td>
                         <select id="birs_client_title" name="birs_client_title">
@@ -265,21 +265,21 @@ birch_ns('birchschedule.view.clients', function($ns){
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('First Name', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('First Name', 'appointer'); ?> </label>
                     </th>
                     <td><input type="text" name="birs_client_name_first" id="birs_client_name_first" value="<?php echo esc_attr($first_name); ?>">
                     <input type="hidden" name="birs_client_fields[]" value="_birs_client_name_first" />
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('Last Name', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('Last Name', 'appointer'); ?> </label>
                     </th>
                     <td><input type="text" name="birs_client_name_last" id="birs_client_name_last" value="<?php echo esc_attr($last_name); ?>">
                     <input type="hidden" name="birs_client_fields[]" value="_birs_client_name_last" />
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('Phone Number', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('Phone Number', 'appointer'); ?> </label>
                     </th>
                     <td>
                         <input type="text" name="birs_client_phone"
@@ -288,7 +288,7 @@ birch_ns('birchschedule.view.clients', function($ns){
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('Email', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('Email', 'appointer'); ?> </label>
                     </th>
                     <td><input type="text" name="birs_client_email"
                                id="birs_client_email" value="<?php echo esc_attr($email); ?>">
@@ -296,7 +296,7 @@ birch_ns('birchschedule.view.clients', function($ns){
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('Address', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('Address', 'appointer'); ?> </label>
                     </th>
                     <td><input type="text" name="birs_client_address1"
                                id="birs_client_address1"
@@ -308,7 +308,7 @@ birch_ns('birchschedule.view.clients', function($ns){
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('City', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('City', 'appointer'); ?> </label>
                     </th>
                     <td><input type="text" name="birs_client_city"
                                id="birs_client_city" value="<?php echo esc_attr($city); ?>">
@@ -316,7 +316,7 @@ birch_ns('birchschedule.view.clients', function($ns){
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('State/Province', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('State/Province', 'appointer'); ?> </label>
                     </th>
                     <td>
                         <select name="birs_client_state_select" id ="birs_client_state_select" style="<?php echo $select_display; ?>">
@@ -331,7 +331,7 @@ birch_ns('birchschedule.view.clients', function($ns){
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('Country', 'birchschedule'); ?></label></th>
+                    <th><label><?php _e('Country', 'appointer'); ?></label></th>
                     <td>
                         <select name="birs_client_country" id="birs_client_country">
                             <?php $birchpress->util->render_html_options($countries, $country); ?>
@@ -340,7 +340,7 @@ birch_ns('birchschedule.view.clients', function($ns){
                     </td>
                 </tr>
                 <tr class="form-field">
-                    <th><label><?php _e('Zip Code', 'birchschedule'); ?> </label>
+                    <th><label><?php _e('Zip Code', 'appointer'); ?> </label>
                     </th>
                     <td><input type="text" name="birs_client_zip"
                                id="birs_client_zip" value="<?php echo esc_attr($zip); ?>">
@@ -354,10 +354,10 @@ birch_ns('birchschedule.view.clients', function($ns){
             });
 
         birch_defn($ns, 'render_client_info', function($post) {
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->render_errors();
-                echo $birchschedule->view->clients->get_client_details_html($post->ID);
+                $appointer->view->render_errors();
+                echo $appointer->view->clients->get_client_details_html($post->ID);
             });
 
     });

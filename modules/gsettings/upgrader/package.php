@@ -1,8 +1,8 @@
 <?php
 
-birch_ns( 'birchschedule.gsettings.upgrader', function( $ns ) {
+birch_ns( 'appointer.gsettings.upgrader', function( $ns ) {
 
-        global $birchschedule;
+        global $appointer;
 
         $default_options_1_0 = array(
             'currency' => 'USD',
@@ -14,12 +14,12 @@ birch_ns( 'birchschedule.gsettings.upgrader', function( $ns ) {
 
         $default_options = $default_options_1_1;
 
-        birch_defn( $ns, 'init', function() use ( &$default_options, $ns, $birchschedule ) {
-                $options = get_option( 'birchschedule_options' );
+        birch_defn( $ns, 'init', function() use ( &$default_options, $ns, $appointer ) {
+                $options = get_option( 'appointer_options' );
                 if ( $options === false ) {
-                    add_option( 'birchschedule_options', $default_options );
+                    add_option( 'appointer_options', $default_options );
                 }
-                birch_defmethod( $birchschedule, 'upgrade_module', 'gsettings', $ns->upgrade_module );
+                birch_defmethod( $appointer, 'upgrade_module', 'gsettings', $ns->upgrade_module );
             } );
 
         birch_defn( $ns, 'upgrade_module', function() use( $ns ) {
@@ -28,7 +28,7 @@ birch_ns( 'birchschedule.gsettings.upgrader', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_db_version_options', function() {
-                $options = get_option( 'birchschedule_options' );
+                $options = get_option( 'appointer_options' );
                 if ( isset( $options['version'] ) ) {
                     return $options['version'];
                 } else {
@@ -41,9 +41,9 @@ birch_ns( 'birchschedule.gsettings.upgrader', function( $ns ) {
                 if ( $version !== '1.0' ) {
                     return;
                 }
-                $options = get_option( 'birchschedule_options' );
+                $options = get_option( 'appointer_options' );
                 $options['version'] = '1.1';
-                update_option( 'birchschedule_options', $options );
+                update_option( 'appointer_options', $options );
             } );
 
     } );

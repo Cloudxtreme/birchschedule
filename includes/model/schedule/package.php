@@ -1,6 +1,6 @@
 <?php
 
-birch_ns( 'birchschedule.model.schedule', function( $ns ) {
+birch_ns( 'appointer.model.schedule', function( $ns ) {
 
 		$_ns_data = new stdClass();
 
@@ -13,9 +13,9 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 		birch_defn( $ns, 'get_staff_calculated_schedule_by_location', function(
 				$staff_id, $location_id ) use ( $ns ) {
 
-				global $birchschedule;
+				global $appointer;
 
-				$location_schedule = $birchschedule->model->
+				$location_schedule = $appointer->model->
 				get_staff_schedule_by_location( $staff_id, $location_id );
 				$new_schedules = array();
 				if ( isset( $location_schedule['schedules'] ) ) {
@@ -25,10 +25,10 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 					}
 					foreach ( $schedules as $schedule_id => $schedule ) {
 						$schedule_date_start =
-						$birchschedule->model->schedule->
+						$appointer->model->schedule->
 						get_staff_schedule_date_start( $staff_id, $location_id, $schedule_id );
 						$schedule_date_end =
-						$birchschedule->model->schedule->
+						$appointer->model->schedule->
 						get_staff_schedule_date_end( $staff_id, $location_id, $schedule_id );
 						foreach ( $new_schedules as $week_day => $new_schedule ) {
 							if ( isset( $schedule['weeks'][$week_day] ) ) {
@@ -47,9 +47,9 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_staff_calculated_schedule', function( $staff_id ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->get( $staff_id, array(
+				$staff = $appointer->model->get( $staff_id, array(
 						'base_keys' => array(),
 						'meta_keys' => array( '_birs_staff_schedule' )
 					) );
@@ -57,23 +57,23 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 				$new_all_schedule = array();
 				foreach ( $staff_schedule as $location_id => $schedule ) {
 					$new_all_schedule[$location_id] =
-					$birchschedule
+					$appointer
 					->model->schedule->get_staff_calculated_schedule_by_location( $staff_id, $location_id );
 				}
 				return $new_all_schedule;
 			} );
 
 		birch_defn( $ns, 'get_all_calculated_schedule', function() use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->query(
+				$staff = $appointer->model->query(
 					array(
 						'post_type' => 'birs_staff'
 					)
 				);
 				$allschedule = array();
 				foreach ( $staff as $thestaff ) {
-					$schedule = $birchschedule->model->schedule->get_staff_calculated_schedule( $thestaff['ID'] );
+					$schedule = $appointer->model->schedule->get_staff_calculated_schedule( $thestaff['ID'] );
 					$allschedule[$thestaff['ID']] = $schedule;
 				}
 				return $allschedule;
@@ -249,7 +249,7 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_staff_busy_time', function( $staff_id, $location_id, $date ) use ( $ns ) {
-				global $birchschedule, $birchpress;
+				global $appointer, $birchpress;
 
 				$timestamp = $date->format( 'U' );
 				$criteria = array(
@@ -258,7 +258,7 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 					'location_id' => -1,
 					'staff_id' => $staff_id
 				);
-				$appointments = $birchschedule->model->booking->query_appointments(
+				$appointments = $appointer->model->booking->query_appointments(
 					$criteria,
 					array(
 						'appointment_keys' => array(
@@ -306,13 +306,13 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_avaliable_time_options', function( $schedule, $service_id ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
-				$timeslot = $birchschedule->model->get_service_timeslot( $service_id );
-				$padding_before = $birchschedule->model->get_service_padding_before( $service_id );
-				$service_length = $birchschedule->model->get_service_length( $service_id );
-				$padding_after = $birchschedule->model->get_service_padding_after( $service_id );
-				$capacity = $birchschedule->model->get_service_capacity( $service_id );
+				$timeslot = $appointer->model->get_service_timeslot( $service_id );
+				$padding_before = $appointer->model->get_service_padding_before( $service_id );
+				$service_length = $appointer->model->get_service_length( $service_id );
+				$padding_after = $appointer->model->get_service_padding_after( $service_id );
+				$capacity = $appointer->model->get_service_capacity( $service_id );
 
 				$time_options = array();
 				$start = $schedule['minutes_start'];
@@ -341,10 +341,10 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 		birch_defn( $ns, 'get_staff_avaliable_time', function(
 				$staff_id, $location_id, $service_id, $date ) use ( $ns ) {
 
-				global $birchschedule;
+				global $appointer;
 
 				$wday = $date->format( 'w' );
-				$staff_schedule = $birchschedule->model->schedule->get_staff_calculated_schedule_by_location( $staff_id, $location_id );
+				$staff_schedule = $appointer->model->schedule->get_staff_calculated_schedule_by_location( $staff_id, $location_id );
 				if ( isset( $staff_schedule['schedules'][$wday] ) ) {
 					$day_schedules = $staff_schedule['schedules'][$wday];
 				} else {
@@ -358,7 +358,7 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 				$avaliable_schedules =
 				$ns->get_avaliable_schedules_by_date( $day_schedules, $date );
 
-				$busy_times = $birchschedule->model->schedule->get_staff_busy_time( $staff_id, $location_id, $date );
+				$busy_times = $appointer->model->schedule->get_staff_busy_time( $staff_id, $location_id, $date );
 				$avaliable_exceptions =
 				$ns->get_avaliable_schedules_by_date( $day_exceptions, $date );
 				$busy_exceptions = $ns->convert_busy_times_to_exceptions( $busy_times );
@@ -375,15 +375,15 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_fully_booked_days', function() use ( $ns ) {
-				$options = get_option( 'birchschedule_schedule_fully_booked' );
+				$options = get_option( 'appointer_schedule_fully_booked' );
 				if ( $options == false ) {
-					add_option( 'birchschedule_schedule_fully_booked', array() );
+					add_option( 'appointer_schedule_fully_booked', array() );
 				}
 				return $options;
 			} );
 
 		birch_defn( $ns, 'clean_past_fully_booked', function( $fully_booked ) use ( $ns ) {
-				global $birchschedule, $birchpress;
+				global $appointer, $birchpress;
 
 				$result = array();
 				foreach ( $fully_booked as $date_text => $value ) {
@@ -399,23 +399,23 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 		birch_defn( $ns, 'mark_fully_booked_day', function(
 				$staff_id, $location_id, $service_id, $date_text ) use ( $ns ) {
 
-				global $birchschedule;
+				global $appointer;
 
-				$fully_booked = $birchschedule->model->schedule->get_fully_booked_days();
-				$fully_booked = $birchschedule->model->schedule->clean_past_fully_booked( $fully_booked );
+				$fully_booked = $appointer->model->schedule->get_fully_booked_days();
+				$fully_booked = $appointer->model->schedule->clean_past_fully_booked( $fully_booked );
 				if ( $staff_id != -1 ) {
 					$fully_booked[$date_text][$staff_id][$location_id][$service_id] = true;
 				}
-				update_option( 'birchschedule_schedule_fully_booked', $fully_booked );
+				update_option( 'appointer_schedule_fully_booked', $fully_booked );
 			} );
 
 		birch_defn( $ns, 'unmark_fully_booked_day', function(
 				$staff_id, $location_id, $service_id, $date_text ) use ( $ns ) {
 
-				global $birchschedule;
+				global $appointer;
 
-				$fully_booked = $birchschedule->model->schedule->get_fully_booked_days();
-				$fully_booked = $birchschedule->model->schedule->clean_past_fully_booked( $fully_booked );
+				$fully_booked = $appointer->model->schedule->get_fully_booked_days();
+				$fully_booked = $appointer->model->schedule->clean_past_fully_booked( $fully_booked );
 				if ( $staff_id != -1 ) {
 					if ( isset( $fully_booked[$date_text] ) && isset( $fully_booked[$date_text][$staff_id] ) &&
 						isset( $fully_booked[$date_text][$staff_id][$location_id] ) &&
@@ -424,7 +424,7 @@ birch_ns( 'birchschedule.model.schedule', function( $ns ) {
 						unset( $fully_booked[$date_text][$staff_id][$location_id][$service_id] );
 					}
 				}
-				update_option( 'birchschedule_schedule_fully_booked', $fully_booked );
+				update_option( 'appointer_schedule_fully_booked', $fully_booked );
 			} );
 
 	} );

@@ -1,5 +1,5 @@
 <?php
 
-birch_ns( 'birchschedule.model.cpt', function( $ns ) {
+birch_ns( 'appointer.model.cpt', function( $ns ) {
 
 	} );

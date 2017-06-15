@@ -3,7 +3,7 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.appointments.edit.clientlist');
+    var ns = namespace('appointer.view.appointments.edit.clientlist');
 
     var multimethod = function(fn) {
 
@@ -41,6 +41,6 @@
     	});
     });
 
-    addAction('birchschedule.initAfter', ns.init);
+    addAction('appointer.initAfter', ns.init);
 
 })(jQuery);

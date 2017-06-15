@@ -1,33 +1,33 @@
 <?php
 
-birch_ns( 'birchschedule.view.appointments.edit.clientlist', function( $ns ) {
+birch_ns( 'appointer.view.appointments.edit.clientlist', function( $ns ) {
 
-        global $birchschedule;
+        global $appointer;
 
         birch_defn( $ns, 'init', function() use ( $ns ) {
                 add_action( 'admin_init', array( $ns, 'wp_admin_init' ) );
-                add_action( 'birchschedule_view_register_common_scripts_after',
+                add_action( 'appointer_view_register_common_scripts_after',
                     array( $ns, 'register_scripts' ) );
             } );
 
         birch_defn( $ns, 'wp_admin_init', function() use( $ns ) {
 
-                add_action( 'birchschedule_view_appointments_edit_add_meta_boxes_after',
+                add_action( 'appointer_view_appointments_edit_add_meta_boxes_after',
                     array( $ns, 'add_meta_boxes' ) );
 
-                add_action( 'birchschedule_view_enqueue_scripts_post_edit_after',
+                add_action( 'appointer_view_enqueue_scripts_post_edit_after',
                     array( $ns, 'enqueue_scripts_post_edit' ) );
 
             } );
 
         birch_defn( $ns, 'register_scripts', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $version = $birchschedule->get_product_version();
+                $version = $appointer->get_product_version();
 
-                wp_register_script( 'birchschedule_view_appointments_edit_clientlist',
-                    $birchschedule->plugin_url() . '/assets/js/view/appointments/edit/clientlist/base.js',
-                    array( 'birchschedule_view_admincommon', 'birchschedule_view', 'jquery-ui-datepicker' ), "$version" );
+                wp_register_script( 'appointer_view_appointments_edit_clientlist',
+                    $appointer->plugin_url() . '/assets/js/view/appointments/edit/clientlist/base.js',
+                    array( 'appointer_view_admincommon', 'appointer_view', 'jquery-ui-datepicker' ), "$version" );
 
             } );
 
@@ -37,19 +37,19 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist', function( $ns ) {
                     return;
                 }
 
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
-                $birchschedule->view->enqueue_scripts(
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
+                $appointer->view->enqueue_scripts(
                     array(
-                        'birchschedule_view_appointments_edit_clientlist'
+                        'appointer_view_appointments_edit_clientlist'
                     )
                 );
             } );
 
         birch_defn( $ns, 'get_clients_meta_box_title', function() {
-                return __( 'Client Info', 'birchschedule' );
+                return __( 'Client Info', 'appointer' );
             } );
 
         birch_defn( $ns, 'add_meta_boxes', function() use ( $ns ) {
@@ -59,7 +59,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist', function( $ns ) {
             } );
 
         birch_defn( $ns, 'render_clients', function( $post ) {
-                $testListTable = new Birchschedule_View_Appointments_Edit_Clientlist_Table( $post->ID );
+                $testListTable = new Appointer_View_Appointments_Edit_Clientlist_Table( $post->ID );
                 $testListTable->prepare_items();
                 $testListTable->display();
             } );
@@ -91,9 +91,9 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_columns', function( $wp_list_table ) {
-                global $birchschedule;
+                global $appointer;
 
-                $labels = $birchschedule->view->bookingform->get_fields_labels();
+                $labels = $appointer->view->bookingform->get_fields_labels();
                 return $columns = array(
                     'title' => $labels['client_name_first'],
                     'client_name_last' => $labels['client_name_last'],
@@ -135,7 +135,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist', function( $ns ) {
             } );
 
         birch_defn( $ns, 'prepare_items', function( $wp_list_table ) use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
                 $perpage = $ns->get_item_count_per_page();
                 $columns = $wp_list_table->get_columns();
@@ -146,7 +146,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist', function( $ns ) {
 
                 $screen = get_current_screen();
 
-                $appointment1on1s = $birchschedule->model->query(
+                $appointment1on1s = $appointer->model->query(
                     array(
                         'post_type' => 'birs_appointment1on1',
                         'post_status' => array( 'publish' ),
@@ -209,7 +209,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist', function( $ns ) {
                         '_birs_client_email', '_birs_client_phone'
                     )
                 );
-                $items = $birchschedule->model->query( $query, $config );
+                $items = $appointer->model->query( $query, $config );
 
                 $items = array_values( $items );
 
@@ -222,7 +222,7 @@ if ( !class_exists( 'WP_List_Table' ) ) {
     require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
 }
 
-class Birchschedule_View_Appointments_Edit_Clientlist_Table extends WP_List_Table {
+class Appointer_View_Appointments_Edit_Clientlist_Table extends WP_List_Table {
 
     var $appointment_id;
 
@@ -233,41 +233,41 @@ class Birchschedule_View_Appointments_Edit_Clientlist_Table extends WP_List_Tabl
     var $package;
 
     function __construct( $appointment_id ) {
-        global $birchschedule;
+        global $appointer;
 
-        $this->package = $birchschedule->view->appointments->edit->clientlist;
+        $this->package = $appointer->view->appointments->edit->clientlist;
         $args = $this->package->get_construct_args( $this );
         parent::__construct( $args );
         $this->appointment_id = $appointment_id;
     }
 
     function column_title( $item ) {
-        global $birchschedule;
+        global $appointer;
         return $this->package->column_title( $this, $item );
     }
 
     function column_default( $item, $column_name ) {
-        global $birchschedule;
+        global $appointer;
         return $this->package->column_default( $this, $item, $column_name );
     }
 
     function get_columns() {
-        global $birchschedule;
+        global $appointer;
         return $this->package->get_columns( $this );
     }
 
     function get_sortable_columns() {
-        global $birchschedule;
+        global $appointer;
         return $this->package->get_sortable_columns( $this );
     }
 
     function single_row( $item ) {
-        global $birchschedule;
+        global $appointer;
         $this->package->single_row( $this, $item );
     }
 
     function prepare_items() {
-        global $birchschedule;
+        global $appointer;
         return $this->package->prepare_items( $this );
     }
 }

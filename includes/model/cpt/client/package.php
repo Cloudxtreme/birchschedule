@@ -1,14 +1,14 @@
 <?php
 
-birch_ns( 'birchschedule.model.cpt.client', function( $ns ) {
+birch_ns( 'appointer.model.cpt.client', function( $ns ) {
 
-		global $birchschedule;
+		global $appointer;
 
-		birch_defn( $ns, 'init', function() use ( $ns, $birchschedule ) {
+		birch_defn( $ns, 'init', function() use ( $ns, $appointer ) {
 
-				birch_defmethod( $birchschedule->model, 'pre_save', 'birs_client', $ns->pre_save );
-				birch_defmethod( $birchschedule->model, 'save', 'birs_client', $ns->save );
-				birch_defmethod( $birchschedule->model, 'post_get', 'birs_client', $ns->post_get );
+				birch_defmethod( $appointer->model, 'pre_save', 'birs_client', $ns->pre_save );
+				birch_defmethod( $appointer->model, 'save', 'birs_client', $ns->save );
+				birch_defmethod( $appointer->model, 'post_get', 'birs_client', $ns->post_get );
 			} );
 
 		birch_defn( $ns, 'pre_save', function( $client, $config ) {
@@ -25,8 +25,8 @@ birch_ns( 'birchschedule.model.cpt.client', function( $ns ) {
 				return $client;
 			} );
 
-		birch_defn( $ns, 'save', function( $client, $config ) use( $ns, $birchschedule ) {
-				return $birchschedule->model->save->fns['_root']( $client, $config );
+		birch_defn( $ns, 'save', function( $client, $config ) use( $ns, $appointer ) {
+				return $appointer->model->save->fns['_root']( $client, $config );
 			} );
 
 		birch_defn( $ns, 'post_get', function( $client ) {

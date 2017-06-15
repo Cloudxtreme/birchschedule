@@ -1,85 +1,97 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirchPress Scheduler\n"
+"Project-Id-Version: Appointer v1.3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-06 22:11-0800\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2014-09-06 22:01-0800\n"
+"PO-Revision-Date: 2014-09-06 22:01-0800\n"
 "Last-Translator: BirchPress <support@birchpress.com>\n"
-"Language-Team: BirchPress Team <support@birchpress.com>\n"
-"Language: en_US\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: _e;__;esc_attr__;esc_attr_e;esc_html__;esc_html_e;_x;"
-"_ex;esc_attr_x;esc_html_x;_n;_nx;_n_noop;_nx_noop\n"
-"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n"
+"+9)%10>3 ? 2 : 1;\n"
 "X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:214
 #: birchpress/includes/birchpress/util/imp.php:1066
 #: birchpress/includes/birchpress/util/imp.php:1075
 #: birchpress/includes/birchpress/util/imp.php:1147
 msgid "Sun"
-msgstr "Dim"
+msgstr "Ned"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:215
 #: birchpress/includes/birchpress/util/imp.php:1067
 #: birchpress/includes/birchpress/util/imp.php:1076
 #: birchpress/includes/birchpress/util/imp.php:1148
 msgid "Mon"
-msgstr "Lun"
+msgstr "Pon"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:216
 #: birchpress/includes/birchpress/util/imp.php:1068
 #: birchpress/includes/birchpress/util/imp.php:1077
 #: birchpress/includes/birchpress/util/imp.php:1149
 msgid "Tue"
-msgstr "Mar"
+msgstr "Uto"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:217
 #: birchpress/includes/birchpress/util/imp.php:1069
 #: birchpress/includes/birchpress/util/imp.php:1078
 #: birchpress/includes/birchpress/util/imp.php:1150
 msgid "Wed"
-msgstr "Mer"
+msgstr "Sri"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:218
 #: birchpress/includes/birchpress/util/imp.php:1070
 #: birchpress/includes/birchpress/util/imp.php:1079
 #: birchpress/includes/birchpress/util/imp.php:1151
 msgid "Thu"
-msgstr "Jeu"
+msgstr "Čet"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:219
 #: birchpress/includes/birchpress/util/imp.php:1071
 #: birchpress/includes/birchpress/util/imp.php:1080
 #: birchpress/includes/birchpress/util/imp.php:1152
 msgid "Fri"
-msgstr "Ven"
+msgstr "Pet"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:220
 #: birchpress/includes/birchpress/util/imp.php:1072
 #: birchpress/includes/birchpress/util/imp.php:1081
 #: birchpress/includes/birchpress/util/imp.php:1153
 msgid "Sat"
-msgstr "Sam"
+msgstr "Sub"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:226
-#: includes/birchschedule/view/calendar/imp.php:256
+#: includes/appointer/view/calendar/imp.php:256
 msgid "Month"
-msgstr "Mois"
+msgstr "Mjesec"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:227
-#: includes/birchschedule/view/calendar/imp.php:260
+#: includes/appointer/view/calendar/imp.php:260
 msgid "Week"
-msgstr "Semaine"
+msgstr "Tjedan"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:228
-#: includes/birchschedule/view/calendar/imp.php:264
+#: includes/appointer/view/calendar/imp.php:264
 msgid "Day"
-msgstr "Jour"
+msgstr "Dan"
 
 #: birchpress/includes/birchpress/util/imp.php:234
 msgid "Afghanistan"
@@ -129,13 +141,17 @@ msgstr ""
 msgid "Aruba"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:246
+#, fuzzy
 msgid "Australia"
-msgstr ""
+msgstr "australijski dolar"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:247
+#, fuzzy
 msgid "Austria"
-msgstr ""
+msgstr "australijski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:248
 msgid "Azerbaijan"
@@ -197,9 +213,11 @@ msgstr ""
 msgid "Bouvet Island"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:263
+#, fuzzy
 msgid "Brazil"
-msgstr ""
+msgstr "brazilski real"
 
 #: birchpress/includes/birchpress/util/imp.php:264
 msgid "British Indian Ocean Territory"
@@ -261,9 +279,11 @@ msgstr ""
 msgid "Christmas Island"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:279
+#, fuzzy
 msgid "Cocos (Keeling) Islands"
-msgstr ""
+msgstr "hongkonški dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:280
 msgid "Colombia"
@@ -281,9 +301,11 @@ msgstr ""
 msgid "Congo, The Democratic Republic Of The"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:284
+#, fuzzy
 msgid "Cook Islands"
-msgstr ""
+msgstr "hongkonški dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:285
 msgid "Costa Rica"
@@ -389,9 +411,11 @@ msgstr ""
 msgid "French Polynesia"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:311
+#, fuzzy
 msgid "French Southern Territories"
-msgstr ""
+msgstr "Nova usluga"
 
 #: birchpress/includes/birchpress/util/imp.php:312
 msgid "Gabon"
@@ -421,9 +445,11 @@ msgstr ""
 msgid "Greece"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:319
+#, fuzzy
 msgid "Greenland"
-msgstr ""
+msgstr "novozelandski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:320
 msgid "Grenada"
@@ -469,9 +495,11 @@ msgstr ""
 msgid "Honduras"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:331
+#, fuzzy
 msgid "Hong Kong"
-msgstr ""
+msgstr "hongkonški dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:332
 msgid "Hungary"
@@ -597,13 +625,17 @@ msgstr ""
 msgid "Madagascar"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:363
+#, fuzzy
 msgid "Malawi"
-msgstr ""
+msgstr "malezijski ringit"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:364
+#, fuzzy
 msgid "Malaysia"
-msgstr ""
+msgstr "malezijski ringit"
 
 #: birchpress/includes/birchpress/util/imp.php:365
 msgid "Maldives"
@@ -637,9 +669,11 @@ msgstr ""
 msgid "Mayotte"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:373
+#, fuzzy
 msgid "Mexico"
-msgstr ""
+msgstr "meksički pezos"
 
 #: birchpress/includes/birchpress/util/imp.php:374
 msgid "Micronesia, Federated States Of"
@@ -685,21 +719,27 @@ msgstr ""
 msgid "Nepal"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:385
+#, fuzzy
 msgid "Netherlands"
-msgstr ""
+msgstr "novozelandski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:386
 msgid "Netherlands Antilles"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:387
+#, fuzzy
 msgid "New Caledonia"
-msgstr ""
+msgstr "Novi klijent"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:388
+#, fuzzy
 msgid "New Zealand"
-msgstr ""
+msgstr "novozelandski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:389
 msgid "Nicaragua"
@@ -717,9 +757,11 @@ msgstr ""
 msgid "Niue"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:393
+#, fuzzy
 msgid "Norfolk Island"
-msgstr ""
+msgstr "hongkonški dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:394
 msgid "Northern Mariana Islands"
@@ -757,9 +799,11 @@ msgstr ""
 msgid "Peru"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:403
+#, fuzzy
 msgid "Philippines"
-msgstr ""
+msgstr "filipinski pezos"
 
 #: birchpress/includes/birchpress/util/imp.php:404
 msgid "Pitcairn"
@@ -837,9 +881,11 @@ msgstr ""
 msgid "Sierra Leone"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:423
+#, fuzzy
 msgid "Singapore"
-msgstr ""
+msgstr "singapurski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:424
 msgid "Slovakia (Slovak Republic)"
@@ -849,9 +895,11 @@ msgstr ""
 msgid "Slovenia"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:426
+#, fuzzy
 msgid "Solomon Islands"
-msgstr ""
+msgstr "hongkonški dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:427
 msgid "Somalia"
@@ -893,9 +941,11 @@ msgstr ""
 msgid "Svalbard And Jan Mayen Islands"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:437
+#, fuzzy
 msgid "Swaziland"
-msgstr ""
+msgstr "novozelandski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:438
 msgid "Sweden"
@@ -1001,9 +1051,11 @@ msgstr ""
 msgid "Venezuela"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:464
+#, fuzzy
 msgid "Viet Nam"
-msgstr ""
+msgstr "Ime klijenta"
 
 #: birchpress/includes/birchpress/util/imp.php:465
 msgid "Virgin Islands (British)"
@@ -1257,17 +1309,21 @@ msgstr ""
 msgid "New South Wales"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:543
+#, fuzzy
 msgid "Northern Territory"
-msgstr ""
+msgstr "Nova usluga"
 
 #: birchpress/includes/birchpress/util/imp.php:544
 msgid "Queensland"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:545
+#, fuzzy
 msgid "South Australia"
-msgstr ""
+msgstr "australijski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:546
 msgid "Tasmania"
@@ -1277,9 +1333,11 @@ msgstr ""
 msgid "Victoria"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:548
+#, fuzzy
 msgid "Western Australia"
-msgstr ""
+msgstr "australijski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:551
 msgid "Acre"
@@ -1405,13 +1463,17 @@ msgstr ""
 msgid "New Brunswick"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:584
+#, fuzzy
 msgid "Newfoundland"
-msgstr ""
+msgstr "novozelandski dolar"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:585
+#, fuzzy
 msgid "Northwest Territories"
-msgstr ""
+msgstr "Nova usluga"
 
 #: birchpress/includes/birchpress/util/imp.php:586
 msgid "Nova Scotia"
@@ -1437,9 +1499,11 @@ msgstr ""
 msgid "Saskatchewan"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:592
+#, fuzzy
 msgid "Yukon Territory"
-msgstr ""
+msgstr "Nova usluga"
 
 #: birchpress/includes/birchpress/util/imp.php:595
 msgid "Yunnan / &#20113;&#21335;"
@@ -1717,9 +1781,11 @@ msgstr ""
 msgid "Ourense"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:666
+#, fuzzy
 msgid "Palencia"
-msgstr ""
+msgstr "Kalendar"
 
 #: birchpress/includes/birchpress/util/imp.php:667
 msgid "Pontevedra"
@@ -1757,9 +1823,11 @@ msgstr ""
 msgid "Toledo"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:676
+#, fuzzy
 msgid "Valencia"
-msgstr ""
+msgstr "Kalendar"
 
 #: birchpress/includes/birchpress/util/imp.php:677
 msgid "Valladolid"
@@ -1777,17 +1845,21 @@ msgstr ""
 msgid "Zaragoza"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:683
+#, fuzzy
 msgid "Hong Kong Island"
-msgstr ""
+msgstr "hongkonški dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:684
 msgid "Kowloon"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:685
+#, fuzzy
 msgid "New Territories"
-msgstr ""
+msgstr "Nova usluga"
 
 #: birchpress/includes/birchpress/util/imp.php:688
 msgid "Bács-Kiskun"
@@ -1857,9 +1929,11 @@ msgstr ""
 msgid "Tolna"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:705
+#, fuzzy
 msgid "Vas"
-msgstr ""
+msgstr "Promjenjivo"
 
 #: birchpress/includes/birchpress/util/imp.php:706
 msgid "Veszprém"
@@ -2128,9 +2202,11 @@ msgstr ""
 msgid "Karnataka"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:775
+#, fuzzy
 msgid "Kerala"
-msgstr ""
+msgstr "Opće"
 
 #: birchpress/includes/birchpress/util/imp.php:776
 msgid "Madhya Pradesh"
@@ -2144,17 +2220,21 @@ msgstr ""
 msgid "Manipur"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:779
+#, fuzzy
 msgid "Meghalaya"
-msgstr ""
+msgstr "malezijski ringit"
 
 #: birchpress/includes/birchpress/util/imp.php:780
 msgid "Mizoram"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:781
+#, fuzzy
 msgid "Nagaland"
-msgstr ""
+msgstr "novozelandski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:782
 msgid "Orissa"
@@ -2675,113 +2755,138 @@ msgstr ""
 msgid "Western Cape"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:929
 msgid "U.S. Dollar"
-msgstr ""
+msgstr "američki dolar"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:930
 msgid "Euro"
-msgstr ""
+msgstr "euro"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:931
 msgid "Pounds Sterling"
-msgstr ""
+msgstr "funta"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:932
 msgid "Australian Dollar"
-msgstr ""
+msgstr "australijski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:933
 msgid "Bahraini dinar"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:934
 msgid "Brazilian Real"
-msgstr ""
+msgstr "brazilski real"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:935
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "kanadski dolar"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:936
 msgid "Chinese RMB"
-msgstr ""
+msgstr "kineski RMB"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:937
 msgid "Czech Koruna"
-msgstr ""
+msgstr "češka kruna"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:938
 msgid "Danish Krone"
-msgstr ""
+msgstr "danska kruna"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:939
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "hongkonški dolar"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:940
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "mađarska forinta"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:941
 msgid "Indian Rupee"
-msgstr ""
+msgstr "indijska rupija"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:942
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "izraelski novi šekel"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:943
 msgid "Japanese Yen"
-msgstr ""
+msgstr "japanski jen"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:944
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "malezijski ringit"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:945
 msgid "Mexican Peso"
-msgstr ""
+msgstr "meksički pezos"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:946
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "novozelandski dolar"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:947
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "norveška kruna"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:948
 msgid "Philippine Peso"
-msgstr ""
+msgstr "filipinski pezos"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:949
 msgid "Polish Zloty"
-msgstr ""
+msgstr "poljski zlot"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:950
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "singapurski dolar"
 
 #: birchpress/includes/birchpress/util/imp.php:951
 msgid "South Africa Rand"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:952
 msgid "Swedish Krona"
-msgstr ""
+msgstr "švedska kruna"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:953
 msgid "Swiss Franc"
-msgstr ""
+msgstr "švicarski franak"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:954
 msgid "Taiwan New Dollar"
-msgstr ""
+msgstr "tajvanski novi dolar"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:955
 msgid "Thai Baht"
-msgstr ""
+msgstr "tajlandski baht"
 
 #: birchpress/includes/birchpress/util/imp.php:956
 msgid "Turkish Lira"
@@ -2791,1414 +2896,1695 @@ msgstr ""
 msgid "United Arab Emirates Dirham"
 msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1003
 msgid "Mr"
-msgstr "M."
+msgstr "g."
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1004
 msgid "Mrs"
-msgstr "Mme"
+msgstr "gđa"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1005
 msgid "Miss"
-msgstr "Mlle"
+msgstr "gđica"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1006
 msgid "Ms"
-msgstr "Mme"
+msgstr "gđa"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1007
 msgid "Dr"
-msgstr "Dr"
+msgstr "dr."
 
 #: birchpress/includes/birchpress/util/imp.php:1038
 #: birchpress/includes/birchpress/util/imp.php:1052
 #: birchpress/includes/birchpress/util/imp.php:1124
 msgid "Jan"
-msgstr "Jan"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1039
 #: birchpress/includes/birchpress/util/imp.php:1053
 #: birchpress/includes/birchpress/util/imp.php:1125
 msgid "Feb"
-msgstr "Fev"
+msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1040
 #: birchpress/includes/birchpress/util/imp.php:1054
 #: birchpress/includes/birchpress/util/imp.php:1126
 msgid "Mar"
-msgstr "Mars"
+msgstr "március"
 
 #: birchpress/includes/birchpress/util/imp.php:1041
 #: birchpress/includes/birchpress/util/imp.php:1055
 #: birchpress/includes/birchpress/util/imp.php:1127
 msgid "Apr"
-msgstr "Avr"
+msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1042
 #: birchpress/includes/birchpress/util/imp.php:1056
 #: birchpress/includes/birchpress/util/imp.php:1114
 #: birchpress/includes/birchpress/util/imp.php:1128
 msgid "May"
-msgstr "Mai"
+msgstr "május"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1043
 #: birchpress/includes/birchpress/util/imp.php:1057
 #: birchpress/includes/birchpress/util/imp.php:1129
 msgid "Jun"
-msgstr "Juin"
+msgstr "jún"
 
 #: birchpress/includes/birchpress/util/imp.php:1044
 #: birchpress/includes/birchpress/util/imp.php:1058
 #: birchpress/includes/birchpress/util/imp.php:1130
 msgid "Jul"
-msgstr "Juil"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1045
 #: birchpress/includes/birchpress/util/imp.php:1059
 #: birchpress/includes/birchpress/util/imp.php:1131
 msgid "Aug"
-msgstr "Aout"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1046
 #: birchpress/includes/birchpress/util/imp.php:1060
 #: birchpress/includes/birchpress/util/imp.php:1132
 msgid "Sep"
-msgstr "Sept"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1047
 #: birchpress/includes/birchpress/util/imp.php:1061
 #: birchpress/includes/birchpress/util/imp.php:1133
 msgid "Oct"
-msgstr "Oct"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1048
 #: birchpress/includes/birchpress/util/imp.php:1062
 #: birchpress/includes/birchpress/util/imp.php:1134
 msgid "Nov"
-msgstr "Nov"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1049
 #: birchpress/includes/birchpress/util/imp.php:1063
 #: birchpress/includes/birchpress/util/imp.php:1135
 msgid "Dec"
-msgstr "Dec"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1084
 msgid "today"
-msgstr "aujourd'hui"
+msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1085
+#, fuzzy
 msgid "month"
-msgstr "mois"
+msgstr "Mjesec"
 
 #: birchpress/includes/birchpress/util/imp.php:1086
 msgid "week"
-msgstr "semaine"
+msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1087
+#, fuzzy
 msgid "day"
-msgstr "jour"
+msgstr "Dan"
 
 #: birchpress/includes/birchpress/util/imp.php:1110
 msgid "January"
-msgstr "Janvier"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1111
 msgid "February"
-msgstr "Février"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1112
 msgid "March"
-msgstr "Mars"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1113
 msgid "April"
-msgstr "Avril"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1115
 msgid "June"
-msgstr "Juin"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1116
 msgid "July"
-msgstr "Juillet"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1117
 msgid "August"
-msgstr "Aout"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1118
 msgid "September"
-msgstr "Septembre"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1119
 msgid "October"
-msgstr "Octobre"
+msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1120
 msgid "November"
-msgstr "Novembre"
+msgstr "November"
 
 #: birchpress/includes/birchpress/util/imp.php:1121
 msgid "December"
-msgstr "Décembre"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1138
 msgid "Sunday"
-msgstr "Dimanche"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1139
 msgid "Monday"
-msgstr "Lundi"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1140
 msgid "Tuesday"
-msgstr "Mardi"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1141
 msgid "Wednesday"
-msgstr "Mercredi"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1142
 msgid "Thursday"
-msgstr "Jeudi"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1143
 msgid "Friday"
-msgstr "Vendredi"
+msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1144
 msgid "Saturday"
-msgstr "Samedi"
+msgstr ""
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1156
 msgid "Su"
-msgstr "Di"
+msgstr "Va"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1157
 msgid "Mo"
-msgstr "Lu"
+msgstr "Hé"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1158
 msgid "Tu"
-msgstr "Ma"
+msgstr "Ke"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1159
 msgid "We"
-msgstr "Me"
+msgstr "Sz"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1160
 msgid "Th"
-msgstr "Je"
+msgstr "Cs"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1161
 msgid "Fr"
-msgstr "Ve"
+msgstr "Pé"
 
+# @ appointer
 #: birchpress/includes/birchpress/util/imp.php:1162
 msgid "Sa"
-msgstr "Sa"
+msgstr "Sz"
 
-#: includes/birchschedule/model/booking/imp.php:42
-#, php-format
+# @ appointer
+#: includes/appointer/model/booking/imp.php:42
+#, fuzzy, php-format
 msgid "%s Clients"
-msgstr "%s clients"
+msgstr "Klijenti"
 
-#: includes/birchschedule/model/booking/imp.php:166
-#: includes/birchschedule/model/booking/imp.php:186
-#: includes/birchschedule/model/booking/imp.php:222
-#: includes/birchschedule/model/booking/imp.php:533
-#: includes/birchschedule/model/booking/imp.php:562
-#: includes/birchschedule/model/booking/imp.php:613
-#: includes/birchschedule/model/booking/imp.php:630
-#: includes/birchschedule/model/booking/imp.php:786
+# @ appointer
+#: includes/appointer/model/booking/imp.php:166
+#: includes/appointer/model/booking/imp.php:186
+#: includes/appointer/model/booking/imp.php:222
+#: includes/appointer/model/booking/imp.php:533
+#: includes/appointer/model/booking/imp.php:562
+#: includes/appointer/model/booking/imp.php:613
+#: includes/appointer/model/booking/imp.php:630
+#: includes/appointer/model/booking/imp.php:786
+#, fuzzy
 msgid "The appointment does not exist."
-msgstr "Ce rendez-vous n'existe pas."
+msgstr "Ovdje su spremljeni termini."
 
-#: includes/birchschedule/model/booking/imp.php:817
+#: includes/appointer/model/booking/imp.php:817
 msgid "Credit Card"
-msgstr "Carte de crédit"
+msgstr ""
 
-#: includes/birchschedule/model/booking/imp.php:818
+#: includes/appointer/model/booking/imp.php:818
 msgid "Cash"
-msgstr "Espèces"
+msgstr ""
 
-#: includes/birchschedule/view/imp.php:295
-#: includes/birchschedule/view/imp.php:296
+#: includes/appointer/view/imp.php:295
+#: includes/appointer/view/imp.php:296
 msgid "Business"
-msgstr "Business"
+msgstr ""
 
-#: includes/birchschedule/view/imp.php:300
-#: includes/birchschedule/view/imp.php:301
+# @ appointer
+#: includes/appointer/view/imp.php:300
+#: includes/appointer/view/imp.php:301
 msgid "Calendar"
-msgstr "Calendrier"
+msgstr "Kalendar"
 
-#: includes/birchschedule/view/imp.php:307
-msgid "BirchPress Scheduler Settings"
-msgstr "Paramètres de BirchPress Scheduler"
+# @ appointer
+#: includes/appointer/view/imp.php:307
+msgid "Appointer Settings"
+msgstr "BirchPress postavke rasporeda"
 
-#: includes/birchschedule/view/imp.php:308
+# @ appointer
+#: includes/appointer/view/imp.php:308
 #: modules/fbuilder/field/predefined/clientsection_imp.php:158
 msgid "Settings"
-msgstr "Paramètres"
+msgstr "Postavke"
 
-#: includes/birchschedule/view/imp.php:313
+# @ appointer
+#: includes/appointer/view/imp.php:313
 msgid "Help"
-msgstr "Aide"
+msgstr "Pomoć"
 
-#: includes/birchschedule/view/imp.php:365
+# @ appointer
+#: includes/appointer/view/imp.php:365
 msgid "Loading..."
-msgstr "Chargement..."
+msgstr "Učitavanje..."
 
-#: includes/birchschedule/view/imp.php:366
+# @ appointer
+#: includes/appointer/view/imp.php:366
 msgid "Loading appointments..."
-msgstr "Rendez-vous en cours de chargement..."
+msgstr "Učitavanje termina..."
 
-#: includes/birchschedule/view/imp.php:367
+# @ appointer
+#: includes/appointer/view/imp.php:367
+#, fuzzy
 msgid "Saving..."
-msgstr "Enregistrement en cours..."
+msgstr "Učitavanje..."
 
-#: includes/birchschedule/view/imp.php:368
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:141
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:304
+# @ appointer
+#: includes/appointer/view/imp.php:368
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:141
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:304
 #: modules/fbuilder/field/imp.php:353 modules/gbooking/imp.php:261
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "Spremi"
 
-#: includes/birchschedule/view/imp.php:369
-#: includes/birchschedule/view/appointments/new/imp.php:259
-#: includes/birchschedule/view/bookingform/imp.php:710
+# @ appointer
+#: includes/appointer/view/imp.php:369
+#: includes/appointer/view/appointments/new/imp.php:259
+#: includes/appointer/view/bookingform/imp.php:710
 #: modules/fbuilder/field/predefined/submit_imp.php:108
 #: modules/gbooking/imp.php:250 modules/wintegration/wc_imp.php:727
 msgid "Please wait..."
-msgstr "Veuillez patienter..."
+msgstr "Molimo pričekajte..."
 
-#: includes/birchschedule/view/imp.php:370
-#: includes/birchschedule/view/appointments/new/imp.php:267
+# @ appointer
+#: includes/appointer/view/imp.php:370
+#: includes/appointer/view/appointments/new/imp.php:267
+#, fuzzy
 msgid "Schedule"
-msgstr "Programme"
+msgstr "Raspored"
 
-#: includes/birchschedule/view/imp.php:371
+# @ appointer
+#: includes/appointer/view/imp.php:371
+#, fuzzy
 msgid "Are you sure you want to cancel this appointment?"
-msgstr "Êtes-vous sûr de vouloir annuler ce rendez-vous ?"
+msgstr "Pretraži termine"
 
-#: includes/birchschedule/view/imp.php:372
+# @ appointer
+#: includes/appointer/view/imp.php:372
+#, fuzzy
 msgid "Your appointment has been cancelled successfully."
-msgstr "Votre rendez-vous a été annulé avec succès."
+msgstr "Tvoj termin je uspješno rezerviran."
 
-#: includes/birchschedule/view/imp.php:373
+#: includes/appointer/view/imp.php:373
 msgid "The appointment doesn't exist or has been cancelled."
-msgstr "Le rendez-vous soit n'existe pas, soit il a été annulé."
+msgstr ""
 
-#: includes/birchschedule/view/imp.php:374
+# @ appointer
+#: includes/appointer/view/imp.php:374
+#, fuzzy
 msgid "Your appointment has been rescheduled successfully."
-msgstr "Votre rendez-vous a été reprogrammé avec succès."
+msgstr "Tvoj termin je uspješno rezerviran."
 
-#: includes/birchschedule/view/imp.php:375
+#: includes/appointer/view/imp.php:375
 msgid ""
 "Your appointment can not be cancelled now according to our booking policies."
 msgstr ""
-"Votre rendez-vous ne peut pas être annulé maintenant selon notre politique "
-"relative aux réservations."
 
-#: includes/birchschedule/view/imp.php:376
+#: includes/appointer/view/imp.php:376
 msgid ""
 "Your appointment can not be rescheduled now according to our booking "
 "policies."
 msgstr ""
-"Votre rendez-vous ne peut pas être reprogrammé maintenant selon notre "
-"politique relative aux réservations."
 
-#: includes/birchschedule/view/imp.php:377
+#: includes/appointer/view/imp.php:377
 msgid "There are no available times."
-msgstr "Il n'y a pas de temps disponible."
+msgstr ""
 
-#: includes/birchschedule/view/imp.php:378
+#: includes/appointer/view/imp.php:378
 msgid "(Deposit)"
-msgstr "(Dépôt)"
+msgstr ""
 
-#: includes/birchschedule/view/imp.php:379
-#: includes/birchschedule/view/appointments/edit/imp.php:294
+# @ appointer
+#: includes/appointer/view/imp.php:379
+#: includes/appointer/view/appointments/edit/imp.php:294
 #: modules/aportal/imp.php:625
+#, fuzzy
 msgid "Reschedule"
-msgstr "reprogrammer"
+msgstr "Raspored"
 
-#: includes/birchschedule/view/imp.php:380 modules/eadmin/imp.php:195
+#: includes/appointer/view/imp.php:380 modules/eadmin/imp.php:195
 #: modules/gbooking/imp.php:199
 msgid "Change"
-msgstr "Changer"
+msgstr ""
 
-#: includes/birchschedule/view/imp.php:381
+#: includes/appointer/view/imp.php:381
 msgid "No Preference"
-msgstr "Aucune préférence"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/imp.php:33
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:33
 #: modules/cmanager/imp.php:30
 msgid "Appointments"
-msgstr "Rendez-vous"
+msgstr "Termini"
 
-#: includes/birchschedule/view/appointments/imp.php:34
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:44
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:34
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:44
 msgid "Appointment"
-msgstr "Rendez-vous"
+msgstr "Termin"
 
-#: includes/birchschedule/view/appointments/imp.php:35
-#: includes/birchschedule/view/appointments/imp.php:36
-#: includes/birchschedule/view/appointments/imp.php:39
-#: includes/birchschedule/view/calendar/imp.php:240
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:35
+#: includes/appointer/view/appointments/imp.php:36
+#: includes/appointer/view/appointments/imp.php:39
+#: includes/appointer/view/calendar/imp.php:240
 #: modules/enotification/imp.php:392
 msgid "New Appointment"
-msgstr "Nouveau rendez-vous"
+msgstr "Novi termin"
 
-#: includes/birchschedule/view/appointments/imp.php:37
-#: includes/birchschedule/view/appointments/imp.php:70
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:47
-#: includes/birchschedule/view/clients/imp.php:35
-#: includes/birchschedule/view/locations/imp.php:36
-#: includes/birchschedule/view/services/imp.php:37
-#: includes/birchschedule/view/staff/imp.php:38
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:37
+#: includes/appointer/view/appointments/imp.php:70
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:47
+#: includes/appointer/view/clients/imp.php:35
+#: includes/appointer/view/locations/imp.php:36
+#: includes/appointer/view/services/imp.php:37
+#: includes/appointer/view/staff/imp.php:38
 #: modules/fbuilder/field/imp.php:412 modules/wcredit/imp.php:114
 msgid "Edit"
-msgstr "Modifier"
+msgstr "Uredi"
 
-#: includes/birchschedule/view/appointments/imp.php:38
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:38
 msgid "Edit Appointment"
-msgstr "Modifier le rendez-vous"
+msgstr "Uredi termin"
 
-#: includes/birchschedule/view/appointments/imp.php:40
-#: includes/birchschedule/view/appointments/imp.php:41
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:40
+#: includes/appointer/view/appointments/imp.php:41
 msgid "View Appointment"
-msgstr "Voir le rendez-vous"
+msgstr "Vidi termin"
 
-#: includes/birchschedule/view/appointments/imp.php:42
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:42
 msgid "Search Appointments"
-msgstr "Rechercher des rendez-vous"
+msgstr "Pretraži termine"
 
-#: includes/birchschedule/view/appointments/imp.php:43
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:43
 msgid "No Appointments found"
-msgstr "Aucun rendez-vous trouvé"
+msgstr "Termin nije pronađen"
 
-#: includes/birchschedule/view/appointments/imp.php:44
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:44
 msgid "No Appointments found in trash"
-msgstr "Aucun rendez-vous trouvé dans la corbeille"
+msgstr "Termin nije pronađen termin"
 
-#: includes/birchschedule/view/appointments/imp.php:45
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:45
 msgid "Parent Appointment"
-msgstr "Répertoire des rendez-vous"
+msgstr "Nadređeni termin"
 
-#: includes/birchschedule/view/appointments/imp.php:47
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:47
 msgid "This is where appointments are stored."
-msgstr "Il s'agit de là où les rendez-vous sont enregistrés."
+msgstr "Ovdje su spremljeni termini."
 
-#: includes/birchschedule/view/appointments/imp.php:66
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:66
+#, fuzzy
 msgid "One-on-one appointments"
-msgstr "Rendez-vous en tête à tête"
+msgstr "Učitavanje termina..."
 
-#: includes/birchschedule/view/appointments/imp.php:67
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:67
+#, fuzzy
 msgid "One-on-one appointment"
-msgstr "Rendez-vous en tête à tête"
+msgstr "Nadređeni termin"
 
-#: includes/birchschedule/view/appointments/imp.php:68
-#: includes/birchschedule/view/appointments/imp.php:69
-#: includes/birchschedule/view/appointments/imp.php:72
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:68
+#: includes/appointer/view/appointments/imp.php:69
+#: includes/appointer/view/appointments/imp.php:72
+#, fuzzy
 msgid "New One-on-one Appointment"
-msgstr "Nouveau rendez-vous en tête à tête"
+msgstr "Novi termin"
 
-#: includes/birchschedule/view/appointments/imp.php:71
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:71
+#, fuzzy
 msgid "Edit One-on-one Appointment"
-msgstr "Modifier le rendez-vous en tête à tête"
+msgstr "Uredi termin"
 
-#: includes/birchschedule/view/appointments/imp.php:73
-#: includes/birchschedule/view/appointments/imp.php:74
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:73
+#: includes/appointer/view/appointments/imp.php:74
+#, fuzzy
 msgid "View One-on-one Appointment"
-msgstr "Voir le rendez-vous en tête à tête"
+msgstr "Vidi termin"
 
-#: includes/birchschedule/view/appointments/imp.php:75
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:75
+#, fuzzy
 msgid "Search One-on-one Appointments"
-msgstr "Rechercher des rendez-vous en tête à tête"
+msgstr "Pretraži termine"
 
-#: includes/birchschedule/view/appointments/imp.php:76
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:76
+#, fuzzy
 msgid "No One-on-one Appointments found"
-msgstr "Aucun rendez-vous en tête à tête trouvé"
+msgstr "Termin nije pronađen"
 
-#: includes/birchschedule/view/appointments/imp.php:77
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:77
+#, fuzzy
 msgid "No One-on-one Appointments found in trash"
-msgstr "Aucun rendez-vous en tête à tête trouvé dans la corbeille"
+msgstr "Termin nije pronađen termin"
 
-#: includes/birchschedule/view/appointments/imp.php:78
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:78
+#, fuzzy
 msgid "Parent One-on-one Appointment"
-msgstr "Répertoire des rendez-vous en tête à tête"
+msgstr "Nadređeni termin"
 
-#: includes/birchschedule/view/appointments/imp.php:80
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:80
+#, fuzzy
 msgid "This is where one-on-one appointments are stored."
-msgstr "Il s'agit de là où les rendez-vous en tête à tête sont enregistrés."
+msgstr "Ovdje su spremljeni termini."
 
-#: includes/birchschedule/view/appointments/imp.php:104
-#: includes/birchschedule/view/appointments/imp.php:107
-#: includes/birchschedule/view/appointments/imp.php:109
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:104
+#: includes/appointer/view/appointments/imp.php:107
+#: includes/appointer/view/appointments/imp.php:109
+#, fuzzy
 msgid "Appointment updated."
-msgstr "Rendez-vous mis à jour."
+msgstr "Info termina"
 
-#: includes/birchschedule/view/appointments/imp.php:105
-#: includes/birchschedule/view/clients/imp.php:147
-#: includes/birchschedule/view/locations/imp.php:81
-#: includes/birchschedule/view/services/imp.php:133
-#: includes/birchschedule/view/staff/imp.php:126
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:105
+#: includes/appointer/view/clients/imp.php:147
+#: includes/appointer/view/locations/imp.php:81
+#: includes/appointer/view/services/imp.php:133
+#: includes/appointer/view/staff/imp.php:126
 msgid "Custom field updated."
-msgstr "Champ personnalisé mis à jour."
+msgstr "Ažurirano je prilagođeno polje."
 
-#: includes/birchschedule/view/appointments/imp.php:106
-#: includes/birchschedule/view/clients/imp.php:148
-#: includes/birchschedule/view/locations/imp.php:82
-#: includes/birchschedule/view/services/imp.php:134
-#: includes/birchschedule/view/staff/imp.php:127
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:106
+#: includes/appointer/view/clients/imp.php:148
+#: includes/appointer/view/locations/imp.php:82
+#: includes/appointer/view/services/imp.php:134
+#: includes/appointer/view/staff/imp.php:127
 msgid "Custom field deleted."
-msgstr "Champ personnalisé supprimé."
+msgstr "Obrisano je prilagođeno polje."
 
-#: includes/birchschedule/view/appointments/imp.php:108
-#, php-format
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:108
+#, fuzzy, php-format
 msgid "Appointment restored to revision from %s"
-msgstr "Rendez restauré de %s"
+msgstr "Klijent je obnovljen revizijom %s"
 
-#: includes/birchschedule/view/appointments/imp.php:110
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:110
+#, fuzzy
 msgid "Appointment saved."
-msgstr "Rendez-vous enregistré."
+msgstr "Termini"
 
-#: includes/birchschedule/view/appointments/imp.php:111
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:111
+#, fuzzy
 msgid "Appointment submitted."
-msgstr "Rendez-vous soumis."
+msgstr "Klijent je poslan."
 
-#: includes/birchschedule/view/appointments/imp.php:112
-#, php-format
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:112
+#, fuzzy, php-format
 msgid "Appointment scheduled for: <strong>%1$s</strong>."
-msgstr "Rendez-vous programmé pour : <strong>%1$s</strong>."
+msgstr "Klijent je raspoređen za: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/appointments/imp.php:113
+# @ appointer
+#: includes/appointer/view/appointments/imp.php:113
+#, fuzzy
 msgid "Appointment draft updated."
-msgstr "Brouillon du rendez-vous mis à jour."
+msgstr "Ažurirana skica klijenta."
 
-#: includes/birchschedule/view/appointments/edit/imp.php:141
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:141
+#, fuzzy
 msgid "Please select a provider"
-msgstr "Veuillez choisir un fournisseur"
+msgstr "Molimo označite uslugu i"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:144
-#: includes/birchschedule/view/appointments/new/imp.php:296
-#: includes/birchschedule/view/bookingform/imp.php:186
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:144
+#: includes/appointer/view/appointments/new/imp.php:296
+#: includes/appointer/view/bookingform/imp.php:186
 #: modules/aportal/imp.php:684
+#, fuzzy
 msgid "Date is required"
-msgstr "La date est requise"
+msgstr "Datum i vrijeme su obavezni"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:147
-#: includes/birchschedule/view/appointments/new/imp.php:299
-#: includes/birchschedule/view/bookingform/imp.php:189
-#: includes/birchschedule/view/bookingform/imp.php:230
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:147
+#: includes/appointer/view/appointments/new/imp.php:299
+#: includes/appointer/view/bookingform/imp.php:189
+#: includes/appointer/view/bookingform/imp.php:230
 #: modules/aportal/imp.php:687
+#, fuzzy
 msgid "Time is required"
-msgstr "L'heure est requise"
+msgstr "Ime je obavezno"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:157
-#: includes/birchschedule/view/appointments/new/imp.php:309
-#: includes/birchschedule/view/bookingform/imp.php:199
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:157
+#: includes/appointer/view/appointments/new/imp.php:309
+#: includes/appointer/view/bookingform/imp.php:199
 msgid "Date & time is incorrect"
-msgstr "La date et l'heure sont incorrectes"
+msgstr "Datum i vrijeme su nekorektni"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:224
-#: includes/birchschedule/view/appointments/new/imp.php:127
-#: includes/birchschedule/view/bookingform/imp.php:626
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:224
+#: includes/appointer/view/appointments/new/imp.php:127
+#: includes/appointer/view/bookingform/imp.php:626
 #: modules/fbuilder/upgrader.php:27 modules/fbuilder/upgrader.php:349
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:94
 #: modules/wintegration/wc_imp.php:556
 msgid "Appointment Info"
-msgstr "Informations du rendez-vous"
+msgstr "Info termina"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:226
-#: includes/birchschedule/view/appointments/new/imp.php:129
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:226
+#: includes/appointer/view/appointments/new/imp.php:129
+#, fuzzy
 msgid "Actions"
-msgstr "Actions"
+msgstr "Lokacija"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:249
-#: includes/birchschedule/view/appointments/new/imp.php:280
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:249
+#: includes/appointer/view/appointments/new/imp.php:280
+#, fuzzy
 msgid "Back to Calendar"
-msgstr "Retour au calendrier"
+msgstr "Kalendar"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:264
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:264
+#, fuzzy
 msgid "Cancel Appointment"
-msgstr "Annuler le rendez-vous"
+msgstr "Novi termin"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:326
-#: includes/birchschedule/view/appointments/new/imp.php:167
-#: includes/birchschedule/view/bookingform/imp.php:292
-#: includes/birchschedule/view/bookingform/imp.php:553
-#: includes/birchschedule/view/bookingform/imp.php:605
-#: includes/birchschedule/view/locations/imp.php:33
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:326
+#: includes/appointer/view/appointments/new/imp.php:167
+#: includes/appointer/view/bookingform/imp.php:292
+#: includes/appointer/view/bookingform/imp.php:553
+#: includes/appointer/view/bookingform/imp.php:605
+#: includes/appointer/view/locations/imp.php:33
 #: modules/fbuilder/upgrader.php:33 modules/fbuilder/upgrader.php:355
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:98
 #: modules/pcalendar/imp.php:196 modules/ppayment/upgrader.php:42
 msgid "Location"
-msgstr "Lieu"
+msgstr "Lokacija"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:337
-#: includes/birchschedule/view/appointments/new/imp.php:177
-#: includes/birchschedule/view/bookingform/imp.php:296
-#: includes/birchschedule/view/bookingform/imp.php:557
-#: includes/birchschedule/view/bookingform/imp.php:606
-#: includes/birchschedule/view/services/imp.php:34
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:337
+#: includes/appointer/view/appointments/new/imp.php:177
+#: includes/appointer/view/bookingform/imp.php:296
+#: includes/appointer/view/bookingform/imp.php:557
+#: includes/appointer/view/bookingform/imp.php:606
+#: includes/appointer/view/services/imp.php:34
 #: modules/fbuilder/upgrader.php:34 modules/fbuilder/upgrader.php:356
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:102
 #: modules/ppayment/upgrader.php:46
 msgid "Service"
-msgstr "Service"
+msgstr "Usluga"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:348
-#: includes/birchschedule/view/appointments/new/imp.php:187
-#: includes/birchschedule/view/bookingform/imp.php:607
-#: includes/birchschedule/view/staff/imp.php:35
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:348
+#: includes/appointer/view/appointments/new/imp.php:187
+#: includes/appointer/view/bookingform/imp.php:607
+#: includes/appointer/view/staff/imp.php:35
 #: modules/fbuilder/upgrader.php:35 modules/fbuilder/upgrader.php:357
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:106
 #: modules/pcalendar/imp.php:199 modules/ppayment/upgrader.php:50
+#, fuzzy
 msgid "Provider"
-msgstr "Fournisseur"
+msgstr "Pružatelj usluge"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:359
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:262
-#: includes/birchschedule/view/appointments/new/imp.php:198
-#: includes/birchschedule/view/bookingform/imp.php:608
+#: includes/appointer/view/appointments/edit/imp.php:359
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:262
+#: includes/appointer/view/appointments/new/imp.php:198
+#: includes/appointer/view/bookingform/imp.php:608
 #: modules/fbuilder/upgrader.php:209 modules/fbuilder/upgrader.php:292
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:110
 #: modules/wcredit/imp.php:187
 msgid "Date"
-msgstr "Date"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/imp.php:369
-#: includes/birchschedule/view/appointments/new/imp.php:209
-#: includes/birchschedule/view/bookingform/imp.php:300
-#: includes/birchschedule/view/bookingform/imp.php:561
-#: includes/birchschedule/view/bookingform/imp.php:609
+# @ appointer
+#: includes/appointer/view/appointments/edit/imp.php:369
+#: includes/appointer/view/appointments/new/imp.php:209
+#: includes/appointer/view/bookingform/imp.php:300
+#: includes/appointer/view/bookingform/imp.php:561
+#: includes/appointer/view/bookingform/imp.php:609
 #: modules/fbuilder/upgrader.php:210 modules/fbuilder/upgrader.php:293
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:114
 #: modules/ppayment/upgrader.php:54
+#, fuzzy
 msgid "Time"
-msgstr "Heure"
+msgstr "Vrijeme: "
 
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:38
-#: includes/birchschedule/view/appointments/new/imp.php:233
-#: includes/birchschedule/view/clients/imp.php:108
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:38
+#: includes/appointer/view/appointments/new/imp.php:233
+#: includes/appointer/view/clients/imp.php:108
 msgid "Client Info"
-msgstr "Informations du client"
+msgstr "Info klijenta"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:56
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:56
+#, fuzzy
 msgid "View Details"
-msgstr "Voir les détails"
+msgstr "Pojedinosti klijenta"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:57
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:43
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:57
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:43
 #: modules/ppayment/imp.php:87
 msgid "Payments"
-msgstr "Paiements"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:58
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:145
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:308
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:58
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:145
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:308
 #: modules/fbuilder/field/imp.php:354 modules/gbooking/imp.php:265
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:101
-#: includes/birchschedule/view/clients/imp.php:215
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:101
+#: includes/appointer/view/clients/imp.php:215
 msgid "Email already exists."
-msgstr "L'e-mail existe déjà."
+msgstr "Email već postoji."
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:109
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:112
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:120
-#: includes/birchschedule/view/appointments/new/imp.php:318
-#: includes/birchschedule/view/appointments/new/imp.php:321
-#: includes/birchschedule/view/appointments/new/imp.php:329
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:109
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:112
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:120
+#: includes/appointer/view/appointments/new/imp.php:318
+#: includes/appointer/view/appointments/new/imp.php:321
+#: includes/appointer/view/appointments/new/imp.php:329
 #: modules/fbuilder/field/imp.php:364
 #: modules/fbuilder/field/predefined/address_imp.php:50
+#, fuzzy
 msgid "This field is required"
-msgstr "Ce champ est obligatoire"
+msgstr "Ime je obavezno"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:115
-#: includes/birchschedule/view/appointments/new/imp.php:324
-#: includes/birchschedule/view/bookingform/imp.php:214
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:115
+#: includes/appointer/view/appointments/new/imp.php:324
+#: includes/appointer/view/bookingform/imp.php:214
 #: modules/fbuilder/field/predefined/clientemail_imp.php:30
 msgid "Email is required"
-msgstr "L'e-mail est requis"
+msgstr "Email je obavezan"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:117
-#: includes/birchschedule/view/appointments/new/imp.php:326
-#: includes/birchschedule/view/bookingform/imp.php:216
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:117
+#: includes/appointer/view/appointments/new/imp.php:326
+#: includes/appointer/view/bookingform/imp.php:216
 msgid "Email is incorrect"
-msgstr "L'e-mail est incorrect"
+msgstr "Email je nekorektan"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:162
-#: includes/birchschedule/view/clients/imp.php:36
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:162
+#: includes/appointer/view/clients/imp.php:36
 msgid "Edit Client"
-msgstr "Modifier le client"
+msgstr "Uredi klijenta"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:206
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:265
-#: includes/birchschedule/view/bookingform/imp.php:610
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:206
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:265
+#: includes/appointer/view/bookingform/imp.php:610
 #: modules/fbuilder/upgrader.php:42 modules/wcredit/imp.php:189
 msgid "Notes"
-msgstr "Notes"
+msgstr "Bilješke"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:249
-#: includes/birchschedule/view/clients/imp.php:262
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:249
+#: includes/appointer/view/clients/imp.php:262
 #: modules/fbuilder/upgrader.php:65
 msgid "Title"
-msgstr "Titre"
+msgstr "Naziv"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:260
-#: includes/birchschedule/view/bookingform/imp.php:611
-#: includes/birchschedule/view/clients/imp.php:272
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:260
+#: includes/appointer/view/bookingform/imp.php:611
+#: includes/appointer/view/clients/imp.php:272
 #: modules/fbuilder/upgrader.php:75
 msgid "First Name"
-msgstr "Prénom"
+msgstr "Ime"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:269
-#: includes/birchschedule/view/bookingform/imp.php:612
-#: includes/birchschedule/view/clients/imp.php:279
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:269
+#: includes/appointer/view/bookingform/imp.php:612
+#: includes/appointer/view/clients/imp.php:279
 #: modules/fbuilder/upgrader.php:83
 msgid "Last Name"
-msgstr "Nom"
+msgstr "Prezime"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:278
-#: includes/birchschedule/view/bookingform/imp.php:613
-#: includes/birchschedule/view/clients/imp.php:118
-#: includes/birchschedule/view/clients/imp.php:295 modules/fbuilder/imp.php:35
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:278
+#: includes/appointer/view/bookingform/imp.php:613
+#: includes/appointer/view/clients/imp.php:118
+#: includes/appointer/view/clients/imp.php:295 modules/fbuilder/imp.php:35
 #: modules/fbuilder/upgrader.php:91
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:287
-#: includes/birchschedule/view/bookingform/imp.php:614
-#: includes/birchschedule/view/clients/imp.php:117
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:287
+#: includes/appointer/view/bookingform/imp.php:614
+#: includes/appointer/view/clients/imp.php:117
 #: modules/fbuilder/upgrader.php:110
 msgid "Phone"
-msgstr "Téléphone"
+msgstr "Telefon"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:296
-#: includes/birchschedule/view/clients/imp.php:119
-#: includes/birchschedule/view/clients/imp.php:303
-#: includes/birchschedule/view/locations/imp.php:69
-#: includes/birchschedule/view/locations/imp.php:214
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:296
+#: includes/appointer/view/clients/imp.php:119
+#: includes/appointer/view/clients/imp.php:303
+#: includes/appointer/view/locations/imp.php:69
+#: includes/appointer/view/locations/imp.php:214
 #: modules/fbuilder/upgrader.php:118
 msgid "Address"
-msgstr "Adresse"
+msgstr "Adresa"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:307
-#: includes/birchschedule/view/clients/imp.php:315
-#: includes/birchschedule/view/locations/imp.php:70
-#: includes/birchschedule/view/locations/imp.php:224
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:307
+#: includes/appointer/view/clients/imp.php:315
+#: includes/appointer/view/locations/imp.php:70
+#: includes/appointer/view/locations/imp.php:224
 #: modules/fbuilder/upgrader.php:126
 msgid "City"
-msgstr "Ville"
+msgstr "Grad"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:316
-#: includes/birchschedule/view/clients/imp.php:323
-#: includes/birchschedule/view/locations/imp.php:71
-#: includes/birchschedule/view/locations/imp.php:231
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:316
+#: includes/appointer/view/clients/imp.php:323
+#: includes/appointer/view/locations/imp.php:71
+#: includes/appointer/view/locations/imp.php:231
 #: modules/fbuilder/upgrader.php:134
 msgid "State/Province"
-msgstr "État/Province"
+msgstr "Županija /regija"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:332
-#: includes/birchschedule/view/clients/imp.php:338
-#: includes/birchschedule/view/locations/imp.php:241
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:332
+#: includes/appointer/view/clients/imp.php:338
+#: includes/appointer/view/locations/imp.php:241
 #: modules/fbuilder/upgrader.php:142
 msgid "Country"
-msgstr "Pays"
+msgstr "Država"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:343
-#: includes/birchschedule/view/clients/imp.php:347
-#: includes/birchschedule/view/locations/imp.php:249
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:343
+#: includes/appointer/view/clients/imp.php:347
+#: includes/appointer/view/locations/imp.php:249
 #: modules/fbuilder/upgrader.php:152
 msgid "Zip Code"
-msgstr "Code postal"
+msgstr "Poštanski broj"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:45
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:246
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:45
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:246
+#, fuzzy
 msgid "Add Payment"
-msgstr "Ajouter un paiement"
+msgstr "Dodaj klijenta"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:46
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:46
+#, fuzzy
 msgid "Add New Payment"
-msgstr "Ajouter un nouveau paiement"
+msgstr "Dodaj novog klijenta"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:48
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:48
+#, fuzzy
 msgid "Edit Payment"
-msgstr "Modifier le paiement"
+msgstr "Uredi klijenta"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:49
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:49
+#, fuzzy
 msgid "New Payment"
-msgstr "Nouveau paiement"
+msgstr "Novi klijent"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:50
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:51
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:50
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:51
+#, fuzzy
 msgid "View Payment"
-msgstr "Voir le paiement"
+msgstr "Vidi klijenta"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:52
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:52
+#, fuzzy
 msgid "Search Payments"
-msgstr "Rechercher des paiements"
+msgstr "Pretraži klijente"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:53
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:53
+#, fuzzy
 msgid "No Payments found"
-msgstr "Aucun paiement trouvé"
+msgstr "Klijenti nisu pronađeni"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:54
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:54
+#, fuzzy
 msgid "No Payments found in trash"
-msgstr "Aucun paiement trouvé dans la corbeille"
+msgstr "Nema klijenata u smeću"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:55
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:55
+#, fuzzy
 msgid "Parent Payment"
-msgstr "Répertoire des paiements"
+msgstr "Nadređeni klijent"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:57
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:57
+#, fuzzy
 msgid "This is where payments are stored."
-msgstr "Il s'agit de là où les paiements sont enregistrés."
+msgstr "Ovdje se spremaju klijenti."
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:181
-#: includes/birchschedule/view/services/imp.php:229
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:181
+#: includes/appointer/view/services/imp.php:229
 msgid "Price"
-msgstr "Prix"
+msgstr "Cijena"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:192
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:192
 msgid "Paid"
-msgstr "Payé"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:201
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:201
+#, fuzzy
 msgid "Due"
-msgstr "Dû"
+msgstr "Uto"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:213
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:213
 msgid "Amount to Pay"
-msgstr "Montant à payer"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:223
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:223
 msgid "Payment Type"
-msgstr "Type de paiement"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:233
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:233
 msgid "Payment Notes"
-msgstr "Avis de paiement"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:255
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:255
 msgid "Payment History"
-msgstr "Historique des paiements"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:263
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:263
 #: modules/wcredit/imp.php:188
+#, fuzzy
 msgid "Amount"
-msgstr "Montant"
+msgstr "Država"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:264
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:264
 msgid "Type"
-msgstr "Type"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:349
+# @ appointer
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:349
 #: modules/cintegration/imp.php:659 modules/fbuilder/field/imp.php:416
 #: modules/fbuilder/field/selectable_imp.php:69
 #: modules/wintegration/imp.php:357
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "Obriši"
 
-#: includes/birchschedule/view/appointments/new/imp.php:249
+#: includes/appointer/view/appointments/new/imp.php:249
 #: modules/enotification/imp.php:290 modules/gbooking/imp.php:240
 msgid "Additional Info"
-msgstr "Informations supplémentaires"
+msgstr ""
 
-#: includes/birchschedule/view/appointments/new/imp.php:293
-#: includes/birchschedule/view/bookingform/imp.php:183
+# @ appointer
+#: includes/appointer/view/appointments/new/imp.php:293
+#: includes/appointer/view/bookingform/imp.php:183
+#, fuzzy
 msgid "Please select a service and a provider"
-msgstr "Veuillez choisir un service et un fournisseur"
+msgstr "Molimo označite uslugu i"
 
-#: includes/birchschedule/view/bookingform/imp.php:208
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:208
 msgid "First name is required"
-msgstr "Le prénom est requis"
+msgstr "Ime je obavezno"
 
-#: includes/birchschedule/view/bookingform/imp.php:211
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:211
 msgid "Last name is required"
-msgstr "Le nom est requis"
+msgstr "Prezime je obavezno"
 
-#: includes/birchschedule/view/bookingform/imp.php:219
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:219
 msgid "Phone is required"
-msgstr "Le téléphone est requis"
+msgstr "Telefon je obavezan"
 
-#: includes/birchschedule/view/bookingform/imp.php:239
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:239
+#, fuzzy
 msgid "Time is unavailable"
-msgstr "L'heure n'est pas disponible"
+msgstr "Vrijeme nije dostupno"
 
-#: includes/birchschedule/view/bookingform/imp.php:285
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:285
 #: modules/eadmin/imp.php:153
+#, fuzzy
 msgid "Duration"
-msgstr "Durée"
+msgstr "Opis"
 
-#: includes/birchschedule/view/bookingform/imp.php:285
+#: includes/appointer/view/bookingform/imp.php:285
 #: modules/eadmin/imp.php:187
 msgid "mins"
-msgstr "mins"
-
-#: includes/birchschedule/view/bookingform/imp.php:288
-#: includes/birchschedule/view/bookingform/imp.php:549
-msgid "Your appointment has been booked successfully."
-msgstr "Votre rendez-vous a été fixé avec succès."
-
-#: includes/birchschedule/view/bookingform/imp.php:375
-msgid "Please refresh the page and book again."
-msgstr "Veuillez rafraîchir la page et réserver de nouveau."
-
-#: includes/birchschedule/view/bookingform/imp.php:430
-msgid "Please select time..."
-msgstr "Veuillez choisir l'heure..."
-
-#: includes/birchschedule/view/bookingform/imp.php:544
-msgid "Your appointment has not been booked successfully due to some errors."
 msgstr ""
-"Votre rendez-vous n'a pas été fixé avec succès en raison de certaines "
-"erreurs."
 
-#: includes/birchschedule/view/bookingform/imp.php:674
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:288
+#: includes/appointer/view/bookingform/imp.php:549
+msgid "Your appointment has been booked successfully."
+msgstr "Tvoj termin je uspješno rezerviran."
+
+#: includes/appointer/view/bookingform/imp.php:375
+msgid "Please refresh the page and book again."
+msgstr ""
+
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:430
+#, fuzzy
+msgid "Please select time..."
+msgstr "Molimo označite uslugu i"
+
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:544
+#, fuzzy
+msgid "Your appointment has not been booked successfully due to some errors."
+msgstr "Tvoj termin je uspješno rezerviran."
+
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:674
 #: modules/fbuilder/upgrader.php:50 modules/fbuilder/upgrader.php:366
 #: modules/fbuilder/field/predefined/clientsection_imp.php:134
 msgid "Your Info"
-msgstr "Vos informations"
+msgstr "Vaš info"
 
-#: includes/birchschedule/view/bookingform/imp.php:712
+# @ appointer
+#: includes/appointer/view/bookingform/imp.php:712
 #: modules/fbuilder/upgrader.php:160
 #: modules/fbuilder/field/predefined/submit_imp.php:35
 msgid "Submit"
-msgstr "Soumettre"
+msgstr "Pošalji"
 
-#: includes/birchschedule/view/calendar/imp.php:122
+# @ appointer
+#: includes/appointer/view/calendar/imp.php:122
+#, fuzzy
 msgid "All Locations"
-msgstr "Tous les lieux"
+msgstr "Lokacija"
 
-#: includes/birchschedule/view/calendar/imp.php:141
+# @ appointer
+#: includes/appointer/view/calendar/imp.php:141
 #: modules/acontrol/imp.php:144 modules/mstaff/imp.php:104
 #: modules/pcalendar/imp.php:106
+#, fuzzy
 msgid "All Providers"
-msgstr "Tous les fournisseurs"
+msgstr "Pružatelj usluge"
 
-#: includes/birchschedule/view/calendar/imp.php:250
+#: includes/appointer/view/calendar/imp.php:250
 msgid "Today"
-msgstr "Aujourd'hui"
+msgstr ""
 
-#: includes/birchschedule/view/clients/imp.php:31
+# @ appointer
+#: includes/appointer/view/clients/imp.php:31
 msgid "Clients"
-msgstr "Clients"
+msgstr "Klijenti"
 
-#: includes/birchschedule/view/clients/imp.php:32
+# @ appointer
+#: includes/appointer/view/clients/imp.php:32
 msgid "Client"
-msgstr "Client"
+msgstr "Klijent"
 
-#: includes/birchschedule/view/clients/imp.php:33
+# @ appointer
+#: includes/appointer/view/clients/imp.php:33
 msgid "Add Client"
-msgstr "Ajouter un client"
+msgstr "Dodaj klijenta"
 
-#: includes/birchschedule/view/clients/imp.php:34
+# @ appointer
+#: includes/appointer/view/clients/imp.php:34
 msgid "Add New Client"
-msgstr "Ajouter un nouveau client"
+msgstr "Dodaj novog klijenta"
 
-#: includes/birchschedule/view/clients/imp.php:37
+# @ appointer
+#: includes/appointer/view/clients/imp.php:37
 msgid "New Client"
-msgstr "Nouveau client"
+msgstr "Novi klijent"
 
-#: includes/birchschedule/view/clients/imp.php:38
-#: includes/birchschedule/view/clients/imp.php:39
+# @ appointer
+#: includes/appointer/view/clients/imp.php:38
+#: includes/appointer/view/clients/imp.php:39
 msgid "View Client"
-msgstr "Voir le client"
+msgstr "Vidi klijenta"
 
-#: includes/birchschedule/view/clients/imp.php:40
+# @ appointer
+#: includes/appointer/view/clients/imp.php:40
 msgid "Search Clients"
-msgstr "Rechercher des clients"
+msgstr "Pretraži klijente"
 
-#: includes/birchschedule/view/clients/imp.php:41
+# @ appointer
+#: includes/appointer/view/clients/imp.php:41
 msgid "No Clients found"
-msgstr "Aucun client trouvé"
+msgstr "Klijenti nisu pronađeni"
 
-#: includes/birchschedule/view/clients/imp.php:42
+# @ appointer
+#: includes/appointer/view/clients/imp.php:42
 msgid "No Clients found in trash"
-msgstr "Aucun client trouvé dans la corbeille"
+msgstr "Nema klijenata u smeću"
 
-#: includes/birchschedule/view/clients/imp.php:43
+# @ appointer
+#: includes/appointer/view/clients/imp.php:43
 msgid "Parent Client"
-msgstr "Répertoire des clients"
+msgstr "Nadređeni klijent"
 
-#: includes/birchschedule/view/clients/imp.php:45
+# @ appointer
+#: includes/appointer/view/clients/imp.php:45
 msgid "This is where clients are stored."
-msgstr "Il s'agit de là où les clients sont enregistrés."
+msgstr "Ovdje se spremaju klijenti."
 
-#: includes/birchschedule/view/clients/imp.php:116
+# @ appointer
+#: includes/appointer/view/clients/imp.php:116
 msgid "Client Name"
-msgstr "Nom du client"
+msgstr "Ime klijenta"
 
-#: includes/birchschedule/view/clients/imp.php:146
-#: includes/birchschedule/view/clients/imp.php:149
-#: includes/birchschedule/view/clients/imp.php:151
+# @ appointer
+#: includes/appointer/view/clients/imp.php:146
+#: includes/appointer/view/clients/imp.php:149
+#: includes/appointer/view/clients/imp.php:151
 msgid "Client updated."
-msgstr "Client mis à jour."
+msgstr "Klijent ažuriran."
 
-#: includes/birchschedule/view/clients/imp.php:150
+# @ appointer
+#: includes/appointer/view/clients/imp.php:150
 #, php-format
 msgid "Client restored to revision from %s"
-msgstr "Client restauré de %s"
+msgstr "Klijent je obnovljen revizijom %s"
 
-#: includes/birchschedule/view/clients/imp.php:152
+# @ appointer
+#: includes/appointer/view/clients/imp.php:152
 msgid "Client saved."
-msgstr "Client enregistré."
+msgstr "Klijent je spremljen"
 
-#: includes/birchschedule/view/clients/imp.php:153
+# @ appointer
+#: includes/appointer/view/clients/imp.php:153
 msgid "Client submitted."
-msgstr "Client soumis."
+msgstr "Klijent je poslan."
 
-#: includes/birchschedule/view/clients/imp.php:154
+# @ appointer
+#: includes/appointer/view/clients/imp.php:154
 #, php-format
 msgid "Client scheduled for: <strong>%1$s</strong>."
-msgstr "Client programmé pour : <strong>%1$s</strong>."
+msgstr "Klijent je raspoređen za: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/clients/imp.php:155
+# @ appointer
+#: includes/appointer/view/clients/imp.php:155
 msgid "Client draft updated."
-msgstr "Brouillon du client mis à jour."
+msgstr "Ažurirana skica klijenta."
 
-#: includes/birchschedule/view/clients/imp.php:212
+# @ appointer
+#: includes/appointer/view/clients/imp.php:212
 msgid "The email address isn’t correct."
-msgstr "L'adresse e-mail est incorrecte."
+msgstr "Email adresa nije korektna."
 
-#: includes/birchschedule/view/clients/imp.php:286
-#: includes/birchschedule/view/locations/imp.php:207
+# @ appointer
+#: includes/appointer/view/clients/imp.php:286
+#: includes/appointer/view/locations/imp.php:207
 msgid "Phone Number"
-msgstr "Numéro de téléphone"
+msgstr "Broj telefona"
 
-#: includes/birchschedule/view/help/imp.php:35
+# @ appointer
+#: includes/appointer/view/help/imp.php:35
 msgid "Help and Support"
-msgstr "Aide et assistance"
+msgstr "Pomoć i podrška"
 
-#: includes/birchschedule/view/help/imp.php:38
+# @ appointer
+#: includes/appointer/view/help/imp.php:38
 msgid "Versions"
-msgstr "Versions"
+msgstr "Verzija"
 
-#: includes/birchschedule/view/locations/imp.php:32
+# @ appointer
+#: includes/appointer/view/locations/imp.php:32
 #: modules/lbservices/imp.php:42 modules/wintegration/imp.php:368
 msgid "Locations"
-msgstr "Lieux"
+msgstr "Lokacija"
 
-#: includes/birchschedule/view/locations/imp.php:34
+# @ appointer
+#: includes/appointer/view/locations/imp.php:34
 msgid "Add Location"
-msgstr "Ajouter un lieu"
+msgstr "Dodaj lokaciju"
 
-#: includes/birchschedule/view/locations/imp.php:35
+# @ appointer
+#: includes/appointer/view/locations/imp.php:35
 msgid "Add New Location"
-msgstr "Ajouter un nouveau lieu"
+msgstr "Dodaj novu lokaciju"
 
-#: includes/birchschedule/view/locations/imp.php:37
+# @ appointer
+#: includes/appointer/view/locations/imp.php:37
 msgid "Edit Location"
-msgstr "Modifier le lieu"
+msgstr "Uredi lokaciju"
 
-#: includes/birchschedule/view/locations/imp.php:38
+# @ appointer
+#: includes/appointer/view/locations/imp.php:38
 msgid "New Location"
-msgstr "Nouveau lieu"
+msgstr "Nova lokacija"
 
-#: includes/birchschedule/view/locations/imp.php:39
-#: includes/birchschedule/view/locations/imp.php:40
+# @ appointer
+#: includes/appointer/view/locations/imp.php:39
+#: includes/appointer/view/locations/imp.php:40
 msgid "View Location"
-msgstr "Voir le lieu"
+msgstr "Vidi lokaciju"
 
-#: includes/birchschedule/view/locations/imp.php:41
+# @ appointer
+#: includes/appointer/view/locations/imp.php:41
 msgid "Search Locations"
-msgstr "Rechercher des lieux"
+msgstr "Pretraži lokacije"
 
-#: includes/birchschedule/view/locations/imp.php:42
+# @ appointer
+#: includes/appointer/view/locations/imp.php:42
 msgid "No Locations found"
-msgstr "Aucun lieu trouvé"
+msgstr "Lokacije nisu pronađene"
 
-#: includes/birchschedule/view/locations/imp.php:43
+# @ appointer
+#: includes/appointer/view/locations/imp.php:43
 msgid "No Locations found in trash"
-msgstr "Aucun lieu trouvé dans la corbeille"
+msgstr "Lokacije nisu pronađene u smeću"
 
-#: includes/birchschedule/view/locations/imp.php:44
+# @ appointer
+#: includes/appointer/view/locations/imp.php:44
 msgid "Parent Location"
-msgstr "Répertoire des lieux"
+msgstr "Nadređena lokacija"
 
-#: includes/birchschedule/view/locations/imp.php:46
+# @ appointer
+#: includes/appointer/view/locations/imp.php:46
 msgid "This is where locations are stored."
-msgstr "Il s'agit de là où les lieux sont enregistrés."
+msgstr "Ovdje su spremljene lokacije."
 
-#: includes/birchschedule/view/locations/imp.php:68
+# @ appointer
+#: includes/appointer/view/locations/imp.php:68
 msgid "Location Name"
-msgstr "Nom du lieu"
+msgstr "Ime lokacije"
 
-#: includes/birchschedule/view/locations/imp.php:80
-#: includes/birchschedule/view/locations/imp.php:83
-#: includes/birchschedule/view/locations/imp.php:85
+# @ appointer
+#: includes/appointer/view/locations/imp.php:80
+#: includes/appointer/view/locations/imp.php:83
+#: includes/appointer/view/locations/imp.php:85
 msgid "Location updated."
-msgstr "Lieu mis à jour."
+msgstr "Ažurirana lokacija."
 
-#: includes/birchschedule/view/locations/imp.php:84
+# @ appointer
+#: includes/appointer/view/locations/imp.php:84
 #, php-format
 msgid "Location restored to revision from %s"
-msgstr "Lieu restauré de %s"
+msgstr "Lokacija obnovljena revizijom %s"
 
-#: includes/birchschedule/view/locations/imp.php:86
+# @ appointer
+#: includes/appointer/view/locations/imp.php:86
 msgid "Location saved."
-msgstr "Lieu enregistré."
+msgstr "Spremljene lokacije"
 
-#: includes/birchschedule/view/locations/imp.php:87
+# @ appointer
+#: includes/appointer/view/locations/imp.php:87
 msgid "Location submitted."
-msgstr "Lieu soumis."
+msgstr "Poslana lokacija"
 
-#: includes/birchschedule/view/locations/imp.php:88
+# @ appointer
+#: includes/appointer/view/locations/imp.php:88
 #, php-format
 msgid "Location scheduled for: <strong>%1$s</strong>."
-msgstr "Lieu programmé pour : <strong>%1$s</strong>."
+msgstr "Raspored lokacije za: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/locations/imp.php:89
+# @ appointer
+#: includes/appointer/view/locations/imp.php:89
 msgid "Location draft updated."
-msgstr "Brouillon du lieu mis à jour."
+msgstr "Ažurirana skica lokacije."
 
-#: includes/birchschedule/view/locations/imp.php:174
+# @ appointer
+#: includes/appointer/view/locations/imp.php:174
 msgid "Location Details"
-msgstr "Détails du lieu"
+msgstr "Pojedinosti lokacije"
 
-#: includes/birchschedule/view/services/imp.php:33
-#: includes/birchschedule/view/staff/imp.php:148
+# @ appointer
+#: includes/appointer/view/services/imp.php:33
+#: includes/appointer/view/staff/imp.php:148
 #: modules/wintegration/imp.php:381
 msgid "Services"
-msgstr "Services"
+msgstr "Usluge"
 
-#: includes/birchschedule/view/services/imp.php:35
+# @ appointer
+#: includes/appointer/view/services/imp.php:35
 msgid "Add Service"
-msgstr "Ajouter un service"
+msgstr "Dodaj uslugu"
 
-#: includes/birchschedule/view/services/imp.php:36
+# @ appointer
+#: includes/appointer/view/services/imp.php:36
 msgid "Add New Service"
-msgstr "Ajouter un nouveau service"
+msgstr "Dodaj novu uslugu"
 
-#: includes/birchschedule/view/services/imp.php:38
+# @ appointer
+#: includes/appointer/view/services/imp.php:38
 msgid "Edit Service"
-msgstr "Modifier le service"
+msgstr "Uredi uslugu"
 
-#: includes/birchschedule/view/services/imp.php:39
+# @ appointer
+#: includes/appointer/view/services/imp.php:39
 msgid "New Service"
-msgstr "Nouveau service"
+msgstr "Nova usluga"
 
-#: includes/birchschedule/view/services/imp.php:40
-#: includes/birchschedule/view/services/imp.php:41
+# @ appointer
+#: includes/appointer/view/services/imp.php:40
+#: includes/appointer/view/services/imp.php:41
 msgid "View Service"
-msgstr "Voir le service"
+msgstr "vidi uslugu"
 
-#: includes/birchschedule/view/services/imp.php:42
+# @ appointer
+#: includes/appointer/view/services/imp.php:42
 msgid "Search Services"
-msgstr "Rechercher des services"
+msgstr "Pretraživanje usluga"
 
-#: includes/birchschedule/view/services/imp.php:43
+# @ appointer
+#: includes/appointer/view/services/imp.php:43
 msgid "No Services found"
-msgstr "Aucun service trouvé"
+msgstr "Usluge nisu pronađene"
 
-#: includes/birchschedule/view/services/imp.php:44
+# @ appointer
+#: includes/appointer/view/services/imp.php:44
 msgid "No Services found in trash"
-msgstr "Aucun service trouvé dans la corbeille"
+msgstr "Usluge nisu pronađene u smeću"
 
-#: includes/birchschedule/view/services/imp.php:45
+# @ appointer
+#: includes/appointer/view/services/imp.php:45
 msgid "Parent Service"
-msgstr "Répertoire des services"
+msgstr "Nadređena usluga"
 
-#: includes/birchschedule/view/services/imp.php:47
+# @ appointer
+#: includes/appointer/view/services/imp.php:47
 msgid "This is where services are stored."
-msgstr "Il s'agit de là où les services sont enregistrés."
+msgstr "Ovdje su usluge spremljene."
 
-#: includes/birchschedule/view/services/imp.php:69
+# @ appointer
+#: includes/appointer/view/services/imp.php:69
 msgid "Service Name"
-msgstr "Nom du service"
+msgstr "Ime usluge"
 
-#: includes/birchschedule/view/services/imp.php:70
-#: includes/birchschedule/view/staff/imp.php:104
+# @ appointer
+#: includes/appointer/view/services/imp.php:70
+#: includes/appointer/view/staff/imp.php:104
 msgid "Description"
-msgstr "Description"
+msgstr "Opis"
 
-#: includes/birchschedule/view/services/imp.php:121
+# @ appointer
+#: includes/appointer/view/services/imp.php:121
 msgid "Service Settings"
-msgstr "Paramètres de service"
+msgstr "Postavke usluge"
 
-#: includes/birchschedule/view/services/imp.php:123
-#: includes/birchschedule/view/staff/imp.php:34
+# @ appointer
+#: includes/appointer/view/services/imp.php:123
+#: includes/appointer/view/staff/imp.php:34
 #: modules/wintegration/imp.php:395
+#, fuzzy
 msgid "Providers"
-msgstr "Fournisseurs"
+msgstr "Pružatelj usluge"
 
-#: includes/birchschedule/view/services/imp.php:132
-#: includes/birchschedule/view/services/imp.php:135
-#: includes/birchschedule/view/services/imp.php:137
+# @ appointer
+#: includes/appointer/view/services/imp.php:132
+#: includes/appointer/view/services/imp.php:135
+#: includes/appointer/view/services/imp.php:137
 msgid "Service updated."
-msgstr "Service mis à jour."
+msgstr "Usluga ažurirana."
 
-#: includes/birchschedule/view/services/imp.php:136
+# @ appointer
+#: includes/appointer/view/services/imp.php:136
 #, php-format
 msgid "Service restored to revision from %s"
-msgstr "Service restauré de %s"
+msgstr "Usluga obnovljena revizijom %s"
 
-#: includes/birchschedule/view/services/imp.php:138
+# @ appointer
+#: includes/appointer/view/services/imp.php:138
 msgid "Service saved."
-msgstr "Service enregistré."
+msgstr "Usluga spremljena."
 
-#: includes/birchschedule/view/services/imp.php:139
+# @ appointer
+#: includes/appointer/view/services/imp.php:139
 msgid "Service submitted."
-msgstr "Service soumis."
+msgstr "Usluga poslana"
 
-#: includes/birchschedule/view/services/imp.php:140
+# @ appointer
+#: includes/appointer/view/services/imp.php:140
 #, php-format
 msgid "Service scheduled for: <strong>%1$s</strong>."
-msgstr "Service programmé pour : <strong>%1$s</strong>."
+msgstr "Raspored usluge za: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/services/imp.php:141
+# @ appointer
+#: includes/appointer/view/services/imp.php:141
 msgid "Service draft updated."
-msgstr "Brouillon du service mis à jour."
+msgstr "Ažurirana skica usluge."
 
-#: includes/birchschedule/view/services/imp.php:149
+# @ appointer
+#: includes/appointer/view/services/imp.php:149
 msgid "minutes"
-msgstr "minutes"
+msgstr "minute"
 
-#: includes/birchschedule/view/services/imp.php:150
+# @ appointer
+#: includes/appointer/view/services/imp.php:150
 msgid "hours"
-msgstr "heures"
+msgstr "sati"
 
-#: includes/birchschedule/view/services/imp.php:156
+# @ appointer
+#: includes/appointer/view/services/imp.php:156
 msgid "Before"
-msgstr "Avant"
+msgstr "Prije"
 
-#: includes/birchschedule/view/services/imp.php:157
+# @ appointer
+#: includes/appointer/view/services/imp.php:157
 msgid "After"
-msgstr "Après"
+msgstr "Poslije"
 
-#: includes/birchschedule/view/services/imp.php:158
+# @ appointer
+#: includes/appointer/view/services/imp.php:158
 msgid "Before & After"
-msgstr "Avant et après"
+msgstr "Prije i poslije"
 
-#: includes/birchschedule/view/services/imp.php:164
+# @ appointer
+#: includes/appointer/view/services/imp.php:164
 msgid "Fixed"
-msgstr "Fixe"
+msgstr "Fiksno"
 
-#: includes/birchschedule/view/services/imp.php:165
+# @ appointer
+#: includes/appointer/view/services/imp.php:165
 msgid "Varies"
-msgstr "Variable"
+msgstr "Promjenjivo"
 
-#: includes/birchschedule/view/services/imp.php:208
+# @ appointer
+#: includes/appointer/view/services/imp.php:208
 msgid "Length"
-msgstr "Durée"
+msgstr "Dužina"
 
-#: includes/birchschedule/view/services/imp.php:219
+# @ appointer
+#: includes/appointer/view/services/imp.php:219
 msgid "Padding"
-msgstr "Espacement"
+msgstr "Čekanje"
 
-#: includes/birchschedule/view/services/imp.php:222
+# @ appointer
+#: includes/appointer/view/services/imp.php:222
 msgid "mins padding time"
-msgstr "mins de temps d'espacement"
+msgstr "čekanje u minutama"
 
-#: includes/birchschedule/view/services/imp.php:272
+# @ appointer
+#: includes/appointer/view/services/imp.php:272
+#, fuzzy
 msgid "Assign providers that can perform this service:"
-msgstr "Désigner des fournisseurs qui peuvent offrir ce service :"
+msgstr "Označi osobu koja može pružiti uslugu:"
 
-#: includes/birchschedule/view/services/imp.php:279
-#, php-format
+# @ appointer
+#: includes/appointer/view/services/imp.php:279
+#, fuzzy, php-format
 msgid "There is no providers to assign. Click %s here %s to add one."
-msgstr ""
-"Il n'y a aucun fournisseur à designer. Cliquer %s ici %s pour en ajouter un."
+msgstr "Nema označenih usluga. Klikni %s ovdje %s i dodaj jednu."
 
-#: includes/birchschedule/view/settings/imp.php:176 modules/ccode/imp.php:233
+# @ appointer
+#: includes/appointer/view/settings/imp.php:176 modules/ccode/imp.php:233
 #: modules/enotification/imp.php:614 modules/gsettings/imp.php:148
 #: modules/ppayment/imp.php:315
 msgid "Save changes"
-msgstr "Enregistrer les modifications"
+msgstr "Spremi promjene"
 
-#: includes/birchschedule/view/settings/imp.php:193 modules/ccode/imp.php:247
+#: includes/appointer/view/settings/imp.php:193 modules/ccode/imp.php:247
 #: modules/enotification/imp.php:637 modules/fbuilder/imp.php:800
 #: modules/ppayment/imp.php:331
 msgid "&nbsp"
-msgstr "&nbsp"
+msgstr ""
 
-#: includes/birchschedule/view/staff/imp.php:36
+# @ appointer
+#: includes/appointer/view/staff/imp.php:36
+#, fuzzy
 msgid "Add Provider"
-msgstr "Ajouter un fournisseur"
+msgstr "Dodaj uslugu"
 
-#: includes/birchschedule/view/staff/imp.php:37
+# @ appointer
+#: includes/appointer/view/staff/imp.php:37
+#, fuzzy
 msgid "Add New Provider"
-msgstr "Ajouter un nouveau fournisseur"
+msgstr "Dodaj novu uslugu"
 
-#: includes/birchschedule/view/staff/imp.php:39
+# @ appointer
+#: includes/appointer/view/staff/imp.php:39
+#, fuzzy
 msgid "Edit Provider"
-msgstr "Modifier le fournisseur"
+msgstr "Uredi uslugu"
 
-#: includes/birchschedule/view/staff/imp.php:40
+# @ appointer
+#: includes/appointer/view/staff/imp.php:40
+#, fuzzy
 msgid "New Provider"
-msgstr "Nouveau fournisseur"
+msgstr "Pružatelj usluge"
 
-#: includes/birchschedule/view/staff/imp.php:41
-#: includes/birchschedule/view/staff/imp.php:42
+# @ appointer
+#: includes/appointer/view/staff/imp.php:41
+#: includes/appointer/view/staff/imp.php:42
+#, fuzzy
 msgid "View Provider"
-msgstr "Voir le fournisseur"
+msgstr "Pružatelj usluge"
 
-#: includes/birchschedule/view/staff/imp.php:43
+# @ appointer
+#: includes/appointer/view/staff/imp.php:43
+#, fuzzy
 msgid "Search Providers"
-msgstr "Rechercher des fournisseurs"
+msgstr "Pružatelj usluge"
 
-#: includes/birchschedule/view/staff/imp.php:44
+# @ appointer
+#: includes/appointer/view/staff/imp.php:44
+#, fuzzy
 msgid "No Providers found"
-msgstr "Aucun fournisseur trouvé"
+msgstr "Usluge nisu pronađene"
 
-#: includes/birchschedule/view/staff/imp.php:45
+# @ appointer
+#: includes/appointer/view/staff/imp.php:45
+#, fuzzy
 msgid "No Providers found in trash"
-msgstr "Aucun fournisseur trouvé dans la corbeille"
+msgstr "Usluge nisu pronađene u smeću"
 
-#: includes/birchschedule/view/staff/imp.php:46
+# @ appointer
+#: includes/appointer/view/staff/imp.php:46
+#, fuzzy
 msgid "Parent Provider"
-msgstr "Répertoire des fournisseur"
+msgstr "Nadređena usluga"
 
-#: includes/birchschedule/view/staff/imp.php:48
+# @ appointer
+#: includes/appointer/view/staff/imp.php:48
+#, fuzzy
 msgid "This is where provider are stored."
-msgstr "Il s'agit de là où les fournisseurs sont enregistrés."
+msgstr "Ovdje su usluge spremljene."
 
-#: includes/birchschedule/view/staff/imp.php:103
+# @ appointer
+#: includes/appointer/view/staff/imp.php:103
+#, fuzzy
 msgid "Provider Name"
-msgstr "Nom du fournisseur"
+msgstr "Ime usluge"
 
-#: includes/birchschedule/view/staff/imp.php:125
-#: includes/birchschedule/view/staff/imp.php:128
-#: includes/birchschedule/view/staff/imp.php:130
+# @ appointer
+#: includes/appointer/view/staff/imp.php:125
+#: includes/appointer/view/staff/imp.php:128
+#: includes/appointer/view/staff/imp.php:130
+#, fuzzy
 msgid "Provider updated."
-msgstr "Fournisseur mis à jour."
+msgstr "Usluga ažurirana."
 
-#: includes/birchschedule/view/staff/imp.php:129
-#, php-format
+# @ appointer
+#: includes/appointer/view/staff/imp.php:129
+#, fuzzy, php-format
 msgid "Provider restored to revision from %s"
-msgstr "Fournisseur restauré de %s"
+msgstr "Usluga obnovljena revizijom %s"
 
-#: includes/birchschedule/view/staff/imp.php:131
+# @ appointer
+#: includes/appointer/view/staff/imp.php:131
+#, fuzzy
 msgid "Provider saved."
-msgstr "Fournisseur enregistré."
+msgstr "Usluga spremljena."
 
-#: includes/birchschedule/view/staff/imp.php:132
+# @ appointer
+#: includes/appointer/view/staff/imp.php:132
+#, fuzzy
 msgid "Provider submitted."
-msgstr "Fournisseur soumis."
+msgstr "Usluga poslana"
 
-#: includes/birchschedule/view/staff/imp.php:133
-#, php-format
+# @ appointer
+#: includes/appointer/view/staff/imp.php:133
+#, fuzzy, php-format
 msgid "Provider scheduled for: <strong>%1$s</strong>."
-msgstr "Fournisseur programmé pour : <strong>%1$s</strong>."
+msgstr "Raspored usluge za: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/staff/imp.php:134
+# @ appointer
+#: includes/appointer/view/staff/imp.php:134
+#, fuzzy
 msgid "Provider draft updated."
-msgstr "Brouillon du fournisseur mis à jour."
+msgstr "Ažurirana skica usluge."
 
-#: includes/birchschedule/view/staff/imp.php:146
+# @ appointer
+#: includes/appointer/view/staff/imp.php:146
 msgid "Work Schedule"
-msgstr "Horaire de travail"
+msgstr "Raspored djelatnika"
 
-#: includes/birchschedule/view/staff/imp.php:219 modules/tblocking/imp.php:120
+#: includes/appointer/view/staff/imp.php:219 modules/tblocking/imp.php:120
 msgid "From"
-msgstr "De"
+msgstr ""
 
-#: includes/birchschedule/view/staff/imp.php:233 modules/tblocking/imp.php:134
+#: includes/appointer/view/staff/imp.php:233 modules/tblocking/imp.php:134
 msgid "To"
-msgstr "À"
+msgstr ""
 
-#: includes/birchschedule/view/staff/imp.php:323
+# @ appointer
+#: includes/appointer/view/staff/imp.php:323
+#, fuzzy
 msgid "+ Add Schedule"
-msgstr "+ Ajouter un programme"
+msgstr "Raspored"
 
-#: includes/birchschedule/view/staff/imp.php:384
+# @ appointer
+#: includes/appointer/view/staff/imp.php:384
 #, php-format
 msgid "There is no locations. Click %s here %s to add one."
-msgstr "Il n'y a aucun lieu. Cliquer %s ici %s pour en ajouter un."
+msgstr "Ovdje nema lokacija. Klikni %s ovdje %s i dodaj jednu."
 
-#: includes/birchschedule/view/staff/imp.php:423
+# @ appointer
+#: includes/appointer/view/staff/imp.php:423
+#, fuzzy
 msgid "Assign services that this provider can perform:"
-msgstr "Désigner les services que peut offrir ce fournisseur :"
+msgstr "Označi usluge koje ovaj djelatnik može napraviti:"
 
-#: includes/birchschedule/view/staff/imp.php:430
+# @ appointer
+#: includes/appointer/view/staff/imp.php:430
 #, php-format
 msgid "There is no services to assign. Click %s here %s to add one."
-msgstr ""
-"Il n'y a aucun service à designer. Cliquer %s ici %s pour en ajouter un."
+msgstr "Nema označenih usluga. Klikni %s ovdje %s i dodaj jednu."
 
+# @ appointer
 #: modules/acontrol/imp.php:294
+#, fuzzy
 msgid "Staff Member"
-msgstr "Membre du personnel"
+msgstr "Ime djelatnika"
 
 #: modules/acontrol/imp.php:316
 msgid "Business Manager"
-msgstr "Chef d'entreprise"
+msgstr ""
 
 #: modules/aportal/imp.php:150
 msgid "Cancel Page"
-msgstr "Annuler la page"
+msgstr ""
 
 #: modules/aportal/imp.php:157
-msgid "This page should contain shortcode [bpscheduler_cancel_appointment]."
+msgid "This page should contain shortcode [appointer_cancel_appointment]."
 msgstr ""
-"Cette page devrait contenir le shortcode [bpscheduler_cancel_appointment]."
 
 #: modules/aportal/imp.php:163
 msgid "Reschedule Page"
-msgstr "Reprogrammer la page"
+msgstr ""
 
 #: modules/aportal/imp.php:170
 msgid ""
-"This page should contain shortcode [bpscheduler_reschedule_appointment]."
+"This page should contain shortcode [appointer_reschedule_appointment]."
 msgstr ""
-"Cette page devrait contenir le shortcode "
-"[bpscheduler_reschedule_appointment]."
 
 #: modules/aportal/imp.php:236
 #, php-format
 msgid "Clients can cancel appointments %s in advance."
-msgstr "Les clients peuvent annuler des rendez-vous %s à l'avance."
+msgstr ""
 
 #: modules/aportal/imp.php:240
 #, php-format
 msgid "Clients can reschedule appointments %s in advance."
-msgstr "Les clients peuvent reprogrammer des rendez-vous %s à l'avance."
+msgstr ""
 
+# @ appointer
 #: modules/aportal/imp.php:353
+#, fuzzy
 msgid "Yes, cancel this appointment"
-msgstr "Oui, annuler le rendez-vous"
+msgstr "Pretraži termine"
 
 #: modules/autoupdater/imp.php:74
 msgid "BirchPress"
-msgstr "BirchPress"
+msgstr ""
 
 #: modules/autoupdater/imp.php:76
 msgid "Support License Key"
-msgstr "Clé de licence avec assistance"
+msgstr ""
 
 #: modules/autoupdater/imp.php:168 modules/autoupdater/imp.php:174
 msgid "Expiration Date: "
-msgstr "Date d'expiration : "
+msgstr ""
 
 #: modules/autoupdater/imp.php:177
 msgid "Invalid license"
-msgstr "Licence invalide"
+msgstr ""
 
 #: modules/autoupdater/imp.php:181
 msgid ""
 "Fill out the license key to receive access to automatic upgrades and support"
 msgstr ""
-"Introduire la clé de licence pour avoir accès à des mises à jour "
-"automatiques et à une assistance"
 
+# @ appointer
 #: modules/bpreferences/imp.php:72
 #, php-format
 msgid "%s hour"
-msgstr "%s heure"
+msgstr "%s sati"
 
+# @ appointer
 #: modules/bpreferences/imp.php:73 modules/bpreferences/imp.php:74
 #: modules/bpreferences/imp.php:75 modules/bpreferences/imp.php:76
 #: modules/bpreferences/imp.php:77
 #, php-format
 msgid "%s hours"
-msgstr "%s heures"
+msgstr "%s sati"
 
 #: modules/bpreferences/imp.php:78 modules/bpreferences/imp.php:79
 #: modules/bpreferences/imp.php:80 modules/bpreferences/imp.php:81
@@ -4206,291 +4592,325 @@ msgstr "%s heures"
 #: modules/bpreferences/imp.php:84
 #, php-format
 msgid "%s days"
-msgstr "%s jours"
+msgstr ""
 
+# @ appointer
 #: modules/bpreferences/imp.php:90
 #, php-format
 msgid "%s month"
-msgstr "%s mois"
+msgstr "%s Mjesec"
 
+# @ appointer
 #: modules/bpreferences/imp.php:91 modules/bpreferences/imp.php:92
 #: modules/bpreferences/imp.php:93 modules/bpreferences/imp.php:94
 #: modules/bpreferences/imp.php:95
 #, php-format
 msgid "%s months"
-msgstr "%s mois"
+msgstr "%s Mjesec"
 
 #: modules/bpreferences/imp.php:104
 msgid "Booking Preferences"
-msgstr "Préférences en matière de réservation"
+msgstr ""
 
 #: modules/bpreferences/imp.php:108
 msgid "Policies"
-msgstr "Politiques"
+msgstr ""
 
 #: modules/bpreferences/imp.php:157
 #, php-format
 msgid "Clients can book appointments up to %s before start time"
 msgstr ""
-"Les clients peuvent fixer des rendez-vous jusqu'à %s avant l'heure de début"
 
 #: modules/bpreferences/imp.php:161
 #, php-format
 msgid "Clients can book appointments up to %s in the future"
-msgstr "Les clients peuvent fixer des rendez-vous jusqu'à %s dans le futur"
+msgstr ""
 
+# @ appointer
 #: modules/bwindow/imp.php:129
+#, fuzzy
 msgid "Start Date"
-msgstr "Date de début"
+msgstr "Spremi podatak"
 
 #: modules/bwindow/imp.php:139 modules/bwindow/imp.php:153
 msgid "(Optional)"
-msgstr "(Optionnel)"
+msgstr ""
 
 #: modules/bwindow/imp.php:143
 msgid "End Date"
-msgstr "Date de fin"
+msgstr ""
 
 #: modules/ccode/imp.php:51
 msgid "Custom Code"
-msgstr "Code personnalisé"
+msgstr ""
 
+# @ appointer
 #: modules/ccode/imp.php:267
+#, fuzzy
 msgid "Custom Code Updated"
-msgstr "Code personnalisé mis à jour"
+msgstr "Ažurirano je prilagođeno polje."
 
 #: modules/cintegration/imp.php:96
 msgid "Sync iCal Interval"
-msgstr "Intervalle de Synchronisation iCal"
+msgstr ""
 
 #: modules/cintegration/imp.php:297
 msgid "BLOCKED"
-msgstr "BLOQUÉ"
+msgstr ""
 
 #: modules/cintegration/imp.php:556
 msgid "Calendar Integration"
-msgstr "Intégration du calendrier"
+msgstr ""
 
 #: modules/cintegration/imp.php:595
 msgid "Calendar Address (iCal)"
-msgstr "Adresse de calendrier (iCal)"
+msgstr ""
 
 #: modules/cintegration/imp.php:608
 msgid "Import Calendars (iCal)"
-msgstr "Importer des calendriers (iCal)"
+msgstr ""
 
 #: modules/cintegration/imp.php:622
 msgid "+ Add by URL"
-msgstr "+ Ajouter par URL"
+msgstr ""
 
 #: modules/cmanager/imp.php:43
 msgid "View"
-msgstr "Voir"
+msgstr ""
 
 #: modules/eadmin/imp.php:128
 msgid "Search for an existing client"
-msgstr "Rechercher pour un client existant"
+msgstr ""
 
 #: modules/enotification/imp.php:85
 msgid "Client Reminder Interval"
-msgstr "Intervalle pour les rappels envoyés au client"
+msgstr ""
 
 #: modules/enotification/imp.php:174
 #, php-format
 msgid "Send alerts to clients %s Hrs prior to their appointment."
-msgstr "Envoyer des rappels aux clients %s Hrs avant leur rendez-vous."
+msgstr ""
 
+# @ appointer
 #: modules/enotification/imp.php:312
+#, fuzzy
 msgid "Email Address"
-msgstr "Adresse e-mail"
+msgstr "Adresa"
 
+# @ appointer
 #: modules/enotification/imp.php:325
+#, fuzzy
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Lokacija"
 
+# @ appointer
 #: modules/enotification/imp.php:335
+#, fuzzy
 msgid "Notification to Provider"
-msgstr "Notification au fournisseur"
+msgstr "Lokacija"
 
 #: modules/enotification/imp.php:338
 msgid "Notification to Client"
-msgstr "Notification au client"
+msgstr ""
 
+# @ appointer
 #: modules/enotification/imp.php:380
+#, fuzzy
 msgid "Notification Settings Updated"
-msgstr "Paramètres de notification mis à jour"
+msgstr "Ažurirana skica lokacije."
 
+# @ appointer
 #: modules/enotification/imp.php:393
+#, fuzzy
 msgid "Appointment Modified"
-msgstr "Rendez-vous modifié"
+msgstr "Info termina"
 
+# @ appointer
 #: modules/enotification/imp.php:394
+#, fuzzy
 msgid "Appointment Cancelled"
-msgstr "Rendez-vous annulé"
+msgstr "Info termina"
 
+# @ appointer
 #: modules/enotification/imp.php:397
+#, fuzzy
 msgid "Appointment Reminder"
-msgstr "Rappel de rendez-vous"
+msgstr "Info termina"
 
+# @ appointer
 #: modules/enotification/imp.php:405
+#, fuzzy
 msgid "From Name"
-msgstr "Du nom"
+msgstr "Ime"
 
+# @ appointer
 #: modules/enotification/imp.php:414
+#, fuzzy
 msgid "From Email"
-msgstr "De l'e-mail"
+msgstr "Email"
 
 #: modules/enotification/imp.php:425
 msgid "Reply To"
-msgstr "Répondre à"
+msgstr ""
 
 #: modules/enotification/imp.php:436
 msgid "BCC"
-msgstr "BCC"
+msgstr ""
 
 #: modules/enotification/imp.php:454
 msgid "Edit Email Templates"
-msgstr "Modifier les modèles d'e-mail"
+msgstr ""
 
 #: modules/enotification/imp.php:491
 msgid "Subject"
-msgstr "Sujet"
+msgstr ""
 
 #: modules/enotification/imp.php:503
 msgid "Message"
-msgstr "Message"
+msgstr ""
 
 #: modules/enotification/imp.php:560
 #, php-format
 msgid "Enable email notification to %s"
-msgstr "Autoriser les notifications par e-mail à %s"
+msgstr ""
 
 #: modules/enotification/imp.php:571
 msgid "providers"
-msgstr "fournisseurs"
+msgstr ""
 
+# @ appointer
 #: modules/enotification/imp.php:575
+#, fuzzy
 msgid "clients"
-msgstr "clients"
+msgstr "Klijenti"
 
 #: modules/fbuilder/imp.php:32 modules/fbuilder/imp.php:821
 msgid "Single Line Text"
-msgstr "Texte sur une ligne"
+msgstr ""
 
 #: modules/fbuilder/imp.php:33 modules/fbuilder/imp.php:824
 msgid "Paragraph Text"
-msgstr "Texte de paragraphe"
+msgstr ""
 
 #: modules/fbuilder/imp.php:34 modules/fbuilder/imp.php:827
 msgid "Drop Down"
-msgstr "Liste déroulante"
+msgstr ""
 
 #: modules/fbuilder/imp.php:36 modules/fbuilder/imp.php:830
 msgid "Checkboxes"
-msgstr "Cases à cocher"
+msgstr ""
 
 #: modules/fbuilder/imp.php:37 modules/fbuilder/imp.php:833
 msgid "Radio Buttons"
-msgstr "Boutons radio"
+msgstr ""
 
 #: modules/fbuilder/imp.php:38
 msgid "Section Break"
-msgstr "Saut de section"
+msgstr ""
 
+# @ appointer
 #: modules/fbuilder/imp.php:647
+#, fuzzy
 msgid "Field Deleted"
-msgstr "Champ supprimé"
+msgstr "Obrisano je prilagođeno polje."
 
 #: modules/fbuilder/imp.php:677
 msgid "Add a Field"
-msgstr "Ajouter un champ"
+msgstr ""
 
 #: modules/fbuilder/imp.php:684
 msgid "Form Builder"
-msgstr "Générateur de formulaire"
+msgstr ""
 
 #: modules/fbuilder/imp.php:923
 msgid "Field Settings Updated"
-msgstr "Paramètres du champ mis à jour"
+msgstr ""
 
+# @ appointer
 #: modules/fbuilder/upgrader.php:36 modules/fbuilder/upgrader.php:358
 msgid "Date & Time"
-msgstr "Date et heure"
+msgstr "Datum i vrijeme"
 
 #: modules/fbuilder/upgrader.php:56 modules/fbuilder/upgrader.php:372
 #: modules/fbuilder/field/predefined/clientsection_imp.php:140
 msgid "Are you a new or returning user?"
-msgstr "Êtes-vous un nouvel utilisateur ou un ancien ?"
+msgstr ""
 
+# @ appointer
 #: modules/fbuilder/upgrader.php:57 modules/fbuilder/upgrader.php:373
+#, fuzzy
 msgid "New User"
-msgstr "Nouvel utilisateur"
+msgstr "Nova usluga"
 
 #: modules/fbuilder/upgrader.php:58 modules/fbuilder/upgrader.php:374
 msgid "Returning User"
-msgstr "Ancien utilisateur"
+msgstr ""
 
 #: modules/fbuilder/upgrader.php:99
 #: modules/fbuilder/field/predefined/password_imp.php:38
 msgid "Password"
-msgstr "Mot de passe"
+msgstr ""
 
 #: modules/fbuilder/upgrader.php:105
 #: modules/fbuilder/field/predefined/password_imp.php:42
 msgid "Retype Password"
-msgstr "Retaper le mot de passe"
+msgstr ""
 
 #: modules/fbuilder/upgrader.php:166
 #: modules/fbuilder/field/predefined/submit_imp.php:39
 msgid "Lost your password?"
-msgstr "Mot de passe perdu ?"
+msgstr ""
 
 #: modules/fbuilder/field/email_imp.php:22
 #: modules/fbuilder/field/predefined/clientemail_imp.php:34
 msgid "Please input a valid email address"
-msgstr "Veuillez indiquer une adresse e-mail valide"
+msgstr ""
 
+# @ appointer
 #: modules/fbuilder/field/imp.php:18 modules/fbuilder/field/imp.php:25
 #: modules/fbuilder/field/imp.php:32 modules/fbuilder/field/imp.php:39
 #: modules/fbuilder/field/imp.php:51 modules/fbuilder/field/imp.php:63
 #: modules/fbuilder/field/imp.php:75
+#, fuzzy
 msgid "Untitled"
-msgstr "Sans titre"
+msgstr "Naziv"
 
+# @ appointer
 #: modules/fbuilder/field/imp.php:44 modules/fbuilder/field/imp.php:56
 #: modules/fbuilder/field/imp.php:68
+#, fuzzy
 msgid "First Choice"
-msgstr "Premier choix"
+msgstr "Ime"
 
 #: modules/fbuilder/field/imp.php:45 modules/fbuilder/field/imp.php:57
 #: modules/fbuilder/field/imp.php:69
 msgid "Second Choice"
-msgstr "Deuxième choix"
+msgstr ""
 
 #: modules/fbuilder/field/imp.php:46 modules/fbuilder/field/imp.php:58
 #: modules/fbuilder/field/imp.php:70
 msgid "Third Choice"
-msgstr "Troisième choix"
+msgstr ""
 
 #: modules/fbuilder/field/imp.php:288
 msgid "Field Label"
-msgstr "Libellé du champ"
+msgstr ""
 
 #: modules/fbuilder/field/imp.php:305
 msgid "The field is mandatory"
-msgstr "Le champ est obligatoire"
+msgstr ""
 
 #: modules/fbuilder/field/imp.php:319
 msgid "Visibility"
-msgstr "Visibilité"
+msgstr ""
 
 #: modules/fbuilder/field/imp.php:328
 msgid "Customers and Admin"
-msgstr "Clients et Admin"
+msgstr ""
 
 #: modules/fbuilder/field/imp.php:336
 msgid "Admin Only"
-msgstr "Admin seulement"
+msgstr ""
 
 #: modules/fbuilder/field/imp.php:429
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:76
@@ -4498,422 +4918,465 @@ msgstr "Admin seulement"
 #: modules/fbuilder/field/predefined/password_imp.php:17
 #: modules/fbuilder/field/predefined/submit_imp.php:17
 msgid "Predefined"
-msgstr "Prédéfini(es)"
+msgstr ""
 
 #: modules/fbuilder/field/selectable_imp.php:32
 msgid "Choices"
-msgstr "Choiix"
+msgstr ""
 
+# @ appointer
 #: modules/fbuilder/field/selectable_imp.php:39
+#, fuzzy
 msgid "+ Add Choice"
-msgstr "+ Ajouter un choix"
+msgstr "Dodaj klijenta"
 
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:70
 msgid ""
 "Appointment Details ('Location','Service','Provider' & 'Date&Time' fields "
 "are predefined, click 'edit' to change the labels)"
 msgstr ""
-"Les détails du rendez-vous (champs 'Lieu','Service','Fournisseur' & 'Date et "
-"heure' sont prédéfinis, cliquez sur 'modifier' pour changer les libellés)"
 
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:91
 #: modules/fbuilder/field/predefined/clientsection_imp.php:131
 #: modules/fbuilder/field/predefined/password_imp.php:35
 #: modules/fbuilder/field/predefined/submit_imp.php:32
 msgid "Labels"
-msgstr "Libellé"
+msgstr ""
 
 #: modules/fbuilder/field/predefined/clientemail_imp.php:47
 msgid ""
 "Email already exists. You may book using this email by selecting \"I am a "
 "returning user.\""
 msgstr ""
-"L'e-mail existe déjà. Vous pouvez réserver en utilisant cet e-mail, en "
-"choisissant \"Je suis un ancien utilisateur.\""
 
 #: modules/fbuilder/field/predefined/clientemail_imp.php:70
 msgid ""
 "Email does not exist. Please contact the administrator to create a user "
 "account."
 msgstr ""
-"L'e-mail n'existe pas. Veuillez contacter l'administrateur pour créer un "
-"compte utilisateur."
 
 #: modules/fbuilder/field/predefined/clientemail_imp.php:73
 msgid ""
 "Email does not exist. You may book using this email by selecting \"I am a "
 "new user.\""
 msgstr ""
-"L'e-mail n'existe pas. Vous pouvez réserver en utilisant cet e-mail, en "
-"choisissant \"Je suis un nouvel utilisateur.\""
 
+# @ appointer
 #: modules/fbuilder/field/predefined/clientemail_imp.php:78
+#, fuzzy
 msgid "Email or password is incorrect."
-msgstr "L'adresse e-mail ou le mot de passe est incorrect"
+msgstr "Email je nekorektan"
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:58
 #, php-format
 msgid "Logged in as %s."
-msgstr "Connecté en tant que %s."
+msgstr ""
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:62
 msgid "Log out?"
-msgstr "Se déconnecter ?"
+msgstr ""
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:146
 msgid "I am a new user."
-msgstr "Je suis un nouvel utilisateur."
+msgstr ""
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:152
 msgid "I am a returning user."
-msgstr "Je suis un ancien utilisateur."
+msgstr ""
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:165
 msgid "Enable user login"
-msgstr "Autoriser la connexion par nom utilisateur"
+msgstr ""
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:172
 msgid "Enable new user registration"
-msgstr "Autoriser l'enregistrement de nouveaux utilisateurs"
+msgstr ""
 
+# @ appointer
 #: modules/fbuilder/field/predefined/country_imp.php:39
+#, fuzzy
 msgid "Default Country"
-msgstr "Pays par défaut"
+msgstr "Država"
 
+# @ appointer
 #: modules/fbuilder/field/predefined/password_imp.php:88
+#, fuzzy
 msgid "Password is required"
-msgstr "Le mot de passe est requis"
+msgstr "Telefon je obavezan"
 
 #: modules/fbuilder/field/predefined/password_imp.php:93
 msgid "Password must be at least 6 digits."
-msgstr "Le mot de passe doit contenir au moins 6 caractères."
+msgstr ""
 
 #: modules/fbuilder/field/predefined/password_imp.php:96
 msgid "Both passwords should match"
-msgstr "Les deux mots de passe doivent être identiques"
+msgstr ""
 
+# @ appointer
 #: modules/fbuilder/field/predefined/state_imp.php:73
+#, fuzzy
 msgid "Default State/Province"
-msgstr "État par défaut/Province par défaut"
+msgstr "Županija /regija"
 
+# @ appointer
 #: modules/fbuilder/field/predefined/submit_imp.php:47
+#, fuzzy
 msgid "Confirmation"
-msgstr "Confirmation"
+msgstr "Lokacija"
 
 #: modules/fbuilder/field/predefined/submit_imp.php:55
 msgid "Text"
-msgstr "Texte"
+msgstr ""
 
 #: modules/fbuilder/field/predefined/submit_imp.php:62
 msgid "Redirect"
-msgstr "Rediriger"
+msgstr ""
 
 #: modules/fdadmin/imp.php:67
 msgid "Show all time slots"
-msgstr "Montrer toutes les plages horaires"
+msgstr ""
 
 #: modules/gbooking/imp.php:61 modules/gbooking/imp.php:169
 msgid "Capacity"
-msgstr "Capacité"
+msgstr ""
 
+# @ appointer
 #: modules/gbooking/imp.php:211 modules/gbooking/imp.php:221
+#, fuzzy
 msgid "+ Add Client"
-msgstr "+ Ajouter un client"
+msgstr "Dodaj klijenta"
 
+# @ appointer
 #: modules/gbooking/imp.php:320
+#, fuzzy
 msgid "This client has been added."
-msgstr "Ce client a été ajouté."
+msgstr "Ovdje se spremaju klijenti."
 
+# @ appointer
 #: modules/gsettings/imp.php:38
 msgid "General"
-msgstr "Général"
+msgstr "Opće"
 
+# @ appointer
 #: modules/gsettings/imp.php:50
 msgid "General Options"
-msgstr "Options générales"
+msgstr "Opće mogućnosti"
 
+# @ default
 #: modules/gsettings/imp.php:56
 msgid "Timezone"
-msgstr "Fuseau horaire"
+msgstr "Vremenska zona"
 
+# @ default
 #: modules/gsettings/imp.php:58
 msgid "Date Format, Time Format"
-msgstr "Format de date, Format de l'heure"
+msgstr "Format datuma, format vremena"
 
 #: modules/gsettings/imp.php:60
 msgid "Week Starts On"
-msgstr "La semaine commence le"
+msgstr ""
 
+# @ default
 #: modules/gsettings/imp.php:62
 msgid "Currency"
-msgstr "Monnaie"
+msgstr "Valuta"
 
+# @ default
 #: modules/gsettings/imp.php:64
 msgid "Default Calendar View"
-msgstr "Vue par défaut du calendrier"
+msgstr "Zadani izgled kalendara"
 
+# @ appointer
 #: modules/gsettings/imp.php:90
 #, php-format
 msgid "<label>Timezone settings are located <a href='%s'>here</a>.</label>"
 msgstr ""
-"<label>Les paramètres du fuseau horaire se trouvent <a href='%s'>ici</a>.</"
-"label>"
+"<label>Postavke vrmenske zone su locirane <a href='%s'>ovdje</a>.</label>"
 
+# @ appointer
 #: modules/gsettings/imp.php:97
 #, php-format
 msgid ""
 "<label>Date format, time format settings are located <a href='%s'>here</a>.</"
 "label>"
 msgstr ""
-"<label>Les paramètres du format de la date et de l'heure se trouvent <a "
-"href='%s'>ici</a>.</label>"
+"<label>Format datuma, format vremena su locirani <a href='%s'>ovdje</a>.</"
+"label>"
 
+# @ appointer
 #: modules/gsettings/imp.php:104
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "<label>First day of week setting is located <a href='%s'>here</a>.</label>"
 msgstr ""
-"<label>Les paramètres du premier jour de la semaine se trouvent <a "
-"href='%s'>ici</a>.</label>"
+"<label>Postavke vrmenske zone su locirane <a href='%s'>ovdje</a>.</label>"
 
+# @ appointer
 #: modules/lbservices/imp.php:187
+#, fuzzy
 msgid "Assign locations that can perform this service:"
-msgstr "Désigner des lieux qui peuvent offrir le service :"
+msgstr "Označi osobu koja može pružiti uslugu:"
 
+# @ appointer
 #: modules/lbservices/imp.php:194
-#, php-format
+#, fuzzy, php-format
 msgid "There is no location to assign. Click %s here %s to add one."
-msgstr "Il n'y a aucun lieu à désigner. Cliquer %s ici %s pour en ajouter un."
+msgstr "Ovdje nema lokacija. Klikni %s ovdje %s i dodaj jednu."
 
+# @ appointer
 #: modules/mstaff/imp.php:145
+#, fuzzy
 msgid "Calendar Color"
-msgstr "Couleur du calendrier"
+msgstr "Kalendar"
 
 #: modules/pgauthorize/imp.php:50
 msgid "Authorize.net Integration"
-msgstr "Intégration Authorize.net"
+msgstr ""
 
 #: modules/pgauthorize/imp.php:62
 msgid "Credit card (Authorize.net)"
-msgstr "Carte de crédit (Authorize.net)"
+msgstr ""
 
 #: modules/pgauthorize/imp.php:63
 msgid "Pay with your credit card via Authorize.net"
-msgstr "Payer avec votre carte de crédit via Authorize.net"
+msgstr ""
 
 #: modules/pgauthorize/imp.php:102
 #, php-format
 msgid "Authorize.net Transaction ID: %s"
-msgstr "ID de transaction Authorize.net : %s"
+msgstr ""
 
 #: modules/pgauthorize/imp.php:116
 msgid "Click here if not redirected."
-msgstr "Cliquer ici si vous n'êtes pas redirigé."
+msgstr ""
 
 #: modules/pgauthorize/imp.php:266 modules/pintegration/imp.php:265
 #: modules/wcredit/imp.php:380 modules/wintegration/imp.php:166
 msgid "Enable/Disable"
-msgstr "Autoriser/Désactiver"
+msgstr ""
 
 #: modules/pgauthorize/imp.php:275
 msgid "Enable Authorize.net"
-msgstr "Autoriser Authorize.net"
+msgstr ""
 
 #: modules/pgauthorize/imp.php:282
 msgid "Login ID"
-msgstr "ID de connexion"
+msgstr ""
 
 #: modules/pgauthorize/imp.php:296
 msgid "Transaction Key"
-msgstr "Clé de transaction"
+msgstr ""
 
 #: modules/pintegration/imp.php:38
 msgid "PayPal Integration"
-msgstr "Intégration PayPal"
+msgstr ""
 
 #: modules/pintegration/imp.php:50
 msgid "PayPal"
-msgstr "PayPal"
+msgstr ""
 
 #: modules/pintegration/imp.php:52
 msgid ""
 "Pay via PayPal; you can pay with your credit card if you don’t have a PayPal "
 "account"
 msgstr ""
-"Payer via PayPal; vous pouvez payer avec votre carte de crédit si vous "
-"n'avez pas de compte PayPal"
 
 #: modules/pintegration/imp.php:106
 #, php-format
 msgid "PayPal Transaction ID: %s"
-msgstr "ID de transaction PayPal: %s"
+msgstr ""
 
 #: modules/pintegration/imp.php:274
 msgid "Enable PayPal"
-msgstr "Autoriser PayPal"
+msgstr ""
 
 #: modules/pintegration/imp.php:281
 msgid "PayPal Email"
-msgstr "E-mail PayPall"
+msgstr ""
 
+# @ appointer
 #: modules/ppayment/imp.php:100
+#, fuzzy
 msgid "Prepayment Settings"
-msgstr "Paramètres de paiement anticipé"
+msgstr "Postavke usluge"
 
+# @ appointer
 #: modules/ppayment/imp.php:124
+#, fuzzy
 msgid "Prepayment Message"
-msgstr "Message de paiement anticipé"
+msgstr "Postavke usluge"
 
 #: modules/ppayment/imp.php:267
 msgid "Place order"
-msgstr "Passer commande"
+msgstr ""
 
+# @ appointer
 #: modules/ppayment/imp.php:284
+#, fuzzy
 msgid "Payments Settings Updated"
-msgstr "Paramètres des paiements mis à jour"
+msgstr "Ažurirana skica lokacije."
 
 #: modules/ppayment/imp.php:440
 msgid "Enable prepayment"
-msgstr "Autoriser le paiement anticipé"
+msgstr ""
 
 #: modules/ppayment/imp.php:455
 #, php-format
 msgid "Charge %s fixed booking fee."
-msgstr "Facturer %s de frais fixe de réservation."
+msgstr ""
 
 #: modules/ppayment/imp.php:467
 #, php-format
 msgid "Charge %s percent of service value."
-msgstr "Facturer %s pour cent de la valeur du service."
+msgstr ""
 
 #: modules/ppayment/upgrader.php:35
 msgid "Please make a payment of {deposit} to hold your appointment."
 msgstr ""
-"Veuillez effectuer un paiement de {deposit} pour prendre votre rendez-vous."
 
+# @ appointer
 #: modules/senhanced/imp.php:37
+#, fuzzy
 msgid " minutes"
-msgstr " minutes"
+msgstr "minute"
 
 #: modules/senhanced/imp.php:131
 #, php-format
 msgid "Enable flexible appointment start time with %s"
-msgstr "Autoriser un temps de début flexible pour les rendez-vous avec %s"
+msgstr ""
 
 #: modules/tblocking/imp.php:43
 msgid "Days Off"
-msgstr "Jours de congé"
+msgstr ""
 
+# @ appointer
 #: modules/tblocking/imp.php:205
+#, fuzzy
 msgid "Exceptions"
-msgstr "Exceptions"
+msgstr "Lokacija"
 
+# @ appointer
 #: modules/tblocking/imp.php:231
+#, fuzzy
 msgid "+ Add Exception"
-msgstr "+ Ajouter une exception"
+msgstr "Dodaj lokaciju"
 
 #: modules/uintegration/imp.php:135
 msgid "User Synchronization"
-msgstr "Synchronisation utilisateur"
+msgstr ""
 
 #: modules/uintegration/imp.php:136
 msgid "Syncing clients with WP users..."
-msgstr "Synchronisation des clients avec les utilisateurs WP..."
+msgstr ""
 
 #: modules/uintegration/imp.php:137
 msgid "synced"
-msgstr "Synchronisé"
+msgstr ""
 
+# @ appointer
 #: modules/wcredit/imp.php:39 modules/wcredit/imp.php:110
 #: modules/wcredit/imp.php:111 modules/wcredit/imp.php:156
+#, fuzzy
 msgid "WooCommerce Credit"
-msgstr "WooCommerce Credit"
+msgstr "Ažurirana skica lokacije."
 
 #: modules/wcredit/imp.php:45
 msgid "The credit should be positive."
-msgstr "Le crédit doit être positif."
+msgstr ""
 
 #: modules/wcredit/imp.php:46
 msgid "The credit is not enough."
-msgstr "Le crédit n'est pas suffisant."
+msgstr ""
 
 #: modules/wcredit/imp.php:47
 #, php-format
 msgid "Used by order No. %s"
-msgstr "Utilisé(s) par la commande No. %s"
+msgstr ""
 
 #: modules/wcredit/imp.php:48
 #, php-format
 msgid "Recharged by order No. %s"
-msgstr "Rechargé(s) par la commande No. %s"
+msgstr ""
 
+# @ appointer
 #: modules/wcredit/imp.php:112
+#, fuzzy
 msgid "Add WooCommerce Credit"
-msgstr "Ajouter un Crédit WooCommerce"
+msgstr "Ažurirana skica lokacije."
 
 #: modules/wcredit/imp.php:113
 msgid "Add New WooCommerce Credit"
-msgstr "Ajouter un nouveau Crédit WooCommerce"
+msgstr ""
 
 #: modules/wcredit/imp.php:115
 msgid "Edit WooCommerce Credit"
-msgstr "Modifier le Crédit WooCommerce"
+msgstr ""
 
+# @ appointer
 #: modules/wcredit/imp.php:116
+#, fuzzy
 msgid "New WooCommerce Credit"
-msgstr "Nouveau Crédit WooCommerce"
+msgstr "Ažurirana skica lokacije."
 
 #: modules/wcredit/imp.php:117 modules/wcredit/imp.php:118
 msgid "View WooCommerce Credit"
-msgstr "Voir le Crédit WooCommerce"
+msgstr ""
 
 #: modules/wcredit/imp.php:119
 msgid "Search WooCommerce credit"
-msgstr "Rechercher des Crédits WooCommerce"
+msgstr ""
 
 #: modules/wcredit/imp.php:120
 msgid "No WooCommerce credit found"
-msgstr "Aucun Crédit WooCommerce trouvé"
+msgstr ""
 
+# @ appointer
 #: modules/wcredit/imp.php:121
+#, fuzzy
 msgid "No WooCommerce credit found in trash"
-msgstr "Aucun Crédit WooCommerce trouvé dans la corbeille"
+msgstr "Usluge nisu pronađene u smeću"
 
 #: modules/wcredit/imp.php:122
 msgid "Parent WooCommerce Credit"
-msgstr "Répertoire Crédit WooCommerce"
+msgstr ""
 
+# @ appointer
 #: modules/wcredit/imp.php:124
+#, fuzzy
 msgid "This is where WooCommerce credit are stored."
-msgstr "Il s'agit de là où les crédits WooCommerce sont enregistrés."
+msgstr "Ovdje su usluge spremljene."
 
 #: modules/wcredit/imp.php:295
 msgid "Credit Balance"
-msgstr "Solde du crédit"
+msgstr ""
 
+# @ appointer
 #: modules/wcredit/imp.php:303
+#, fuzzy
 msgid "+ Add Credit"
-msgstr "+ Ajouter un crédit"
+msgstr "Dodaj klijenta"
 
 #: modules/wcredit/imp.php:389
 msgid "Enable WooCommerce Credit"
-msgstr "Autoriser WooCommerce Credit"
+msgstr ""
 
 #: modules/wcredit/imp.php:396
 msgid "Buy Credit Amount from WooCommerce Products"
-msgstr "Acheter un montant de crédit des produits WooCommerce"
+msgstr ""
 
 #: modules/wcredit/imp.php:404 modules/wintegration/imp.php:361
 msgid "(Only simple products are listed here)"
-msgstr "(Seuls les produits simples sont listés ici)"
+msgstr ""
 
+# @ appointer
 #: modules/wcredit/imp.php:463
+#, fuzzy
 msgid "Customer Credit"
-msgstr "Crédit client"
+msgstr "Ažurirano je prilagođeno polje."
 
 #: modules/wcredit/imp.php:481
 msgid "Please login to use your credit."
-msgstr "Veuillez vous connecter pour utiliser votre crédit."
+msgstr ""
 
 #: modules/wcredit/imp.php:503
 #, php-format
@@ -4921,69 +5384,272 @@ msgid ""
 "Your current credit balance is %s. <br/>Enter a credit amount if you want to "
 "pay by customer credit."
 msgstr ""
-"Votre solde de crédit actuel est %s. <br/>Taper un montant de crédit si vous "
-"voulez payer par crédit client."
 
 #: modules/wcredit/imp.php:512
 msgid "Apply Custom Credit"
-msgstr "Appliquer un crédit client"
+msgstr ""
 
 #: modules/wintegration/imp.php:69
 msgid "WooCommerce"
-msgstr "WooCommerce"
+msgstr ""
 
 #: modules/wintegration/imp.php:89
 msgid "WooCommerce Integration"
-msgstr "Intégration WooCommerce"
+msgstr ""
 
 #: modules/wintegration/imp.php:175
 msgid "Enable WooCommerce integration"
-msgstr "Autoriser l'intégration WooCommerce"
+msgstr ""
 
 #: modules/wintegration/imp.php:182
 msgid "Autocomplete Order"
-msgstr "Achèvement automatique de commande"
+msgstr ""
 
 #: modules/wintegration/imp.php:191
 msgid ""
 "Enable WooCommerce automatically set appointment orders on Completed status "
 "right after a successfull payment."
 msgstr ""
-"Autorise WooCommerce à assigner automatiquement le statut Terminé aux "
-"demandes de rendez-vous juste après un paiement effectué avec succès."
 
+# @ appointer
 #: modules/wintegration/imp.php:198
+#, fuzzy
 msgid "Products Settings"
-msgstr "Paramètres des produits"
+msgstr "Postavke"
 
+# @ appointer
 #: modules/wintegration/imp.php:210
+#, fuzzy
 msgid "+ Add Product"
-msgstr "+ Ajouter un produit"
+msgstr "Dodaj klijenta"
 
 #: modules/wintegration/imp.php:345
 msgid "WooCommerce Product"
-msgstr "Produit WooCommerce"
+msgstr ""
 
 #: modules/wintegration/imp.php:408
 msgid "Custom CSS"
-msgstr "CSS personnalisé"
+msgstr ""
 
+# @ appointer
 #: modules/wintegration/imp.php:474
+#, fuzzy
 msgid "WooCommerce Settings Updated"
-msgstr "Paramètres WooCommerce mis à jour"
+msgstr "Ažurirana skica lokacije."
 
 #: modules/wintegration/wc_imp.php:360
 msgid ""
 "There was a problem with your submission. Please check error messages below."
 msgstr ""
-"Il y a eu un problème avec votre soumission. Veuillez vérifier les messages "
-"d'erreur ci-dessous."
 
 #: modules/wintegration/wc_imp.php:467
 #, php-format
 msgid "WooCommerce Order ID: %s"
-msgstr "ID de commande WooCommerce : %s"
+msgstr ""
 
+# @ appointer
 #: modules/wintegration/wc_imp.php:729
+#, fuzzy
 msgid "Add to cart"
-msgstr "Ajouter au panier"
+msgstr "Dodaj lokaciju"
+
+# @ appointer
+#~ msgid "M j, Y @ G:i"
+#~ msgstr "M j, Y @ G:i"
+
+# @ appointer
+#~ msgid "Scheduler"
+#~ msgstr "Raspored"
+
+# @ appointer
+#~ msgid "Add Appointment"
+#~ msgstr "Dodaj termin"
+
+# @ appointer
+#~ msgid "Add New Appointment"
+#~ msgstr "Dodaj novi termin"
+
+# @ appointer
+#, fuzzy
+#~ msgid "Please select a staff member"
+#~ msgstr "Molimo označite uslugu i"
+
+# @ appointer
+#~ msgid "Staff"
+#~ msgstr "Osoblje"
+
+# @ appointer
+#, fuzzy
+#~ msgid "Please select a service and a staff"
+#~ msgstr "Molimo označite uslugu i"
+
+# @ appointer
+#, fuzzy
+#~ msgid "All Staff"
+#~ msgstr "Dodaj djelatnika"
+
+# @ appointer
+#, fuzzy
+#~ msgid "+ Add Appointment"
+#~ msgstr "Dodaj termin"
+
+# @ appointer
+#~ msgid "Assign staff that can perform this service:"
+#~ msgstr "Označi osobu koja može pružiti uslugu:"
+
+# @ appointer
+#~ msgid "There is no staff to assign. Click %s here %s to add one."
+#~ msgstr "Nema označene osobe. Klikni %s ovdje %s i dodaj jednu."
+
+# @ appointer
+#~ msgid "Add Staff"
+#~ msgstr "Dodaj djelatnika"
+
+# @ appointer
+#~ msgid "Add New Staff"
+#~ msgstr "Dodaj novog djelatnika"
+
+# @ appointer
+#~ msgid "Edit Staff"
+#~ msgstr "Uredi djelatnika"
+
+# @ appointer
+#~ msgid "New Staff"
+#~ msgstr "Novi djelatnik"
+
+# @ appointer
+#~ msgid "View Staff"
+#~ msgstr "Vidi djelatnika"
+
+# @ appointer
+#~ msgid "Search Staff"
+#~ msgstr "Pretraži djelatnike"
+
+# @ appointer
+#~ msgid "No Staff found"
+#~ msgstr "Nema pronađenih djelatnika"
+
+# @ appointer
+#~ msgid "No Staff found in trash"
+#~ msgstr "Nema pronađenih djelatnika u smeću"
+
+# @ appointer
+#~ msgid "Parent Staff"
+#~ msgstr "Nadređeni djelatnik"
+
+# @ appointer
+#~ msgid "This is where staff are stored."
+#~ msgstr "Ovdje su spremljeni djelatnici."
+
+# @ appointer
+#~ msgid "Staff Name"
+#~ msgstr "Ime djelatnika"
+
+# @ appointer
+#~ msgid "Staff updated."
+#~ msgstr "Djelatnik ažuriran."
+
+# @ appointer
+#~ msgid "Staff restored to revision from %s"
+#~ msgstr "Djelatnik obnovljen revizijom %s"
+
+# @ appointer
+#~ msgid "Staff saved."
+#~ msgstr "Djelatnik spremljen."
+
+# @ appointer
+#~ msgid "Staff submitted."
+#~ msgstr "Djelatnik poslan."
+
+# @ appointer
+#~ msgid "Staff scheduled for: <strong>%1$s</strong>."
+#~ msgstr "Raspored djelatnika za: <strong>%1$s</strong>."
+
+# @ appointer
+#~ msgid "Staff draft updated."
+#~ msgstr "Ažurirana skica djelatnika."
+
+# @ appointer
+#~ msgid "Location:"
+#~ msgstr "Lokacija: "
+
+# @ appointer
+#~ msgid "Service:"
+#~ msgstr "Usluga: "
+
+# @ appointer
+#, fuzzy
+#~ msgid "Staff:"
+#~ msgstr "Osoblje"
+
+# @ appointer
+#~ msgid "Time:"
+#~ msgstr "Vrijeme: "
+
+# @ appointer
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "Adresa"
+
+# @ appointer
+#~ msgid "General Info"
+#~ msgstr "Info općenito"
+
+# @ appointer
+#~ msgid "Appointment Details"
+#~ msgstr "Pojedinosti termina"
+
+# @ default
+#~ msgid "Booking appointment failed"
+#~ msgstr "Nije uspjela rezervacija termina"
+
+# @ appointer
+#~ msgid "Refresh"
+#~ msgstr "Osvježi"
+
+# @ appointer
+#, fuzzy
+#~ msgid "Export Settings"
+#~ msgstr "Postavke"
+
+# @ appointer
+#~ msgid "Save Data"
+#~ msgstr "Spremi podatak"
+
+# @ appointer
+#~ msgid "Free"
+#~ msgstr "Slobodno"
+
+# @ appointer
+#~ msgid "Don't show"
+#~ msgstr "Ne prikazuj"
+
+# @ appointer
+#, fuzzy
+#~ msgid "3 hours"
+#~ msgstr "sati"
+
+# @ appointer
+#, fuzzy
+#~ msgid "6 hours"
+#~ msgstr "sati"
+
+# @ appointer
+#, fuzzy
+#~ msgid "12 hours"
+#~ msgstr "sati"
+
+# @ appointer
+#, fuzzy
+#~ msgid "24 hours"
+#~ msgstr "sati"
+
+# @ appointer
+#, fuzzy
+#~ msgid "3 months"
+#~ msgstr "Mjesec"
+
+# @ appointer
+#, fuzzy
+#~ msgid "6 months"
+#~ msgstr "Mjesec"

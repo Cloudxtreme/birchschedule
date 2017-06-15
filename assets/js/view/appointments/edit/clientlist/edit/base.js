@@ -3,10 +3,10 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.appointments.edit.clientlist.edit');
+    var ns = namespace('appointer.view.appointments.edit.clientlist.edit');
 
     defineFunction(ns, 'render', function(viewState) {
-        birchschedule.view.appointments.edit.clientlist.render.fn.default(viewState);
+        appointer.view.appointments.edit.clientlist.render.fn.default(viewState);
         var clientId = viewState.clientId;
         if(viewState.view === 'edit') {
             var row = $('#birs_client_list_row_' + clientId);
@@ -22,17 +22,17 @@
     });
 
     defineFunction(ns, 'save', function() {
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
-        var i18nMessages = birchschedule.view.getI18nMessages();
+        var ajaxUrl = appointer.model.getAjaxUrl();
+        var i18nMessages = appointer.view.getI18nMessages();
         var save_button = $('#birs_appointment_client_edit_save');
         var postData = $('form').serialize();
         postData += '&' + $.param({
-            action: 'birchschedule_view_appointments_edit_clientlist_edit_save'
+            action: 'appointer_view_appointments_edit_clientlist_edit_save'
         });
         $.post(ajaxUrl, postData, function(data, status, xhr){
-            var result = birchschedule.model.parseAjaxResponse(data);
+            var result = appointer.model.parseAjaxResponse(data);
             if(result.errors) {
-                birchschedule.view.showFormErrors(result.errors);
+                appointer.view.showFormErrors(result.errors);
             } 
             else if(result.success) {
                 window.location.reload();
@@ -45,9 +45,9 @@
     });
 
     defineFunction(ns, 'initForm', function() {
-        birchschedule.view.initCountryStateField('birs_client_country', 'birs_client_state');
+        appointer.view.initCountryStateField('birs_client_country', 'birs_client_state');
         $('#birs_appointment_client_edit_cancel').click(function(){
-            birchschedule.view.appointments.edit.clientlist.setViewState({
+            appointer.view.appointments.edit.clientlist.setViewState({
                 view: 'list'
             });
         });
@@ -57,16 +57,16 @@
     });
 
     defineFunction(ns, 'init', function() {
-        birchschedule.view.appointments.edit.clientlist.render.fn.when('edit', ns.render);
+        appointer.view.appointments.edit.clientlist.render.fn.when('edit', ns.render);
     	$('.wp-list-table.birs_clients .row-actions .edit a').click(function(eventObject){
             var clientId = $(eventObject.target).attr('data-item-id');
-            birchschedule.view.appointments.edit.clientlist.setViewState({
+            appointer.view.appointments.edit.clientlist.setViewState({
                 view: 'edit',
                 clientId: clientId
             });
     	});
     });
 
-    addAction('birchschedule.initAfter', ns.init);
+    addAction('appointer.initAfter', ns.init);
 
 })(jQuery);

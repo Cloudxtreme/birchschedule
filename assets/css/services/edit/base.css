@@ -5,8 +5,8 @@
 	width: 6em;
 }
 
-#birchschedule-staff-services input,
-#birchschedule-service-staff input, 
-#birchschedule-service-locations input {
+#appointer-staff-services input,
+#appointer-service-staff input, 
+#appointer-service-locations input {
     margin-right: 4px;
 }

@@ -1,6 +1,6 @@
 <?php
 
-birch_ns( 'birchschedule.gsettings', function( $ns ) {
+birch_ns( 'appointer.gsettings', function( $ns ) {
 
         $update_info = array();
 
@@ -14,27 +14,27 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
 
         birch_defn( $ns, 'wp_init', function() use ( $ns ) {
 
-                add_action( 'birchschedule_view_show_notice', array( $ns, 'show_update_notice' ) );
+                add_action( 'appointer_view_show_notice', array( $ns, 'show_update_notice' ) );
 
                 add_filter( 'site_transient_update_plugins', array( $ns, 'get_update_info' ), 20 );
 
-                add_filter( 'birchschedule_view_settings_get_tabs', array( $ns, 'add_tab' ) );
+                add_filter( 'appointer_view_settings_get_tabs', array( $ns, 'add_tab' ) );
 
-                add_filter( 'birchschedule_model_get_currency_code', array( $ns, 'get_option_currency' ) );
+                add_filter( 'appointer_model_get_currency_code', array( $ns, 'get_option_currency' ) );
 
-                add_filter( 'birchschedule_view_calendar_get_default_view',
+                add_filter( 'appointer_view_calendar_get_default_view',
                     array( $ns, 'get_option_default_calendar_view' ) );
 
             } );
 
         birch_defn( $ns, 'wp_admin_init', function() use ( $ns ) {
-                register_setting( 'birchschedule_options', 'birchschedule_options', array( $ns, 'sanitize_input' ) );
+                register_setting( 'appointer_options', 'appointer_options', array( $ns, 'sanitize_input' ) );
                 $ns->add_settings_sections();
             } );
 
         birch_defn( $ns, 'add_tab', function( $tabs ) use ( $ns ) {
                 $tabs['general'] = array(
-                    'title' => __( 'General', 'birchschedule' ),
+                    'title' => __( 'General', 'appointer' ),
                     'action' => array( $ns, 'render_page' ),
                     'order' => 0
                 );
@@ -43,26 +43,26 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'add_settings_sections', function() use ( $ns ) {
-                add_settings_section( 'birchschedule_general', __( 'General Options', 'birchschedule' ),
-                    array( $ns, 'render_section_general' ), 'birchschedule_settings' );
+                add_settings_section( 'appointer_general', __( 'General Options', 'appointer' ),
+                    array( $ns, 'render_section_general' ), 'appointer_settings' );
                 $ns->add_settings_fields();
             } );
 
         birch_defn( $ns, 'add_settings_fields', function() use ( $ns ) {
-                add_settings_field( 'birchschedule_timezone', __( 'Timezone' ),
-                    array( $ns, 'render_timezone' ), 'birchschedule_settings', 'birchschedule_general' );
+                add_settings_field( 'appointer_timezone', __( 'Timezone' ),
+                    array( $ns, 'render_timezone' ), 'appointer_settings', 'appointer_general' );
 
-                add_settings_field( 'birchschedule_date_time_format', __( 'Date Format, Time Format', 'birchschedule' ),
-                    array( $ns, 'render_date_time_format' ), 'birchschedule_settings', 'birchschedule_general' );
+                add_settings_field( 'appointer_date_time_format', __( 'Date Format, Time Format', 'appointer' ),
+                    array( $ns, 'render_date_time_format' ), 'appointer_settings', 'appointer_general' );
 
-                add_settings_field( 'birchschedule_start_of_week', __( 'Week Starts On', 'birchschedule' ),
-                    array( $ns, 'render_start_of_week' ), 'birchschedule_settings', 'birchschedule_general' );
+                add_settings_field( 'appointer_start_of_week', __( 'Week Starts On', 'appointer' ),
+                    array( $ns, 'render_start_of_week' ), 'appointer_settings', 'appointer_general' );
 
-                add_settings_field( 'birchschedule_currency', __( 'Currency', 'birchschedule' ),
-                    array( $ns, 'render_currency' ), 'birchschedule_settings', 'birchschedule_general' );
+                add_settings_field( 'appointer_currency', __( 'Currency', 'appointer' ),
+                    array( $ns, 'render_currency' ), 'appointer_settings', 'appointer_general' );
 
-                add_settings_field( 'birchschedule_default_calendar_view', __( 'Default Calendar View', 'birchschedule' ),
-                    array( $ns, 'render_default_calendar_view' ), 'birchschedule_settings', 'birchschedule_general' );
+                add_settings_field( 'appointer_default_calendar_view', __( 'Default Calendar View', 'appointer' ),
+                    array( $ns, 'render_default_calendar_view' ), 'appointer_settings', 'appointer_general' );
 
             } );
 
@@ -81,28 +81,28 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_options', function() use ( $ns ) {
-                $options = get_option( 'birchschedule_options' );
+                $options = get_option( 'appointer_options' );
                 return $options;
             } );
 
         birch_defn( $ns, 'render_timezone', function() {
                 $timezone_url = admin_url( 'options-general.php' );
                 echo sprintf(
-                    __( "<label>Timezone settings are located <a href='%s'>here</a>.</label>", 'birchschedule' ),
+                    __( "<label>Timezone settings are located <a href='%s'>here</a>.</label>", 'appointer' ),
                     $timezone_url );
             } );
 
         birch_defn( $ns, 'render_date_time_format', function() {
                 $timezone_url = admin_url( 'options-general.php' );
                 echo sprintf(
-                    __( "<label>Date format, time format settings are located <a href='%s'>here</a>.</label>", 'birchschedule' ),
+                    __( "<label>Date format, time format settings are located <a href='%s'>here</a>.</label>", 'appointer' ),
                     $timezone_url );
             } );
 
         birch_defn( $ns, 'render_start_of_week', function() {
                 $timezone_url = admin_url( 'options-general.php' );
                 echo sprintf(
-                    __( "<label>First day of week setting is located <a href='%s'>here</a>.</label>", 'birchschedule' ),
+                    __( "<label>First day of week setting is located <a href='%s'>here</a>.</label>", 'appointer' ),
                     $timezone_url );
             } );
 
@@ -120,7 +120,7 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
                 $currencies = $birchpress->util->get_currencies();
                 $currencies = array_map( array( $ns, 'map_currencies' ), $currencies );
                 $currency = $ns->get_option_currency();
-                echo '<select id="birchschedule_currency" name="birchschedule_options[currency]">';
+                echo '<select id="appointer_currency" name="appointer_options[currency]">';
                 $birchpress->util->render_html_options( $currencies, $currency );
                 echo '</select>';
             } );
@@ -130,7 +130,7 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
 
                 $views = $birchpress->util->get_calendar_views();
                 $default_view = $ns->get_option_default_calendar_view();
-                echo '<select id="birchschedule_default_calenar_view" name="birchschedule_options[default_calendar_view]">';
+                echo '<select id="appointer_default_calenar_view" name="appointer_options[default_calendar_view]">';
                 $birchpress->util->render_html_options( $views, $default_view );
                 echo '</select>';
             } );
@@ -141,12 +141,12 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
                 settings_errors();
 ?>
                 <form action="options.php" method="post">
-                    <input type='hidden' name='birchschedule_options[version]' value='<?php echo $version; ?>'>
-                    <?php settings_fields( 'birchschedule_options' ); ?>
-                    <?php do_settings_sections( 'birchschedule_settings' ); ?>
+                    <input type='hidden' name='appointer_options[version]' value='<?php echo $version; ?>'>
+                    <?php settings_fields( 'appointer_options' ); ?>
+                    <?php do_settings_sections( 'appointer_settings' ); ?>
                     <p class="submit">
                         <input name="Submit" type="submit" class="button-primary"
-                               value="<?php _e( 'Save changes', 'birchschedule' ); ?>" />
+                               value="<?php _e( 'Save changes', 'appointer' ); ?>" />
                     </p>
                 </form>
 <?php
@@ -157,7 +157,7 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_update_info', function( $checked_data ) use ( &$update_info ) {
-                $plugin_slug = "birchschedule";
+                $plugin_slug = "appointer";
                 $slug_str = $plugin_slug . '/' . $plugin_slug . '.php';
                 if ( isset( $checked_data->response[$slug_str] ) ) {
                     $update_info = $checked_data->response[$slug_str];
@@ -169,9 +169,9 @@ birch_ns( 'birchschedule.gsettings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'show_update_notice', function() use ( &$update_info ) {
-                global $birchschedule;
+                global $appointer;
 
-                $product_name = $birchschedule->get_product_name();
+                $product_name = $appointer->get_product_name();
                 $update_url = admin_url( 'update-core.php' );
                 $update_text = "%s %s is available! <a href='$update_url'>Please update now</a>.";
                 if ( $update_info ):

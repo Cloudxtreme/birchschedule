@@ -1,6 +1,6 @@
 <?php
 
-birch_ns( 'birchschedule', function( $ns ) {
+birch_ns( 'appointer', function( $ns ) {
 
 		$plugin_url = '';
 

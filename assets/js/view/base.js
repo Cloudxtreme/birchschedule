@@ -1,11 +1,11 @@
 (function($){
-    var params = birchschedule_view;
+    var params = appointer_view;
 
     var namespace = birchpress.namespace;
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view');
+    var ns = namespace('appointer.view');
 
     defineFunction(ns, 'getDatepickerI18nOptions', function(){
         return params.datepicker_i18n_options;
@@ -44,7 +44,7 @@
     });
 
     defineFunction(ns, 'ifShowDayForDatepicker', function(date, staffId, locationId, serviceId){
-        if(!birchschedule.model.isDayAvaliableByNow(date)){
+        if(!appointer.model.isDayAvaliableByNow(date)){
             return [false, ""];
         }
         var day = date.getDay();
@@ -52,16 +52,16 @@
 
         var showByStaff = false;
         _.each(staffIds, function(staffId) {
-            var showByDaysOff = birchschedule.model.isDayAvaliableByDaysOff(date, staffId);
-            var showBySchedules = birchschedule.model.isDayAvaliableBySchedules(date, staffId, 
+            var showByDaysOff = appointer.model.isDayAvaliableByDaysOff(date, staffId);
+            var showBySchedules = appointer.model.isDayAvaliableBySchedules(date, staffId, 
                         locationId, day);
-            var fullyBooked = birchschedule.model.isDayFullyBooked(date, staffId, locationId, serviceId);
+            var fullyBooked = appointer.model.isDayFullyBooked(date, staffId, locationId, serviceId);
             showByStaff = showByStaff || (showByDaysOff && showBySchedules && !fullyBooked);
         });
         if(!showByStaff) {
             return [false, ""];
         }
-        var showByPreferences = birchschedule.model.isDayAvaliableByBookingPreferences(date);
+        var showByPreferences = appointer.model.isDayAvaliableByBookingPreferences(date);
         if(!showByPreferences) {
             return [false, ""];
         }
@@ -145,12 +145,12 @@
             };
         }
         if(!config.gotoDate) {
-            config.gotoDate = birchschedule.model.getNow4Locale();
+            config.gotoDate = appointer.model.getNow4Locale();
         }
         if(!config.ifShowDayForDatepicker) {
-            config.ifShowDayForDatepicker = birchschedule.view.ifShowDayForDatepicker;
+            config.ifShowDayForDatepicker = appointer.view.ifShowDayForDatepicker;
         }
-        var datepickerI18nOptions = birchschedule.view.getDatepickerI18nOptions();
+        var datepickerI18nOptions = appointer.view.getDatepickerI18nOptions();
         var clearHighlight = function() {
             var dateValue = $('#' + config.dateFieldId).val();
             if(!dateValue) {

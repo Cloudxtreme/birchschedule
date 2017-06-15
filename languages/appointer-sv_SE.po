@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirchPress Scheduler\n"
+"Project-Id-Version: Appointer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-06 21:06-0800\n"
+"POT-Creation-Date: 2014-09-06 22:41-0800\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Diego Onishi\n"
-"Language-Team: Diego Onishi\n"
-"Language: pt_BR\n"
+"Last-Translator: BirchPress <support@birchpress.com>\n"
+"Language-Team: BirchPress Team <support@birchpress.com>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +15,6 @@ msgstr ""
 "_ex;esc_attr_x;esc_html_x;_n;_nx;_n_noop;_nx_noop\n"
 "X-Poedit-Basepath: ../\n"
 "X-Generator: Poedit 1.5.5\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: birchpress/includes/birchpress/util/imp.php:214
@@ -23,64 +22,64 @@ msgstr ""
 #: birchpress/includes/birchpress/util/imp.php:1075
 #: birchpress/includes/birchpress/util/imp.php:1147
 msgid "Sun"
-msgstr "Dom"
+msgstr "Sön"
 
 #: birchpress/includes/birchpress/util/imp.php:215
 #: birchpress/includes/birchpress/util/imp.php:1067
 #: birchpress/includes/birchpress/util/imp.php:1076
 #: birchpress/includes/birchpress/util/imp.php:1148
 msgid "Mon"
-msgstr "Seg"
+msgstr "Mån"
 
 #: birchpress/includes/birchpress/util/imp.php:216
 #: birchpress/includes/birchpress/util/imp.php:1068
 #: birchpress/includes/birchpress/util/imp.php:1077
 #: birchpress/includes/birchpress/util/imp.php:1149
 msgid "Tue"
-msgstr "Ter"
+msgstr "Tis"
 
 #: birchpress/includes/birchpress/util/imp.php:217
 #: birchpress/includes/birchpress/util/imp.php:1069
 #: birchpress/includes/birchpress/util/imp.php:1078
 #: birchpress/includes/birchpress/util/imp.php:1150
 msgid "Wed"
-msgstr "Qua"
+msgstr "Ons"
 
 #: birchpress/includes/birchpress/util/imp.php:218
 #: birchpress/includes/birchpress/util/imp.php:1070
 #: birchpress/includes/birchpress/util/imp.php:1079
 #: birchpress/includes/birchpress/util/imp.php:1151
 msgid "Thu"
-msgstr "Qui"
+msgstr "Tor"
 
 #: birchpress/includes/birchpress/util/imp.php:219
 #: birchpress/includes/birchpress/util/imp.php:1071
 #: birchpress/includes/birchpress/util/imp.php:1080
 #: birchpress/includes/birchpress/util/imp.php:1152
 msgid "Fri"
-msgstr "Sex"
+msgstr "Fed"
 
 #: birchpress/includes/birchpress/util/imp.php:220
 #: birchpress/includes/birchpress/util/imp.php:1072
 #: birchpress/includes/birchpress/util/imp.php:1081
 #: birchpress/includes/birchpress/util/imp.php:1153
 msgid "Sat"
-msgstr "Sáb"
+msgstr "Lör"
 
 #: birchpress/includes/birchpress/util/imp.php:226
-#: includes/birchschedule/view/calendar/imp.php:256
+#: includes/appointer/view/calendar/imp.php:256
 msgid "Month"
-msgstr "Mês"
+msgstr "Månad"
 
 #: birchpress/includes/birchpress/util/imp.php:227
-#: includes/birchschedule/view/calendar/imp.php:260
+#: includes/appointer/view/calendar/imp.php:260
 msgid "Week"
-msgstr "Semana"
+msgstr "Vecka"
 
 #: birchpress/includes/birchpress/util/imp.php:228
-#: includes/birchschedule/view/calendar/imp.php:264
+#: includes/appointer/view/calendar/imp.php:264
 msgid "Day"
-msgstr "Dia"
+msgstr "Dag"
 
 #: birchpress/includes/birchpress/util/imp.php:234
 msgid "Afghanistan"
@@ -2794,24 +2793,23 @@ msgstr ""
 
 #: birchpress/includes/birchpress/util/imp.php:1003
 msgid "Mr"
-msgstr "Sr."
+msgstr "Hr"
 
 #: birchpress/includes/birchpress/util/imp.php:1004
 msgid "Mrs"
-msgstr "Sra."
+msgstr "Fru"
 
 #: birchpress/includes/birchpress/util/imp.php:1005
 msgid "Miss"
-msgstr "Senhorita"
+msgstr "Frkn"
 
-# If "Ms" refers to "Medical Science", please keep it as "Ms".
 #: birchpress/includes/birchpress/util/imp.php:1006
 msgid "Ms"
-msgstr "Srta."
+msgstr "Frkn"
 
 #: birchpress/includes/birchpress/util/imp.php:1007
 msgid "Dr"
-msgstr "Dr."
+msgstr "Dr"
 
 #: birchpress/includes/birchpress/util/imp.php:1038
 #: birchpress/includes/birchpress/util/imp.php:1052
@@ -2823,7 +2821,7 @@ msgstr "Jan"
 #: birchpress/includes/birchpress/util/imp.php:1053
 #: birchpress/includes/birchpress/util/imp.php:1125
 msgid "Feb"
-msgstr "Fev"
+msgstr "Feb"
 
 #: birchpress/includes/birchpress/util/imp.php:1040
 #: birchpress/includes/birchpress/util/imp.php:1054
@@ -2835,15 +2833,14 @@ msgstr "Mar"
 #: birchpress/includes/birchpress/util/imp.php:1055
 #: birchpress/includes/birchpress/util/imp.php:1127
 msgid "Apr"
-msgstr "Abr"
+msgstr "Apr"
 
-# May can also be translated in full as "Maio".
 #: birchpress/includes/birchpress/util/imp.php:1042
 #: birchpress/includes/birchpress/util/imp.php:1056
 #: birchpress/includes/birchpress/util/imp.php:1114
 #: birchpress/includes/birchpress/util/imp.php:1128
 msgid "May"
-msgstr "Mai"
+msgstr "Maj"
 
 #: birchpress/includes/birchpress/util/imp.php:1043
 #: birchpress/includes/birchpress/util/imp.php:1057
@@ -2861,19 +2858,19 @@ msgstr "Jul"
 #: birchpress/includes/birchpress/util/imp.php:1059
 #: birchpress/includes/birchpress/util/imp.php:1131
 msgid "Aug"
-msgstr "Ago"
+msgstr "Aug"
 
 #: birchpress/includes/birchpress/util/imp.php:1046
 #: birchpress/includes/birchpress/util/imp.php:1060
 #: birchpress/includes/birchpress/util/imp.php:1132
 msgid "Sep"
-msgstr "Set"
+msgstr "Sep"
 
 #: birchpress/includes/birchpress/util/imp.php:1047
 #: birchpress/includes/birchpress/util/imp.php:1061
 #: birchpress/includes/birchpress/util/imp.php:1133
 msgid "Oct"
-msgstr "Out"
+msgstr "Okt"
 
 #: birchpress/includes/birchpress/util/imp.php:1048
 #: birchpress/includes/birchpress/util/imp.php:1062
@@ -2885,1290 +2882,1280 @@ msgstr "Nov"
 #: birchpress/includes/birchpress/util/imp.php:1063
 #: birchpress/includes/birchpress/util/imp.php:1135
 msgid "Dec"
-msgstr "Dez"
+msgstr "Dec"
 
 #: birchpress/includes/birchpress/util/imp.php:1084
 msgid "today"
-msgstr "hoje"
+msgstr "idag"
 
 #: birchpress/includes/birchpress/util/imp.php:1085
 msgid "month"
-msgstr "mês"
+msgstr "Månad"
 
 #: birchpress/includes/birchpress/util/imp.php:1086
 msgid "week"
-msgstr "semana"
+msgstr "Vecka"
 
 #: birchpress/includes/birchpress/util/imp.php:1087
 msgid "day"
-msgstr "dia"
+msgstr "Dag"
 
 #: birchpress/includes/birchpress/util/imp.php:1110
 msgid "January"
-msgstr "Janeiro"
+msgstr "Januari"
 
 #: birchpress/includes/birchpress/util/imp.php:1111
 msgid "February"
-msgstr "Fevereiro"
+msgstr "Februari"
 
 #: birchpress/includes/birchpress/util/imp.php:1112
 msgid "March"
-msgstr "Março"
+msgstr "Mars"
 
 #: birchpress/includes/birchpress/util/imp.php:1113
 msgid "April"
-msgstr "Abril"
+msgstr "April"
 
 #: birchpress/includes/birchpress/util/imp.php:1115
 msgid "June"
-msgstr "Junho"
+msgstr "Juni"
 
 #: birchpress/includes/birchpress/util/imp.php:1116
 msgid "July"
-msgstr "Julho"
+msgstr "Juli"
 
 #: birchpress/includes/birchpress/util/imp.php:1117
 msgid "August"
-msgstr "Agosto"
+msgstr "Augusti"
 
 #: birchpress/includes/birchpress/util/imp.php:1118
 msgid "September"
-msgstr "Setembro"
+msgstr "September"
 
 #: birchpress/includes/birchpress/util/imp.php:1119
 msgid "October"
-msgstr "Outubro"
+msgstr "Oktober"
 
 #: birchpress/includes/birchpress/util/imp.php:1120
 msgid "November"
-msgstr "Novembro"
+msgstr "November"
 
 #: birchpress/includes/birchpress/util/imp.php:1121
 msgid "December"
-msgstr "Dezembro"
+msgstr "December"
 
 #: birchpress/includes/birchpress/util/imp.php:1138
 msgid "Sunday"
-msgstr "Domingo"
+msgstr "Söndag"
 
 #: birchpress/includes/birchpress/util/imp.php:1139
 msgid "Monday"
-msgstr "Segunda-feira"
+msgstr "Måndag"
 
 #: birchpress/includes/birchpress/util/imp.php:1140
 msgid "Tuesday"
-msgstr "Terça-feira"
+msgstr "Tisdag"
 
 #: birchpress/includes/birchpress/util/imp.php:1141
 msgid "Wednesday"
-msgstr "Quarta-feira"
+msgstr "Onsdag"
 
 #: birchpress/includes/birchpress/util/imp.php:1142
 msgid "Thursday"
-msgstr "Quinta-feira"
+msgstr "Torsdag"
 
 #: birchpress/includes/birchpress/util/imp.php:1143
 msgid "Friday"
-msgstr "Sexta-feira"
+msgstr "Fredag"
 
 #: birchpress/includes/birchpress/util/imp.php:1144
 msgid "Saturday"
-msgstr "Sábado"
+msgstr "Lördag"
 
 #: birchpress/includes/birchpress/util/imp.php:1156
 msgid "Su"
-msgstr "Do"
+msgstr "Sö"
 
 #: birchpress/includes/birchpress/util/imp.php:1157
 msgid "Mo"
-msgstr "Se"
+msgstr "Må"
 
 #: birchpress/includes/birchpress/util/imp.php:1158
 msgid "Tu"
-msgstr "Te"
+msgstr "Ti"
 
-# Please note that Wednesday (Quarta-feira) and Thursday (Quinta-feira) will have their short forms the same (Qu). If they come consecutively it will be easy to distinguish from each other, but if they come isolated it's better to use "Qua" and "Qui", respectively.
 #: birchpress/includes/birchpress/util/imp.php:1159
 msgid "We"
-msgstr "Qu"
+msgstr "On"
 
-# Please note that Wednesday (Quarta-feira) and Thursday (Quinta-feira) will have their short forms the same (Qu). If they come consecutively it will be easy to distinguish from each other, but if they come isolated it's better to use "Qua" and "Qui", respectively.
 #: birchpress/includes/birchpress/util/imp.php:1160
 msgid "Th"
-msgstr "Qu"
+msgstr "To"
 
 #: birchpress/includes/birchpress/util/imp.php:1161
 msgid "Fr"
-msgstr "Se"
+msgstr "Fr"
 
 #: birchpress/includes/birchpress/util/imp.php:1162
 msgid "Sa"
-msgstr "Sa"
+msgstr "Lö"
 
-#: includes/birchschedule/model/booking/imp.php:42
+#: includes/appointer/model/booking/imp.php:42
 #, php-format
 msgid "%s Clients"
-msgstr "%s Clientes"
+msgstr "%s klienter"
 
-#: includes/birchschedule/model/booking/imp.php:166
-#: includes/birchschedule/model/booking/imp.php:186
-#: includes/birchschedule/model/booking/imp.php:222
-#: includes/birchschedule/model/booking/imp.php:533
-#: includes/birchschedule/model/booking/imp.php:562
-#: includes/birchschedule/model/booking/imp.php:613
-#: includes/birchschedule/model/booking/imp.php:630
-#: includes/birchschedule/model/booking/imp.php:786
+#: includes/appointer/model/booking/imp.php:166
+#: includes/appointer/model/booking/imp.php:186
+#: includes/appointer/model/booking/imp.php:222
+#: includes/appointer/model/booking/imp.php:533
+#: includes/appointer/model/booking/imp.php:562
+#: includes/appointer/model/booking/imp.php:613
+#: includes/appointer/model/booking/imp.php:630
+#: includes/appointer/model/booking/imp.php:786
 msgid "The appointment does not exist."
-msgstr "A consulta não existe."
+msgstr "Motståndaren finn inte."
 
-#: includes/birchschedule/model/booking/imp.php:817
+#: includes/appointer/model/booking/imp.php:817
 msgid "Credit Card"
-msgstr "Cartão de Crédito"
+msgstr "Kreditkort"
 
-#: includes/birchschedule/model/booking/imp.php:818
+#: includes/appointer/model/booking/imp.php:818
 msgid "Cash"
-msgstr "Dinheiro"
+msgstr "Kontanter"
 
-#: includes/birchschedule/view/imp.php:295
-#: includes/birchschedule/view/imp.php:296
+#: includes/appointer/view/imp.php:295
+#: includes/appointer/view/imp.php:296
 msgid "Business"
-msgstr "Empresa"
+msgstr "Verksamhet (affärer)"
 
-#: includes/birchschedule/view/imp.php:300
-#: includes/birchschedule/view/imp.php:301
+#: includes/appointer/view/imp.php:300
+#: includes/appointer/view/imp.php:301
 msgid "Calendar"
-msgstr "Calendário"
+msgstr "Kalender"
 
-#: includes/birchschedule/view/imp.php:307
-msgid "BirchPress Scheduler Settings"
-msgstr "Configurações do BirchPress Scheduler"
+#: includes/appointer/view/imp.php:307
+msgid "Appointer Settings"
+msgstr "Appointer-inställningar"
 
-#: includes/birchschedule/view/imp.php:308
+#: includes/appointer/view/imp.php:308
 #: modules/fbuilder/field/predefined/clientsection_imp.php:158
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Inställningar"
 
-#: includes/birchschedule/view/imp.php:313
+#: includes/appointer/view/imp.php:313
 msgid "Help"
-msgstr "Ajuda"
+msgstr "Hjälp"
 
-#: includes/birchschedule/view/imp.php:365
+#: includes/appointer/view/imp.php:365
 msgid "Loading..."
-msgstr "Carregando..."
+msgstr "Laddar..."
 
-#: includes/birchschedule/view/imp.php:366
+#: includes/appointer/view/imp.php:366
 msgid "Loading appointments..."
-msgstr "Carregando consultas..."
+msgstr "Laddar möten..."
 
-#: includes/birchschedule/view/imp.php:367
+#: includes/appointer/view/imp.php:367
 msgid "Saving..."
-msgstr "Salvando..."
+msgstr "Sparar..."
 
-#: includes/birchschedule/view/imp.php:368
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:141
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:304
+#: includes/appointer/view/imp.php:368
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:141
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:304
 #: modules/fbuilder/field/imp.php:353 modules/gbooking/imp.php:261
 msgid "Save"
-msgstr "Salvar"
+msgstr "Spara"
 
-#: includes/birchschedule/view/imp.php:369
-#: includes/birchschedule/view/appointments/new/imp.php:259
-#: includes/birchschedule/view/bookingform/imp.php:710
+#: includes/appointer/view/imp.php:369
+#: includes/appointer/view/appointments/new/imp.php:259
+#: includes/appointer/view/bookingform/imp.php:710
 #: modules/fbuilder/field/predefined/submit_imp.php:108
 #: modules/gbooking/imp.php:250 modules/wintegration/wc_imp.php:727
 msgid "Please wait..."
-msgstr "Por favor, aguarde..."
+msgstr "Vänta..."
 
-#: includes/birchschedule/view/imp.php:370
-#: includes/birchschedule/view/appointments/new/imp.php:267
+#: includes/appointer/view/imp.php:370
+#: includes/appointer/view/appointments/new/imp.php:267
 msgid "Schedule"
-msgstr "Cronograma"
+msgstr "Schema"
 
-#: includes/birchschedule/view/imp.php:371
+#: includes/appointer/view/imp.php:371
 msgid "Are you sure you want to cancel this appointment?"
-msgstr "Tem certeza de que deseja cancelar esta consulta?"
+msgstr "Är du säker på att du vill stryka det här mötet?"
 
-#: includes/birchschedule/view/imp.php:372
+#: includes/appointer/view/imp.php:372
 msgid "Your appointment has been cancelled successfully."
-msgstr "Sua consulta foi cancelada com sucesso."
+msgstr "Ditt möte har tagits bort."
 
-#: includes/birchschedule/view/imp.php:373
+#: includes/appointer/view/imp.php:373
 msgid "The appointment doesn't exist or has been cancelled."
-msgstr "A consulta não existe ou foi cancelada."
+msgstr "Mötet finns inte eller har tagits bort."
 
-#: includes/birchschedule/view/imp.php:374
+#: includes/appointer/view/imp.php:374
 msgid "Your appointment has been rescheduled successfully."
-msgstr "Sua consulta foi remarcada com sucesso."
+msgstr "Ditt möte har lagts om till annat tillfälle."
 
-#: includes/birchschedule/view/imp.php:375
+#: includes/appointer/view/imp.php:375
 msgid ""
 "Your appointment can not be cancelled now according to our booking policies."
-msgstr ""
-"De acordo com nossas políticas de agendamento, sua consulta não pode ser "
-"cancelada agora."
+msgstr "Ditt möte kan inte tas bort enligt vår bokningspolicy."
 
-#: includes/birchschedule/view/imp.php:376
+#: includes/appointer/view/imp.php:376
 msgid ""
 "Your appointment can not be rescheduled now according to our booking "
 "policies."
-msgstr ""
-"De acordo com nossas políticas de agendamento, sua consulta não pode ser "
-"remarcada agora."
+msgstr "Ditt möte kan inte läggas om nu enligt vår bokningspolicy."
 
-#: includes/birchschedule/view/imp.php:377
+#: includes/appointer/view/imp.php:377
 msgid "There are no available times."
-msgstr "Não há horários disponíveis."
+msgstr "Inga tider finns tillgängliga."
 
-#: includes/birchschedule/view/imp.php:378
+#: includes/appointer/view/imp.php:378
 msgid "(Deposit)"
-msgstr "(Depósito)"
+msgstr "(Insättning)"
 
-#: includes/birchschedule/view/imp.php:379
-#: includes/birchschedule/view/appointments/edit/imp.php:294
+#: includes/appointer/view/imp.php:379
+#: includes/appointer/view/appointments/edit/imp.php:294
 #: modules/aportal/imp.php:625
 msgid "Reschedule"
-msgstr "Remarcar"
+msgstr "Ombokning"
 
-#: includes/birchschedule/view/imp.php:380 modules/eadmin/imp.php:195
+#: includes/appointer/view/imp.php:380 modules/eadmin/imp.php:195
 #: modules/gbooking/imp.php:199
 msgid "Change"
-msgstr "Alterar"
+msgstr "Ändring"
 
-#: includes/birchschedule/view/imp.php:381
+#: includes/appointer/view/imp.php:381
 msgid "No Preference"
-msgstr "Sem Preferências"
+msgstr "Ingen preferens"
 
-#: includes/birchschedule/view/appointments/imp.php:33
+#: includes/appointer/view/appointments/imp.php:33
 #: modules/cmanager/imp.php:30
 msgid "Appointments"
-msgstr "Consultas"
+msgstr "Möten"
 
-#: includes/birchschedule/view/appointments/imp.php:34
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:44
+#: includes/appointer/view/appointments/imp.php:34
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:44
 msgid "Appointment"
-msgstr "Consulta"
+msgstr "Möte"
 
-#: includes/birchschedule/view/appointments/imp.php:35
-#: includes/birchschedule/view/appointments/imp.php:36
-#: includes/birchschedule/view/appointments/imp.php:39
-#: includes/birchschedule/view/calendar/imp.php:240
+#: includes/appointer/view/appointments/imp.php:35
+#: includes/appointer/view/appointments/imp.php:36
+#: includes/appointer/view/appointments/imp.php:39
+#: includes/appointer/view/calendar/imp.php:240
 #: modules/enotification/imp.php:392
 msgid "New Appointment"
-msgstr "Nova Consulta"
+msgstr "Nytt möte"
 
-#: includes/birchschedule/view/appointments/imp.php:37
-#: includes/birchschedule/view/appointments/imp.php:70
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:47
-#: includes/birchschedule/view/clients/imp.php:35
-#: includes/birchschedule/view/locations/imp.php:36
-#: includes/birchschedule/view/services/imp.php:37
-#: includes/birchschedule/view/staff/imp.php:38
+#: includes/appointer/view/appointments/imp.php:37
+#: includes/appointer/view/appointments/imp.php:70
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:47
+#: includes/appointer/view/clients/imp.php:35
+#: includes/appointer/view/locations/imp.php:36
+#: includes/appointer/view/services/imp.php:37
+#: includes/appointer/view/staff/imp.php:38
 #: modules/fbuilder/field/imp.php:412 modules/wcredit/imp.php:114
 msgid "Edit"
-msgstr "Editar"
+msgstr "Redigera"
 
-#: includes/birchschedule/view/appointments/imp.php:38
+#: includes/appointer/view/appointments/imp.php:38
 msgid "Edit Appointment"
-msgstr "Editar Consulta"
+msgstr "Redigera möte"
 
-#: includes/birchschedule/view/appointments/imp.php:40
-#: includes/birchschedule/view/appointments/imp.php:41
+#: includes/appointer/view/appointments/imp.php:40
+#: includes/appointer/view/appointments/imp.php:41
 msgid "View Appointment"
-msgstr "Ver Consulta"
+msgstr "Se möte"
 
-#: includes/birchschedule/view/appointments/imp.php:42
+#: includes/appointer/view/appointments/imp.php:42
 msgid "Search Appointments"
-msgstr "Procurar Consultas"
+msgstr "Sök möten"
 
-#: includes/birchschedule/view/appointments/imp.php:43
+#: includes/appointer/view/appointments/imp.php:43
 msgid "No Appointments found"
-msgstr "Nenhuma consulta encontrada"
+msgstr "Inga möten hittades"
 
-#: includes/birchschedule/view/appointments/imp.php:44
+#: includes/appointer/view/appointments/imp.php:44
 msgid "No Appointments found in trash"
-msgstr "Nenhuma consulta encontrada na lixeira"
+msgstr "Ingamöten hittas i papperkorgen"
 
-#: includes/birchschedule/view/appointments/imp.php:45
+#: includes/appointer/view/appointments/imp.php:45
 msgid "Parent Appointment"
-msgstr "Consulta Pai"
+msgstr "Föräldramöte"
 
-#: includes/birchschedule/view/appointments/imp.php:47
+#: includes/appointer/view/appointments/imp.php:47
 msgid "This is where appointments are stored."
-msgstr "Aqui são armazenadas as consultas."
+msgstr "Det är här som möten sparas."
 
-#: includes/birchschedule/view/appointments/imp.php:66
+#: includes/appointer/view/appointments/imp.php:66
 msgid "One-on-one appointments"
-msgstr "Consultas individuais"
+msgstr "Personliga möten"
 
-#: includes/birchschedule/view/appointments/imp.php:67
+#: includes/appointer/view/appointments/imp.php:67
 msgid "One-on-one appointment"
-msgstr "Consulta individual"
+msgstr "Personligt möte"
 
-#: includes/birchschedule/view/appointments/imp.php:68
-#: includes/birchschedule/view/appointments/imp.php:69
-#: includes/birchschedule/view/appointments/imp.php:72
+#: includes/appointer/view/appointments/imp.php:68
+#: includes/appointer/view/appointments/imp.php:69
+#: includes/appointer/view/appointments/imp.php:72
 msgid "New One-on-one Appointment"
-msgstr "Nova Consulta Individual"
+msgstr "Nytt personligt möte"
 
-#: includes/birchschedule/view/appointments/imp.php:71
+#: includes/appointer/view/appointments/imp.php:71
 msgid "Edit One-on-one Appointment"
-msgstr "Editar Consulta Individual"
+msgstr "Redigera personligt möte"
 
-#: includes/birchschedule/view/appointments/imp.php:73
-#: includes/birchschedule/view/appointments/imp.php:74
+#: includes/appointer/view/appointments/imp.php:73
+#: includes/appointer/view/appointments/imp.php:74
 msgid "View One-on-one Appointment"
-msgstr "Ver Consulta Individual"
+msgstr "Se personligt möte"
 
-#: includes/birchschedule/view/appointments/imp.php:75
+#: includes/appointer/view/appointments/imp.php:75
 msgid "Search One-on-one Appointments"
-msgstr "Procurar Consultas Individuais"
+msgstr "Sök personliga möten"
 
-#: includes/birchschedule/view/appointments/imp.php:76
+#: includes/appointer/view/appointments/imp.php:76
 msgid "No One-on-one Appointments found"
-msgstr "Nenhuma consulta individual encontrada"
+msgstr "Inga personliga möten hittades"
 
-#: includes/birchschedule/view/appointments/imp.php:77
+#: includes/appointer/view/appointments/imp.php:77
 msgid "No One-on-one Appointments found in trash"
-msgstr "Nenhuma consulta individual encontrada na lixeira"
+msgstr "Inget personligt möte hittades i papperskorgen"
 
-#: includes/birchschedule/view/appointments/imp.php:78
+#: includes/appointer/view/appointments/imp.php:78
 msgid "Parent One-on-one Appointment"
-msgstr "Consulta Individual Pai"
+msgstr "Enskilt föräldramöte"
 
-#: includes/birchschedule/view/appointments/imp.php:80
+#: includes/appointer/view/appointments/imp.php:80
 msgid "This is where one-on-one appointments are stored."
-msgstr "Aqui são armazenadas as consultas individuais."
+msgstr "Det är här som personliga möten sparas."
 
-#: includes/birchschedule/view/appointments/imp.php:104
-#: includes/birchschedule/view/appointments/imp.php:107
-#: includes/birchschedule/view/appointments/imp.php:109
+#: includes/appointer/view/appointments/imp.php:104
+#: includes/appointer/view/appointments/imp.php:107
+#: includes/appointer/view/appointments/imp.php:109
 msgid "Appointment updated."
-msgstr "Consulta atualizada."
+msgstr "Mötet är uppdaterat."
 
-#: includes/birchschedule/view/appointments/imp.php:105
-#: includes/birchschedule/view/clients/imp.php:147
-#: includes/birchschedule/view/locations/imp.php:81
-#: includes/birchschedule/view/services/imp.php:133
-#: includes/birchschedule/view/staff/imp.php:126
+#: includes/appointer/view/appointments/imp.php:105
+#: includes/appointer/view/clients/imp.php:147
+#: includes/appointer/view/locations/imp.php:81
+#: includes/appointer/view/services/imp.php:133
+#: includes/appointer/view/staff/imp.php:126
 msgid "Custom field updated."
-msgstr "Campo personalizado atualizado."
+msgstr "Anpassat fält är uppdaterat."
 
-#: includes/birchschedule/view/appointments/imp.php:106
-#: includes/birchschedule/view/clients/imp.php:148
-#: includes/birchschedule/view/locations/imp.php:82
-#: includes/birchschedule/view/services/imp.php:134
-#: includes/birchschedule/view/staff/imp.php:127
+#: includes/appointer/view/appointments/imp.php:106
+#: includes/appointer/view/clients/imp.php:148
+#: includes/appointer/view/locations/imp.php:82
+#: includes/appointer/view/services/imp.php:134
+#: includes/appointer/view/staff/imp.php:127
 msgid "Custom field deleted."
-msgstr "Campo personalizado excluído."
+msgstr "Anpassat fält raderat."
 
-#: includes/birchschedule/view/appointments/imp.php:108
+#: includes/appointer/view/appointments/imp.php:108
 #, php-format
 msgid "Appointment restored to revision from %s"
-msgstr "Consulta restaurada da revisão de %s"
+msgstr "Mötet återställt för ändring från %s"
 
-#: includes/birchschedule/view/appointments/imp.php:110
+#: includes/appointer/view/appointments/imp.php:110
 msgid "Appointment saved."
-msgstr "Consulta salva."
+msgstr "Mötet sparat."
 
-#: includes/birchschedule/view/appointments/imp.php:111
+#: includes/appointer/view/appointments/imp.php:111
 msgid "Appointment submitted."
-msgstr "Consulta enviada."
+msgstr "Mötet inlämnat."
 
-#: includes/birchschedule/view/appointments/imp.php:112
+#: includes/appointer/view/appointments/imp.php:112
 #, php-format
 msgid "Appointment scheduled for: <strong>%1$s</strong>."
-msgstr "Consulta agendada para: <strong>%1$s</strong>."
+msgstr "Möte schemalgt för: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/appointments/imp.php:113
+#: includes/appointer/view/appointments/imp.php:113
 msgid "Appointment draft updated."
-msgstr "Rascunho de consulta atualizado."
+msgstr "Mötesutkastet är uppdaterat."
 
-#: includes/birchschedule/view/appointments/edit/imp.php:141
+#: includes/appointer/view/appointments/edit/imp.php:141
 msgid "Please select a provider"
-msgstr "Por favor, selecione um prestador."
+msgstr "Välj en leverantör"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:144
-#: includes/birchschedule/view/appointments/new/imp.php:296
-#: includes/birchschedule/view/bookingform/imp.php:186
+#: includes/appointer/view/appointments/edit/imp.php:144
+#: includes/appointer/view/appointments/new/imp.php:296
+#: includes/appointer/view/bookingform/imp.php:186
 #: modules/aportal/imp.php:684
 msgid "Date is required"
-msgstr "A data é obrigatória"
+msgstr "Datum krävs"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:147
-#: includes/birchschedule/view/appointments/new/imp.php:299
-#: includes/birchschedule/view/bookingform/imp.php:189
-#: includes/birchschedule/view/bookingform/imp.php:230
+#: includes/appointer/view/appointments/edit/imp.php:147
+#: includes/appointer/view/appointments/new/imp.php:299
+#: includes/appointer/view/bookingform/imp.php:189
+#: includes/appointer/view/bookingform/imp.php:230
 #: modules/aportal/imp.php:687
 msgid "Time is required"
-msgstr "O horário é obrigatório"
+msgstr "Tidpunkt krävs"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:157
-#: includes/birchschedule/view/appointments/new/imp.php:309
-#: includes/birchschedule/view/bookingform/imp.php:199
+#: includes/appointer/view/appointments/edit/imp.php:157
+#: includes/appointer/view/appointments/new/imp.php:309
+#: includes/appointer/view/bookingform/imp.php:199
 msgid "Date & time is incorrect"
-msgstr "Data e hora incorretos"
+msgstr "Datum och tidpunkt är felaktiga"
 
-# If space is short, please use "Info. da Consulta".
-#: includes/birchschedule/view/appointments/edit/imp.php:224
-#: includes/birchschedule/view/appointments/new/imp.php:127
-#: includes/birchschedule/view/bookingform/imp.php:626
+#: includes/appointer/view/appointments/edit/imp.php:224
+#: includes/appointer/view/appointments/new/imp.php:127
+#: includes/appointer/view/bookingform/imp.php:626
 #: modules/fbuilder/upgrader.php:27 modules/fbuilder/upgrader.php:349
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:94
 #: modules/wintegration/wc_imp.php:556
 msgid "Appointment Info"
-msgstr "Informações da Consulta"
+msgstr "Mötesinfo"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:226
-#: includes/birchschedule/view/appointments/new/imp.php:129
+#: includes/appointer/view/appointments/edit/imp.php:226
+#: includes/appointer/view/appointments/new/imp.php:129
 msgid "Actions"
-msgstr "Ações"
+msgstr "Åtgärder"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:249
-#: includes/birchschedule/view/appointments/new/imp.php:280
+#: includes/appointer/view/appointments/edit/imp.php:249
+#: includes/appointer/view/appointments/new/imp.php:280
 msgid "Back to Calendar"
-msgstr "Voltar ao Calendário"
+msgstr "Tillbaka till kalendern"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:264
+#: includes/appointer/view/appointments/edit/imp.php:264
 msgid "Cancel Appointment"
-msgstr "Cancelar Consulta"
+msgstr "Stryk mötet"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:326
-#: includes/birchschedule/view/appointments/new/imp.php:167
-#: includes/birchschedule/view/bookingform/imp.php:292
-#: includes/birchschedule/view/bookingform/imp.php:553
-#: includes/birchschedule/view/bookingform/imp.php:605
-#: includes/birchschedule/view/locations/imp.php:33
+#: includes/appointer/view/appointments/edit/imp.php:326
+#: includes/appointer/view/appointments/new/imp.php:167
+#: includes/appointer/view/bookingform/imp.php:292
+#: includes/appointer/view/bookingform/imp.php:553
+#: includes/appointer/view/bookingform/imp.php:605
+#: includes/appointer/view/locations/imp.php:33
 #: modules/fbuilder/upgrader.php:33 modules/fbuilder/upgrader.php:355
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:98
 #: modules/pcalendar/imp.php:196 modules/ppayment/upgrader.php:42
 msgid "Location"
-msgstr "Local"
+msgstr "Plats"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:337
-#: includes/birchschedule/view/appointments/new/imp.php:177
-#: includes/birchschedule/view/bookingform/imp.php:296
-#: includes/birchschedule/view/bookingform/imp.php:557
-#: includes/birchschedule/view/bookingform/imp.php:606
-#: includes/birchschedule/view/services/imp.php:34
+#: includes/appointer/view/appointments/edit/imp.php:337
+#: includes/appointer/view/appointments/new/imp.php:177
+#: includes/appointer/view/bookingform/imp.php:296
+#: includes/appointer/view/bookingform/imp.php:557
+#: includes/appointer/view/bookingform/imp.php:606
+#: includes/appointer/view/services/imp.php:34
 #: modules/fbuilder/upgrader.php:34 modules/fbuilder/upgrader.php:356
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:102
 #: modules/ppayment/upgrader.php:46
 msgid "Service"
-msgstr "Serviço"
+msgstr "Tjänst"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:348
-#: includes/birchschedule/view/appointments/new/imp.php:187
-#: includes/birchschedule/view/bookingform/imp.php:607
-#: includes/birchschedule/view/staff/imp.php:35
+#: includes/appointer/view/appointments/edit/imp.php:348
+#: includes/appointer/view/appointments/new/imp.php:187
+#: includes/appointer/view/bookingform/imp.php:607
+#: includes/appointer/view/staff/imp.php:35
 #: modules/fbuilder/upgrader.php:35 modules/fbuilder/upgrader.php:357
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:106
 #: modules/pcalendar/imp.php:199 modules/ppayment/upgrader.php:50
 msgid "Provider"
-msgstr "Prestador"
+msgstr "Leverantör"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:359
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:262
-#: includes/birchschedule/view/appointments/new/imp.php:198
-#: includes/birchschedule/view/bookingform/imp.php:608
+#: includes/appointer/view/appointments/edit/imp.php:359
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:262
+#: includes/appointer/view/appointments/new/imp.php:198
+#: includes/appointer/view/bookingform/imp.php:608
 #: modules/fbuilder/upgrader.php:209 modules/fbuilder/upgrader.php:292
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:110
 #: modules/wcredit/imp.php:187
 msgid "Date"
-msgstr "Data"
+msgstr "Datum"
 
-#: includes/birchschedule/view/appointments/edit/imp.php:369
-#: includes/birchschedule/view/appointments/new/imp.php:209
-#: includes/birchschedule/view/bookingform/imp.php:300
-#: includes/birchschedule/view/bookingform/imp.php:561
-#: includes/birchschedule/view/bookingform/imp.php:609
+#: includes/appointer/view/appointments/edit/imp.php:369
+#: includes/appointer/view/appointments/new/imp.php:209
+#: includes/appointer/view/bookingform/imp.php:300
+#: includes/appointer/view/bookingform/imp.php:561
+#: includes/appointer/view/bookingform/imp.php:609
 #: modules/fbuilder/upgrader.php:210 modules/fbuilder/upgrader.php:293
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:114
 #: modules/ppayment/upgrader.php:54
 msgid "Time"
-msgstr "Horário"
+msgstr "Tidpunkt"
 
-# If space is short, please use "Info. do Cliente".
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:38
-#: includes/birchschedule/view/appointments/new/imp.php:233
-#: includes/birchschedule/view/clients/imp.php:108
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:38
+#: includes/appointer/view/appointments/new/imp.php:233
+#: includes/appointer/view/clients/imp.php:108
 msgid "Client Info"
-msgstr "Informações do Cliente"
+msgstr "Klientinformation"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:56
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:56
 msgid "View Details"
-msgstr "Ver detalhes"
+msgstr "Se detaljer"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:57
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:43
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:57
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:43
 #: modules/ppayment/imp.php:87
 msgid "Payments"
-msgstr "Pagamentos"
+msgstr "Betalningar"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/imp.php:58
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:145
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:308
+#: includes/appointer/view/appointments/edit/clientlist/imp.php:58
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:145
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:308
 #: modules/fbuilder/field/imp.php:354 modules/gbooking/imp.php:265
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Avbryt"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:101
-#: includes/birchschedule/view/clients/imp.php:215
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:101
+#: includes/appointer/view/clients/imp.php:215
 msgid "Email already exists."
-msgstr "O e-mail já existe."
+msgstr "E-mailet finns redan"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:109
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:112
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:120
-#: includes/birchschedule/view/appointments/new/imp.php:318
-#: includes/birchschedule/view/appointments/new/imp.php:321
-#: includes/birchschedule/view/appointments/new/imp.php:329
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:109
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:112
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:120
+#: includes/appointer/view/appointments/new/imp.php:318
+#: includes/appointer/view/appointments/new/imp.php:321
+#: includes/appointer/view/appointments/new/imp.php:329
 #: modules/fbuilder/field/imp.php:364
 #: modules/fbuilder/field/predefined/address_imp.php:50
 msgid "This field is required"
-msgstr "Este campo é obrigatório"
+msgstr "Detta fält är obligatoriskt"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:115
-#: includes/birchschedule/view/appointments/new/imp.php:324
-#: includes/birchschedule/view/bookingform/imp.php:214
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:115
+#: includes/appointer/view/appointments/new/imp.php:324
+#: includes/appointer/view/bookingform/imp.php:214
 #: modules/fbuilder/field/predefined/clientemail_imp.php:30
 msgid "Email is required"
-msgstr "O e-mail é obrigatório"
+msgstr "E-mai är obligatoriskt"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:117
-#: includes/birchschedule/view/appointments/new/imp.php:326
-#: includes/birchschedule/view/bookingform/imp.php:216
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:117
+#: includes/appointer/view/appointments/new/imp.php:326
+#: includes/appointer/view/bookingform/imp.php:216
 msgid "Email is incorrect"
-msgstr "E-mail incorreto"
+msgstr "E-maiet är felaktigt"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:162
-#: includes/birchschedule/view/clients/imp.php:36
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:162
+#: includes/appointer/view/clients/imp.php:36
 msgid "Edit Client"
-msgstr "Editar Cliente"
+msgstr "Redigera klient"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:206
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:265
-#: includes/birchschedule/view/bookingform/imp.php:610
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:206
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:265
+#: includes/appointer/view/bookingform/imp.php:610
 #: modules/fbuilder/upgrader.php:42 modules/wcredit/imp.php:189
 msgid "Notes"
-msgstr "Notas"
+msgstr "Anteckningar"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:249
-#: includes/birchschedule/view/clients/imp.php:262
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:249
+#: includes/appointer/view/clients/imp.php:262
 #: modules/fbuilder/upgrader.php:65
 msgid "Title"
-msgstr "Título"
+msgstr "Titel"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:260
-#: includes/birchschedule/view/bookingform/imp.php:611
-#: includes/birchschedule/view/clients/imp.php:272
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:260
+#: includes/appointer/view/bookingform/imp.php:611
+#: includes/appointer/view/clients/imp.php:272
 #: modules/fbuilder/upgrader.php:75
 msgid "First Name"
-msgstr "Nome"
+msgstr "Förnamn"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:269
-#: includes/birchschedule/view/bookingform/imp.php:612
-#: includes/birchschedule/view/clients/imp.php:279
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:269
+#: includes/appointer/view/bookingform/imp.php:612
+#: includes/appointer/view/clients/imp.php:279
 #: modules/fbuilder/upgrader.php:83
 msgid "Last Name"
-msgstr "Sobrenome"
+msgstr "Efternamn"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:278
-#: includes/birchschedule/view/bookingform/imp.php:613
-#: includes/birchschedule/view/clients/imp.php:118
-#: includes/birchschedule/view/clients/imp.php:295 modules/fbuilder/imp.php:35
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:278
+#: includes/appointer/view/bookingform/imp.php:613
+#: includes/appointer/view/clients/imp.php:118
+#: includes/appointer/view/clients/imp.php:295 modules/fbuilder/imp.php:35
 #: modules/fbuilder/upgrader.php:91
 msgid "Email"
 msgstr "E-mail"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:287
-#: includes/birchschedule/view/bookingform/imp.php:614
-#: includes/birchschedule/view/clients/imp.php:117
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:287
+#: includes/appointer/view/bookingform/imp.php:614
+#: includes/appointer/view/clients/imp.php:117
 #: modules/fbuilder/upgrader.php:110
 msgid "Phone"
-msgstr "Telefone"
+msgstr "Telefon"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:296
-#: includes/birchschedule/view/clients/imp.php:119
-#: includes/birchschedule/view/clients/imp.php:303
-#: includes/birchschedule/view/locations/imp.php:69
-#: includes/birchschedule/view/locations/imp.php:214
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:296
+#: includes/appointer/view/clients/imp.php:119
+#: includes/appointer/view/clients/imp.php:303
+#: includes/appointer/view/locations/imp.php:69
+#: includes/appointer/view/locations/imp.php:214
 #: modules/fbuilder/upgrader.php:118
 msgid "Address"
-msgstr "Endereço"
+msgstr "Adress"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:307
-#: includes/birchschedule/view/clients/imp.php:315
-#: includes/birchschedule/view/locations/imp.php:70
-#: includes/birchschedule/view/locations/imp.php:224
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:307
+#: includes/appointer/view/clients/imp.php:315
+#: includes/appointer/view/locations/imp.php:70
+#: includes/appointer/view/locations/imp.php:224
 #: modules/fbuilder/upgrader.php:126
 msgid "City"
-msgstr "Cidade"
+msgstr "Stad"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:316
-#: includes/birchschedule/view/clients/imp.php:323
-#: includes/birchschedule/view/locations/imp.php:71
-#: includes/birchschedule/view/locations/imp.php:231
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:316
+#: includes/appointer/view/clients/imp.php:323
+#: includes/appointer/view/locations/imp.php:71
+#: includes/appointer/view/locations/imp.php:231
 #: modules/fbuilder/upgrader.php:134
 msgid "State/Province"
-msgstr "Estado/Distrito"
+msgstr "Område"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:332
-#: includes/birchschedule/view/clients/imp.php:338
-#: includes/birchschedule/view/locations/imp.php:241
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:332
+#: includes/appointer/view/clients/imp.php:338
+#: includes/appointer/view/locations/imp.php:241
 #: modules/fbuilder/upgrader.php:142
 msgid "Country"
-msgstr "País"
+msgstr "Landskap"
 
-# This acronym is widely used in Brazil. It stands for "Código de Endereçamento Postal", in case you need it to be written in full.
-#: includes/birchschedule/view/appointments/edit/clientlist/edit/imp.php:343
-#: includes/birchschedule/view/clients/imp.php:347
-#: includes/birchschedule/view/locations/imp.php:249
+#: includes/appointer/view/appointments/edit/clientlist/edit/imp.php:343
+#: includes/appointer/view/clients/imp.php:347
+#: includes/appointer/view/locations/imp.php:249
 #: modules/fbuilder/upgrader.php:152
 msgid "Zip Code"
-msgstr "CEP"
+msgstr "Postnummer"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:45
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:246
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:45
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:246
 msgid "Add Payment"
-msgstr "Adicionar Pagamento"
+msgstr "Lägg till betalning"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:46
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:46
 msgid "Add New Payment"
-msgstr "Adicionar Novo Pagamento"
+msgstr "Lägg till ny betalning"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:48
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:48
 msgid "Edit Payment"
-msgstr "Editar Pagamento"
+msgstr "Redigera betalning"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:49
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:49
 msgid "New Payment"
-msgstr "Novo Pagamento"
+msgstr "Ny betalning"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:50
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:51
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:50
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:51
 msgid "View Payment"
-msgstr "Ver Pagamento"
+msgstr "Se betalning"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:52
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:52
 msgid "Search Payments"
-msgstr "Procurar Pagamentos"
+msgstr "Sök betalningar"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:53
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:53
 msgid "No Payments found"
-msgstr "Nenhum pagamento encontrado"
+msgstr "Ingen betalning hittades"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:54
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:54
 msgid "No Payments found in trash"
-msgstr "Nenhum pagamento encontrado na lixeira"
+msgstr "Inga betalningar hittade i papperskorgen"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:55
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:55
 msgid "Parent Payment"
-msgstr "Pagamento Pai"
+msgstr "Föräldrabetalning"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:57
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:57
 msgid "This is where payments are stored."
-msgstr "Aqui são armazenados os pagamentos."
+msgstr "Det är här som betalningar sparas."
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:181
-#: includes/birchschedule/view/services/imp.php:229
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:181
+#: includes/appointer/view/services/imp.php:229
 msgid "Price"
-msgstr "Preço"
+msgstr "Pris"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:192
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:192
 msgid "Paid"
-msgstr "Pago"
+msgstr "Betalt"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:201
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:201
 msgid "Due"
-msgstr "Devido"
+msgstr "Förfallen"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:213
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:213
 msgid "Amount to Pay"
-msgstr "Quantia a Pagar"
+msgstr "Summa att betala"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:223
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:223
 msgid "Payment Type"
-msgstr "Tipo de Pagamento"
+msgstr "Betalningstyp"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:233
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:233
 msgid "Payment Notes"
-msgstr "Notas do Pagamento"
+msgstr "Betalningsanteckningar"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:255
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:255
 msgid "Payment History"
-msgstr "Histórico de Pagamento"
+msgstr "Betalningshistorik"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:263
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:263
 #: modules/wcredit/imp.php:188
 msgid "Amount"
-msgstr "Quantia"
+msgstr "Belopp"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:264
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:264
 msgid "Type"
-msgstr "Tipo"
+msgstr "Typ"
 
-#: includes/birchschedule/view/appointments/edit/clientlist/payments/imp.php:349
+#: includes/appointer/view/appointments/edit/clientlist/payments/imp.php:349
 #: modules/cintegration/imp.php:659 modules/fbuilder/field/imp.php:416
 #: modules/fbuilder/field/selectable_imp.php:69
 #: modules/wintegration/imp.php:357
 msgid "Delete"
-msgstr "Excluir"
+msgstr "Radera"
 
-# If space is short, please use "Info. Adicionais".
-#: includes/birchschedule/view/appointments/new/imp.php:249
+#: includes/appointer/view/appointments/new/imp.php:249
 #: modules/enotification/imp.php:290 modules/gbooking/imp.php:240
 msgid "Additional Info"
-msgstr "Informações Adicionais"
+msgstr "Ytterligare information"
 
-#: includes/birchschedule/view/appointments/new/imp.php:293
-#: includes/birchschedule/view/bookingform/imp.php:183
+#: includes/appointer/view/appointments/new/imp.php:293
+#: includes/appointer/view/bookingform/imp.php:183
 msgid "Please select a service and a provider"
-msgstr "Por favor, selecione um serviço e um prestador."
+msgstr "Välj en tjänst och en leverantör"
 
-#: includes/birchschedule/view/bookingform/imp.php:208
+#: includes/appointer/view/bookingform/imp.php:208
 msgid "First name is required"
-msgstr "O nome é obrigatório"
+msgstr "Förnamn är obligatoriskt"
 
-#: includes/birchschedule/view/bookingform/imp.php:211
+#: includes/appointer/view/bookingform/imp.php:211
 msgid "Last name is required"
-msgstr "O sobrenome é obrigatório"
+msgstr "Efternamn är obligatoriskt"
 
-#: includes/birchschedule/view/bookingform/imp.php:219
+#: includes/appointer/view/bookingform/imp.php:219
 msgid "Phone is required"
-msgstr "O telefone é obrigatório"
+msgstr "Telefonnummer är obligatoriskt"
 
-#: includes/birchschedule/view/bookingform/imp.php:239
+#: includes/appointer/view/bookingform/imp.php:239
 msgid "Time is unavailable"
-msgstr "Horário indisponível"
+msgstr ""
 
-#: includes/birchschedule/view/bookingform/imp.php:285
+#: includes/appointer/view/bookingform/imp.php:285
 #: modules/eadmin/imp.php:153
 msgid "Duration"
-msgstr "Duração"
+msgstr "Varaktighet"
 
-#: includes/birchschedule/view/bookingform/imp.php:285
+#: includes/appointer/view/bookingform/imp.php:285
 #: modules/eadmin/imp.php:187
 msgid "mins"
-msgstr "min."
+msgstr "minuter"
 
-#: includes/birchschedule/view/bookingform/imp.php:288
-#: includes/birchschedule/view/bookingform/imp.php:549
+#: includes/appointer/view/bookingform/imp.php:288
+#: includes/appointer/view/bookingform/imp.php:549
 msgid "Your appointment has been booked successfully."
-msgstr "Sua consulta foi agendada com sucesso."
+msgstr "Ditt möte har bokats."
 
-#: includes/birchschedule/view/bookingform/imp.php:375
+#: includes/appointer/view/bookingform/imp.php:375
 msgid "Please refresh the page and book again."
-msgstr "Por favor, atualize a página e agende novamente."
+msgstr "Uppdatera sidan och boka igen."
 
-#: includes/birchschedule/view/bookingform/imp.php:430
+#: includes/appointer/view/bookingform/imp.php:430
 msgid "Please select time..."
-msgstr "Por favor, selecione o horário..."
+msgstr "Välj tidpunkt..."
 
-#: includes/birchschedule/view/bookingform/imp.php:544
+#: includes/appointer/view/bookingform/imp.php:544
 msgid "Your appointment has not been booked successfully due to some errors."
-msgstr "Sua consulta não foi agendada com sucesso em razão de alguns erros."
+msgstr "Ditt möte har inte bokats p.g.a fel."
 
-# If space is short, "Suas Info."
-#: includes/birchschedule/view/bookingform/imp.php:674
+#: includes/appointer/view/bookingform/imp.php:674
 #: modules/fbuilder/upgrader.php:50 modules/fbuilder/upgrader.php:366
 #: modules/fbuilder/field/predefined/clientsection_imp.php:134
 msgid "Your Info"
-msgstr "Suas Informações"
+msgstr "Dina upplysningar"
 
-#: includes/birchschedule/view/bookingform/imp.php:712
+#: includes/appointer/view/bookingform/imp.php:712
 #: modules/fbuilder/upgrader.php:160
 #: modules/fbuilder/field/predefined/submit_imp.php:35
 msgid "Submit"
-msgstr "Enviar"
+msgstr "Lämna in."
 
-#: includes/birchschedule/view/calendar/imp.php:122
+#: includes/appointer/view/calendar/imp.php:122
 msgid "All Locations"
-msgstr "Todos os Locais"
+msgstr "Alla platser"
 
-#: includes/birchschedule/view/calendar/imp.php:141
+#: includes/appointer/view/calendar/imp.php:141
 #: modules/acontrol/imp.php:144 modules/mstaff/imp.php:104
 #: modules/pcalendar/imp.php:106
 msgid "All Providers"
-msgstr "Todos os Prestadores"
+msgstr "Alla leverantörer"
 
-#: includes/birchschedule/view/calendar/imp.php:250
+#: includes/appointer/view/calendar/imp.php:250
 msgid "Today"
-msgstr "Hoje"
+msgstr "idag"
 
-#: includes/birchschedule/view/clients/imp.php:31
+#: includes/appointer/view/clients/imp.php:31
 msgid "Clients"
-msgstr "Clientes"
+msgstr "Klienter"
 
-#: includes/birchschedule/view/clients/imp.php:32
+#: includes/appointer/view/clients/imp.php:32
 msgid "Client"
-msgstr "Cliente"
+msgstr "Klient"
 
-#: includes/birchschedule/view/clients/imp.php:33
+#: includes/appointer/view/clients/imp.php:33
 msgid "Add Client"
-msgstr "Adicionar Cliente"
+msgstr "Lägg till klient"
 
-#: includes/birchschedule/view/clients/imp.php:34
+#: includes/appointer/view/clients/imp.php:34
 msgid "Add New Client"
-msgstr "Adicionar Novo Cliente"
+msgstr "Lägg till ny klient"
 
-#: includes/birchschedule/view/clients/imp.php:37
+#: includes/appointer/view/clients/imp.php:37
 msgid "New Client"
-msgstr "Novo Cliente"
+msgstr "Ny klient"
 
-#: includes/birchschedule/view/clients/imp.php:38
-#: includes/birchschedule/view/clients/imp.php:39
+#: includes/appointer/view/clients/imp.php:38
+#: includes/appointer/view/clients/imp.php:39
 msgid "View Client"
-msgstr "Ver Cliente"
+msgstr "Se klient"
 
-#: includes/birchschedule/view/clients/imp.php:40
+#: includes/appointer/view/clients/imp.php:40
 msgid "Search Clients"
-msgstr "Procurar Clientes"
+msgstr "Sök klienter"
 
-#: includes/birchschedule/view/clients/imp.php:41
+#: includes/appointer/view/clients/imp.php:41
 msgid "No Clients found"
-msgstr "Nenhum cliente encontrado"
+msgstr "Inga klienter hittades"
 
-#: includes/birchschedule/view/clients/imp.php:42
+#: includes/appointer/view/clients/imp.php:42
 msgid "No Clients found in trash"
-msgstr "Nenhum cliente encontrado na lixeira"
+msgstr "Inga klienter hittade i papperskorgen"
 
-#: includes/birchschedule/view/clients/imp.php:43
+#: includes/appointer/view/clients/imp.php:43
 msgid "Parent Client"
-msgstr "Cliente Pai"
+msgstr "Föräldraklient"
 
-#: includes/birchschedule/view/clients/imp.php:45
+#: includes/appointer/view/clients/imp.php:45
 msgid "This is where clients are stored."
-msgstr "Aqui são armazenados os clientes."
+msgstr "Det är här som klienter sparas."
 
-#: includes/birchschedule/view/clients/imp.php:116
+#: includes/appointer/view/clients/imp.php:116
 msgid "Client Name"
-msgstr "Nome do Cliente"
+msgstr "Klient namn"
 
-#: includes/birchschedule/view/clients/imp.php:146
-#: includes/birchschedule/view/clients/imp.php:149
-#: includes/birchschedule/view/clients/imp.php:151
+#: includes/appointer/view/clients/imp.php:146
+#: includes/appointer/view/clients/imp.php:149
+#: includes/appointer/view/clients/imp.php:151
 msgid "Client updated."
-msgstr "Cliente atualizado."
+msgstr "Klient uppdaterad."
 
-#: includes/birchschedule/view/clients/imp.php:150
+#: includes/appointer/view/clients/imp.php:150
 #, php-format
 msgid "Client restored to revision from %s"
-msgstr "Cliente restaurado da revisão de %s"
+msgstr "Klienten återställt för ändring från %s"
 
-#: includes/birchschedule/view/clients/imp.php:152
+#: includes/appointer/view/clients/imp.php:152
 msgid "Client saved."
-msgstr "Cliente salvo."
+msgstr "Klienten sparad."
 
-#: includes/birchschedule/view/clients/imp.php:153
+#: includes/appointer/view/clients/imp.php:153
 msgid "Client submitted."
-msgstr "Cliente enviado."
+msgstr "Klienten inlämnad."
 
-#: includes/birchschedule/view/clients/imp.php:154
+#: includes/appointer/view/clients/imp.php:154
 #, php-format
 msgid "Client scheduled for: <strong>%1$s</strong>."
-msgstr "Cliente agendado para: <strong>%1$s</strong>."
+msgstr "Klienten schemalagd för: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/clients/imp.php:155
+#: includes/appointer/view/clients/imp.php:155
 msgid "Client draft updated."
-msgstr "Rascunho de cliente atualizado."
+msgstr "Klient uppdaterad."
 
-#: includes/birchschedule/view/clients/imp.php:212
+#: includes/appointer/view/clients/imp.php:212
 msgid "The email address isn’t correct."
-msgstr "O endereço de e-mail está incorreto."
+msgstr "E-postadressen är felaktig."
 
-#: includes/birchschedule/view/clients/imp.php:286
-#: includes/birchschedule/view/locations/imp.php:207
+#: includes/appointer/view/clients/imp.php:286
+#: includes/appointer/view/locations/imp.php:207
 msgid "Phone Number"
-msgstr "Número de Telefone"
+msgstr "Telefonnummer"
 
-#: includes/birchschedule/view/help/imp.php:35
+#: includes/appointer/view/help/imp.php:35
 msgid "Help and Support"
-msgstr "Ajuda e Suporte"
+msgstr "Hjälp och support"
 
-#: includes/birchschedule/view/help/imp.php:38
+#: includes/appointer/view/help/imp.php:38
 msgid "Versions"
-msgstr "Versões"
+msgstr "Versioner"
 
-#: includes/birchschedule/view/locations/imp.php:32
+#: includes/appointer/view/locations/imp.php:32
 #: modules/lbservices/imp.php:42 modules/wintegration/imp.php:368
 msgid "Locations"
-msgstr "Locais"
+msgstr "Platser"
 
-#: includes/birchschedule/view/locations/imp.php:34
+#: includes/appointer/view/locations/imp.php:34
 msgid "Add Location"
-msgstr "Adicionar Local"
+msgstr "Lägg till plats"
 
-#: includes/birchschedule/view/locations/imp.php:35
+#: includes/appointer/view/locations/imp.php:35
 msgid "Add New Location"
-msgstr "Adicionar Novo Local"
+msgstr "Lägg till ny plats"
 
-#: includes/birchschedule/view/locations/imp.php:37
+#: includes/appointer/view/locations/imp.php:37
 msgid "Edit Location"
-msgstr "Editar Local"
+msgstr "Redigera plats"
 
-#: includes/birchschedule/view/locations/imp.php:38
+#: includes/appointer/view/locations/imp.php:38
 msgid "New Location"
-msgstr "Novo Local"
+msgstr "Ny plats"
 
-#: includes/birchschedule/view/locations/imp.php:39
-#: includes/birchschedule/view/locations/imp.php:40
+#: includes/appointer/view/locations/imp.php:39
+#: includes/appointer/view/locations/imp.php:40
 msgid "View Location"
-msgstr "Ver Local"
+msgstr "Se plats"
 
-#: includes/birchschedule/view/locations/imp.php:41
+#: includes/appointer/view/locations/imp.php:41
 msgid "Search Locations"
-msgstr "Procurar Local"
+msgstr "Sök platser"
 
-#: includes/birchschedule/view/locations/imp.php:42
+#: includes/appointer/view/locations/imp.php:42
 msgid "No Locations found"
-msgstr "Nenhum local encontrado"
+msgstr "Inga platser hittades"
 
-#: includes/birchschedule/view/locations/imp.php:43
+#: includes/appointer/view/locations/imp.php:43
 msgid "No Locations found in trash"
-msgstr "Nenhum local encontrado na lixeira"
+msgstr "Ingaplatser hittades i papperskorgen"
 
-#: includes/birchschedule/view/locations/imp.php:44
+#: includes/appointer/view/locations/imp.php:44
 msgid "Parent Location"
-msgstr "Local Pai"
+msgstr "Föräldraplats"
 
-#: includes/birchschedule/view/locations/imp.php:46
+#: includes/appointer/view/locations/imp.php:46
 msgid "This is where locations are stored."
-msgstr "Aqui são armazenados os locais."
+msgstr "Det är här som platser sparas."
 
-#: includes/birchschedule/view/locations/imp.php:68
+#: includes/appointer/view/locations/imp.php:68
 msgid "Location Name"
-msgstr "Nome do Local"
+msgstr "Platsnamn"
 
-#: includes/birchschedule/view/locations/imp.php:80
-#: includes/birchschedule/view/locations/imp.php:83
-#: includes/birchschedule/view/locations/imp.php:85
+#: includes/appointer/view/locations/imp.php:80
+#: includes/appointer/view/locations/imp.php:83
+#: includes/appointer/view/locations/imp.php:85
 msgid "Location updated."
-msgstr "Local atualizado."
+msgstr "Platsen uppdaterad"
 
-#: includes/birchschedule/view/locations/imp.php:84
+#: includes/appointer/view/locations/imp.php:84
 #, php-format
 msgid "Location restored to revision from %s"
-msgstr "Local restaurado da revisão de %s"
+msgstr "Platsen återställd för ändring från %s"
 
-#: includes/birchschedule/view/locations/imp.php:86
+#: includes/appointer/view/locations/imp.php:86
 msgid "Location saved."
-msgstr "Local salvo."
+msgstr "Platsen sparad."
 
-#: includes/birchschedule/view/locations/imp.php:87
+#: includes/appointer/view/locations/imp.php:87
 msgid "Location submitted."
-msgstr "Local enviado."
+msgstr "Platsen inlämnad."
 
-#: includes/birchschedule/view/locations/imp.php:88
+#: includes/appointer/view/locations/imp.php:88
 #, php-format
 msgid "Location scheduled for: <strong>%1$s</strong>."
-msgstr "Local agendado para: <strong>%1$s</strong>."
+msgstr "Platsen schemalagd för: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/locations/imp.php:89
+#: includes/appointer/view/locations/imp.php:89
 msgid "Location draft updated."
-msgstr "Rascunho de local atualizado."
+msgstr "Platsskiss uppdaterad"
 
-#: includes/birchschedule/view/locations/imp.php:174
+#: includes/appointer/view/locations/imp.php:174
 msgid "Location Details"
-msgstr "Detalhes do Local"
+msgstr "Platsuppgifter"
 
-#: includes/birchschedule/view/services/imp.php:33
-#: includes/birchschedule/view/staff/imp.php:148
+#: includes/appointer/view/services/imp.php:33
+#: includes/appointer/view/staff/imp.php:148
 #: modules/wintegration/imp.php:381
 msgid "Services"
-msgstr "Serviços"
+msgstr "Tjänster"
 
-#: includes/birchschedule/view/services/imp.php:35
+#: includes/appointer/view/services/imp.php:35
 msgid "Add Service"
-msgstr "Adicionar Serviço"
+msgstr "Lägg till tjänst"
 
-#: includes/birchschedule/view/services/imp.php:36
+#: includes/appointer/view/services/imp.php:36
 msgid "Add New Service"
-msgstr "Adicionar Novo Serviço"
+msgstr "Lägg till ny tjänst"
 
-#: includes/birchschedule/view/services/imp.php:38
+#: includes/appointer/view/services/imp.php:38
 msgid "Edit Service"
-msgstr "Editar Serviço"
+msgstr "Redigera tjänst"
 
-#: includes/birchschedule/view/services/imp.php:39
+#: includes/appointer/view/services/imp.php:39
 msgid "New Service"
-msgstr "Novo Serviço"
+msgstr "Ny tjänst"
 
-#: includes/birchschedule/view/services/imp.php:40
-#: includes/birchschedule/view/services/imp.php:41
+#: includes/appointer/view/services/imp.php:40
+#: includes/appointer/view/services/imp.php:41
 msgid "View Service"
-msgstr "Ver Serviço"
+msgstr "Se tjänst"
 
-#: includes/birchschedule/view/services/imp.php:42
+#: includes/appointer/view/services/imp.php:42
 msgid "Search Services"
-msgstr "Procurar Serviços"
+msgstr "Sök tjänster"
 
-#: includes/birchschedule/view/services/imp.php:43
+#: includes/appointer/view/services/imp.php:43
 msgid "No Services found"
-msgstr "Nenhum serviço encontrado"
+msgstr "Inga tjänster hittades"
 
-#: includes/birchschedule/view/services/imp.php:44
+#: includes/appointer/view/services/imp.php:44
 msgid "No Services found in trash"
-msgstr "Nenhum serviço encontrado na lixeira"
+msgstr "Inga tjänster hittades i papperskorge"
 
-#: includes/birchschedule/view/services/imp.php:45
+#: includes/appointer/view/services/imp.php:45
 msgid "Parent Service"
-msgstr "Serviço Pai"
+msgstr "Föräldratjänst"
 
-#: includes/birchschedule/view/services/imp.php:47
+#: includes/appointer/view/services/imp.php:47
 msgid "This is where services are stored."
-msgstr "Aqui são armazenados os serviços."
+msgstr "Det är här som tjänster sparas."
 
-#: includes/birchschedule/view/services/imp.php:69
+#: includes/appointer/view/services/imp.php:69
 msgid "Service Name"
-msgstr "Nome do Serviço"
+msgstr "Tjänstens namn"
 
-#: includes/birchschedule/view/services/imp.php:70
-#: includes/birchschedule/view/staff/imp.php:104
+#: includes/appointer/view/services/imp.php:70
+#: includes/appointer/view/staff/imp.php:104
 msgid "Description"
-msgstr "Descrição"
+msgstr "Beskrivning"
 
-#: includes/birchschedule/view/services/imp.php:121
+#: includes/appointer/view/services/imp.php:121
 msgid "Service Settings"
-msgstr "Configurações do Serviço"
+msgstr "Tjänsteinställningar"
 
-#: includes/birchschedule/view/services/imp.php:123
-#: includes/birchschedule/view/staff/imp.php:34
+#: includes/appointer/view/services/imp.php:123
+#: includes/appointer/view/staff/imp.php:34
 #: modules/wintegration/imp.php:395
 msgid "Providers"
-msgstr "Prestadores"
+msgstr "Leverantörer"
 
-#: includes/birchschedule/view/services/imp.php:132
-#: includes/birchschedule/view/services/imp.php:135
-#: includes/birchschedule/view/services/imp.php:137
+#: includes/appointer/view/services/imp.php:132
+#: includes/appointer/view/services/imp.php:135
+#: includes/appointer/view/services/imp.php:137
 msgid "Service updated."
-msgstr "Serviço atualizado."
+msgstr "Tjänsten uppdaterad."
 
-#: includes/birchschedule/view/services/imp.php:136
+#: includes/appointer/view/services/imp.php:136
 #, php-format
 msgid "Service restored to revision from %s"
-msgstr "Serviço restaurado da revisão de %s"
+msgstr "Tjänsten återställd för ändring från %s"
 
-#: includes/birchschedule/view/services/imp.php:138
+#: includes/appointer/view/services/imp.php:138
 msgid "Service saved."
-msgstr "Serviço salvo."
+msgstr "Tjänsten sparad."
 
-#: includes/birchschedule/view/services/imp.php:139
+#: includes/appointer/view/services/imp.php:139
 msgid "Service submitted."
-msgstr "Serviço enviado."
+msgstr "Tjänsten inlämnad."
 
-#: includes/birchschedule/view/services/imp.php:140
+#: includes/appointer/view/services/imp.php:140
 #, php-format
 msgid "Service scheduled for: <strong>%1$s</strong>."
-msgstr "Serviço agendado para: <strong>%1$s</strong>."
+msgstr "Tjänsten schemalagd för: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/services/imp.php:141
+#: includes/appointer/view/services/imp.php:141
 msgid "Service draft updated."
-msgstr "Rascunho de serviço atualizado."
+msgstr "Tjänstskiss uppdaterad."
 
-#: includes/birchschedule/view/services/imp.php:149
+#: includes/appointer/view/services/imp.php:149
 msgid "minutes"
-msgstr "minutos"
+msgstr "minuter"
 
-#: includes/birchschedule/view/services/imp.php:150
+#: includes/appointer/view/services/imp.php:150
 msgid "hours"
-msgstr "horas"
+msgstr "timmar"
 
-#: includes/birchschedule/view/services/imp.php:156
+#: includes/appointer/view/services/imp.php:156
 msgid "Before"
-msgstr "Antes"
+msgstr "Före"
 
-#: includes/birchschedule/view/services/imp.php:157
+#: includes/appointer/view/services/imp.php:157
 msgid "After"
-msgstr "Depois"
+msgstr "Efter"
 
-#: includes/birchschedule/view/services/imp.php:158
+#: includes/appointer/view/services/imp.php:158
 msgid "Before & After"
-msgstr "Antes e Depois"
+msgstr "Före och efter"
 
-#: includes/birchschedule/view/services/imp.php:164
+#: includes/appointer/view/services/imp.php:164
 msgid "Fixed"
-msgstr "Fixa"
+msgstr "Fixerad"
 
-#: includes/birchschedule/view/services/imp.php:165
+#: includes/appointer/view/services/imp.php:165
 msgid "Varies"
-msgstr "Varia"
+msgstr "Varierar"
 
-#: includes/birchschedule/view/services/imp.php:208
+#: includes/appointer/view/services/imp.php:208
 msgid "Length"
-msgstr "Duração"
+msgstr "Längd"
 
-# If space is short, "Padding" might be kept in English.
-#: includes/birchschedule/view/services/imp.php:219
+#: includes/appointer/view/services/imp.php:219
 msgid "Padding"
-msgstr "Margem de Segurança"
+msgstr "Utfyllnad"
 
-#: includes/birchschedule/view/services/imp.php:222
+#: includes/appointer/view/services/imp.php:222
 msgid "mins padding time"
-msgstr "margem de segurança em min."
+msgstr "minuter utfyllnadstid"
 
-#: includes/birchschedule/view/services/imp.php:272
+#: includes/appointer/view/services/imp.php:272
 msgid "Assign providers that can perform this service:"
-msgstr "Designe prestadores capazes de realizar este serviços:"
+msgstr "Utse leverantörer som kan utföra den här tjänsten:"
 
-#: includes/birchschedule/view/services/imp.php:279
+#: includes/appointer/view/services/imp.php:279
 #, php-format
 msgid "There is no providers to assign. Click %s here %s to add one."
-msgstr "Não há prestadores para designar. Clique %s aqui %s para adicionar um."
+msgstr ""
+"Det finns inga leverantörer att utse. Klicka %s här %s för att lägga till en."
 
-#: includes/birchschedule/view/settings/imp.php:176 modules/ccode/imp.php:233
+#: includes/appointer/view/settings/imp.php:176 modules/ccode/imp.php:233
 #: modules/enotification/imp.php:614 modules/gsettings/imp.php:148
 #: modules/ppayment/imp.php:315
 msgid "Save changes"
-msgstr "Salvar alterações"
+msgstr "Spara ändringar"
 
-#: includes/birchschedule/view/settings/imp.php:193 modules/ccode/imp.php:247
+#: includes/appointer/view/settings/imp.php:193 modules/ccode/imp.php:247
 #: modules/enotification/imp.php:637 modules/fbuilder/imp.php:800
 #: modules/ppayment/imp.php:331
 msgid "&nbsp"
 msgstr "&nbsp"
 
-#: includes/birchschedule/view/staff/imp.php:36
+#: includes/appointer/view/staff/imp.php:36
 msgid "Add Provider"
-msgstr "Adicionar Prestador"
+msgstr "Lägg btill leverantör"
 
-#: includes/birchschedule/view/staff/imp.php:37
+#: includes/appointer/view/staff/imp.php:37
 msgid "Add New Provider"
-msgstr "Adicionar Novo Prestador"
+msgstr "Lägg till ny leverantör"
 
-#: includes/birchschedule/view/staff/imp.php:39
+#: includes/appointer/view/staff/imp.php:39
 msgid "Edit Provider"
-msgstr "Editar Prestador"
+msgstr "Redigera leverantör"
 
-#: includes/birchschedule/view/staff/imp.php:40
+#: includes/appointer/view/staff/imp.php:40
 msgid "New Provider"
-msgstr "Novo Prestador"
+msgstr "Ny leverantör"
 
-#: includes/birchschedule/view/staff/imp.php:41
-#: includes/birchschedule/view/staff/imp.php:42
+#: includes/appointer/view/staff/imp.php:41
+#: includes/appointer/view/staff/imp.php:42
 msgid "View Provider"
-msgstr "Ver Prestador"
+msgstr "Se leverantör"
 
-#: includes/birchschedule/view/staff/imp.php:43
+#: includes/appointer/view/staff/imp.php:43
 msgid "Search Providers"
-msgstr "Procurar Prestadores"
+msgstr "Sök leverantörer"
 
-#: includes/birchschedule/view/staff/imp.php:44
+#: includes/appointer/view/staff/imp.php:44
 msgid "No Providers found"
-msgstr "Nenhum prestador encontrado"
+msgstr "Inga leverantörer hittades"
 
-#: includes/birchschedule/view/staff/imp.php:45
+#: includes/appointer/view/staff/imp.php:45
 msgid "No Providers found in trash"
-msgstr "Nenhum prestador encontrado na lixeira"
+msgstr "Inga leverantörer hittades i papperskorgen"
 
-#: includes/birchschedule/view/staff/imp.php:46
+#: includes/appointer/view/staff/imp.php:46
 msgid "Parent Provider"
-msgstr "Prestador Pai"
+msgstr "Föräldraleverantör"
 
-#: includes/birchschedule/view/staff/imp.php:48
+#: includes/appointer/view/staff/imp.php:48
 msgid "This is where provider are stored."
-msgstr "Aqui são armazenados os prestadores."
+msgstr "Det är här som leverantörer sparas."
 
-#: includes/birchschedule/view/staff/imp.php:103
+#: includes/appointer/view/staff/imp.php:103
 msgid "Provider Name"
-msgstr "Nome do Prestador"
+msgstr "Leverantörens namn"
 
-#: includes/birchschedule/view/staff/imp.php:125
-#: includes/birchschedule/view/staff/imp.php:128
-#: includes/birchschedule/view/staff/imp.php:130
+#: includes/appointer/view/staff/imp.php:125
+#: includes/appointer/view/staff/imp.php:128
+#: includes/appointer/view/staff/imp.php:130
 msgid "Provider updated."
-msgstr "Prestador atualizado."
+msgstr "Leverantören uppdaterad"
 
-#: includes/birchschedule/view/staff/imp.php:129
+#: includes/appointer/view/staff/imp.php:129
 #, php-format
 msgid "Provider restored to revision from %s"
-msgstr "Prestador restaurado da revisão de %s"
+msgstr "Leverantören återställd för ändring från %s"
 
-#: includes/birchschedule/view/staff/imp.php:131
+#: includes/appointer/view/staff/imp.php:131
 msgid "Provider saved."
-msgstr "Prestador salvo."
+msgstr "Lleverantören sparad."
 
-#: includes/birchschedule/view/staff/imp.php:132
+#: includes/appointer/view/staff/imp.php:132
 msgid "Provider submitted."
-msgstr "Prestador enviado."
+msgstr "Leverantören inlämnad."
 
-#: includes/birchschedule/view/staff/imp.php:133
+#: includes/appointer/view/staff/imp.php:133
 #, php-format
 msgid "Provider scheduled for: <strong>%1$s</strong>."
-msgstr "Prestador agendado para: <strong>%1$s</strong>."
+msgstr "Leverantören schemalagd för: <strong>%1$s</strong>."
 
-#: includes/birchschedule/view/staff/imp.php:134
+#: includes/appointer/view/staff/imp.php:134
 msgid "Provider draft updated."
-msgstr "Rascunho de prestador atualizado."
+msgstr "Leverantörskiss uppdaterad"
 
-#: includes/birchschedule/view/staff/imp.php:146
+#: includes/appointer/view/staff/imp.php:146
 msgid "Work Schedule"
-msgstr "Cronograma de Trabalho"
+msgstr "Arbetsschema"
 
-#: includes/birchschedule/view/staff/imp.php:219 modules/tblocking/imp.php:120
+#: includes/appointer/view/staff/imp.php:219 modules/tblocking/imp.php:120
 msgid "From"
-msgstr "De"
+msgstr "Från"
 
-#: includes/birchschedule/view/staff/imp.php:233 modules/tblocking/imp.php:134
+#: includes/appointer/view/staff/imp.php:233 modules/tblocking/imp.php:134
 msgid "To"
-msgstr "Até"
+msgstr "Till"
 
-#: includes/birchschedule/view/staff/imp.php:323
+#: includes/appointer/view/staff/imp.php:323
 msgid "+ Add Schedule"
-msgstr "+ Adicionar Horário"
+msgstr "+ Lägg till schema"
 
-#: includes/birchschedule/view/staff/imp.php:384
+#: includes/appointer/view/staff/imp.php:384
 #, php-format
 msgid "There is no locations. Click %s here %s to add one."
-msgstr "Não há locais. Clique %s aqui %s para adicionar um."
+msgstr "Det finns inga platser. Klicka %s här %s för att lägga till en."
 
-#: includes/birchschedule/view/staff/imp.php:423
+#: includes/appointer/view/staff/imp.php:423
 msgid "Assign services that this provider can perform:"
-msgstr "Atribua serviços que este prestador é capaz de realizar:"
+msgstr "Utse tjänster som denna leverantör kan utföra:"
 
-#: includes/birchschedule/view/staff/imp.php:430
+#: includes/appointer/view/staff/imp.php:430
 #, php-format
 msgid "There is no services to assign. Click %s here %s to add one."
-msgstr "Não há serviços para atribuir. Clique %s aqui %s para adicionar um."
+msgstr ""
+"Det finns inga tjänster att utse. Klicka %s här %s för att lägga till en."
 
 #: modules/acontrol/imp.php:294
 msgid "Staff Member"
-msgstr "Membro da Equipe"
+msgstr "Medarbetare"
 
 #: modules/acontrol/imp.php:316
 msgid "Business Manager"
-msgstr "Gerente de Negócios"
+msgstr "Verksamhetschef"
 
 #: modules/aportal/imp.php:150
 msgid "Cancel Page"
-msgstr "Cancelar Página"
+msgstr "Avbryt sida"
 
 #: modules/aportal/imp.php:157
-msgid "This page should contain shortcode [bpscheduler_cancel_appointment]."
-msgstr "Esta página deve conter o shortcode  [bpscheduler_cancel_appointment]."
+msgid "This page should contain shortcode [appointer_cancel_appointment]."
+msgstr "Denna sida bör innehålla kort-kod [appointer_cancel_appointment]."
 
 #: modules/aportal/imp.php:163
 msgid "Reschedule Page"
-msgstr "Página de Remarcação"
+msgstr "Ombokning sida"
 
 #: modules/aportal/imp.php:170
 msgid ""
-"This page should contain shortcode [bpscheduler_reschedule_appointment]."
+"This page should contain shortcode [appointer_reschedule_appointment]."
 msgstr ""
-"Esta página deve conter o shortcode [bpscheduler_reschedule_appointment]."
+"Denna sida bör innehålla kort-kod [appointer_reschedulel_appointment]."
 
 #: modules/aportal/imp.php:236
 #, php-format
 msgid "Clients can cancel appointments %s in advance."
-msgstr "Clientes podem cancelar consultas com antecedência de %s."
+msgstr "Klienter kan stryka möten %s i förväg."
 
 #: modules/aportal/imp.php:240
 #, php-format
 msgid "Clients can reschedule appointments %s in advance."
-msgstr "Clientes podem remarcar consultas com antecedência de %s."
+msgstr "Klienter kam omboka möten %s i förväg."
 
 #: modules/aportal/imp.php:353
 msgid "Yes, cancel this appointment"
-msgstr "Sim, cancelar esta consulta"
+msgstr "Ja, stryk det här mötet"
 
 #: modules/autoupdater/imp.php:74
 msgid "BirchPress"
@@ -4176,34 +4163,34 @@ msgstr "BirchPress"
 
 #: modules/autoupdater/imp.php:76
 msgid "Support License Key"
-msgstr "Chave de Licença de Suporte"
+msgstr "Support Licensnyckel"
 
 #: modules/autoupdater/imp.php:168 modules/autoupdater/imp.php:174
 msgid "Expiration Date: "
-msgstr "Data de Expiração:"
+msgstr "Utgångsdatum: "
 
 #: modules/autoupdater/imp.php:177
 msgid "Invalid license"
-msgstr "Licença inválida"
+msgstr "Ogiltig licens"
 
 #: modules/autoupdater/imp.php:181
 msgid ""
 "Fill out the license key to receive access to automatic upgrades and support"
 msgstr ""
-"Preencha a chave de licença para obter acesso a upgrades automáticos e "
-"suporte"
+"Fyll i licensnyckeln för att få tillgång till automatiska uppgraderingar och "
+"support"
 
 #: modules/bpreferences/imp.php:72
 #, php-format
 msgid "%s hour"
-msgstr "%s hora"
+msgstr "%s timme"
 
 #: modules/bpreferences/imp.php:73 modules/bpreferences/imp.php:74
 #: modules/bpreferences/imp.php:75 modules/bpreferences/imp.php:76
 #: modules/bpreferences/imp.php:77
 #, php-format
 msgid "%s hours"
-msgstr "%s horas"
+msgstr "%s timmar"
 
 #: modules/bpreferences/imp.php:78 modules/bpreferences/imp.php:79
 #: modules/bpreferences/imp.php:80 modules/bpreferences/imp.php:81
@@ -4211,292 +4198,290 @@ msgstr "%s horas"
 #: modules/bpreferences/imp.php:84
 #, php-format
 msgid "%s days"
-msgstr "%s dias"
+msgstr "%s dagar"
 
 #: modules/bpreferences/imp.php:90
 #, php-format
 msgid "%s month"
-msgstr "%s mês"
+msgstr "%s månad"
 
 #: modules/bpreferences/imp.php:91 modules/bpreferences/imp.php:92
 #: modules/bpreferences/imp.php:93 modules/bpreferences/imp.php:94
 #: modules/bpreferences/imp.php:95
 #, php-format
 msgid "%s months"
-msgstr "%s meses"
+msgstr "%s månader"
 
 #: modules/bpreferences/imp.php:104
 msgid "Booking Preferences"
-msgstr "Preferências de Agendamento"
+msgstr "Bokningspreferenser"
 
 #: modules/bpreferences/imp.php:108
 msgid "Policies"
-msgstr "Políticas"
+msgstr "Policy"
 
 #: modules/bpreferences/imp.php:157
 #, php-format
 msgid "Clients can book appointments up to %s before start time"
-msgstr "Clientes podem agendar consultas até %s antes do horário de início"
+msgstr "Klienter kan boka möten fram till %s före starttidpunkten"
 
 #: modules/bpreferences/imp.php:161
 #, php-format
 msgid "Clients can book appointments up to %s in the future"
-msgstr "Clientes podem agendar consultas até %s no futuro"
+msgstr "Clienter kan boka möten fram till %s i framtiden"
 
 #: modules/bwindow/imp.php:129
 msgid "Start Date"
-msgstr "Data de Início"
+msgstr "Startdatum"
 
 #: modules/bwindow/imp.php:139 modules/bwindow/imp.php:153
 msgid "(Optional)"
-msgstr "(Opcional)"
+msgstr "(Valfrittl)"
 
 #: modules/bwindow/imp.php:143
 msgid "End Date"
-msgstr "Data Final"
+msgstr "Slutdatum"
 
 #: modules/ccode/imp.php:51
 msgid "Custom Code"
-msgstr "Código Personalizado"
+msgstr "Anpassad kod"
 
 #: modules/ccode/imp.php:267
 msgid "Custom Code Updated"
-msgstr "Código Personalizado Atualizado"
+msgstr "Anpassad kod uppdaterad"
 
 #: modules/cintegration/imp.php:96
 msgid "Sync iCal Interval"
-msgstr "Sincronizar Período com iCal"
+msgstr "Sync iCal-intervall"
 
 #: modules/cintegration/imp.php:297
 msgid "BLOCKED"
-msgstr "BLOQUEADO"
+msgstr "BLOCKERAD"
 
 #: modules/cintegration/imp.php:556
 msgid "Calendar Integration"
-msgstr "Integração de Calendário"
+msgstr "Kalenderintegration"
 
 #: modules/cintegration/imp.php:595
 msgid "Calendar Address (iCal)"
-msgstr "Endereço do Calendário (iCal)"
+msgstr "Kalenderadress (iCal)"
 
 #: modules/cintegration/imp.php:608
 msgid "Import Calendars (iCal)"
-msgstr "Importar Calendários (iCal)"
+msgstr "Importera kalendrar (iCal)"
 
 #: modules/cintegration/imp.php:622
 msgid "+ Add by URL"
-msgstr "+ Adicionar por URL"
+msgstr "+ Lägg till med URL"
 
 #: modules/cmanager/imp.php:43
 msgid "View"
-msgstr "Ver"
+msgstr "Granska"
 
 #: modules/eadmin/imp.php:128
 msgid "Search for an existing client"
-msgstr "Procurar um cliente existente"
+msgstr "Sök en befintlig klient"
 
 #: modules/enotification/imp.php:85
 msgid "Client Reminder Interval"
-msgstr "Período de Lembrete do Cliente"
+msgstr "Klientpåminnelseintervall"
 
 #: modules/enotification/imp.php:174
 #, php-format
 msgid "Send alerts to clients %s Hrs prior to their appointment."
-msgstr "Enviar alertas aos clientes %s horas antes da consulta."
+msgstr "Skicka påminnelse till klienter %s timmar före mötet."
 
 #: modules/enotification/imp.php:312
 msgid "Email Address"
-msgstr "Endereço de E-mail"
+msgstr "E-postadress"
 
 #: modules/enotification/imp.php:325
 msgid "Notifications"
-msgstr "Notificações"
+msgstr "Meddelanden"
 
 #: modules/enotification/imp.php:335
 msgid "Notification to Provider"
-msgstr "Notificação ao Prestador"
+msgstr "Medelande till leverantör"
 
 #: modules/enotification/imp.php:338
 msgid "Notification to Client"
-msgstr "Notificação ao Cliente"
+msgstr "Medelande till klient"
 
 #: modules/enotification/imp.php:380
 msgid "Notification Settings Updated"
-msgstr "Configurações de Notificação Atualizadas"
+msgstr "Medelandeinställningarna uppdaterade"
 
 #: modules/enotification/imp.php:393
 msgid "Appointment Modified"
-msgstr "Consulta Modificada"
+msgstr "Mötet modifierat"
 
 #: modules/enotification/imp.php:394
 msgid "Appointment Cancelled"
-msgstr "Consulta Cancelada"
+msgstr "Mötet struket"
 
 #: modules/enotification/imp.php:397
 msgid "Appointment Reminder"
-msgstr "Lembrete de Consulta"
+msgstr "Mötespåminnelse"
 
 #: modules/enotification/imp.php:405
 msgid "From Name"
-msgstr "Nome do Remetente"
+msgstr "Från namn"
 
 #: modules/enotification/imp.php:414
 msgid "From Email"
-msgstr "E-mail do Remetente"
+msgstr "Från e-post"
 
 #: modules/enotification/imp.php:425
 msgid "Reply To"
-msgstr "Responder A"
+msgstr "Svar till"
 
 #: modules/enotification/imp.php:436
 msgid "BCC"
-msgstr "CCO"
+msgstr "BCC"
 
 #: modules/enotification/imp.php:454
 msgid "Edit Email Templates"
-msgstr "Editar Modelos de E-mail"
+msgstr "Redigera e-postmallar"
 
 #: modules/enotification/imp.php:491
 msgid "Subject"
-msgstr "Assunto"
+msgstr "Ämne"
 
 #: modules/enotification/imp.php:503
 msgid "Message"
-msgstr "Mensagem"
+msgstr "Medelande"
 
 #: modules/enotification/imp.php:560
 #, php-format
 msgid "Enable email notification to %s"
-msgstr "Habilitar notificação de e-mail para %s"
+msgstr "Aktivera e-postmedelande till %s"
 
 #: modules/enotification/imp.php:571
 msgid "providers"
-msgstr "prestadores"
+msgstr "Leverantörer"
 
 #: modules/enotification/imp.php:575
 msgid "clients"
-msgstr "clientes"
+msgstr "Klienter"
 
 #: modules/fbuilder/imp.php:32 modules/fbuilder/imp.php:821
 msgid "Single Line Text"
-msgstr "Texto em Linha Única"
+msgstr "Enkelrad text"
 
 #: modules/fbuilder/imp.php:33 modules/fbuilder/imp.php:824
 msgid "Paragraph Text"
-msgstr "Texto em Parágrafo"
+msgstr "Paragraf text"
 
 #: modules/fbuilder/imp.php:34 modules/fbuilder/imp.php:827
 msgid "Drop Down"
-msgstr "Lista Suspensa"
+msgstr "Rullgardin"
 
 #: modules/fbuilder/imp.php:36 modules/fbuilder/imp.php:830
 msgid "Checkboxes"
-msgstr "Caixas de Seleção"
+msgstr "Kryssrutor"
 
 #: modules/fbuilder/imp.php:37 modules/fbuilder/imp.php:833
 msgid "Radio Buttons"
-msgstr "Botões de Opção"
+msgstr "Radioknappar"
 
 #: modules/fbuilder/imp.php:38
 msgid "Section Break"
-msgstr "Quebra de Seção"
+msgstr "Sektionsslut"
 
 #: modules/fbuilder/imp.php:647
 msgid "Field Deleted"
-msgstr "Campo Excluído"
+msgstr "Fält raderat"
 
 #: modules/fbuilder/imp.php:677
 msgid "Add a Field"
-msgstr "Adicionar um Campo"
+msgstr "Lägg till ett fält"
 
 #: modules/fbuilder/imp.php:684
 msgid "Form Builder"
-msgstr "Construtor de Formulário"
+msgstr "Formulärbyggare"
 
 #: modules/fbuilder/imp.php:923
 msgid "Field Settings Updated"
-msgstr "Configurações de Campo Atualizadas"
+msgstr "Fältinställningar uppdaterade"
 
 #: modules/fbuilder/upgrader.php:36 modules/fbuilder/upgrader.php:358
 msgid "Date & Time"
-msgstr "Data e Hora"
+msgstr "Datum och tidpunkt"
 
 #: modules/fbuilder/upgrader.php:56 modules/fbuilder/upgrader.php:372
 #: modules/fbuilder/field/predefined/clientsection_imp.php:140
 msgid "Are you a new or returning user?"
-msgstr "Você é um usuário novo ou recorrente?"
+msgstr "Är du en återkommande användare?"
 
 #: modules/fbuilder/upgrader.php:57 modules/fbuilder/upgrader.php:373
 msgid "New User"
-msgstr "Usuário Novo"
+msgstr "Ny användare"
 
 #: modules/fbuilder/upgrader.php:58 modules/fbuilder/upgrader.php:374
 msgid "Returning User"
-msgstr "Usuário Recorrente"
+msgstr "Återkommande användare"
 
 #: modules/fbuilder/upgrader.php:99
 #: modules/fbuilder/field/predefined/password_imp.php:38
 msgid "Password"
-msgstr "Senha"
+msgstr "Lösenord"
 
 #: modules/fbuilder/upgrader.php:105
 #: modules/fbuilder/field/predefined/password_imp.php:42
 msgid "Retype Password"
-msgstr "Redigite a Senha"
+msgstr "Upprepa lösenord"
 
 #: modules/fbuilder/upgrader.php:166
 #: modules/fbuilder/field/predefined/submit_imp.php:39
 msgid "Lost your password?"
-msgstr "Perdeu sua senha?"
+msgstr "Förlorat ditt lösenord?"
 
 #: modules/fbuilder/field/email_imp.php:22
 #: modules/fbuilder/field/predefined/clientemail_imp.php:34
 msgid "Please input a valid email address"
-msgstr "Por favor, insira um endereço de e-mail válido."
+msgstr "Skriv in en giltig e-postadress"
 
 #: modules/fbuilder/field/imp.php:18 modules/fbuilder/field/imp.php:25
 #: modules/fbuilder/field/imp.php:32 modules/fbuilder/field/imp.php:39
 #: modules/fbuilder/field/imp.php:51 modules/fbuilder/field/imp.php:63
 #: modules/fbuilder/field/imp.php:75
 msgid "Untitled"
-msgstr "Sem título"
+msgstr "Utan rubrik"
 
 #: modules/fbuilder/field/imp.php:44 modules/fbuilder/field/imp.php:56
 #: modules/fbuilder/field/imp.php:68
 msgid "First Choice"
-msgstr "Primeira Opção"
+msgstr "Förstaval"
 
 #: modules/fbuilder/field/imp.php:45 modules/fbuilder/field/imp.php:57
 #: modules/fbuilder/field/imp.php:69
 msgid "Second Choice"
-msgstr "Segunda Opção"
+msgstr "Andraval"
 
 #: modules/fbuilder/field/imp.php:46 modules/fbuilder/field/imp.php:58
 #: modules/fbuilder/field/imp.php:70
 msgid "Third Choice"
-msgstr "Terceira Opção"
+msgstr "Tredjeval"
 
 #: modules/fbuilder/field/imp.php:288
 msgid "Field Label"
-msgstr "Rótulo do Campo"
+msgstr "Fält-etikett"
 
 #: modules/fbuilder/field/imp.php:305
 msgid "The field is mandatory"
-msgstr "O campo é obrigatório"
+msgstr "Fältet är obligatoriskt"
 
 #: modules/fbuilder/field/imp.php:319
 msgid "Visibility"
-msgstr "Visibilidade"
+msgstr "Synbarhet"
 
-# If space is short, it is possible to keep "Admin" as it is.
 #: modules/fbuilder/field/imp.php:328
 msgid "Customers and Admin"
-msgstr "Clientes e Administrador"
+msgstr "Kunder och admin"
 
-# If space is short, it is possible to keep "Admin" as it is.
 #: modules/fbuilder/field/imp.php:336
 msgid "Admin Only"
-msgstr "Somente Administrador"
+msgstr "Endast admin"
 
 #: modules/fbuilder/field/imp.php:429
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:76
@@ -4504,166 +4489,165 @@ msgstr "Somente Administrador"
 #: modules/fbuilder/field/predefined/password_imp.php:17
 #: modules/fbuilder/field/predefined/submit_imp.php:17
 msgid "Predefined"
-msgstr "Predefinido"
+msgstr "Fördefinierad"
 
 #: modules/fbuilder/field/selectable_imp.php:32
 msgid "Choices"
-msgstr "Opções"
+msgstr "Val"
 
 #: modules/fbuilder/field/selectable_imp.php:39
 msgid "+ Add Choice"
-msgstr "+ Adicionar Opções"
+msgstr "+ Lägg till val"
 
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:70
 msgid ""
 "Appointment Details ('Location','Service','Provider' & 'Date&Time' fields "
 "are predefined, click 'edit' to change the labels)"
 msgstr ""
-"Detalhes da Consulta (os campos 'Local','Serviço','Prestador' e 'Data e "
-"Hora' são predefinidos. Clique em 'editar' para alterar os rótulos)"
+"Mötesinformation (\"Plats\",\"Tjänste-\",'Leverantör-\" och \"Datum och "
+"tidpunk-\" fälten är fördefinierade, Klicka på \"Redigera\" för att ändra "
+"etiketterna) "
 
 #: modules/fbuilder/field/predefined/appointmentsection_imp.php:91
 #: modules/fbuilder/field/predefined/clientsection_imp.php:131
 #: modules/fbuilder/field/predefined/password_imp.php:35
 #: modules/fbuilder/field/predefined/submit_imp.php:32
 msgid "Labels"
-msgstr "Rótulos"
+msgstr "Etiketter"
 
 #: modules/fbuilder/field/predefined/clientemail_imp.php:47
 msgid ""
 "Email already exists. You may book using this email by selecting \"I am a "
 "returning user.\""
 msgstr ""
-"E-mail já existente. Você pode agendar usando este e-mail ao selecionar "
-"\"Sou um usuário recorrente\"."
+"E-mailet finns redan Du kan boka med hjälp av denna e-postadress genom att "
+"välja \"Jag är en återkommande användare.\""
 
 #: modules/fbuilder/field/predefined/clientemail_imp.php:70
 msgid ""
 "Email does not exist. Please contact the administrator to create a user "
 "account."
 msgstr ""
-"E-mail não existente. Por favor, contate o administrador para criar uma "
-"conta de usuário."
+"E-post finns inte. Kontakta inte administratören för att skapa nytt "
+"användarkonto."
 
 #: modules/fbuilder/field/predefined/clientemail_imp.php:73
 msgid ""
 "Email does not exist. You may book using this email by selecting \"I am a "
 "new user.\""
 msgstr ""
-"E-mail não existente. Você pode agendar usando este e-mail ao selecionar "
-"\"Sou um novo usuário\"."
+"E-post finns inte. Du kan boka med hjälp av denna e-postadress genom att "
+"välja \"Jag är en ny användare.\""
 
 #: modules/fbuilder/field/predefined/clientemail_imp.php:78
 msgid "Email or password is incorrect."
-msgstr "Senha ou e-mail incorreto."
+msgstr "E-post och lösenord är felaktigt."
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:58
 #, php-format
 msgid "Logged in as %s."
-msgstr "Conectado como %s."
+msgstr "Inloggad som %s."
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:62
 msgid "Log out?"
-msgstr "Sair?"
+msgstr "Logga utt?"
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:146
 msgid "I am a new user."
-msgstr "Sou um novo usuário."
+msgstr "Jag är en ny användare."
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:152
 msgid "I am a returning user."
-msgstr "Sou um usuário recorrente."
+msgstr "Jag är en återkommande användare."
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:165
 msgid "Enable user login"
-msgstr "Habilitar login do usuário"
+msgstr "Aktivera användarinloggningen"
 
 #: modules/fbuilder/field/predefined/clientsection_imp.php:172
 msgid "Enable new user registration"
-msgstr "Habilitar registro de novo usuário"
+msgstr "Aktivera ny användarregistrering"
 
 #: modules/fbuilder/field/predefined/country_imp.php:39
 msgid "Default Country"
-msgstr "País Padrão"
+msgstr "Förinställt land"
 
 #: modules/fbuilder/field/predefined/password_imp.php:88
 msgid "Password is required"
-msgstr "A senha é obrigatória"
+msgstr "Lösenord krävs"
 
 #: modules/fbuilder/field/predefined/password_imp.php:93
 msgid "Password must be at least 6 digits."
-msgstr "A senha deve conter pelo menos 6 dígitos."
+msgstr "Lösenordet måste ha minst vara minst 6 tecken."
 
 #: modules/fbuilder/field/predefined/password_imp.php:96
 msgid "Both passwords should match"
-msgstr "Ambas as senhas devem coincidir"
+msgstr "Båda lösenorden måste vara likadana"
 
 #: modules/fbuilder/field/predefined/state_imp.php:73
 msgid "Default State/Province"
-msgstr "Estado/Distrito Padrão"
+msgstr "Förinställd stat/provins"
 
 #: modules/fbuilder/field/predefined/submit_imp.php:47
 msgid "Confirmation"
-msgstr "Confirmação"
+msgstr "Bekräftelse"
 
 #: modules/fbuilder/field/predefined/submit_imp.php:55
 msgid "Text"
-msgstr "Texto"
+msgstr "Text"
 
 #: modules/fbuilder/field/predefined/submit_imp.php:62
 msgid "Redirect"
-msgstr "Redirecionar"
+msgstr "Omdirigera"
 
 #: modules/fdadmin/imp.php:67
 msgid "Show all time slots"
-msgstr "Exibir todos os espaços de tempo"
+msgstr "Visa alla luckor i tiden"
 
 #: modules/gbooking/imp.php:61 modules/gbooking/imp.php:169
 msgid "Capacity"
-msgstr "Capacidade"
+msgstr "Kapacitet"
 
 #: modules/gbooking/imp.php:211 modules/gbooking/imp.php:221
 msgid "+ Add Client"
-msgstr "+ Adicionar Cliente"
+msgstr "+ Lägg till klient"
 
 #: modules/gbooking/imp.php:320
 msgid "This client has been added."
-msgstr "Este cliente foi adicionado."
+msgstr "Klienten har lagts till."
 
 #: modules/gsettings/imp.php:38
 msgid "General"
-msgstr "Geral"
+msgstr "Allmänt"
 
 #: modules/gsettings/imp.php:50
 msgid "General Options"
-msgstr "Opções Gerais"
+msgstr "Allmänna val"
 
 #: modules/gsettings/imp.php:56
 msgid "Timezone"
-msgstr "Fuso Horário"
+msgstr "Tidszon"
 
 #: modules/gsettings/imp.php:58
 msgid "Date Format, Time Format"
-msgstr "Formato de Data, Formato de Hora"
+msgstr "Datumformat, Tidpunkt."
 
 #: modules/gsettings/imp.php:60
 msgid "Week Starts On"
-msgstr "Semana Inicia Em"
+msgstr "Veckan startar på"
 
 #: modules/gsettings/imp.php:62
 msgid "Currency"
-msgstr "Moeda"
+msgstr "Valuta"
 
 #: modules/gsettings/imp.php:64
 msgid "Default Calendar View"
-msgstr "Visualização Padrão do Calendário"
+msgstr "Förinställd kalendervy"
 
 #: modules/gsettings/imp.php:90
 #, php-format
 msgid "<label>Timezone settings are located <a href='%s'>here</a>.</label>"
-msgstr ""
-"<label>As configurações de fuso horário se localizam <a href='%s'>aqui</a>.</"
-"label>"
+msgstr "<label>Tidszoninställningarna finns <a href='%s'>här</a>.</label>"
 
 #: modules/gsettings/imp.php:97
 #, php-format
@@ -4671,72 +4655,70 @@ msgid ""
 "<label>Date format, time format settings are located <a href='%s'>here</a>.</"
 "label>"
 msgstr ""
-"<label>As configurações de formato de data e formato de hora se localizam <a "
-"href='%s'>aqui</a>.</label>"
+"<label>Datumformats-, tidsformatsinställningarna finns <a href='%s'>här</a>."
+"</label>"
 
 #: modules/gsettings/imp.php:104
 #, php-format
 msgid ""
 "<label>First day of week setting is located <a href='%s'>here</a>.</label>"
-msgstr ""
-"<label>A configuração de primeiro dia da semana se localiza <a "
-"href='%s'>aqui</a>.</label>"
+msgstr "<label>Försda dagen i veckan finns <a href='%s'>här</a>.</label>"
 
 #: modules/lbservices/imp.php:187
 msgid "Assign locations that can perform this service:"
-msgstr "Designe locais capazes de realizar este serviço:"
+msgstr "Utse platser som kan utföra den här tjänsten:"
 
 #: modules/lbservices/imp.php:194
 #, php-format
 msgid "There is no location to assign. Click %s here %s to add one."
 msgstr ""
-"Não há nenhum local para designar. Clique %s aqui %s para adicionar um."
+"Det finns inga platser att utse. Klicka %s här %s för att lägga till en."
 
 #: modules/mstaff/imp.php:145
 msgid "Calendar Color"
-msgstr "Cor do Calendário"
+msgstr "Kalenderfärg"
 
 #: modules/pgauthorize/imp.php:50
 msgid "Authorize.net Integration"
-msgstr "Integração com Authorize.net"
+msgstr "Auktorisera.net-integration"
 
 #: modules/pgauthorize/imp.php:62
 msgid "Credit card (Authorize.net)"
-msgstr "Cartão de crédito (Authorize.net)"
+msgstr "Kreditkort (Authorize.net)"
 
 #: modules/pgauthorize/imp.php:63
 msgid "Pay with your credit card via Authorize.net"
-msgstr "Pague com seu cartão de crédito por meio da Authorize.net"
+msgstr "Betala med ditt kreditkort via Authorize.net"
 
 #: modules/pgauthorize/imp.php:102
 #, php-format
 msgid "Authorize.net Transaction ID: %s"
-msgstr "ID de Transação Authorize.net: %s"
+msgstr "Authorize.net Transaktions ID: %s"
 
 #: modules/pgauthorize/imp.php:116
 msgid "Click here if not redirected."
-msgstr "Clique aqui caso não seja redirecionado."
+msgstr "Klicka härom du inte har omdirigerats."
 
 #: modules/pgauthorize/imp.php:266 modules/pintegration/imp.php:265
 #: modules/wcredit/imp.php:380 modules/wintegration/imp.php:166
 msgid "Enable/Disable"
-msgstr "Habilitar/Desabilitar"
+msgstr "Aktivera/deaktivera"
 
 #: modules/pgauthorize/imp.php:275
 msgid "Enable Authorize.net"
-msgstr "Habilitar Authorize.net"
+msgstr "Aktivera Authorize.net"
 
 #: modules/pgauthorize/imp.php:282
 msgid "Login ID"
-msgstr "ID de Login"
+msgstr "Inloggnings-ID"
 
 #: modules/pgauthorize/imp.php:296
 msgid "Transaction Key"
-msgstr "Chave de Transação"
+msgstr ""
 
 #: modules/pintegration/imp.php:38
 msgid "PayPal Integration"
-msgstr "Integração com PayPal"
+msgstr "PayPa-integration"
 
 #: modules/pintegration/imp.php:50
 msgid "PayPal"
@@ -4747,184 +4729,179 @@ msgid ""
 "Pay via PayPal; you can pay with your credit card if you don’t have a PayPal "
 "account"
 msgstr ""
-"Pague com PayPal; você pode pagar com seu cartão de crédito caso não tenha "
-"uma conta PayPal."
+"Betala via PayPal; du kan betala med ditt kreditkort om du inte har ett "
+"PayPal-konto"
 
 #: modules/pintegration/imp.php:106
 #, php-format
 msgid "PayPal Transaction ID: %s"
-msgstr "ID de Transação PayPal: %s"
+msgstr "PayPal Transaktions-ID: %s"
 
 #: modules/pintegration/imp.php:274
 msgid "Enable PayPal"
-msgstr "Habilitar PayPal"
+msgstr "Aktivera PayPal"
 
 #: modules/pintegration/imp.php:281
 msgid "PayPal Email"
-msgstr "E-mail do PayPal"
+msgstr "PayPal E-post"
 
-# If space is short, please use "Configurações de Pré-Pagamento".
 #: modules/ppayment/imp.php:100
 msgid "Prepayment Settings"
-msgstr "Configurações de Pagamento Antecipado"
+msgstr "Förinbetalningsinställningar"
 
-# If space is short, please use "Mensagem de Pré-Pagamento".
 #: modules/ppayment/imp.php:124
 msgid "Prepayment Message"
-msgstr "Mensagem de Pagamento Antecipado"
+msgstr "Förbetalningsmeddelande."
 
 #: modules/ppayment/imp.php:267
 msgid "Place order"
-msgstr "Realizar pedido"
+msgstr "Lägg stolen"
 
 #: modules/ppayment/imp.php:284
 msgid "Payments Settings Updated"
-msgstr "Configurações de Pagamentos Atualizadas"
+msgstr "Betalningsinställningarna uppdaterade"
 
-# If space is short, please use "Habilitar pré-pagamento".
 #: modules/ppayment/imp.php:440
 msgid "Enable prepayment"
-msgstr "Habilitar pagamento antecipado"
+msgstr "Aktivera förskottsbetalning"
 
 #: modules/ppayment/imp.php:455
 #, php-format
 msgid "Charge %s fixed booking fee."
-msgstr "Cobrar taxa fixa de agendamento de %s."
+msgstr "Belasta %s fast bokningsavgift."
 
 #: modules/ppayment/imp.php:467
 #, php-format
 msgid "Charge %s percent of service value."
-msgstr "Cobrar %s por cento sobre o valor do serviço."
+msgstr "Belasta%s percent av tjänstevärdet."
 
 #: modules/ppayment/upgrader.php:35
 msgid "Please make a payment of {deposit} to hold your appointment."
-msgstr "Por favor, realize um pagamento de {deposit} para manter sua consulta."
+msgstr "Gör betalning för{deposit} att hålla på ditt konto."
 
 #: modules/senhanced/imp.php:37
 msgid " minutes"
-msgstr "minutos"
+msgstr " minuter"
 
 #: modules/senhanced/imp.php:131
 #, php-format
 msgid "Enable flexible appointment start time with %s"
-msgstr "Habilitar hora de início flexível das consultas com %s"
+msgstr "Aktivera flexibla mötesstarttider med %s"
 
 #: modules/tblocking/imp.php:43
 msgid "Days Off"
-msgstr "Dias de Folga"
+msgstr "Dagar kvar"
 
 #: modules/tblocking/imp.php:205
 msgid "Exceptions"
-msgstr "Exceções"
+msgstr "Undantag"
 
 #: modules/tblocking/imp.php:231
 msgid "+ Add Exception"
-msgstr "+ Adicionar Exceções"
+msgstr "+ Lägg till undantag"
 
 #: modules/uintegration/imp.php:135
 msgid "User Synchronization"
-msgstr "Sincronização de Usuário"
+msgstr "Användarsynkronisering"
 
 #: modules/uintegration/imp.php:136
 msgid "Syncing clients with WP users..."
-msgstr "Sincronizando clientes com usuários WP..."
+msgstr "Synkar klienter med WP-användare..."
 
 #: modules/uintegration/imp.php:137
 msgid "synced"
-msgstr "sincronizado"
+msgstr "synkat"
 
 #: modules/wcredit/imp.php:39 modules/wcredit/imp.php:110
 #: modules/wcredit/imp.php:111 modules/wcredit/imp.php:156
 msgid "WooCommerce Credit"
-msgstr "Crédito WooCommerce"
+msgstr "WooCommerce kredit"
 
 #: modules/wcredit/imp.php:45
 msgid "The credit should be positive."
-msgstr "O crédito deve ser positivo."
+msgstr "Krediten skall vara positiv."
 
 #: modules/wcredit/imp.php:46
 msgid "The credit is not enough."
-msgstr "O crédito não é suficiente."
+msgstr "Krediten räcker inte."
 
-# If possible, please use "nº" instead of "n.".
 #: modules/wcredit/imp.php:47
 #, php-format
 msgid "Used by order No. %s"
-msgstr "Usado pelo pedido n. %s"
+msgstr "Använd enligt order nr. %s"
 
-# If possible, please use "nº" instead of "n.".
 #: modules/wcredit/imp.php:48
 #, php-format
 msgid "Recharged by order No. %s"
-msgstr "Recarregado pelo pedido n. %s"
+msgstr "Återbelastad genom order nr. %s"
 
 #: modules/wcredit/imp.php:112
 msgid "Add WooCommerce Credit"
-msgstr "Adicionar Crédito WooCommerce"
+msgstr "Lägg till WooCommerce kredit"
 
 #: modules/wcredit/imp.php:113
 msgid "Add New WooCommerce Credit"
-msgstr "Adicionar Novo Crédito WooCommerce"
+msgstr "Lägg till ny WooCommerce kredit"
 
 #: modules/wcredit/imp.php:115
 msgid "Edit WooCommerce Credit"
-msgstr "Editar Crédito WooCommerce"
+msgstr "Redigera WooCommerce kredit"
 
 #: modules/wcredit/imp.php:116
 msgid "New WooCommerce Credit"
-msgstr "Novo Crédito WooCommerce"
+msgstr "Ny WooCommerce kredit"
 
 #: modules/wcredit/imp.php:117 modules/wcredit/imp.php:118
 msgid "View WooCommerce Credit"
-msgstr "Ver Crédito WooCommerce"
+msgstr "Se WooCommerce kredit"
 
 #: modules/wcredit/imp.php:119
 msgid "Search WooCommerce credit"
-msgstr "Procurar crédito WooCommerce"
+msgstr "Sök WooCommerce kredit"
 
 #: modules/wcredit/imp.php:120
 msgid "No WooCommerce credit found"
-msgstr "Nenhum crédito WooCommerce encontrado"
+msgstr "Ingen WooCommerce kredit hittades"
 
 #: modules/wcredit/imp.php:121
 msgid "No WooCommerce credit found in trash"
-msgstr "Nenhum crédito WooCommerce encontrado na lixeira"
+msgstr "Ingen WooCommerce kredit hittades i papperskorgen"
 
 #: modules/wcredit/imp.php:122
 msgid "Parent WooCommerce Credit"
-msgstr "Crédito WooCommerce Pai"
+msgstr "Föräldra-WooCommerce kredit"
 
 #: modules/wcredit/imp.php:124
 msgid "This is where WooCommerce credit are stored."
-msgstr "Aqui são armazenados os créditos WooCommerce."
+msgstr "Det är här WooCommerce kredit sparas."
 
 #: modules/wcredit/imp.php:295
 msgid "Credit Balance"
-msgstr "Saldo de Crédito"
+msgstr "Kreditsaldo"
 
 #: modules/wcredit/imp.php:303
 msgid "+ Add Credit"
-msgstr "+ Adicionar Crédito"
+msgstr "+ Lägg till kredit"
 
 #: modules/wcredit/imp.php:389
 msgid "Enable WooCommerce Credit"
-msgstr "Habilitar Crédito WooCommerce"
+msgstr "Aktivera WooCommerce kredit"
 
 #: modules/wcredit/imp.php:396
 msgid "Buy Credit Amount from WooCommerce Products"
-msgstr "Comprar Quantia de Crédito dos Produtos WooCommerce"
+msgstr "Köp kreditbelopp från WooCommerce Products"
 
 #: modules/wcredit/imp.php:404 modules/wintegration/imp.php:361
 msgid "(Only simple products are listed here)"
-msgstr "(Somente produtos simples são listados aqui)"
+msgstr "(Endast enkla produkter är listade här)"
 
 #: modules/wcredit/imp.php:463
 msgid "Customer Credit"
-msgstr "Crédito do Cliente"
+msgstr "Kundkredit"
 
 #: modules/wcredit/imp.php:481
 msgid "Please login to use your credit."
-msgstr "Por favor, efetue login para usar seu crédito."
+msgstr "Logga in för att använda din kredit."
 
 #: modules/wcredit/imp.php:503
 #, php-format
@@ -4932,12 +4909,12 @@ msgid ""
 "Your current credit balance is %s. <br/>Enter a credit amount if you want to "
 "pay by customer credit."
 msgstr ""
-"Seu atual saldo de crédito é de %s. <br/>Insira uma quantia de crédito caso "
-"queira pagar com crédito do cliente."
+"Ditt aktuella kreditsaldo är %s. <br/>Fyll i ett kreditbelopp om du vill "
+"betala med kundens kredit."
 
 #: modules/wcredit/imp.php:512
 msgid "Apply Custom Credit"
-msgstr "Aplicar Crédito Personalizado"
+msgstr "Tillämpa anpassad kredit"
 
 #: modules/wintegration/imp.php:69
 msgid "WooCommerce"
@@ -4945,56 +4922,55 @@ msgstr "WooCommerce"
 
 #: modules/wintegration/imp.php:89
 msgid "WooCommerce Integration"
-msgstr "Integração com WooCommerce"
+msgstr "WooCommerce-integreration"
 
 #: modules/wintegration/imp.php:175
 msgid "Enable WooCommerce integration"
-msgstr "Habilitar integração com WooCommerce"
+msgstr "Aktivera WooCommerce-integration"
 
 #: modules/wintegration/imp.php:182
 msgid "Autocomplete Order"
-msgstr "Autopreencher Pedido"
+msgstr "Autoavsluta order"
 
 #: modules/wintegration/imp.php:191
 msgid ""
 "Enable WooCommerce automatically set appointment orders on Completed status "
 "right after a successfull payment."
 msgstr ""
-"Habilitar realização automática de pedidos de consulta do WooCommerce em "
-"status Concluído logo após um pagamento bem-sucedido."
+"Aktivera WooCommerce automatiskt sätt mötesorder på fullbordad status direkt "
+"efter genomförd betalning."
 
 #: modules/wintegration/imp.php:198
 msgid "Products Settings"
-msgstr "Configurações de Produtos"
+msgstr "Produktinställningar"
 
 #: modules/wintegration/imp.php:210
 msgid "+ Add Product"
-msgstr "+ Adicionar Produto"
+msgstr "+ Lägg till produkt"
 
 #: modules/wintegration/imp.php:345
 msgid "WooCommerce Product"
-msgstr "Produto WooCommerce"
+msgstr "WooCommerce-produkt"
 
 #: modules/wintegration/imp.php:408
 msgid "Custom CSS"
-msgstr "CSS Personalizado"
+msgstr "Anpassad CSS"
 
 #: modules/wintegration/imp.php:474
 msgid "WooCommerce Settings Updated"
-msgstr "Configurações do WooCommerce Atualizadas"
+msgstr "WooCommerce inställningar uppdaraterade"
 
 #: modules/wintegration/wc_imp.php:360
 msgid ""
 "There was a problem with your submission. Please check error messages below."
 msgstr ""
-"Houve um problema com seu envio. Por favor, verifique abaixo as mensagens de "
-"erro."
+"Det har varit problem med din ansökan. Kontrollera fel-meddelanden nedan."
 
 #: modules/wintegration/wc_imp.php:467
 #, php-format
 msgid "WooCommerce Order ID: %s"
-msgstr "ID do Pedido WooCommerce: %s"
+msgstr "WooCommerce order-ID: %s"
 
 #: modules/wintegration/wc_imp.php:729
 msgid "Add to cart"
-msgstr "Adicionar ao carrinho"
+msgstr "Lägg till i inköpsvagnen"

@@ -3,22 +3,22 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.appointments.edit.clientlist.cancel');
+    var ns = namespace('appointer.view.appointments.edit.clientlist.cancel');
 
     defineFunction(ns, 'cancel', function(appointmentId, clientId) {
-        var i18nMessages = birchschedule.view.getI18nMessages();
+        var i18nMessages = appointer.view.getI18nMessages();
         var r = window.confirm(i18nMessages['Are you sure you want to cancel this appointment?']);
         if(r != true) {
             return;
         }
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
+        var ajaxUrl = appointer.model.getAjaxUrl();
         var postData = $.param({
-            action: 'birchschedule_view_appointments_edit_clientlist_cancel_cancel',
+            action: 'appointer_view_appointments_edit_clientlist_cancel_cancel',
             birs_client_id: clientId,
             birs_appointment_id: appointmentId
         });
         $.post(ajaxUrl, postData, function(data, status, xhr){
-            var result = birchschedule.model.parseAjaxResponse(data);
+            var result = appointer.model.parseAjaxResponse(data);
             if(result.success) {
                 if(result.success.code === 'reload') {
                     window.location.reload();
@@ -39,5 +39,5 @@
     	});
     });
 
-    addAction('birchschedule.initAfter', ns.init);
+    addAction('appointer.initAfter', ns.init);
 })(jQuery);

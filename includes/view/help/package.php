@@ -1,27 +1,27 @@
 <?php
 
-birch_ns( 'birchschedule.view.help', function( $ns ) {
+birch_ns( 'appointer.view.help', function( $ns ) {
 
-        global $birchschedule;
+        global $appointer;
 
         $_ns_data = new stdClass();
 
         birch_defn( $ns, 'init', function() use ( $ns, $_ns_data ) {
 
-                $_ns_data->RUN_ACTION_NAME = "birchschedule_help_action_run";
+                $_ns_data->RUN_ACTION_NAME = "appointer_help_action_run";
 
                 add_action( 'admin_init', array( $ns, 'wp_admin_init' ) );
 
             } );
 
         birch_defn( $ns, 'wp_admin_init', function() use( $ns, $_ns_data ) {
-                if ( isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'birchschedule_help' ) {
-                    $php_code = get_transient( 'birchschedule_help_php_code' );
+                if ( isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'appointer_help' ) {
+                    $php_code = get_transient( 'appointer_help_php_code' );
                     $ns->run_php_code( $php_code );
-                    delete_transient( 'birchschedule_help_php_code' );
+                    delete_transient( 'appointer_help_php_code' );
                     $ns->load_page();
                 }
-                add_action( 'birchschedule_view_render_help_page_after', array( $ns, 'render_admin_page' ) );
+                add_action( 'appointer_view_render_help_page_after', array( $ns, 'render_admin_page' ) );
                 add_action( 'admin_post_' . $_ns_data->RUN_ACTION_NAME, array( $ns, 'cache_code' ) );
             } );
 
@@ -36,34 +36,34 @@ birch_ns( 'birchschedule.view.help', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_screen', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $hook_name = $birchschedule->view->get_page_hook( 'help' );
-                $screen = $birchschedule->view->get_screen( $hook_name );
+                $hook_name = $appointer->view->get_page_hook( 'help' );
+                $screen = $appointer->view->get_screen( $hook_name );
                 return $screen;
             } );
 
         birch_defn( $ns, 'load_page', function() use ( $ns ) {
                 $screen = $ns->get_screen();
-                add_meta_box( 'birs_help_general', __( 'Help and Support', 'birchschedule' ),
+                add_meta_box( 'birs_help_general', __( 'Help and Support', 'appointer' ),
                     array( $ns, 'render_help_general' ),
                     $screen, 'main', 'default' );
-                add_meta_box( 'birs_help_version', __( 'Versions', 'birchschedule' ),
+                add_meta_box( 'birs_help_version', __( 'Versions', 'appointer' ),
                     array( $ns, 'render_help_version' ),
                     $screen, 'main', 'default' );
 
                 if ( current_user_can( 'manage_options' ) ) {
-                    add_meta_box( 'birs_help_run_scripts', __( 'Tools', 'birchschedule' ),
+                    add_meta_box( 'birs_help_run_scripts', __( 'Tools', 'appointer' ),
                         array( $ns, 'render_run_scripts' ),
                         $screen, 'main', 'default' );
                 }
             } );
 
         birch_defn( $ns, 'render_help_version', function() use ( $ns ) {
-                global $birchschedule, $wp_version, $wpdb;
+                global $appointer, $wp_version, $wpdb;
 
-                $version = $birchschedule->get_product_version();
-                $product_name = $birchschedule->get_product_name();
+                $version = $appointer->get_product_version();
+                $product_name = $appointer->get_product_name();
 ?>
                 <div class="wrap">
                     <table class="form-table">
@@ -96,12 +96,12 @@ birch_ns( 'birchschedule.view.help', function( $ns ) {
                     <p>If you have any questions, please refer to <a target="_blank" href="http://www.birchpress.com/support/documentation">documentation</a> first.</p>
                     <p>If you are using a <a target="_blank" href="http://www.birchpress.com/">premium edition</a>, please submit a ticket <a target="_blank" href="http://www.birchpress.com/support/submit-a-ticket/">here</a>.</p>
                     <p>If you are using a free version, please submit your question through our <a target="_blank" href="http://www.birchpress.com/support/forums">support forum</a>.</p>
-                    <p>If you find our product helpful, please <a target="_blank" href="http://wordpress.org/extend/plugins/birchschedule">rate it!</a></p>
+                    <p>If you find our product helpful, please <a target="_blank" href="http://wordpress.org/extend/plugins/appointer">rate it!</a></p>
                 </div>
 <?php
             } );
 
-        birch_defn( $ns, 'render_run_scripts', function() use( $ns, $birchschedule, $_ns_data ) {
+        birch_defn( $ns, 'render_run_scripts', function() use( $ns, $appointer, $_ns_data ) {
 ?>
     <p>
         <a href="javascript:void(0);" id="birs_help_button_toggle_run"><?php _e( 'Run PHP scripts. This is only for advanced users.' ); ?></a>
@@ -110,8 +110,8 @@ birch_ns( 'birchschedule.view.help', function( $ns ) {
         <form method="post" action="<?php echo admin_url( 'admin-post.php' ); ?>">
             <?php wp_nonce_field( $_ns_data->RUN_ACTION_NAME ); ?>
             <input type="hidden" name="action" value="<?php echo $_ns_data->RUN_ACTION_NAME; ?>" />
-            <textarea name="birchschedule_help_php_code" style="width:99%;display:block;margin:6px 0;" rows="10"></textarea>
-            <input type="submit" class="button-primary" value="<?php _e( 'Run', 'birchschedule' ); ?>" />
+            <textarea name="appointer_help_php_code" style="width:99%;display:block;margin:6px 0;" rows="10"></textarea>
+            <input type="submit" class="button-primary" value="<?php _e( 'Run', 'appointer' ); ?>" />
         </form>
     </div>
     <script type="text/javascript">
@@ -124,11 +124,11 @@ birch_ns( 'birchschedule.view.help', function( $ns ) {
 <?php
             } );
 
-        birch_defn( $ns, 'cache_code', function() use ( $ns, $birchschedule, $_ns_data ) {
+        birch_defn( $ns, 'cache_code', function() use ( $ns, $appointer, $_ns_data ) {
                 check_admin_referer( $_ns_data->RUN_ACTION_NAME );
-                if ( isset( $_POST['birchschedule_help_php_code'] ) ) {
-                    $php_code = stripslashes_deep( $_POST['birchschedule_help_php_code'] );
-                    set_transient( "birchschedule_help_php_code", $php_code, 60 );
+                if ( isset( $_POST['appointer_help_php_code'] ) ) {
+                    $php_code = stripslashes_deep( $_POST['appointer_help_php_code'] );
+                    set_transient( "appointer_help_php_code", $php_code, 60 );
                 }
                 $orig_url = $_POST['_wp_http_referer'];
                 wp_redirect( $orig_url );
@@ -136,12 +136,12 @@ birch_ns( 'birchschedule.view.help', function( $ns ) {
             } );
 
         birch_defn( $ns, 'render_admin_page', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
                 $screen = $ns->get_screen();
-                $birchschedule->view->show_notice();
+                $appointer->view->show_notice();
 ?>
-                <div id="birchschedule_help" class="wrap">
+                <div id="appointer_help" class="wrap">
                     <div id="poststuff">
                         <div id="post-body" class="metabox-holder columns-1">
                             <div id="postbox-container-1" class="postbox-container">

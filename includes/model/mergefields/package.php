@@ -1,6 +1,6 @@
 <?php
 
-birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
+birch_ns( 'appointer.model.mergefields', function( $ns ) {
 
         $_ns_data = new stdClass();
 
@@ -13,10 +13,10 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_appointment_merge_values', function( $appointment_id ) use ( $ns ) {
-                global $birchschedule, $birchpress;
+                global $appointer, $birchpress;
 
-                $meta_keys = $birchschedule->model->get_appointment_fields();
-                $appointment = $birchschedule->model->get( $appointment_id, array(
+                $meta_keys = $appointer->model->get_appointment_fields();
+                $appointment = $appointer->model->get( $appointment_id, array(
                         'meta_keys' => $meta_keys,
                         'base_keys' => array( 'post_status', 'post_title' )
                     ) );
@@ -26,13 +26,13 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
                 }
 
                 $appointment['_birs_appointment_pre_payment_fee'] =
-                $birchschedule->model->get_service_pre_payment_fee( $appointment['_birs_appointment_service'] );
-                $currency_code = $birchschedule->model->get_currency_code();
+                $appointer->model->get_service_pre_payment_fee( $appointment['_birs_appointment_service'] );
+                $currency_code = $appointer->model->get_currency_code();
                 $appointment['_birs_appointment_pre_payment_fee_with_currency'] =
-                $birchschedule->model->
+                $appointer->model->
                 apply_currency_symbol( $appointment['_birs_appointment_pre_payment_fee'], $currency_code );
 
-                $staff = $birchschedule->model->get( $appointment['_birs_appointment_staff'], array(
+                $staff = $appointer->model->get( $appointment['_birs_appointment_staff'], array(
                         'base_keys' => array(
                             'post_title', 'post_content'
                         ),
@@ -43,7 +43,7 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
                 if ( !$staff ) {
                     $staff = array();
                 }
-                $service = $birchschedule->model->get( $appointment['_birs_appointment_service'], array(
+                $service = $appointer->model->get( $appointment['_birs_appointment_service'], array(
                         'base_keys' => array(
                             'post_title', 'post_content'
                         ),
@@ -59,7 +59,7 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
                     '_birs_location_state', '_birs_location_country',
                     '_birs_location_zip'
                 );
-                $location = $birchschedule->model->get( $appointment['_birs_appointment_location'], array(
+                $location = $appointer->model->get( $appointment['_birs_appointment_location'], array(
                         'base_keys' => array(
                             'post_title', 'post_content'
                         ),
@@ -75,10 +75,10 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_client_merge_values', function( $client_id ) use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $client_meta_keys = $birchschedule->model->get_client_fields();
-                $client = $birchschedule->model->get( $client_id, array(
+                $client_meta_keys = $appointer->model->get_client_fields();
+                $client = $appointer->model->get( $client_id, array(
                         'meta_keys' => $client_meta_keys,
                         'base_keys' => array( 'post_title' )
                     ) );
@@ -89,12 +89,12 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_appointment1on1_merge_values', function( $appointment1on1_id ) use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $std_fields = $birchschedule->model->get_appointment1on1_fields();
-                $custom_fields = $birchschedule->model->get_appointment1on1_custom_fields();
+                $std_fields = $appointer->model->get_appointment1on1_fields();
+                $custom_fields = $appointer->model->get_appointment1on1_custom_fields();
                 $fields = array_merge( $std_fields, $custom_fields );
-                $appointment1on1 = $birchschedule->model->get( $appointment1on1_id, array(
+                $appointment1on1 = $appointer->model->get( $appointment1on1_id, array(
                         'meta_keys' => $fields,
                         'base_keys' => array( 'post_status' )
                     ) );
@@ -107,15 +107,15 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
                 $appointment1on1 = array_merge( $appointment, $client, $appointment1on1 );
 
                 $appointment1on1['_birs_appointment1on1_owing'] = $appointment1on1['_birs_appointment1on1_price'];
-                $payments = $birchschedule->model->booking->get_payments_by_appointment1on1(
+                $payments = $appointer->model->booking->get_payments_by_appointment1on1(
                     $appointment1on1['_birs_appointment_id'], $appointment1on1['_birs_client_id']
                 );
                 foreach ( $payments as $payment ) {
                     $appointment1on1['_birs_appointment1on1_owing'] -= $payment['_birs_payment_amount'];
                 }
-                $currency_code = $birchschedule->model->get_currency_code();
+                $currency_code = $appointer->model->get_currency_code();
                 $appointment1on1['_birs_appointment1on1_amount_due'] =
-                $birchschedule->model->
+                $appointer->model->
                 apply_currency_symbol( $appointment1on1['_birs_appointment1on1_owing'], $currency_code );
 
                 return $appointment1on1;
@@ -154,7 +154,7 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
             } );
 
         birch_defn( $ns, 'apply_merge_field', function( $matches ) use ( $ns, $_ns_data ) {
-                global $birchschedule;
+                global $appointer;
 
                 $name = $matches[1];
                 $appointment = $_ns_data->appointment_for_merge_field;
@@ -173,7 +173,7 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
                 if ( isset( $appointment[$name] ) ) {
                     $field_value = $appointment[$name];
                     $field_value_display =
-                    $birchschedule->model->mergefields->get_merge_field_display_value( $field_value );
+                    $appointer->model->mergefields->get_merge_field_display_value( $field_value );
                     return $field_value_display;
                 } else {
                     return "";
@@ -183,11 +183,11 @@ birch_ns( 'birchschedule.model.mergefields', function( $ns ) {
         birch_defn( $ns, 'apply_merge_fields',
             function( $template, $appointment, $map = false ) use ( $ns, $_ns_data ) {
 
-                global $birchschedule;
+                global $appointer;
 
                 $_ns_data->appointment_for_merge_field = $appointment;
                 if ( $map === false ) {
-                    $_ns_data->merge_fields_map = $birchschedule->model->mergefields->get_merge_fields_map();
+                    $_ns_data->merge_fields_map = $appointer->model->mergefields->get_merge_fields_map();
                 } else {
                     $_ns_data->merge_fields_map = $map;
                 }

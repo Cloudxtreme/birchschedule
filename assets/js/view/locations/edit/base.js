@@ -3,9 +3,9 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.locations.edit');
+    var ns = namespace('appointer.view.locations.edit');
 
-    addAction('birchschedule.initAfter', function(){
-        birchschedule.view.initCountryStateField('birs_location_country', 'birs_location_state');
+    addAction('appointer.initAfter', function(){
+        appointer.view.initCountryStateField('birs_location_country', 'birs_location_state');
 	});
 })(jQuery);

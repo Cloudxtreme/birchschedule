@@ -1,6 +1,6 @@
 <?php
 
-birch_ns( 'birchschedule.model', function( $ns ) {
+birch_ns( 'appointer.model', function( $ns ) {
 
 
 		birch_defn( $ns, 'init', function() use ( $ns ) {
@@ -16,9 +16,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defmulti( $ns, 'save', $ns->get_post_type_lookup_config, function( $model, $config = false ) {
-				global $birchschedule, $birchpress;
+				global $appointer, $birchpress;
 
-				$model = $birchschedule->model->pre_save( $model, $config );
+				$model = $appointer->model->pre_save( $model, $config );
 				return $birchpress->db->save( $model, $config );
 			} );
 
@@ -49,13 +49,13 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_service_pre_payment_fee', function( $service_id ) {
-				global $birchschedule;
+				global $appointer;
 
-				if ( !$birchschedule->model->is_valid_id( $service_id ) ) {
+				if ( !$appointer->model->is_valid_id( $service_id ) ) {
 					return 0;
 				}
 
-				$service = $birchschedule->model->get( $service_id,
+				$service = $appointer->model->get( $service_id,
 					array(
 						'base_keys' => array(),
 						'meta_keys' => array(
@@ -64,7 +64,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 						)
 					) );
 
-				$is_prepayment_enabled = $birchschedule->model->is_prepayment_enabled( $service_id );
+				$is_prepayment_enabled = $appointer->model->is_prepayment_enabled( $service_id );
 				if ( !$is_prepayment_enabled ) {
 					return 0;
 				}
@@ -86,11 +86,11 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_service_padding', function( $service_id, $type ) {
-				global $birchschedule;
-				birch_assert( $birchschedule->model->is_valid_id( $service_id ) );
+				global $appointer;
+				birch_assert( $appointer->model->is_valid_id( $service_id ) );
 				birch_assert( $type === 'before' || $type === 'after' );
 
-				$service = $birchschedule->model->get( $service_id,
+				$service = $appointer->model->get( $service_id,
 					array(
 						'meta_keys' => array(
 							'_birs_service_padding', '_birs_service_padding_type'
@@ -116,10 +116,10 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_service_length', function( $service_id ) {
-				global $birchschedule;
-				birch_assert( $birchschedule->model->is_valid_id( $service_id ) );
+				global $appointer;
+				birch_assert( $appointer->model->is_valid_id( $service_id ) );
 
-				$service = $birchschedule->model->get( $service_id,
+				$service = $appointer->model->get( $service_id,
 					array(
 						'meta_keys' => array(
 							'_birs_service_length', '_birs_service_length_type'
@@ -141,9 +141,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_service_price', function( $service_id ) {
-				global $birchschedule;
+				global $appointer;
 
-				$service = $birchschedule->model->get( $service_id,
+				$service = $appointer->model->get( $service_id,
 					array(
 						'base_keys' => array(),
 						'meta_keys' => array(
@@ -166,11 +166,11 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get', function( $post, $config = false ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
 				$model = $birchpress->db->get( $post, $config );
 				if ( $model ) {
-					return $birchschedule->model->post_get( $model );
+					return $appointer->model->post_get( $model );
 				} else {
 					return false;
 				}
@@ -182,7 +182,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'query', function( $criteria, $config = false ) use ( $ns ) {
-				global $birchschedule, $birchpress;
+				global $appointer, $birchpress;
 
 				if ( !is_array( $config ) ) {
 					$config = array();
@@ -193,10 +193,10 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_staff_schedule_by_location', function( $staff_id, $location_id ) {
-				global $birchschedule;
+				global $appointer;
 
 				$schedules = array();
-				$staff = $birchschedule->model->get( $staff_id, array(
+				$staff = $appointer->model->get( $staff_id, array(
 						'base_keys' => array(),
 						'meta_keys' => array( '_birs_staff_schedule' )
 					) );
@@ -220,7 +220,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 		birch_defn( $ns, 'update_model_relations', function( $source_id, $source_key,
 				$target_type, $target_key ) {
 
-				global $birchschedule;
+				global $appointer;
 
 				$assigned_targets = get_post_meta( $source_id, $source_key, true );
 				if ( $assigned_targets ) {
@@ -229,7 +229,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 				if ( !$assigned_targets ) {
 					$assigned_targets = array();
 				}
-				$targets = $birchschedule->model->query(
+				$targets = $appointer->model->query(
 					array(
 						'post_type' => $target_type
 					),
@@ -251,9 +251,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'is_prepayment_enabled', function( $service_id ) {
-				global $birchschedule;
+				global $appointer;
 
-				$service = $birchschedule->model->get( $service_id, array(
+				$service = $appointer->model->get( $service_id, array(
 						'meta_keys' => array(
 							'_birs_service_enable_pre_payment'
 						),
@@ -302,7 +302,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_client_by_email', function( $email, $config ) {
-				global $birchschedule;
+				global $appointer;
 				$criteria = array(
 					'post_type' => 'birs_client',
 					'post_status' => 'publish',
@@ -313,7 +313,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 						)
 					)
 				);
-				$clients = $birchschedule->model->query( $criteria, $config );
+				$clients = $appointer->model->query( $criteria, $config );
 				if ( sizeof( $clients ) > 0 ) {
 					$clients_values = array_values( $clients );
 					$client = array_shift( $clients_values );
@@ -349,13 +349,13 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_services_by_location', function( $location_id ) {
-				global $birchschedule;
-				birch_assert( $birchschedule->model->is_valid_id( $location_id ) ) ;
+				global $appointer;
+				birch_assert( $appointer->model->is_valid_id( $location_id ) ) ;
 
 				$location = array(
 					'ID' => $location_id
 				);
-				$services = $birchschedule->model->query(
+				$services = $appointer->model->query(
 					array(
 						'post_type' => 'birs_service',
 						'order' => 'ASC',
@@ -383,9 +383,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_staff_by_location', function( $location_id ) {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->query(
+				$staff = $appointer->model->query(
 					array(
 						'post_type' => 'birs_staff',
 						'order' => 'ASC',
@@ -436,8 +436,8 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_locations_map', function() {
-				global $birchschedule;
-				$locations = $birchschedule->model->query(
+				global $appointer;
+				$locations = $appointer->model->query(
 					array(
 						'post_type' => 'birs_location',
 						'order' => 'ASC',
@@ -454,8 +454,8 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_services_map', function() {
-				global $birchschedule;
-				$services = $birchschedule->model->query(
+				global $appointer;
+				$services = $appointer->model->query(
 					array(
 						'post_type' => 'birs_service',
 						'order' => 'ASC',
@@ -472,10 +472,10 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_locations_services_map', function() {
-				global $birchschedule;
+				global $appointer;
 
 				$map = array();
-				$locations = $birchschedule->model->query(
+				$locations = $appointer->model->query(
 					array(
 						'post_type' => 'birs_location'
 					),
@@ -484,7 +484,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 						'meta_keys' => array()
 					)
 				);
-				$services = $birchschedule->model->query(
+				$services = $appointer->model->query(
 					array(
 						'post_type' => 'birs_service',
 						'order' => 'ASC',
@@ -508,10 +508,10 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_locations_staff_map', function() {
-				global $birchschedule;
+				global $appointer;
 
 				$map = array();
-				$locations = $birchschedule->model->query(
+				$locations = $appointer->model->query(
 					array(
 						'post_type' => 'birs_location'
 					),
@@ -521,16 +521,16 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 					)
 				);
 				foreach ( $locations as $location ) {
-					$map[$location['ID']] = $birchschedule->model->get_staff_by_location( $location['ID'] );
+					$map[$location['ID']] = $appointer->model->get_staff_by_location( $location['ID'] );
 				}
 				return $map;
 			} );
 
 		birch_defn( $ns, 'get_services_staff_map', function() {
-				global $birchschedule;
+				global $appointer;
 
 				$map = array();
-				$services = $birchschedule->model->query(
+				$services = $appointer->model->query(
 					array(
 						'post_type' => 'birs_service'
 					),
@@ -543,7 +543,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 				);
 				foreach ( $services as $service ) {
 					$assigned_staff_ids = $service['_birs_assigned_staff'];
-					$staff = $birchschedule->model->query(
+					$staff = $appointer->model->query(
 						array(
 							'post_type' => 'birs_staff'
 						),
@@ -566,10 +566,10 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_services_locations_map', function() {
-				global $birchschedule;
+				global $appointer;
 
 				$map = array();
-				$services = $birchschedule->model->query(
+				$services = $appointer->model->query(
 					array(
 						'post_type' => 'birs_service'
 					),
@@ -578,7 +578,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 						'meta_keys' => array()
 					)
 				);
-				$locations = $birchschedule->model->query(
+				$locations = $appointer->model->query(
 					array(
 						'post_type' => 'birs_location',
 						'order' => 'ASC',
@@ -602,9 +602,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_locations_listing_order', function() {
-				global $birchschedule;
+				global $appointer;
 
-				$locations = $birchschedule->model->query(
+				$locations = $appointer->model->query(
 					array(
 						'post_type' => 'birs_location',
 						'order' => 'ASC',
@@ -626,9 +626,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_staff_listing_order', function() {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->query(
+				$staff = $appointer->model->query(
 					array(
 						'post_type' => 'birs_staff',
 						'order' => 'ASC',
@@ -646,9 +646,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_services_listing_order', function() {
-				global $birchschedule;
+				global $appointer;
 
-				$services = $birchschedule->model->query(
+				$services = $appointer->model->query(
 					array(
 						'post_type' => 'birs_service',
 						'order' => 'ASC',
@@ -665,8 +665,8 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_services_prices_map', function() {
-				global $birchschedule;
-				$services = $birchschedule->model->query(
+				global $appointer;
+				$services = $appointer->model->query(
 					array( 'post_type' => 'birs_service' ),
 					array(
 						'meta_keys' => array( '_birs_service_price', '_birs_service_price_type' ),
@@ -684,8 +684,8 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_services_duration_map', function() {
-				global $birchschedule;
-				$services = $birchschedule->model->query(
+				global $appointer;
+				$services = $appointer->model->query(
 					array( 'post_type' => 'birs_service' ),
 					array(
 						'meta_keys' => array(
@@ -698,7 +698,7 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 				$duration_map = array();
 				foreach ( $services as $service ) {
 					$duration_map[$service['ID']] = array(
-						'duration' => $birchschedule->model->get_service_length( $service['ID'] )
+						'duration' => $appointer->model->get_service_length( $service['ID'] )
 					);
 				}
 				return $duration_map;
@@ -743,9 +743,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_staff_daysoff', function( $staff_id ) {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->get( $staff_id, array(
+				$staff = $appointer->model->get( $staff_id, array(
 						'base_keys' => array(),
 						'meta_keys' => array( '_birs_staff_dayoffs' )
 					) );
@@ -757,9 +757,9 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_all_daysoff', function() {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->query(
+				$staff = $appointer->model->query(
 					array(
 						'post_type' => 'birs_staff'
 					),
@@ -771,15 +771,15 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 				$dayoffs = array();
 				foreach ( array_values( $staff ) as $thestaff ) {
 					$dayoffs[$thestaff['ID']] =
-					$birchschedule->model->get_staff_daysoff( $thestaff['ID'] );
+					$appointer->model->get_staff_daysoff( $thestaff['ID'] );
 				}
 				return $dayoffs;
 			} );
 
 		birch_defn( $ns, 'get_user_by_staff', function( $staff_id ) {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->get( $staff_id,
+				$staff = $appointer->model->get( $staff_id,
 					array(
 						'base_keys' => array(),
 						'meta_keys' => array( '_birs_staff_email' )
@@ -794,10 +794,10 @@ birch_ns( 'birchschedule.model', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_staff_by_user', function( $user, $config = array() ) {
-				global $birchschedule;
+				global $appointer;
 
 				$email = $user->user_email;
-				$staff = $birchschedule->model->query(
+				$staff = $appointer->model->query(
 					array(
 						'post_type' => 'birs_staff',
 						'meta_query' => array(

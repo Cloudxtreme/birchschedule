@@ -1,39 +1,39 @@
 <?php
 
-birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function( $ns ) {
+birch_ns( 'appointer.view.appointments.edit.clientlist.reschedule', function( $ns ) {
 
-        global $birchschedule;
+        global $appointer;
 
         birch_defn( $ns, 'init', function() use ( $ns ) {
 
                 add_action( 'admin_init', array( $ns, 'wp_admin_init' ) );
 
-                add_action( 'birchschedule_view_register_common_scripts_after',
+                add_action( 'appointer_view_register_common_scripts_after',
                     array( $ns, 'register_scripts' ) );
             } );
 
-        birch_defn( $ns, 'wp_admin_init', function() use ( $ns, $birchschedule ) {
+        birch_defn( $ns, 'wp_admin_init', function() use ( $ns, $appointer ) {
 
-                add_action( 'birchschedule_view_enqueue_scripts_post_edit_after',
+                add_action( 'appointer_view_enqueue_scripts_post_edit_after',
                     array( $ns, 'enqueue_scripts_post_edit' ) );
 
-                add_action( 'birchschedule_view_appointments_edit_clientlist_render_more_rows_after',
+                add_action( 'appointer_view_appointments_edit_clientlist_render_more_rows_after',
                     array( $ns, 'render_row' ), 20, 3 );
 
-                add_filter( 'birchschedule_view_appointments_edit_clientlist_get_item_actions',
+                add_filter( 'appointer_view_appointments_edit_clientlist_get_item_actions',
                     array( $ns, 'add_item_action' ), 35, 2 );
 
-                add_action( 'wp_ajax_birchschedule_view_appointments_edit_clientlist_reschedule',
+                add_action( 'wp_ajax_appointer_view_appointments_edit_clientlist_reschedule',
                     array( $ns, 'ajax_reschedule' ) );
             } );
 
-        birch_defn( $ns, 'register_scripts', function() use( $birchschedule ) {
+        birch_defn( $ns, 'register_scripts', function() use( $appointer ) {
 
-                $version = $birchschedule->get_product_version();
+                $version = $appointer->get_product_version();
 
-                wp_register_script( 'birchschedule_view_appointments_edit_clientlist_reschedule',
-                    $birchschedule->plugin_url() . '/assets/js/view/appointments/edit/clientlist/reschedule/base.js',
-                    array( 'birchschedule_view_admincommon', 'birchschedule_view' ), "$version" );
+                wp_register_script( 'appointer_view_appointments_edit_clientlist_reschedule',
+                    $appointer->plugin_url() . '/assets/js/view/appointments/edit/clientlist/reschedule/base.js',
+                    array( 'appointer_view_admincommon', 'appointer_view' ), "$version" );
 
             } );
 
@@ -43,20 +43,20 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                     return;
                 }
 
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
-                $birchschedule->view->enqueue_scripts(
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
+                $appointer->view->enqueue_scripts(
                     array(
-                        'birchschedule_view_appointments_edit_clientlist_reschedule'
+                        'appointer_view_appointments_edit_clientlist_reschedule'
                     )
                 );
             } );
 
         birch_defn( $ns, 'add_item_action', function( $item_actions, $item ) {
                 $action_html = '<a href="javascript:void(0);" data-item-id="%s">%s</a>';
-                $item_actions['reschedule'] = sprintf( $action_html, $item['ID'], __( 'Reschedule', 'birchschedule' ) );
+                $item_actions['reschedule'] = sprintf( $action_html, $item['ID'], __( 'Reschedule', 'appointer' ) );
                 return $item_actions;
             } );
 
@@ -82,13 +82,13 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
 
                 $errors = array();
                 if ( !isset( $_POST['birs_appointment_staff'] ) ) {
-                    $errors['birs_appointment_staff'] = __( 'Please select a provider', 'birchschedule' );
+                    $errors['birs_appointment_staff'] = __( 'Please select a provider', 'appointer' );
                 }
                 if ( !isset( $_POST['birs_appointment_date'] ) || !$_POST['birs_appointment_date'] ) {
-                    $errors['birs_appointment_date'] = __( 'Date is required', 'birchschedule' );
+                    $errors['birs_appointment_date'] = __( 'Date is required', 'appointer' );
                 }
                 if ( !isset( $_POST['birs_appointment_time'] ) || !$_POST['birs_appointment_time'] ) {
-                    $errors['birs_appointment_time'] = __( 'Time is required', 'birchschedule' );
+                    $errors['birs_appointment_time'] = __( 'Time is required', 'appointer' );
                 }
                 if ( isset( $_POST['birs_appointment_date'] ) && $_POST['birs_appointment_date'] &&
                     isset( $_POST['birs_appointment_time'] ) && $_POST['birs_appointment_time'] ) {
@@ -98,18 +98,18 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                     );
                     $datetime = $birchpress->util->get_wp_datetime( $datetime );
                     if ( !$datetime ) {
-                        $errors['birs_appointment_datetime'] = __( 'Date & time is incorrect', 'birchschedule' );
+                        $errors['birs_appointment_datetime'] = __( 'Date & time is incorrect', 'appointer' );
                     }
                 }
                 return $errors;
             } );
 
         birch_defn( $ns, 'ajax_reschedule', function() use ( $ns ) {
-                global $birchpress, $birchschedule;
+                global $birchpress, $appointer;
 
                 $errors = $ns->validate_reschedule_info();
                 if ( $errors ) {
-                    $birchschedule->view->render_ajax_error_messages( $errors );
+                    $appointer->view->render_ajax_error_messages( $errors );
                 }
                 $appointment_info = array();
                 $datetime = array(
@@ -124,11 +124,11 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                 $appointment_info['_birs_appointment_service'] = $_POST['birs_appointment_service'];
                 $appointment_id = $_POST['birs_appointment_id'];
                 $client_id = $_POST['birs_client_id'];
-                $appointment1on1 = $birchschedule->model->booking->get_appointment1on1($appointment_id, $client_id);
-                $birchschedule->model->booking->reschedule_appointment1on1( $appointment1on1['ID'], $appointment_info );
-                $cal_url = admin_url( 'admin.php?page=birchschedule_calendar' );
+                $appointment1on1 = $appointer->model->booking->get_appointment1on1($appointment_id, $client_id);
+                $appointer->model->booking->reschedule_appointment1on1( $appointment1on1['ID'], $appointment_info );
+                $cal_url = admin_url( 'admin.php?page=appointer_calendar' );
                 $refer_query = parse_url( wp_get_referer(), PHP_URL_QUERY );
-                $hash_string = $birchschedule->view->get_query_string( $refer_query,
+                $hash_string = $appointer->view->get_query_string( $refer_query,
                     array(
                         'calview', 'locationid', 'staffid', 'currentdate'
                     )
@@ -136,7 +136,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                 if ( $hash_string ) {
                     $cal_url = $cal_url . '#' . $hash_string;
                 }
-                $birchschedule->view->render_ajax_success_message( array(
+                $appointer->view->render_ajax_success_message( array(
                         'code' => 'success',
                         'message' => json_encode( array(
                                 'url' => htmlentities( $cal_url )
@@ -148,7 +148,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                 ob_start();
 ?>
                 <div style="overflow:hidden;">
-                    <h4><?php _e( 'Reschedule', 'birchschedule' ); ?></h4>
+                    <h4><?php _e( 'Reschedule', 'appointer' ); ?></h4>
                     <input type="hidden" name="birs_client_id" id="birs_client_id" value="<?php echo $client_id; ?>" />
                     <?php echo $ns->get_appointment_info_html( $appointment_id ); ?>
                     <?php echo $ns->get_actions_html(); ?>
@@ -168,11 +168,11 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                             <input name="birs_appointment_reschedule"
                                 id="birs_appointment_reschedule"
                                 type="button" class="button-primary"
-                                value="<?php _e( 'Reschedule', 'birchschedule' ); ?>" />
+                                value="<?php _e( 'Reschedule', 'appointer' ); ?>" />
                             <a href="javascript:void(0);"
                                 id="birs_appointment_reschedule_cancel"
                                 style="padding: 4px 0 0 4px; display: inline-block;">
-                                <?php _e( 'Cancel', 'birchschedule' ); ?>
+                                <?php _e( 'Cancel', 'appointer' ); ?>
                             </a>
                         </div>
                     </li>
@@ -180,12 +180,12 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
 <?php
             } );
 
-        birch_defn( $ns, 'get_appointment_info_html', function( $appointment_id ) use ( $ns, $birchschedule ) {
-                global $birchpress, $birchschedule;
+        birch_defn( $ns, 'get_appointment_info_html', function( $appointment_id ) use ( $ns, $appointer ) {
+                global $birchpress, $appointer;
 
-                $appointment = $birchschedule->model->get( $appointment_id, array(
+                $appointment = $appointer->model->get( $appointment_id, array(
                         'base_keys' => array(),
-                        'meta_keys' => $birchschedule->model->get_appointment_fields()
+                        'meta_keys' => $appointer->model->get_appointment_fields()
                     ) );
 
                 $options = $birchpress->util->get_time_options( 5 );
@@ -203,7 +203,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                 <ul>
                     <li class="birs_form_field birs_appointment_location">
                         <label>
-                            <?php _e( 'Location', 'birchschedule' ); ?>
+                            <?php _e( 'Location', 'appointer' ); ?>
                         </label>
                         <div class="birs_field_content">
                             <select id="birs_appointment_location" name="birs_appointment_location"
@@ -214,7 +214,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                     </li>
                     <li class="birs_form_field birs_appointment_service">
                         <label>
-                            <?php _e( 'Service', 'birchschedule' ); ?>
+                            <?php _e( 'Service', 'appointer' ); ?>
                         </label>
                         <div class="birs_field_content">
                             <select id="birs_appointment_service" name="birs_appointment_service"
@@ -225,7 +225,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                     </li>
                     <li class="birs_form_field">
                         <label>
-                            <?php _e( 'Provider', 'birchschedule' ); ?>
+                            <?php _e( 'Provider', 'appointer' ); ?>
                         </label>
                         <div class="birs_field_content">
                             <select id="birs_appointment_staff" name="birs_appointment_staff"
@@ -236,7 +236,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                     </li>
                     <li class="birs_form_field">
                         <label>
-                            <?php _e( 'Date', 'birchschedule' ); ?>
+                            <?php _e( 'Date', 'appointer' ); ?>
                         </label>
                         <div class="birs_field_content">
                             <div id="birs_appointment_datepicker"></div>
@@ -246,7 +246,7 @@ birch_ns( 'birchschedule.view.appointments.edit.clientlist.reschedule', function
                     </li>
                     <li class="birs_form_field">
                         <label>
-                            <?php _e( 'Time', 'birchschedule' ); ?>
+                            <?php _e( 'Time', 'appointer' ); ?>
                         </label>
                         <div class="birs_field_content">
                             <select id="birs_appointment_time" name="birs_appointment_time" size="1">

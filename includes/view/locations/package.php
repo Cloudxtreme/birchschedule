@@ -1,22 +1,22 @@
 <?php
 
-birch_ns( 'birchschedule.view.locations', function( $ns ) {
+birch_ns( 'appointer.view.locations', function( $ns ) {
 
-        global $birchschedule;
+        global $appointer;
 
-        birch_defn( $ns, 'init', function() use( $ns, $birchschedule ) {
+        birch_defn( $ns, 'init', function() use( $ns, $appointer ) {
 
                 add_action( 'admin_init', array( $ns, 'wp_admin_init' ) );
 
                 add_action( 'init', array( $ns, 'wp_init' ) );
 
-                birch_defmethod( $birchschedule->view, 'load_page_edit',
+                birch_defmethod( $appointer->view, 'load_page_edit',
                     'birs_location', $ns->load_page_edit );
 
-                birch_defmethod( $birchschedule->view, 'enqueue_scripts_edit',
+                birch_defmethod( $appointer->view, 'enqueue_scripts_edit',
                     'birs_location', $ns->enqueue_scripts_edit );
 
-                birch_defmethod( $birchschedule->view, 'save_post',
+                birch_defmethod( $appointer->view, 'save_post',
                     'birs_location', $ns->save_post );
 
             } );
@@ -33,21 +33,21 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
         birch_defn( $ns, 'get_register_options', function() {
                 return array(
                     'labels' => array(
-                        'name' => __( 'Locations', 'birchschedule' ),
-                        'singular_name' => __( 'Location', 'birchschedule' ),
-                        'add_new' => __( 'Add Location', 'birchschedule' ),
-                        'add_new_item' => __( 'Add New Location', 'birchschedule' ),
-                        'edit' => __( 'Edit', 'birchschedule' ),
-                        'edit_item' => __( 'Edit Location', 'birchschedule' ),
-                        'new_item' => __( 'New Location', 'birchschedule' ),
-                        'view' => __( 'View Location', 'birchschedule' ),
-                        'view_item' => __( 'View Location', 'birchschedule' ),
-                        'search_items' => __( 'Search Locations', 'birchschedule' ),
-                        'not_found' => __( 'No Locations found', 'birchschedule' ),
-                        'not_found_in_trash' => __( 'No Locations found in trash', 'birchschedule' ),
-                        'parent' => __( 'Parent Location', 'birchschedule' )
+                        'name' => __( 'Locations', 'appointer' ),
+                        'singular_name' => __( 'Location', 'appointer' ),
+                        'add_new' => __( 'Add Location', 'appointer' ),
+                        'add_new_item' => __( 'Add New Location', 'appointer' ),
+                        'edit' => __( 'Edit', 'appointer' ),
+                        'edit_item' => __( 'Edit Location', 'appointer' ),
+                        'new_item' => __( 'New Location', 'appointer' ),
+                        'view' => __( 'View Location', 'appointer' ),
+                        'view_item' => __( 'View Location', 'appointer' ),
+                        'search_items' => __( 'Search Locations', 'appointer' ),
+                        'not_found' => __( 'No Locations found', 'appointer' ),
+                        'not_found_in_trash' => __( 'No Locations found in trash', 'appointer' ),
+                        'parent' => __( 'Parent Location', 'appointer' )
                     ),
-                    'description' => __( 'This is where locations are stored.', 'birchschedule' ),
+                    'description' => __( 'This is where locations are stored.', 'appointer' ),
                     'public' => false,
                     'show_ui' => true,
                     'capability_type' => 'birs_location',
@@ -72,10 +72,10 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
                 $columns = array();
 
                 $columns["cb"] = "<input type=\"checkbox\" />";
-                $columns["title"] = __( "Location Name", 'birchschedule' );
-                $columns["birs_location_address"] = __( "Address", 'birchschedule' );
-                $columns["birs_location_city"] = __( "City", 'birchschedule' );
-                $columns["birs_location_state"] = __( "State/Province", 'birchschedule' );
+                $columns["title"] = __( "Location Name", 'appointer' );
+                $columns["birs_location_address"] = __( "Address", 'appointer' );
+                $columns["birs_location_city"] = __( "City", 'appointer' );
+                $columns["birs_location_state"] = __( "State/Province", 'appointer' );
                 return $columns;
             } );
 
@@ -84,16 +84,16 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
 
                 $messages['birs_location'] = array(
                     0 => '', // Unused. Messages start at index 1.
-                    1 => __( 'Location updated.', 'birchschedule' ),
-                    2 => __( 'Custom field updated.', 'birchschedule' ),
-                    3 => __( 'Custom field deleted.', 'birchschedule' ),
-                    4 => __( 'Location updated.', 'birchschedule' ),
-                    5 => isset( $_GET['revision'] ) ? sprintf( __( 'Location restored to revision from %s', 'birchschedule' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-                    6 => __( 'Location updated.', 'birchschedule' ),
-                    7 => __( 'Location saved.', 'birchschedule' ),
-                    8 => __( 'Location submitted.', 'birchschedule' ),
-                    9 => sprintf( __( 'Location scheduled for: <strong>%1$s</strong>.', 'birchschedule' ), date_i18n( 'M j, Y @ G:i', strtotime( $post->post_date ) ) ),
-                    10 => __( 'Location draft updated.', 'birchschedule' )
+                    1 => __( 'Location updated.', 'appointer' ),
+                    2 => __( 'Custom field updated.', 'appointer' ),
+                    3 => __( 'Custom field deleted.', 'appointer' ),
+                    4 => __( 'Location updated.', 'appointer' ),
+                    5 => isset( $_GET['revision'] ) ? sprintf( __( 'Location restored to revision from %s', 'appointer' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+                    6 => __( 'Location updated.', 'appointer' ),
+                    7 => __( 'Location saved.', 'appointer' ),
+                    8 => __( 'Location submitted.', 'appointer' ),
+                    9 => sprintf( __( 'Location scheduled for: <strong>%1$s</strong>.', 'appointer' ), date_i18n( 'M j, Y @ G:i', strtotime( $post->post_date ) ) ),
+                    10 => __( 'Location draft updated.', 'appointer' )
                 );
 
                 return $messages;
@@ -129,22 +129,22 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
 
         birch_defn( $ns, 'enqueue_scripts_edit', function( $arg ) use ( $ns ) {
 
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
-                $birchschedule->view->enqueue_scripts(
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
+                $appointer->view->enqueue_scripts(
                     array(
-                        'birchschedule_view_locations_edit', 'birchschedule_model',
-                        'birchschedule_view_admincommon', 'birchschedule_view'
+                        'appointer_view_locations_edit', 'appointer_model',
+                        'appointer_view_admincommon', 'appointer_view'
                     )
                 );
-                $birchschedule->view->enqueue_styles( array( 'birchschedule_admincommon', 'birchschedule_locations_edit' ) );
+                $appointer->view->enqueue_styles( array( 'appointer_admincommon', 'appointer_locations_edit' ) );
             } );
 
         birch_defn( $ns, 'save_post', function( $post ) use ( $ns ) {
 
-                global $birchschedule;
+                global $appointer;
 
                 $config = array(
                     'meta_keys' => array(
@@ -155,20 +155,20 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
                     ),
                     'base_keys' => array()
                 );
-                $post_data = $birchschedule->view->merge_request( $post, $config, $_REQUEST );
-                $birchschedule->model->save( $post_data, $config );
+                $post_data = $appointer->view->merge_request( $post, $config, $_REQUEST );
+                $appointer->model->save( $post_data, $config );
             } );
 
 
         birch_defn( $ns, 'add_meta_boxes', function() use ( $ns ) {
                 remove_meta_box( 'slugdiv', 'birs_location', 'normal' );
                 remove_meta_box( 'postcustom', 'birs_location', 'normal' );
-                add_meta_box( 'birchschedule-location-info', __( 'Location Details', 'birchschedule' ),
+                add_meta_box( 'appointer-location-info', __( 'Location Details', 'appointer' ),
                     array( $ns, 'render_location_info' ), 'birs_location', 'normal', 'high' );
             } );
 
         birch_defn( $ns, 'render_location_info', function( $post ) use ( $ns ) {
-                global $birchpress, $birchschedule;
+                global $birchpress, $appointer;
 
                 $post_id = $post->ID;
                 $addresss1 = get_post_meta( $post_id, '_birs_location_address1', true );
@@ -179,7 +179,7 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
                 $state = get_post_meta( $post_id, '_birs_location_state', true );
                 $country = get_post_meta( $post_id, '_birs_location_country', true );
                 if ( !$country ) {
-                    $country = $birchschedule->model->get_default_country();
+                    $country = $appointer->model->get_default_country();
                 }
                 $countries = $birchpress->util->get_countries();
                 $all_states = $birchpress->util->get_states();
@@ -193,17 +193,17 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
                     $states = array();
                 }
 ?>
-                <div class="panel-wrap birchschedule">
+                <div class="panel-wrap appointer">
                     <table class="form-table">
                         <tr class="form-field">
-                            <th><label><?php _e( 'Phone Number', 'birchschedule' ); ?> </label>
+                            <th><label><?php _e( 'Phone Number', 'appointer' ); ?> </label>
                             </th>
                             <td><input type="text" name="birs_location_phone"
                                        id="birs_location_phone" value="<?php echo esc_attr( $phone ); ?>">
                             </td>
                         </tr>
                         <tr class="form-field">
-                            <th><label><?php _e( 'Address', 'birchschedule' ); ?> </label>
+                            <th><label><?php _e( 'Address', 'appointer' ); ?> </label>
                             </th>
                             <td><input type="text" name="birs_location_address1"
                                        id="birs_location_address1"
@@ -213,14 +213,14 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
                             </td>
                         </tr>
                         <tr class="form-field">
-                            <th><label><?php _e( 'City', 'birchschedule' ); ?> </label>
+                            <th><label><?php _e( 'City', 'appointer' ); ?> </label>
                             </th>
                             <td><input type="text" name="birs_location_city"
                                        id="birs_location_city" value="<?php echo esc_attr( $city ); ?>">
                             </td>
                         </tr>
                         <tr class="form-field">
-                            <th><label><?php _e( 'State/Province', 'birchschedule' ); ?> </label>
+                            <th><label><?php _e( 'State/Province', 'appointer' ); ?> </label>
                             </th>
                             <td>
                                 <select name="birs_location_state_select" id="birs_location_state_select" style="<?php echo $select_display; ?>">
@@ -230,7 +230,7 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
                             </td>
                         </tr>
                         <tr class="form-field">
-                            <th><label><?php _e( 'Country', 'birchschedule' ); ?></label></th>
+                            <th><label><?php _e( 'Country', 'appointer' ); ?></label></th>
                             <td>
                                 <select name="birs_location_country" id="birs_location_country">
                                     <?php $birchpress->util->render_html_options( $countries, $country ); ?>
@@ -238,7 +238,7 @@ birch_ns( 'birchschedule.view.locations', function( $ns ) {
                             </td>
                         </tr>
                         <tr class="form-field">
-                            <th><label><?php _e( 'Zip Code', 'birchschedule' ); ?> </label>
+                            <th><label><?php _e( 'Zip Code', 'appointer' ); ?> </label>
                             </th>
                             <td><input type="text" name="birs_location_zip"
                                        id="birs_location_zip" value="<?php echo esc_attr( $zip ); ?>">

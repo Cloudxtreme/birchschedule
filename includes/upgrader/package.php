@@ -1,9 +1,9 @@
 <?php
 
-birch_ns( 'birchschedule.upgrader', function( $ns ) {
+birch_ns( 'appointer.upgrader', function( $ns ) {
 
         birch_defn( $ns, 'init', function() use ( $ns ) {
-                add_action( 'birchschedule_upgrade_core_after', array( $ns, 'upgrade_core' ) );
+                add_action( 'appointer_upgrade_core_after', array( $ns, 'upgrade_core' ) );
             } );
 
         birch_defn( $ns, 'get_staff_all_schedule_1_0', function( $staff ) {
@@ -83,7 +83,7 @@ birch_ns( 'birchschedule.upgrader', function( $ns ) {
             } );
 
         birch_defn( $ns, 'upgrade_appointment_from_1_0_to_1_1', function() use ( $ns ) {
-                global $birchpress, $birchschedule;
+                global $birchpress, $appointer;
 
                 $version = $ns->get_db_version_appointment();
                 if ( $version != '1.0' ) {
@@ -107,7 +107,7 @@ birch_ns( 'birchschedule.upgrader', function( $ns ) {
                     '_birs_appointment_notes'
                 );
 
-                $options = get_option( 'birchschedule_options_form' );
+                $options = get_option( 'appointer_options_form' );
                 if ( $options != false ) {
                     $fields_options = $options['fields'];
                     foreach ( $fields_options as $field_id => $field ) {
@@ -120,7 +120,7 @@ birch_ns( 'birchschedule.upgrader', function( $ns ) {
                         }
                     }
                 }
-                $appointments = $birchschedule->model->query(
+                $appointments = $appointer->model->query(
                     array(
                         'post_type' => 'birs_appointment',
                         'post_status' => array( 'publish', 'pending' )
@@ -180,13 +180,13 @@ birch_ns( 'birchschedule.upgrader', function( $ns ) {
             } );
 
         birch_defn( $ns, 'upgrade_appointment_from_1_1_to_1_2', function() use ( $ns ) {
-                global $birchpress, $birchschedule;
+                global $birchpress, $appointer;
 
                 $version = $ns->get_db_version_appointment();
                 if ( $version != '1.1' ) {
                     return;
                 }
-                $appointments = $birchschedule->model->query(
+                $appointments = $appointer->model->query(
                     array(
                         'post_type' => 'birs_appointment',
                         'post_status' => array( 'any' )
@@ -198,7 +198,7 @@ birch_ns( 'birchschedule.upgrader', function( $ns ) {
                 );
                 if ( $appointments ) {
                     foreach ( $appointments as $appointment_id => $appointment ) {
-                        $staff = $birchschedule->model->get( $appointment['_birs_appointment_staff'],
+                        $staff = $appointer->model->get( $appointment['_birs_appointment_staff'],
                             array(
                                 'base_keys' => array(),
                                 'meta_keys' => array( '_birs_staff_email' )
@@ -208,7 +208,7 @@ birch_ns( 'birchschedule.upgrader', function( $ns ) {
                             $user = WP_User::get_data_by( 'email', $staff['_birs_staff_email'] );
                             if ( $user ) {
                                 $appointment['post_author'] = $user->ID;
-                                $birchschedule->model->save( $appointment, array(
+                                $appointer->model->save( $appointment, array(
                                         'base_keys' => array( 'post_author' ),
                                         'meta_keys' => array()
                                     ) );

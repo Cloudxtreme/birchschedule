@@ -1,16 +1,17 @@
-# Fork of BirchPress Scheduler for Wordpress
+# Appointer for Wordpress
 
 ## Summary
 
-[Birchpress Scheduler](https://www.birchpress.com) is an appointment booking and online
-scheduling plugin that allows service businesses to take online bookings.
+Appointer is a fork of [BirchPress Scheduler](https://www.birchpress.com)
+that adds timezone support, and improves the user interface.
 
-Birchpress Scheduler is published under the GPLv2.
+Appointer is a WordPress plugin that adds appointment booking and online
+scheduling for service businesses.
 
-This repository contains a fork of Birchpress Scheduler that adds timezone support,
-and improves the user interface.
+Like it's ancestor Birchpress Scheduler, Appointer is published under the
+GPLv2.
 
-![Screenshot](https://github.com/knipknap/birchschedule/blob/1.10.2/screenshot-2.png?raw=true)
+![Screenshot](https://github.com/knipknap/appointer/blob/1.10.2/screenshot-2.png?raw=true)
 
 ## Features
 
@@ -37,4 +38,4 @@ and improves the user interface.
 2. Remove the .git folder from the cloned folder.
 3. Using an FTP program, or your hosting control panel, upload the folder to your WordPress installation's wp-content/plugins/ directory.
 4. Activate the plugin from the Plugins menu within the WordPress admin.
-5. To embed the booking form into a post/page, just insert the following shortcode: [bpscheduler_booking_form]
+5. To embed the booking form into a post/page, just insert the following shortcode: [appointer_booking_form]

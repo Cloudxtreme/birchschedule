@@ -3,9 +3,9 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.services.edit');
+    var ns = namespace('appointer.view.services.edit');
 
-    addAction('birchschedule.initAfter', function(){
+    addAction('appointer.initAfter', function(){
         var priceTypeEl = $("#birs_service_price_type"); 
         var priceEl = $('#birs_service_price');
         

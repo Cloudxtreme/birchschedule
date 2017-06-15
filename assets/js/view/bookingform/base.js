@@ -1,12 +1,12 @@
 (function($) {
-    var params = birchschedule_view_bookingform;
-    var scAttrs = birchschedule_view_bookingform_sc_attrs;
+    var params = appointer_view_bookingform;
+    var scAttrs = appointer_view_bookingform_sc_attrs;
 
     var namespace = birchpress.namespace;
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.bookingform');
+    var ns = namespace('appointer.view.bookingform');
 
     defineFunction(ns, 'getServicesPricesMap', function() {
         return params.services_prices_map;
@@ -60,8 +60,8 @@
         var locationsOrder = ns.getLocationsOrder();
         var locationsMap = ns.getLocationsMap();
 
-        var options = birchschedule.model.getLocationOptions(locationsMap, locationsOrder);
-        var html = birchschedule.view.getOptionsHtml(options);
+        var options = appointer.model.getLocationOptions(locationsMap, locationsOrder);
+        var html = appointer.view.getOptionsHtml(options);
         $('#birs_appointment_location').html(html);
     });
 
@@ -70,9 +70,9 @@
         var servicesOrder = ns.getServicesOrder();
         var locationId = $('#birs_appointment_location').val();
 
-        var options = birchschedule.model.getServiceOptions(locationsServicesMap,
+        var options = appointer.model.getServiceOptions(locationsServicesMap,
             locationId, servicesOrder);
-        var html = birchschedule.view.getOptionsHtml(options);
+        var html = appointer.view.getOptionsHtml(options);
 
         var serviceId = parseInt($('#birs_appointment_service').val());
         $('#birs_appointment_service').html(html);
@@ -89,9 +89,9 @@
         var servicesStaffMap = ns.getServicesStaffMap();
         var staffOrder = ns.getStaffOrder();
 
-        var options = birchschedule.model.getStaffOptions(locationsStaffMap, servicesStaffMap,
+        var options = appointer.model.getStaffOptions(locationsStaffMap, servicesStaffMap,
             locationId, serviceId, staffOrder);
-        var html = birchschedule.view.getOptionsHtml(options);
+        var html = appointer.view.getOptionsHtml(options);
 
         var staffId = parseInt($('#birs_appointment_staff').val());
         $('#birs_appointment_staff').html(html);
@@ -124,8 +124,8 @@
             return;
         }
 
-        var i18n = birchschedule.view.getI18nMessages();
-        var pluginUrl = birchschedule.view.getPluginUrl();
+        var i18n = appointer.view.getI18nMessages();
+        var pluginUrl = appointer.view.getPluginUrl();
         var waitImgUrl = pluginUrl + '/assets/images/ajax-loader.gif';
         var waiting_html = "<div id='birs_appointment_timeoptions'>" +
             i18n['Please wait...'] +
@@ -135,10 +135,10 @@
         $('#birs_appointment_alternative_staff').val('');
         $('#birs_appointment_time').val('');
 
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
+        var ajaxUrl = appointer.model.getAjaxUrl();
         var postData = ns.getFormQueryData();
         postData += '&' + $.param({
-            action: 'birchschedule_view_bookingform_get_avaliable_time'
+            action: 'appointer_view_bookingform_get_avaliable_time'
         });
         $.post(ajaxUrl, postData, function(data, status, xhr) {
             $('.birs_form_field.birs_appointment_time .birs_field_content').html(data);
@@ -170,17 +170,17 @@
     });
 
     defineFunction(ns, 'initDatepicker', function() {
-        var gotoDate = birchschedule.model.getNow4Locale();
+        var gotoDate = appointer.model.getNow4Locale();
         if (scAttrs['date']) {
             gotoDate = $.datepicker.parseDate('mm/dd/yy', scAttrs['date']);
         }
-        return birchschedule.view.initDatepicker({
+        return appointer.view.initDatepicker({
             gotoDate: gotoDate
         });
     });
 
     defineFunction(ns, 'refreshDatepicker', function(datepicker) {
-        birchschedule.view.refreshDatepicker(datepicker);
+        appointer.view.refreshDatepicker(datepicker);
     });
 
     defineFunction(ns, 'bookSucceed', function(message) {
@@ -203,16 +203,16 @@
     });
 
     defineFunction(ns, 'bookAppointment', function() {
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
+        var ajaxUrl = appointer.model.getAjaxUrl();
         var postData = $('form').serialize();
         postData += '&' + $.param({
-            action: 'birchschedule_view_bookingform_schedule'
+            action: 'appointer_view_bookingform_schedule'
         });
         $.post(ajaxUrl, postData, function(data, status, xhr) {
             $('#birs_please_wait').hide("slow");
-            var result = birchschedule.model.parseAjaxResponse(data);
+            var result = appointer.model.parseAjaxResponse(data);
             if (result.errors) {
-                birchschedule.view.showFormErrors(result.errors);
+                appointer.view.showFormErrors(result.errors);
             } else if (result.success) {
                 var bookSucceed = ns.bookSucceed();
                 ns.bookingSucceed(bookSucceed[result.success.code], result.success.message);
@@ -245,7 +245,7 @@
             _falseAction: function(){},
 
             _apply: function() {
-                birchpress.addAction('birchschedule.view.bookingform.setLocationOptionsAfter', conditionalLogic);
+                birchpress.addAction('appointer.view.bookingform.setLocationOptionsAfter', conditionalLogic);
                 $('#' + that._whenField).change(conditionalLogic);
             },
 
@@ -289,7 +289,7 @@
     });
 
     defineFunction(ns, 'init', function() {
-        var getNow4Locale = birchschedule.model.getNow4Locale;
+        var getNow4Locale = appointer.model.getNow4Locale;
 
         ns.setLocationOptions();
         ns.setServiceOptions();
@@ -329,6 +329,6 @@
         });
     });
 
-    addAction('birchschedule.initAfter', ns.init);
+    addAction('appointer.initAfter', ns.init);
 
 })(jQuery);

@@ -1,13 +1,13 @@
 <?php
 
-birch_ns( 'birchschedule.model.cpt.payment', function( $ns ) {
+birch_ns( 'appointer.model.cpt.payment', function( $ns ) {
 
-		global $birchschedule;
+		global $appointer;
 
-		birch_defn( $ns, 'init', function() use ( $ns, $birchschedule ) {
+		birch_defn( $ns, 'init', function() use ( $ns, $appointer ) {
 
-				birch_defmethod( $birchschedule->model, 'pre_save', 'birs_payment', $ns->pre_save );
-				birch_defmethod( $birchschedule->model, 'post_get', 'birs_payment', $ns->post_get );
+				birch_defmethod( $appointer->model, 'pre_save', 'birs_payment', $ns->pre_save );
+				birch_defmethod( $appointer->model, 'post_get', 'birs_payment', $ns->post_get );
 			} );
 
 		birch_defn( $ns, 'pre_save', function( $payment, $config ) {

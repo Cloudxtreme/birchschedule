@@ -1,5 +1,5 @@
 (function($){
-    var params = birchschedule_view_calendar;
+    var params = appointer_view_calendar;
     var addAppointmentTitle = params.add_appointment_title;
     var editAppointmentTitle = params.edit_appointment_title;
     var locationMap = params.location_map;
@@ -14,9 +14,9 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.calendar');
+    var ns = namespace('appointer.view.calendar');
 
-    var gmtOffset = birchschedule.model.getServerGmtOffset();
+    var gmtOffset = appointer.model.getServerGmtOffset();
     
     defineFunction(ns, 'changeLocationOptions', function() {
         var html = '';
@@ -102,7 +102,7 @@
     });
 
     defineFunction(ns, 'getEditAppointmentUrl', function(appointmentId){
-        var aptEditUrl = birchschedule.model.getAdminUrl() + 'post.php?post=' 
+        var aptEditUrl = appointer.model.getAdminUrl() + 'post.php?post=' 
             + appointmentId + '&action=edit';
         var hash = document.location.hash.substring(1);
         if(hash) {
@@ -112,12 +112,12 @@
     });
 
     defineFunction(ns, 'getFcOptions', function(params){
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
-        var showMessage = birchschedule.view.admincommon.showMessage;
-        var hideMessage = birchschedule.view.admincommon.hideMessage;
+        var ajaxUrl = appointer.model.getAjaxUrl();
+        var showMessage = appointer.view.admincommon.showMessage;
+        var hideMessage = appointer.view.admincommon.hideMessage;
 
-        var fcI18nOptions = birchschedule.view.getFullcalendarI18nOptions();
-        var i18n = birchschedule.view.admincommon.getI18nMessages();
+        var fcI18nOptions = appointer.view.getFullcalendarI18nOptions();
+        var i18n = appointer.view.admincommon.getI18nMessages();
 
         var fcOptions = $.extend(fcI18nOptions, {
             header: '',
@@ -171,7 +171,7 @@
                     url: ajaxUrl,
                     dataType: 'html',
                     data: {
-                        action: 'birchschedule_view_calendar_query_appointments',
+                        action: 'appointer_view_calendar_query_appointments',
                         birs_time_start: start,
                         birs_time_end: end,
                         birs_location_id: locationId,
@@ -215,7 +215,7 @@
     });
 
     defineFunction(ns, 'getNewAppointmentUrl', function() {
-        var aptEditUrl = birchschedule.model.getAdminUrl() + 'post-new.php?post_type=birs_appointment';
+        var aptEditUrl = appointer.model.getAdminUrl() + 'post-new.php?post_type=birs_appointment';
         var hash = document.location.hash.substring(1);
         if(hash) {
             aptEditUrl = aptEditUrl + '&' + hash;   
@@ -296,6 +296,6 @@
         });
     });
 
-    addAction('birchschedule.initAfter', ns.init);
+    addAction('appointer.initAfter', ns.init);
 
 })(jQuery);

@@ -3,11 +3,11 @@
     var namespace = birchpress.namespace;
     var defineFunction = birchpress.defineFunction;
 
-    var ns = namespace('birchschedule');
+    var ns = namespace('appointer');
     
     defineFunction(ns, 'init', function(){});
 
     $(function(){
-        birchschedule.init();
+        appointer.init();
     });
 })(jQuery);

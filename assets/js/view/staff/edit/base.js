@@ -3,10 +3,10 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.staff.edit');
+    var ns = namespace('appointer.view.staff.edit');
 
-    addAction('birchschedule.initAfter', function(){
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
+    addAction('appointer.initAfter', function(){
+        var ajaxUrl = appointer.model.getAjaxUrl();
         var locationList = $('div#location_list li');
         locationList.click(function() {
             var locationId = $(this).attr('data-location-id');
@@ -30,7 +30,7 @@
             
             var postData = {
                 birs_location_id: locationId,
-                action: 'birchschedule_view_staff_new_schedule'
+                action: 'appointer_view_staff_new_schedule'
             };
             $.post(ajaxUrl, postData, function(data, status, xhr){
                 $('#birs_schedule_' + locationId).append(data);

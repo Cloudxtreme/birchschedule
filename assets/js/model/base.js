@@ -1,11 +1,11 @@
 (function($){
-    var params = birchschedule_model;
+    var params = appointer_model;
 
     var namespace = birchpress.namespace;
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.model');
+    var ns = namespace('appointer.model');
 
     defineFunction(ns, 'getAjaxUrl', function(){
         return params.ajax_url;

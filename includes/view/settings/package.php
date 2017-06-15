@@ -1,6 +1,6 @@
 <?php
 
-birch_ns( 'birchschedule.view.settings', function( $ns ) {
+birch_ns( 'appointer.view.settings', function( $ns ) {
 
         $_ns_data = new stdClass();
 
@@ -16,7 +16,7 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'wp_admin_init', function() use ( $ns, $_ns_data ) {
-                if ( isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'birchschedule_settings' ) {
+                if ( isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'appointer_settings' ) {
                     if ( isset( $_GET['tab'] ) ) {
                         $_ns_data->active_tab = $_GET['tab'];
                     } else {
@@ -26,20 +26,20 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
                     $ns->init_tab( array(
                             'tab' => $_ns_data->active_tab
                         ) );
-                    add_action( 'birchschedule_view_render_settings_page', array( $ns, 'render_admin_page' ) );
+                    add_action( 'appointer_view_render_settings_page', array( $ns, 'render_admin_page' ) );
                     add_action( 'admin_enqueue_scripts', array( $ns, 'enqueue_scripts' ) );
                 }
             } );
 
         birch_defn( $ns, 'enqueue_scripts', function( $hook ) use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                if ( $birchschedule->view->get_page_hook( 'settings' ) !== $hook ) {
+                if ( $appointer->view->get_page_hook( 'settings' ) !== $hook ) {
                     return;
                 }
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
-                $birchschedule->view->enqueue_scripts( array( 'birchschedule_view_admincommon' ) );
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
+                $appointer->view->enqueue_scripts( array( 'appointer_view_admincommon' ) );
             } );
 
         birch_defn( $ns, 'get_tabs', function() {
@@ -63,11 +63,11 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'render_admin_page', function() use ( $ns, $_ns_data ) {
-                global $birchschedule;
+                global $appointer;
 
-                $setting_page_url = admin_url( "admin.php" ) . "?page=birchschedule_settings";
+                $setting_page_url = admin_url( "admin.php" ) . "?page=appointer_settings";
                 uasort( $_ns_data->tabs, array( $ns, 'compare_tab_order' ) );
-                $birchschedule->view->show_notice();
+                $appointer->view->show_notice();
 ?>
         <div class="wrap">
             <h2 class="nav-tab-wrapper">
@@ -102,19 +102,19 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_tab_page_hook', function( $tab_name ) {
-                return 'birchschedule_page_settings_tab_' . $tab_name;
+                return 'appointer_page_settings_tab_' . $tab_name;
             } );
 
         birch_defn( $ns, 'get_tab_save_action_name', function( $tab_name ) {
-                return 'birchschedule_save_options_' . $tab_name;
+                return 'appointer_save_options_' . $tab_name;
             } );
 
         birch_defn( $ns, 'get_tab_options_name', function( $tab_name ) {
-                return 'birchschedule_options_' . $tab_name;
+                return 'appointer_options_' . $tab_name;
             } );
 
         birch_defn( $ns, 'get_tab_transient_message_name', function( $tab_name ) {
-                return "birchschedule_" . $tab_name . "_info";
+                return "appointer_" . $tab_name . "_info";
             } );
 
         birch_defn( $ns, 'save_tab_options', function( $tab_name, $message ) use ( $ns ) {
@@ -133,10 +133,10 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'render_tab_page', function( $tab_name ) use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
                 $page_hook = $ns->get_tab_page_hook( $tab_name );
-                $screen = $birchschedule->view->get_screen( $page_hook );
+                $screen = $appointer->view->get_screen( $page_hook );
                 $save_action_name = $ns->get_tab_save_action_name( $tab_name );
                 $options_name = $ns->get_tab_options_name( $tab_name );
                 $options = get_option( $options_name );
@@ -145,7 +145,7 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
                 } else {
                     $version = false;
                 }
-                $block_id = "birchschedule_" . $tab_name;
+                $block_id = "appointer_" . $tab_name;
 ?>
         <style type="text/css">
             #notification_main-sortables .hndle {
@@ -172,7 +172,7 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
                     <br class="clear" />
                 </div>
                 <input type="submit" name="submit"
-                    value="<?php _e( 'Save changes', 'birchschedule' ); ?>"
+                    value="<?php _e( 'Save changes', 'appointer' ); ?>"
                     class="button-primary" />
             </form>
         </div>
@@ -189,7 +189,7 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
                 $.jGrowl('<?php echo esc_js( $info ); ?>', {
                         life: 1000,
                         position: 'center',
-                        header: '<?php _e( '&nbsp', 'birchschedule' ); ?>'
+                        header: '<?php _e( '&nbsp', 'appointer' ); ?>'
                     });
 <?php
                     delete_transient( $info_key );
@@ -241,7 +241,7 @@ birch_ns( 'birchschedule.view.settings', function( $ns ) {
             } );
 
         birch_defn( $ns, 'init_capabilities', function() use ( $ns ) {
-                global $wp_roles, $birchschedule;
+                global $wp_roles, $appointer;
 
                 if ( class_exists( 'WP_Roles' ) )
                 if ( ! isset( $wp_roles ) )

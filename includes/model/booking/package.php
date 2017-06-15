@@ -1,54 +1,54 @@
 <?php
 
-birch_ns( 'birchschedule.model.booking', function( $ns ) {
+birch_ns( 'appointer.model.booking', function( $ns ) {
 
-		global $birchschedule;
+		global $appointer;
 
-		birch_defn( $ns, 'init', function() use ( $ns, $birchschedule ) {
+		birch_defn( $ns, 'init', function() use ( $ns, $appointer ) {
 
-				add_action( 'birchschedule_model_schedule_get_staff_avaliable_time_after',
+				add_action( 'appointer_model_schedule_get_staff_avaliable_time_after',
 					array( $ns, 'record_fully_booked_day' ), 20, 5 );
 
-				add_action( 'admin_post_birchschedule_model_booking_recheck_fully_booked_days',
+				add_action( 'admin_post_appointer_model_booking_recheck_fully_booked_days',
 					array( $ns, 'admin_post_recheck_fully_booked_days' ), 20 );
 
-				add_action( 'admin_post_nopriv_birchschedule_model_booking_recheck_fully_booked_days',
+				add_action( 'admin_post_nopriv_appointer_model_booking_recheck_fully_booked_days',
 					array( $ns, 'admin_post_recheck_fully_booked_days' ), 20 );
 
-				add_action ( 'birchschedule_model_booking_actions_check_if_fully_booked_for',
+				add_action ( 'appointer_model_booking_actions_check_if_fully_booked_for',
 					array( $ns, 'check_if_fully_booked_for' ), 20, 1 );
 
-				add_action( 'birchschedule_model_booking_do_change_appointment1on1_status_after',
+				add_action( 'appointer_model_booking_do_change_appointment1on1_status_after',
 					array( $ns, 'enqueue_checking_if_fully_booked' ), 20, 1 );
 
-				add_action( 'birchschedule_model_booking_do_reschedule_appointment1on1_after',
+				add_action( 'appointer_model_booking_do_reschedule_appointment1on1_after',
 					array( $ns, 'enqueue_checking_if_fully_booked' ), 20, 1 );
 
-				add_action( 'birchschedule_model_booking_cancel_appointment1on1_after',
+				add_action( 'appointer_model_booking_cancel_appointment1on1_after',
 					array( $ns, 'enqueue_checking_if_fully_booked' ), 20, 1 );
 
-				add_action( 'birchschedule_model_booking_do_change_appointment1on1_status_after',
-					array( $birchschedule, 'spawn_cron' ), 200 );
+				add_action( 'appointer_model_booking_do_change_appointment1on1_status_after',
+					array( $appointer, 'spawn_cron' ), 200 );
 
-				add_action( 'birchschedule_model_booking_do_reschedule_appointment1on1_after',
-					array( $birchschedule, 'spawn_cron' ), 200 );
+				add_action( 'appointer_model_booking_do_reschedule_appointment1on1_after',
+					array( $appointer, 'spawn_cron' ), 200 );
 
-				add_action( 'birchschedule_model_booking_cancel_appointment1on1_after',
-					array( $birchschedule, 'spawn_cron' ), 200 );
+				add_action( 'appointer_model_booking_cancel_appointment1on1_after',
+					array( $appointer, 'spawn_cron' ), 200 );
 			} );
 
 
 		birch_defn( $ns, 'get_appointment_title', function( $appointment ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$service = $birchschedule->model->get( $appointment['_birs_appointment_service'],
+				$service = $appointer->model->get( $appointment['_birs_appointment_service'],
 					array(
 						'base_keys' => array( 'post_title' ),
 						'meta_keys' => array()
 					) );
 				$appointment1on1s = $appointment['appointment1on1s'];
 				if ( sizeof( $appointment1on1s ) > 1 ) {
-					$title = $service['post_title'] . ' - ' . sprintf( __( '%s Clients', 'birchschedule' ),
+					$title = $service['post_title'] . ' - ' . sprintf( __( '%s Clients', 'appointer' ),
 						sizeof( $appointment1on1s ) );
 				}
 				else if ( sizeof( $appointment1on1s ) == 1 ) {
@@ -89,10 +89,10 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 
 		birch_defn( $ns, 'get_appointment1on1',
 			function( $appointment_id, $client_id, $config = array() ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
 				if ( !$config ) {
-					$fields = $birchschedule->model->get_appointment1on1_custom_fields();
+					$fields = $appointer->model->get_appointment1on1_custom_fields();
 					$fields = array_merge( $fields, array(
 							'_birs_client_id', '_birs_appointment_id', 'post_status'
 						) );
@@ -126,7 +126,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 
 		birch_defn( $ns, 'query_appointments', function( $criteria, $config = array() ) use ( $ns ) {
 
-				global $birchschedule;
+				global $appointer;
 
 				if ( !is_array( $criteria ) ) {
 					$criteria = array();
@@ -258,7 +258,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				}
 
 				if ( $appointment_id == -1 || $appointment_keys ) {
-					$appointments = $birchschedule->model->query( $appointments_criteria,
+					$appointments = $appointer->model->query( $appointments_criteria,
 						array(
 							'keys' => $appointment_keys
 						)
@@ -306,7 +306,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 						);
 					}
 				}
-				$appointment1on1s = $birchschedule->model->query( $appointment1on1s_critera,
+				$appointment1on1s = $appointer->model->query( $appointment1on1s_critera,
 					array(
 						'keys' => $appointment1on1_keys
 					)
@@ -315,7 +315,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				foreach ( $appointment1on1s as $appointment1on1_id => $appointment1on1 ) {
 					$client_id = $appointment1on1['_birs_client_id'];
 					if ( $client_keys ) {
-						$client = $birchschedule->model->get( $client_id, array(
+						$client = $appointer->model->get( $client_id, array(
 								'keys' => $client_keys
 							) );
 						if ( !$client ) {
@@ -354,17 +354,17 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'if_cancel_appointment_outoftime', function( $appointment_id ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
-				$time_before_cancel = $birchschedule->model->get_time_before_cancel();
-				$appointment = $birchschedule->model->get( $appointment_id, array(
+				$time_before_cancel = $appointer->model->get_time_before_cancel();
+				$appointment = $appointer->model->get( $appointment_id, array(
 						'base_keys' => array(),
 						'meta_keys' => array(
 							'_birs_appointment_timestamp'
 						)
 					) );
 				if ( !$appointment ) {
-					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 				}
 				if ( $appointment['_birs_appointment_timestamp'] - time() > $time_before_cancel * 60 * 60 ) {
 					return true;
@@ -374,17 +374,17 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'if_reschedule_appointment_outoftime', function( $appointment_id ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
-				$time_before_reschedule = $birchschedule->model->get_time_before_reschedule();
-				$appointment = $birchschedule->model->get( $appointment_id, array(
+				$time_before_reschedule = $appointer->model->get_time_before_reschedule();
+				$appointment = $appointer->model->get( $appointment_id, array(
 						'base_keys' => array(),
 						'meta_keys' => array(
 							'_birs_appointment_timestamp'
 						)
 					) );
 				if ( !$appointment ) {
-					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 				}
 				if ( $appointment['_birs_appointment_timestamp'] - time() > $time_before_reschedule * 60 * 60 ) {
 					return true;
@@ -408,9 +408,9 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'if_appointment1on1_cancelled', function( $appointment1on1_id ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
-				$appointment1on1 = $birchschedule->model->get(
+				$appointment1on1 = $appointer->model->get(
 					$appointment1on1_id,
 					array(
 						'base_keys' => array( 'post_status' ),
@@ -420,7 +420,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 					)
 				);
 				if ( !$appointment1on1 ) {
-					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 				}
 				if ( $appointment1on1['post_status'] == 'cancelled' ) {
 					return true;
@@ -430,9 +430,9 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'if_email_duplicated', function( $client_id, $email ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$clients = $birchschedule->model->query(
+				$clients = $appointer->model->query(
 					array(
 						'post_type' => 'birs_client',
 						'meta_query' => array(
@@ -460,12 +460,12 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'save_client', function( $client_info ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
 				if ( isset( $client_info['_birs_client_fields'] ) ) {
 					$fields = $client_info['_birs_client_fields'];
 				} else {
-					$fields = $birchschedule->model->get_client_fields();
+					$fields = $appointer->model->get_client_fields();
 				}
 				$config = array(
 					'meta_keys' => $fields,
@@ -476,7 +476,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				if ( isset( $client_info['_birs_client_email'] ) &&
 					!isset( $client_info['ID'] ) ) {
 					$email = $client_info['_birs_client_email'];
-					$client = $birchschedule->model->get_client_by_email( $email,
+					$client = $appointer->model->get_client_by_email( $email,
 						array(
 							'base_keys' => array(),
 							'meta_keys' => array()
@@ -486,14 +486,14 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 					}
 				}
 				$client_info['post_type'] = 'birs_client';
-				$client_id = $birchschedule->model->save( $client_info, $config );
+				$client_id = $appointer->model->save( $client_info, $config );
 				return $client_id;
 			} );
 
 		birch_defn( $ns, 'get_user_by_staff', function( $staff_id ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$staff = $birchschedule->model->get( $staff_id,
+				$staff = $appointer->model->get( $staff_id,
 					array(
 						'base_keys' => array(),
 						'meta_keys' => array( '_birs_staff_email' )
@@ -507,9 +507,9 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_appointment_capacity', function( $appointment_id ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$appointment = $birchschedule->model->get( $appointment_id, array(
+				$appointment = $appointer->model->get( $appointment_id, array(
 						'meta_keys' => array( '_birs_appointment_capacity' )
 					) );
 				if ( isset( $appointment['_birs_appointment_capacity'] ) ) {
@@ -529,9 +529,9 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				birch_assert( isset( $appointment_info['_birs_appointment_staff'] ) );
 				birch_assert( isset( $appointment_info['_birs_appointment_timestamp'] ) );
 
-				global $birchschedule;
+				global $appointer;
 
-				$appointments = $birchschedule->model->query(
+				$appointments = $appointer->model->query(
 					array(
 						'post_type' => 'birs_appointment',
 						'post_status' => array( 'publish' ),
@@ -566,25 +566,25 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 					$appointment_info['_birs_appointment_uid'] = uniqid( rand(), true );
 					if ( !isset( $appointment_info['_birs_appointment_capacity'] ) ) {
 						$appointment_info['_birs_appointment_capacity'] =
-						$birchschedule->model->get_service_capacity(
+						$appointer->model->get_service_capacity(
 							$appointment_info['_birs_appointment_service']
 						);
 					}
 					if ( !isset( $appointment_info['_birs_appointment_duration'] ) ) {
 						$appointment_info['_birs_appointment_duration'] =
-						$birchschedule->model->get_service_length(
+						$appointer->model->get_service_length(
 							$appointment_info['_birs_appointment_service']
 						);
 					}
 					if ( !isset( $appointment_info['_birs_appointment_padding_before'] ) ) {
 						$appointment_info['_birs_appointment_padding_before'] =
-						$birchschedule->model->get_service_padding_before(
+						$appointer->model->get_service_padding_before(
 							$appointment_info['_birs_appointment_service']
 						);
 					}
 					if ( !isset( $appointment_info['_birs_appointment_padding_after'] ) ) {
 						$appointment_info['_birs_appointment_padding_after'] =
-						$birchschedule->model->get_service_padding_after(
+						$appointer->model->get_service_padding_after(
 							$appointment_info['_birs_appointment_service']
 						);
 					}
@@ -597,20 +597,20 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				}
 				$config = array(
 					'base_keys' => $base_keys,
-					'meta_keys' => $birchschedule->model->get_appointment_fields()
+					'meta_keys' => $appointer->model->get_appointment_fields()
 				);
 				$appointment_info['post_type'] = 'birs_appointment';
-				$appointment_id = $birchschedule->model->save( $appointment_info, $config );
+				$appointment_id = $appointer->model->save( $appointment_info, $config );
 				$ns->remove_auto_draft_appointments();
 				return $appointment_id;
 			} );
 
 		birch_defn( $ns, 'remove_appointment_if_empty', function( $appointment_id ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
 				$appointment1on1s = $ns->get_appointment1on1s_by_appointment( $appointment_id );
 				if ( !$appointment1on1s ) {
-					$birchschedule->model->delete( $appointment_id );
+					$appointer->model->delete( $appointment_id );
 				}
 			} );
 
@@ -635,11 +635,11 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 		birch_defn( $ns, 'make_appointment1on1', function( $appointment1on1_info, $status = 'draft' ) use ( $ns ) {
 				birch_assert( isset( $appointment1on1_info['_birs_client_id'] ), 'no client id' );
 
-				global $birchschedule;
+				global $appointer;
 
 				if ( isset( $appointment1on1_info['_birs_appointment_id'] ) ) {
 					$appointment_id = $appointment1on1_info['_birs_appointment_id'];
-					$appointment = $birchschedule->model->get( $appointment_id, array(
+					$appointment = $appointer->model->get( $appointment_id, array(
 							'meta_keys' => array( '_birs_appointment_service' )
 						) );
 					$appointment1on1_info['_birs_appointment_service'] = $appointment['_birs_appointment_service'];
@@ -659,7 +659,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				$appointment1on1_info['_birs_appointment1on1_uid'] = uniqid( rand(), true );
 				if ( !isset( $appointment1on1_info['_birs_appointment1on1_price'] ) ) {
 					$appointment1on1_info['_birs_appointment1on1_price'] =
-					$birchschedule->model->get_service_price(
+					$appointer->model->get_service_price(
 						$appointment1on1_info['_birs_appointment_service']
 					);
 				}
@@ -668,15 +668,15 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				if ( isset( $appointment1on1_info['_birs_appointment_fields'] ) ) {
 					$custom_fields = $appointment1on1_info['_birs_appointment_fields'];
 				} else {
-					$custom_fields = $birchschedule->model->get_appointment1on1_custom_fields();
+					$custom_fields = $appointer->model->get_appointment1on1_custom_fields();
 				}
-				$std_fields = $birchschedule->model->get_appointment1on1_fields();
+				$std_fields = $appointer->model->get_appointment1on1_fields();
 				$all_fields = array_merge( $std_fields, $custom_fields );
 				$appointment1on1_info['post_type'] = 'birs_appointment1on1';
 				$base_keys = array(
 					'post_status'
 				);
-				$appointment1on1_id = $birchschedule->model->save( $appointment1on1_info, array(
+				$appointment1on1_id = $appointer->model->save( $appointment1on1_info, array(
 						'base_keys' => $base_keys,
 						'meta_keys' => $all_fields
 					) );
@@ -684,7 +684,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'change_appointment1on1_status', function( $appointment1on1_id, $status ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
 				$appointment1on1_info = array(
 					'ID' => $appointment1on1_id,
@@ -697,12 +697,12 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 					),
 					'meta_keys' => array()
 				);
-				$appointment1on1 = $birchschedule->model->get( $appointment1on1_id, $config );
+				$appointment1on1 = $appointer->model->get( $appointment1on1_id, $config );
 				if ( !$appointment1on1 ) {
-					return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+					return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 				}
 				$old_status = $appointment1on1['post_status'];
-				$birchschedule->model->save( $appointment1on1_info, $config );
+				$appointer->model->save( $appointment1on1_info, $config );
 				$ns->do_change_appointment1on1_status( $appointment1on1_id, $status, $old_status );
 				return true;
 			} );
@@ -711,7 +711,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			function( $appointment1on1_id, $new_status, $old_status ) {} );
 
 		birch_defn( $ns, 'change_appointment1on1_custom_info', function( $appointment1on1_info ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
 				$assertion = isset( $appointment1on1_info['ID'] ) ||
 				( isset( $appointment1on1_info['_birs_appointment_id'] ) &&
@@ -720,7 +720,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				if ( isset( $appointment1on1_info['_birs_appointment_fields'] ) ) {
 					$custom_fields = $appointment1on1_info['_birs_appointment_fields'];
 				} else {
-					$custom_fields = $birchschedule->model->get_appointment1on1_custom_fields();
+					$custom_fields = $appointer->model->get_appointment1on1_custom_fields();
 				}
 				if ( !isset( $appointment1on1_info['ID'] ) ) {
 					$appointment1on1 = $ns->get_appointment1on1(
@@ -728,13 +728,13 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 						$appointment1on1_info['_birs_client_id']
 					);
 					if ( !$appointment1on1 ) {
-						return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+						return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 					} else {
 						$appointment1on1_info['ID'] = $appointment1on1['ID'];
 					}
 				}
 				$appointment1on1_info['post_type'] = 'birs_appointment1on1';
-				$appointment1on1_id = $birchschedule->model->save( $appointment1on1_info, array(
+				$appointment1on1_id = $appointer->model->save( $appointment1on1_info, array(
 						'base_keys' => array(),
 						'meta_keys' => $custom_fields
 					) );
@@ -745,7 +745,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				birch_assert( isset( $appointment_info['_birs_appointment_staff'] ) ||
 					isset( $appointment_info['_birs_appointment_timestamp'] ) );
 
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
 				$appointment1on1s = $ns->get_appointment1on1s_by_appointment( $appointment_id,
 					array(
@@ -762,11 +762,11 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 		birch_defn( $ns, 'do_reschedule_appointment1on1', function( $appointment1on1_id, $appointment_info ) {} );
 
 		birch_defn( $ns, 'reschedule_appointment1on1', function( $appointment1on1_id, $appointment_info ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
 				birch_assert( isset( $appointment_info['_birs_appointment_staff'] ) ||
 					isset( $appointment_info['_birs_appointment_timestamp'] ) );
-				$appointment1on1 = $birchschedule->model->get( $appointment1on1_id, array(
+				$appointment1on1 = $appointer->model->get( $appointment1on1_id, array(
 						'base_keys' => array(),
 						'meta_keys' => array(
 							'_birs_appointment_id',
@@ -774,9 +774,9 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 						)
 					) );
 				if ( !$appointment1on1 ) {
-					return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+					return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 				}
-				$appointment = $birchschedule->model->get( $appointment1on1['_birs_appointment_id'],
+				$appointment = $appointer->model->get( $appointment1on1['_birs_appointment_id'],
 					array(
 						'base_keys' => array(),
 						'meta_keys' => array(
@@ -791,7 +791,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 					)
 				);
 				if ( !$appointment ) {
-					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+					return $birchpress->util->new_error( 'appointment_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 				}
 				if ( !isset( $appointment_info['_birs_appointment_staff'] ) ) {
 					$appointment_info['_birs_appointment_staff'] = $appointment['_birs_appointment_staff'];
@@ -820,13 +820,13 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				$appointment_id = $ns->make_appointment( $appointment );
 				$orig_appointment_id = $appointment1on1['_birs_appointment_id'];
 				$appointment1on1['_birs_appointment_id'] = $appointment_id;
-				$birchschedule->model->save( $appointment1on1, array(
+				$appointer->model->save( $appointment1on1, array(
 						'base_keys' => array(),
 						'meta_keys' => array(
 							'_birs_appointment_id'
 						)
 					) );
-				$payments = $birchschedule->model->query(
+				$payments = $appointer->model->query(
 					array(
 						'post_type' => 'birs_payment',
 						'meta_query' => array(
@@ -847,7 +847,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				);
 				foreach ( $payments as $payment ) {
 					$payment['_birs_payment_appointment'] = $appointment_id;
-					$birchschedule->model->save( $payment, array(
+					$appointer->model->save( $payment, array(
 							'base_keys' => array(),
 							'meta_keys' => array(
 								'_birs_payment_appointment'
@@ -874,10 +874,10 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 
 		birch_defn( $ns, 'cancel_appointment1on1', function( $appointment1on1_id ) use ( $ns ) {
 
-				global $birchschedule;
+				global $appointer;
 
 				$appointment1on1 =
-				$birchschedule->model->mergefields->get_appointment1on1_merge_values(
+				$appointer->model->mergefields->get_appointment1on1_merge_values(
 					$appointment1on1_id
 				);
 				if ( !$appointment1on1 ) {
@@ -892,7 +892,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 						'post_type' => 'birs_appointment1on1',
 						'ID' => $appointment1on1_id
 					);
-					$birchschedule->model->save( $new_appointment1on1, array(
+					$appointer->model->save( $new_appointment1on1, array(
 							'base_keys' => array( 'post_status' ),
 							'meta_keys' => array()
 						) );
@@ -901,9 +901,9 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'get_payments_by_appointment1on1', function( $appointment_id, $client_id ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$payments = $birchschedule->model->query(
+				$payments = $appointer->model->query(
 					array(
 						'post_type' => 'birs_payment',
 						'meta_query' => array(
@@ -918,7 +918,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 						)
 					),
 					array(
-						'meta_keys' => $birchschedule->model->get_payment_fields(),
+						'meta_keys' => $appointer->model->get_payment_fields(),
 						'base_keys' => array()
 					)
 				);
@@ -926,20 +926,20 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'make_payment', function( $payment_info ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
 				$appointment_id = $payment_info['_birs_payment_appointment'];
 				$client_id = $payment_info['_birs_payment_client'];
 				$appointment1on1 = $ns->get_appointment1on1( $appointment_id, $client_id );
 				if ( !$appointment1on1 ) {
-					return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'birchschedule' ) );
+					return $birchpress->util->new_error( 'appointment1on1_nonexist', __( 'The appointment does not exist.', 'appointer' ) );
 				}
 				$config = array(
-					'meta_keys' => $birchschedule->model->get_payment_fields(),
+					'meta_keys' => $appointer->model->get_payment_fields(),
 					'base_keys' => array()
 				);
 				$payment_info['post_type'] = 'birs_payment';
-				$payment_id = $birchschedule->model->save( $payment_info, $config );
+				$payment_id = $appointer->model->save( $payment_info, $config );
 				$appointment_price = $appointment1on1['_birs_appointment1on1_price'];
 				$all_payments = $ns->get_payments_by_appointment1on1( $appointment_id, $client_id );
 				$paid = 0;
@@ -954,7 +954,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 					$payment_status = 'paid';
 				}
 				$appointment1on1['_birs_appointment1on1_payment_status'] = $payment_status;
-				$birchschedule->model->save( $appointment1on1, array(
+				$appointer->model->save( $appointment1on1, array(
 						'base_keys' => array(),
 						'meta_keys' => array( '_birs_appointment1on1_payment_status' )
 					) );
@@ -963,16 +963,16 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 
 		birch_defn( $ns, 'get_payment_types', function() {
 				return array(
-					'credit_card' => __( 'Credit Card', 'birchschedule' ),
-					'cash' => __( 'Cash', 'birchschedule' )
+					'credit_card' => __( 'Credit Card', 'appointer' ),
+					'cash' => __( 'Cash', 'appointer' )
 				);
 			} );
 
 		birch_defn( $ns, 'delete_appointment1on1', function( $appointment1on1_id ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$fields = $birchschedule->model->get_appointment1on1_fields();
-				$custom_fields = $birchschedule->model->get_appointment1on1_custom_fields();
+				$fields = $appointer->model->get_appointment1on1_fields();
+				$custom_fields = $appointer->model->get_appointment1on1_custom_fields();
 				$fields = array_merge( $fields, $custom_fields );
 				foreach ( $fields as $field ) {
 					delete_post_meta( $appointment1on1_id, $field );
@@ -981,14 +981,14 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'delete_appointment', function( $appointment_id ) use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
 				$appointment1on1s =
 				$ns->get_appointment1on1s_by_appointment( $appointment_id, array( 'status' => 'any' ) );
 				foreach ( $appointment1on1s as $appointment1on1_id => $appointment1on1 ) {
 					$ns->delete_appointment1on1( $appointment1on1_id );
 				}
-				$fields = $birchschedule->model->get_appointment_fields();
+				$fields = $appointer->model->get_appointment_fields();
 				foreach ( $fields as $field ) {
 					delete_post_meta( $appointment_id, $field );
 				}
@@ -1012,7 +1012,7 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 		birch_defn( $ns, 'record_fully_booked_day',
 			function( $staff_id, $location_id, $service_id, $date, $time_options ) use ( $ns ) {
 
-				global $birchschedule;
+				global $appointer;
 
 				$empty = true;
 				foreach ( $time_options as $key => $value ) {
@@ -1023,24 +1023,24 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 				}
 				$date_text = $date->format( 'Y-m-d' );
 				if ( $empty ) {
-					$birchschedule->model->schedule->mark_fully_booked_day(
+					$appointer->model->schedule->mark_fully_booked_day(
 						$staff_id, $location_id, $service_id, $date_text );
 				} else {
-					$birchschedule->model->schedule->unmark_fully_booked_day(
+					$appointer->model->schedule->unmark_fully_booked_day(
 						$staff_id, $location_id, $service_id, $date_text );
 				}
 			} );
 
 		birch_defn( $ns, 'enqueue_checking_if_fully_booked', function( $appointment1on1_id ) use ( $ns ) {
-				wp_schedule_single_event( time(), 'birchschedule_model_booking_actions_check_if_fully_booked_for', array(
+				wp_schedule_single_event( time(), 'appointer_model_booking_actions_check_if_fully_booked_for', array(
 						'appointment1on1_id' => $appointment1on1_id
 					) );
 			} );
 
-		birch_defn( $ns, 'check_if_fully_booked_for', function( $appointment1on1_id ) use( $ns, $birchschedule ) {
+		birch_defn( $ns, 'check_if_fully_booked_for', function( $appointment1on1_id ) use( $ns, $appointer ) {
 				global $birchpress;
 
-				$appointment1on1 = $birchschedule->model->mergefields->get_appointment1on1_merge_values( $appointment1on1_id );
+				$appointment1on1 = $appointer->model->mergefields->get_appointment1on1_merge_values( $appointment1on1_id );
 				$staff_id = $appointment1on1['_birs_appointment_staff'];
 				$timestamp = $appointment1on1['_birs_appointment_timestamp'];
 				$date = $birchpress->util->get_wp_datetime( $timestamp );
@@ -1049,15 +1049,15 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 			} );
 
 		birch_defn( $ns, 'check_if_fully_booked', function( $staff_id, $date_text ) use ( $ns ) {
-				global $birchpress, $birchschedule;
+				global $birchpress, $appointer;
 
-				$services = $birchschedule->model->get_services_by_staff( $staff_id );
-				$locations = $birchschedule->model->get_locations_listing_order();
+				$services = $appointer->model->get_services_by_staff( $staff_id );
+				$locations = $appointer->model->get_locations_listing_order();
 				foreach ( $services as $service_id => $value ) {
 					foreach ( $locations as $location_id ) {
 						$date = $birchpress->util->get_wp_datetime( "$date_text 00:00:00" );
 
-						$time_options = $birchschedule->model->schedule->get_staff_avaliable_time(
+						$time_options = $appointer->model->schedule->get_staff_avaliable_time(
 							$staff_id, $location_id, $service_id, $date
 						);
 					}
@@ -1071,15 +1071,15 @@ birch_ns( 'birchschedule.model.booking', function( $ns ) {
 						'blocking' => false,
 						'sslverify' => apply_filters( 'https_local_ssl_verify', true ),
 						'body' => array(
-							'action' => 'birchschedule_model_booking_recheck_fully_booked_days'
+							'action' => 'appointer_model_booking_recheck_fully_booked_days'
 						)
 					) );
 			} );
 
 		birch_defn( $ns, 'admin_post_recheck_fully_booked_days', function() use ( $ns ) {
-				global $birchschedule;
+				global $appointer;
 
-				$fully_booked = $birchschedule->model->schedule->get_fully_booked_days();
+				$fully_booked = $appointer->model->schedule->get_fully_booked_days();
 				foreach ( $fully_booked as $date_text => $staff_arr ) {
 					foreach ( $staff_arr as $staff_id => $arr ) {
 						$ns->check_if_fully_booked( $staff_id, $date_text );

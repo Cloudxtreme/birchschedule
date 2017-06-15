@@ -1,5 +1,5 @@
 (function($){
-    var params = birchschedule_view_appointments_new;
+    var params = appointer_view_appointments_new;
     var locationsMap = params.locations_map;
     var locationsOrder = params.locations_order;
     var locationsStaffMap = params.locations_staff_map;
@@ -14,19 +14,19 @@
     var defineFunction = birchpress.defineFunction;
     var addAction = birchpress.addAction;
 
-    var ns = namespace('birchschedule.view.appointments.new');
+    var ns = namespace('appointer.view.appointments.new');
 
     defineFunction(ns, 'setLocationOptions', function(){
-        var options = birchschedule.model.getLocationOptions(locationsMap, locationsOrder);
-        var html = birchschedule.view.getOptionsHtml(options);
+        var options = appointer.model.getLocationOptions(locationsMap, locationsOrder);
+        var html = appointer.view.getOptionsHtml(options);
         $('#birs_appointment_location').html(html);
     });
 
     defineFunction(ns, 'setServiceOptions', function(){
         var locationId = $('#birs_appointment_location').val();
-        var options = birchschedule.model.getServiceOptions(locationsServicesMap, 
+        var options = appointer.model.getServiceOptions(locationsServicesMap, 
             locationId, servicesOrder);
-        var html = birchschedule.view.getOptionsHtml(options);
+        var html = appointer.view.getOptionsHtml(options);
 
         var serviceId = $('#birs_appointment_service').val();
         $('#birs_appointment_service').html(html);
@@ -39,9 +39,9 @@
     defineFunction(ns, 'setStaffOptions', function() {
         var locationId = $('#birs_appointment_location').val();
         var serviceId = $('#birs_appointment_service').val();
-        var options = birchschedule.model.getStaffOptions(locationsStaffMap, servicesStaffMap, 
+        var options = appointer.model.getStaffOptions(locationsStaffMap, servicesStaffMap, 
             locationId, serviceId, staffOrder);
-        var html = birchschedule.view.getOptionsHtml(options);
+        var html = appointer.view.getOptionsHtml(options);
 
         var staffId = $('#birs_appointment_staff').val();
         $('#birs_appointment_staff').html(html);
@@ -86,11 +86,11 @@
         var config = {
             ifOnlyShowAvailable: ns.ifOnlyShowAvailable
         };
-        return birchschedule.view.initDatepicker(config);
+        return appointer.view.initDatepicker(config);
     });
 
     defineFunction(ns, 'initClientInfo', function() {
-        birchschedule.view.initCountryStateField('birs_client_country', 'birs_client_state');
+        appointer.view.initCountryStateField('birs_client_country', 'birs_client_state');
     });
 
     defineFunction(ns, 'reloadTimeOptions', function(){
@@ -98,16 +98,16 @@
     });
 
     defineFunction(ns, 'schedule', function() {
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
-        var i18nMessages = birchschedule.view.getI18nMessages();
+        var ajaxUrl = appointer.model.getAjaxUrl();
+        var i18nMessages = appointer.view.getI18nMessages();
         var postData = $('form').serialize();
         postData += '&' + $.param({
-            action: 'birchschedule_view_appointments_new_schedule'
+            action: 'appointer_view_appointments_new_schedule'
         });
         $.post(ajaxUrl, postData, function(data, status, xhr){
-            var result = birchschedule.model.parseAjaxResponse(data);
+            var result = appointer.model.parseAjaxResponse(data);
             if(result.errors) {
-                birchschedule.view.showFormErrors(result.errors);
+                appointer.view.showFormErrors(result.errors);
             } 
             else if(result.success) {
                 var url = $.parseJSON(result.success.message).url;
@@ -121,7 +121,7 @@
     });
 
     defineFunction(ns, 'init', function(){
-        var ajaxUrl = birchschedule.model.getAjaxUrl();
+        var ajaxUrl = appointer.model.getAjaxUrl();
 
         ns.setLocationOptions();
         ns.setLocation();
@@ -132,7 +132,7 @@
 
         var datepicker = ns.initDatepicker();
         defineFunction(ns, 'refreshDatepicker', function(){
-            birchschedule.view.refreshDatepicker(datepicker);
+            appointer.view.refreshDatepicker(datepicker);
         });
 
         ns.reloadTimeOptions();
@@ -165,6 +165,6 @@
 
         $('#birs_appointment_actions_schedule').click(ns.schedule);
     });
-    addAction('birchschedule.initAfter', ns.init);
+    addAction('appointer.initAfter', ns.init);
 
 })(jQuery);

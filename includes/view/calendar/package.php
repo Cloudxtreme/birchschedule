@@ -1,34 +1,34 @@
 <?php
 
-birch_ns( 'birchschedule.view.calendar', function( $ns ) {
+birch_ns( 'appointer.view.calendar', function( $ns ) {
 
         birch_defn( $ns, 'init', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
                 add_action( 'admin_init', array( $ns, 'wp_admin_init' ) );
 
-                $birchschedule->view->register_script_data_fn(
-                    'birchschedule_view_calendar', 'birchschedule_view_calendar',
+                $appointer->view->register_script_data_fn(
+                    'appointer_view_calendar', 'appointer_view_calendar',
                     array( $ns, 'get_script_data_fn_view_calendar' ) );
             } );
 
         birch_defn( $ns, 'wp_admin_init', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
                 add_action( 'admin_enqueue_scripts', function( $hook ) {
-                        global $birchschedule;
+                        global $appointer;
 
-                        if ( $birchschedule->view->get_page_hook( 'calendar' ) !== $hook ) {
+                        if ( $appointer->view->get_page_hook( 'calendar' ) !== $hook ) {
                             return;
                         }
 
-                        $birchschedule->view->calendar->enqueue_scripts();
+                        $appointer->view->calendar->enqueue_scripts();
                     } );
 
-                add_action( 'wp_ajax_birchschedule_view_calendar_query_appointments',
+                add_action( 'wp_ajax_appointer_view_calendar_query_appointments',
                     array( $ns, 'ajax_query_appointments' ) );
 
-                add_action( 'birchschedule_view_render_calendar_page_after', array( $ns, 'render_admin_page' ) );
+                add_action( 'appointer_view_render_calendar_page_after', array( $ns, 'render_admin_page' ) );
 
             } );
 
@@ -45,21 +45,21 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
             } );
 
         birch_defn( $ns, 'enqueue_scripts', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->register_3rd_scripts();
-                $birchschedule->view->register_3rd_styles();
-                $birchschedule->view->enqueue_scripts(
+                $appointer->view->register_3rd_scripts();
+                $appointer->view->register_3rd_styles();
+                $appointer->view->enqueue_scripts(
                     array(
-                        'birchschedule_view_calendar', 'birchschedule_view',
-                        'birchschedule_view_admincommon', 'birchschedule_model',
+                        'appointer_view_calendar', 'appointer_view',
+                        'appointer_view_admincommon', 'appointer_model',
                         'bootstrap'
                     )
                 );
-                $birchschedule->view->enqueue_styles(
+                $appointer->view->enqueue_styles(
                     array(
                         'fullcalendar_birchpress', 'bootstrap-theme',
-                        'birchschedule_admincommon', 'birchschedule_calendar',
+                        'appointer_admincommon', 'appointer_calendar',
                         'select2', 'jgrowl'
                     )
                 );
@@ -70,7 +70,7 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
             } );
 
         birch_defn( $ns, 'query_appointments', function( $start, $end, $location_id, $staff_id ) use ( $ns ) {
-                global $birchschedule, $birchpress;
+                global $appointer, $birchpress;
 
                 $criteria = array(
                     'start' => $start,
@@ -79,7 +79,7 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
                     'staff_id' => $staff_id
                 );
                 $appointments =
-                $birchschedule->model->booking->query_appointments( $criteria,
+                $appointer->model->booking->query_appointments( $criteria,
                     array(
                         'appointment_keys' => array(
                             '_birs_appointment_duration', '_birs_appointment_price',
@@ -90,7 +90,7 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
                 );
                 $apmts = array();
                 foreach ( $appointments as $appointment ) {
-                    $title = $birchschedule->model->booking->get_appointment_title( $appointment );
+                    $title = $appointer->model->booking->get_appointment_title( $appointment );
                     $appointment['post_title'] = $title;
                     $duration = intval( $appointment['_birs_appointment_duration'] );
                     $price = $appointment['_birs_appointment_price'];
@@ -113,10 +113,10 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_locations_map', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $i18n_msgs = $birchschedule->view->get_frontend_i18n_messages();
-                $locations_map = $birchschedule->model->get_locations_map();
+                $i18n_msgs = $appointer->view->get_frontend_i18n_messages();
+                $locations_map = $appointer->model->get_locations_map();
                 $locations_map[-1] = array(
                     'post_title' => $i18n_msgs['All Locations']
                 );
@@ -124,11 +124,11 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_locations_staff_map', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $i18n_msgs = $birchschedule->view->get_frontend_i18n_messages();
-                $map = $birchschedule->model->get_locations_staff_map();
-                $allstaff = $birchschedule->model->query(
+                $i18n_msgs = $appointer->view->get_frontend_i18n_messages();
+                $map = $appointer->model->get_locations_staff_map();
+                $allstaff = $appointer->model->query(
                     array(
                         'post_type' => 'birs_staff'
                     ),
@@ -148,51 +148,51 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
             } );
 
         birch_defn( $ns, 'get_locations_services_map', function() {
-                global $birchschedule;
+                global $appointer;
 
-                return $birchschedule->model->get_locations_services_map();
+                return $appointer->model->get_locations_services_map();
             } );
 
         birch_defn( $ns, 'get_services_staff_map', function() {
-                global $birchschedule;
+                global $appointer;
 
-                return $birchschedule->model->get_services_staff_map();
+                return $appointer->model->get_services_staff_map();
             } );
 
         birch_defn( $ns, 'get_locations_listing_order', function() {
-                global $birchschedule;
+                global $appointer;
 
-                $locations = $birchschedule->model->get_locations_listing_order();
+                $locations = $appointer->model->get_locations_listing_order();
                 $locations = array_merge( array( -1 ), $locations );
                 return $locations;
             } );
 
         birch_defn( $ns, 'get_staff_listing_order', function() {
-                global $birchschedule;
+                global $appointer;
 
-                return $birchschedule->model->get_staff_listing_order();
+                return $appointer->model->get_staff_listing_order();
             } );
 
         birch_defn( $ns, 'get_services_listing_order', function() {
-                global $birchschedule;
+                global $appointer;
 
-                return $birchschedule->model->get_services_listing_order();
+                return $appointer->model->get_services_listing_order();
             } );
 
         birch_defn( $ns, 'get_services_prices_map', function() {
-                global $birchschedule;
+                global $appointer;
 
-                return $birchschedule->model->get_services_prices_map();
+                return $appointer->model->get_services_prices_map();
             } );
 
         birch_defn( $ns, 'get_services_duration_map', function() {
-                global $birchschedule;
+                global $appointer;
 
-                return $birchschedule->model->get_services_duration_map();
+                return $appointer->model->get_services_duration_map();
             } );
 
         birch_defn( $ns, 'ajax_query_appointments', function() use ( $ns ) {
-                global $birchschedule, $birchpress;
+                global $appointer, $birchpress;
 
                 $start = $_GET['birs_time_start'];
                 $start = $birchpress->util->get_wp_datetime( $start )->format( 'U' );
@@ -201,7 +201,7 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
                 $location_id = $_GET['birs_location_id'];
                 $staff_id = $_GET['birs_staff_id'];
 
-                $apmts = $birchschedule->view->calendar->query_appointments( $start, $end, $location_id, $staff_id );
+                $apmts = $appointer->view->calendar->query_appointments( $start, $end, $location_id, $staff_id );
 ?>
         <div id="birs_response">
             <?php
@@ -213,9 +213,9 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
             } );
 
         birch_defn( $ns, 'render_admin_page', function() use ( $ns ) {
-                global $birchschedule;
+                global $appointer;
 
-                $birchschedule->view->show_notice();
+                $appointer->view->show_notice();
                 $ns->render_calendar_scene();
             } );
 
@@ -236,7 +236,7 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
                             <div class="btn-group navbar-btn">
                                 <button type="button" class="btn btn-default"
                                     id="birs_add_appointment">
-                                    <?php _e( 'New Appointment', 'birchschedule' ); ?>
+                                    <?php _e( 'New Appointment', 'appointer' ); ?>
                                 </button>
                                 <button type="button" class="btn btn-default"
                                     id="birs_calendar_refresh">
@@ -246,21 +246,21 @@ birch_ns( 'birchschedule.view.calendar', function( $ns ) {
                             <div class="btn-group navbar-btn">
                                 <button type="button" class="btn btn-default"
                                     id="birs_calendar_today">
-                                    <?php _e( 'Today', 'birchschedule' ); ?>
+                                    <?php _e( 'Today', 'appointer' ); ?>
                                 </button>
                             </div>
                             <div class="btn-group navbar-btn" data-toggle="buttons">
                                 <label class="btn btn-default">
                                     <input type="radio" name="birs_calendar_view_choice" value="month">
-                                    <?php _e( 'Month', 'birchschedule' ); ?>
+                                    <?php _e( 'Month', 'appointer' ); ?>
                                 </label>
                                 <label class="btn btn-default">
                                     <input type="radio" name="birs_calendar_view_choice" value="agendaWeek">
-                                    <?php _e( 'Week', 'birchschedule' ); ?>
+                                    <?php _e( 'Week', 'appointer' ); ?>
                                 </label>
                                 <label class="btn btn-default">
                                     <input type="radio" name="birs_calendar_view_choice" value="agendaDay">
-                                    <?php _e( 'Day', 'birchschedule' ); ?>
+                                    <?php _e( 'Day', 'appointer' ); ?>
                                 </label>
                                 <input type="hidden" name="birs_calendar_view" />
                                 <input type="hidden" name="birs_calendar_current_date" />
