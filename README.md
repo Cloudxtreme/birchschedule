@@ -13,6 +13,10 @@ GPLv2.
 
 ![Screenshot](https://github.com/knipknap/appointer/blob/1.10.2/screenshot-2.png?raw=true)
 
+## Do you need commercial support?
+
+Appointer is supported by [Procedure 8](https://procedure8.com). Get in touch if you need anything!
+
 ## Features
 
 * Customer booking appointments for specific time in a day
