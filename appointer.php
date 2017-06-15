@@ -2,11 +2,11 @@
 
 /*
   Plugin Name: Appointer
-  Plugin URI: http://procedure8.com/oss-appointer
+  Plugin URI: https://github.com/knipknap/appointer
   Description: An appointment booking and online scheduling plugin for service businesses.
   Version: 0.1
   Author: Procedure 8 (Original author: Birchpress)
-  Author URI: http://procedure8.com
+  Author URI: https://procedure8.com
   License: GPLv2
  */
 
