@@ -1,4 +1,4 @@
-# FORK of BirchPress Scheduler
+# Fork of BirchPress Scheduler for Wordpress
 
 ## Summary
 
@@ -7,8 +7,8 @@ scheduling plugin that allows service businesses to take online bookings.
 
 Birchpress Scheduler is published under the GPLv2.
 
-This repository contains a FORK of Birchpress Scheduler that adds proper localization
-and timezone support, and fixes some annoying problems, too.
+This repository contains a fork of Birchpress Scheduler that adds timezone support,
+and improves the user interface.
 
 ![Screenshot](https://github.com/knipknap/birchschedule/blob/1.10.2/screenshot-2.png?raw=true)
 
