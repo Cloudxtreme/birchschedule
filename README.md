@@ -11,7 +11,7 @@ scheduling for service businesses.
 Like it's ancestor Birchpress Scheduler, Appointer is published under the
 GPLv2.
 
-![Screenshot](https://github.com/knipknap/appointer/blob/1.10.2/screenshot-2.png?raw=true)
+![Screenshot](https://ibb.co/gUoXOQ)
 
 ## Do you need commercial support?
 
